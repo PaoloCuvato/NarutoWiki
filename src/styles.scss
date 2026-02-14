@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importiamo le icone ufficiali */
+@import "primeicons/primeicons.css";
+/* Stili base di PrimeNG */
+@import "primeicons/primeicons.css";
+
+/* Il resto del tuo codice (colori arancione/blu, ecc.) */
+
+/* Variabili Colore Ninja */
+$naruto-orange: #FF9000;
+$rasengan-blue: #00A3FF;
+$manga-black: #1A1A1A;
+$pure-white: #FFFFFF;
+
+body {
+    margin: 0;
+    background-color: $pure-white;
+    color: $manga-black;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* --- CLASSI PERSONALIZZATE PER I COMPONENTI --- */
+
+/* Forza un componente ad essere Arancione Naruto */
+.accent-naruto {
+    --p-button-primary-background: #{$naruto-orange} !important;
+    --p-button-primary-border-color: #{$naruto-orange} !important;
+    --p-button-primary-hover-background: #{darken($naruto-orange, 10%)} !important;
+}
+
+/* Forza un componente ad essere Blu Rasengan */
+.accent-rasengan {
+    --p-button-primary-background: #{$rasengan-blue} !important;
+    --p-button-primary-border-color: #{$rasengan-blue} !important;
+    --p-button-primary-hover-background: #{darken($rasengan-blue, 10%)} !important;
+}
+
+/* Card in stile Manga (Bordo nero netto) */
+.ninja-card {
+    background: white;
+    border: 2px solid $manga-black;
+    padding: 20px;
+    border-radius: 0; /* Angoli netti tipo fumetto */
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: translate(-4px, -4px);
+        box-shadow: 4px 4px 0px $manga-black;
+    }
+}

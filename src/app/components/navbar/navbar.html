@@ -1,0 +1,22 @@
+<nav class="storm-navbar">
+  <div class="logo-section">
+    <img src="StormSeries.jpeg" alt="Storm Logo">
+  </div>
+
+  <div class="links-section">
+    <a routerLink="/home" routerLinkActive="active-link" class="nav-item">
+      <span class="dot"></span> HOMEPAGE
+    </a>
+    <a routerLink="/games" routerLinkActive="active-link" class="nav-item">
+      <span class="dot"></span> GAMES
+    </a>
+  </div>
+
+  <div class="action-section">
+    <button class="storm-menu-btn" (click)="menu.toggle($event)">
+      <i class="pi pi-bars"></i>
+      <span class="btn-text">MENU</span>
+    </button>
+    <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
+  </div>
+</nav>

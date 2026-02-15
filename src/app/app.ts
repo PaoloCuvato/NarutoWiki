@@ -1,10 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Button } from 'primeng/button'; // Questo è il pezzo mancante!
+import { Button } from 'primeng/button';
+import { Navbar } from "./components/navbar/navbar"; // Questo è il pezzo mancante!
+import { TieredMenuModule } from 'primeng/tieredmenu';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Button],
+  imports: [ Button, Navbar,TieredMenuModule,ButtonModule,RouterOutlet,],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

@@ -1,30 +1,58 @@
+/* --- NAVBAR CONTAINER --- */
 .storm-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
   height: 80px;
-  background-color: #000; /* Nero totale come il resto del sito */
-  border-bottom: 3px solid #FF9000; 
+  background-color: #000 !important; /* Nero totale */
+  border-bottom: 3px solid #FF9000;  /* Linea arancione */
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.logo-section img {
-  height: 55px;
-  filter: drop-shadow(0 0 5px #fff); /* Risalto bianco sul logo */
+/* --- LOGO E TITOLO (STORM WIKI) --- */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  img {
+    height: 50px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+  }
+
+  .navbar-title {
+    /* Reset totale per forzare il bianco */
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: white !important;
+    color: white !important;
+    
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+    /* Separatore Rosso Eremita */
+    border-left: 4px solid #FF9000 !important; 
+    padding-left: 12px;
+    line-height: 1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
 }
 
+/* --- LINK CENTRALI --- */
 .links-section {
   display: flex;
-  gap: 40px;
+  gap: 25px;
 
   .nav-item {
     color: #fff;
     text-decoration: none;
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     letter-spacing: 1px;
     display: flex;
     align-items: center;
@@ -34,10 +62,11 @@
     .dot {
       width: 8px;
       height: 8px;
-      background-color: #00A2FF; /* Blu Rasengan */
+      background-color: #00A2FF; /* Blu Chakra */
       border-radius: 50%;
       opacity: 0;
       box-shadow: 0 0 8px #00A2FF;
+      transition: opacity 0.3s;
     }
 
     &:hover {
@@ -53,9 +82,10 @@
   }
 }
 
+/* --- PULSANTE MENU (BORDO ARANCIONE -> HOVER ROSSO) --- */
 .storm-menu-btn {
   background: transparent;
-  border: 2px solid #FF9000; /* Bordo Arancione Storm di base */
+  border: 2px solid #FF9000; /* Bordo Arancione */
   color: #fff;
   padding: 8px 18px;
   cursor: pointer;
@@ -64,32 +94,19 @@
   gap: 10px;
   border-radius: 4px;
   font-weight: bold;
-  transition: all 0.3s ease; /* Transizione fluida */
+  transition: all 0.3s ease;
 
   i {
-    color: #FF9000; 
+    color: #FF9000; /* Icona Arancione */
     transition: all 0.3s ease;
   }
 
   &:hover {
-    border-color: #D10000; /* Rosso Eremita (Sennin Mode) */
-    box-shadow: 0 0 15px rgba(209, 0, 0, 0.6); /* Bagliore Rosso */
+    border-color: #D10000; /* Rosso Eremita */
+    color: #D10000;
+    box-shadow: 0 0 15px rgba(209, 0, 0, 0.6);
     
-    i {
-      color: #D10000; /* Anche l'icona diventa rossa */
-    }
-    
-    .btn-text {
-      color: #D10000;
-    }
+    i { color: #D10000; }
+    .btn-text { color: #D10000; }
   }
-
-.nav-item {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  &:hover {
-    color: #FF9000;
-  }
-}
 }

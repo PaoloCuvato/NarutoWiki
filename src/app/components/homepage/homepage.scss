@@ -1,0 +1,57 @@
+/* RESET TOTALE - IMPORTANTE per togliere la barra a destra */
+/* 1. Il contenitore */
+.hero-banner {
+  width: 100%;          /* Occupa tutta la larghezza */
+  margin: 0;
+  padding: 0;
+  display: block;       /* Rimuove spazi bianchi sotto l'immagine */
+  background-color: #000;
+  line-height: 0;       /* Elimina piccoli spazi residui */
+}
+
+/* 2. L'immagine "intelligente" */
+.hero-banner img {
+  width: 100%;          /* Si allarga sempre su tutto il lato */
+  height: auto;         /* L'altezza si adatta DA SOLA per non tagliare nulla */
+  display: block;
+  object-fit: contain;  /* Mostra sempre tutta l'immagine */
+}
+
+/* 3. Blocca lo scroll laterale fastidioso */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  overflow-x: hidden;   /* Se l'immagine prova a uscire di 1px, viene bloccata */
+  background-color: #000;
+}
+
+/* Titolo in cima */
+.top-title {
+  color: #fff; 
+  background-color: #000;
+  margin: 0;
+  padding: 20px 15px;
+  border-left: 10px solid #FF9000;
+  font-size: 1.8rem;
+}
+
+
+
+/* Sezione database */
+.database-section {
+  padding: 2rem;
+  background-color: #000;
+}
+
+.database-title {
+  color: #fff;
+  border-left: 10px solid #FF9000;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}

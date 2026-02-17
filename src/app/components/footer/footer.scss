@@ -1,0 +1,94 @@
+.storm-footer {
+  width: 100%;
+  margin-top: auto;
+  background-color: #FF9000; 
+  position: relative;
+
+  .footer-accent {
+    height: 6px;
+    background-color: #FFB347; 
+    width: 100%;
+  }
+
+  .footer-container {
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 70%; /* Evita che il testo vada sopra il bottone Discord */
+
+    .copyright {
+      font-weight: 900;
+      font-size: 1.1rem;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .mission {
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin: 0;
+      color: #1a1a1a;
+    }
+
+    .disclaimer {
+      font-size: 0.7rem;
+      line-height: 1.4;
+      margin: 5px 0 0 0;
+      opacity: 0.9;
+      
+      strong {
+        font-weight: 800; /* Risalta i nomi dei brand */
+      }
+    }
+  }
+
+  .discord-btn {
+    background-color: #000;
+    color: #FF9000;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: 900;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid #000;
+    white-space: nowrap; /* Evita che il testo del bottone vada a capo */
+
+    &:hover {
+      background-color: #ffffff;
+      color: #000;
+      border-color: #ffffff;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    i {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+/* Ottimizzazione Mobile */
+@media (max-width: 992px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .footer-section {
+    max-width: 100%;
+    align-items: center;
+  }
+}

@@ -1,32 +1,45 @@
-/* RESET TOTALE - IMPORTANTE per togliere la barra a destra */
-/* 1. Il contenitore */
-.hero-banner {
-  width: 100%;          /* Occupa tutta la larghezza */
+
+
+// Applica questo al componente root
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 100% dell'altezza del viewport */
+}
+
+.content-wrapper {
+  flex: 1; /* Questo comando dice: "Prendi tutto lo spazio disponibile" */
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* RESET TOTALE - IMPORTANTE per togliere la barra a destra   
+
+/* .hero-banner {
+  width: 100%;          
   margin: 0;
   padding: 0;
-  display: block;       /* Rimuove spazi bianchi sotto l'immagine */
+  display: block;       
   background-color: #000;
-  line-height: 0;       /* Elimina piccoli spazi residui */
+  line-height: 0;       
 }
 
-/* 2. L'immagine "intelligente" */
 .hero-banner img {
-  width: 100%;          /* Si allarga sempre su tutto il lato */
-  height: auto;         /* L'altezza si adatta DA SOLA per non tagliare nulla */
+  width: 100%;          
+  height: auto;         
   display: block;
-  object-fit: contain;  /* Mostra sempre tutta l'immagine */
+  object-fit: contain;  
 }
 
-/* 3. Blocca lo scroll laterale fastidioso */
 html, body {
   margin: 0 !important;
   padding: 0 !important;
   width: 100%;
-  overflow-x: hidden;   /* Se l'immagine prova a uscire di 1px, viene bloccata */
+  overflow-x: hidden;   
   background-color: #000;
 }
 
-/* Titolo in cima */
 .top-title {
   color: #fff; 
   background-color: #000;
@@ -36,9 +49,6 @@ html, body {
   font-size: 1.8rem;
 }
 
-
-
-/* Sezione database */
 .database-section {
   padding: 2rem;
   background-color: #000;
@@ -54,4 +64,19 @@ html, body {
 .button-group {
   display: flex;
   gap: 1rem;
+} 
+*/
+
+
+// Applica questo al componente root
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 100% dell'altezza del viewport */
+}
+
+.content-wrapper {
+  flex: 1; /* Questo comando dice: "Prendi tutto lo spazio disponibile" */
+  display: flex;
+  flex-direction: column;
 }

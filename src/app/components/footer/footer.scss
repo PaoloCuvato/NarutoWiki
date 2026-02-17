@@ -3,6 +3,7 @@
   margin-top: auto;
   background-color: #FF9000; 
   position: relative;
+  font-family: 'Segoe UI', Roboto, sans-serif;
 
   .footer-accent {
     height: 6px;
@@ -21,31 +22,28 @@
   .footer-section {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    max-width: 70%; /* Evita che il testo vada sopra il bottone Discord */
+    gap: 4px;
+    max-width: 75%; // Leggermente più largo per il disclaimer
 
     .copyright {
       font-weight: 900;
       font-size: 1.1rem;
       margin: 0;
       text-transform: uppercase;
-    }
-
-    .mission {
-      font-weight: 700;
-      font-size: 0.85rem;
-      margin: 0;
-      color: #1a1a1a;
+      letter-spacing: -0.5px;
     }
 
     .disclaimer {
-      font-size: 0.7rem;
-      line-height: 1.4;
+      font-size: 0.72rem; // Leggermente aumentato per leggibilità
+      line-height: 1.5;
       margin: 5px 0 0 0;
-      opacity: 0.9;
+      color: #1a1a1a;
+      opacity: 0.85;
+      font-style: italic;
       
       strong {
-        font-weight: 800; /* Risalta i nomi dei brand */
+        font-weight: 800;
+        color: #000; // I nomi dei brand sono in nero pieno per risaltare
       }
     }
   }
@@ -53,27 +51,27 @@
   .discord-btn {
     background-color: #000;
     color: #FF9000;
-    padding: 12px 24px;
+    padding: 12px 28px;
     text-decoration: none;
     font-weight: 900;
     border-radius: 4px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
+    gap: 12px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 2px solid #000;
-    white-space: nowrap; /* Evita che il testo del bottone vada a capo */
+    white-space: nowrap;
 
     &:hover {
       background-color: #ffffff;
       color: #000;
       border-color: #ffffff;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     }
 
     i {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
     }
   }
 }
@@ -82,13 +80,17 @@
 @media (max-width: 992px) {
   .footer-container {
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     text-align: center;
-    padding: 30px 20px;
+    padding: 40px 20px;
   }
   
   .footer-section {
     max-width: 100%;
     align-items: center;
+
+    .disclaimer {
+      text-align: center;
+    }
   }
 }

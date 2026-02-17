@@ -1,6 +1,14 @@
 # Naruto ultimate ninja storm Wiki
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
 
+Questo progetto è un fan made project dedicato alla creazione di una piattaforma wiki moderna, intuitiva e completamente personalizzata.
+
+L’applicazione è sviluppata utilizzando Angular 21, sfruttando le sue funzionalità più recenti per garantire performance elevate, modularità e una struttura scalabile. L’interfaccia utente è realizzata con PrimeNG 21, una libreria completa di componenti UI che permette di offrire un’esperienza grafica elegante, reattiva e professionale.
+
+L’obiettivo del progetto è costruire una wiki dinamica e facilmente navigabile, con un design moderno e una struttura organizzata, pensata per gestire contenuti in modo chiaro ed efficiente.
+
+Essendo un progetto fan made, nasce dalla passione per la tecnologia e dalla volontà di sperimentare le potenzialità delle ultime versioni di Angular e PrimeNG, unendo sviluppo frontend avanzato e cura dell’esperienza utente.
+
 ## Development server
 
 To start a local development server, run:

@@ -1,6 +1,13 @@
-# NarutoWiki
-
+# Naruto ultimate ninja storm Wiki
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+
+This project is a fan-made project focused on creating a modern, intuitive, and fully customizable wiki platform.
+
+The application is developed using Angular 21, leveraging its latest features to ensure high performance, modularity, and a scalable architecture. The user interface is built with PrimeNG 21, a comprehensive UI component library that provides an elegant, responsive, and professional user experience.
+
+The goal of the project is to build a dynamic and easy-to-navigate wiki with a modern design and a well-structured architecture, designed to manage content in a clear and efficient way.
+
+As a fan-made project, it was born from a passion for technology and the desire to experiment with the full potential of the latest versions of Angular and PrimeNG, combining advanced frontend development with a strong focus on user experience.
 
 ## Development server
 

@@ -1,0 +1,154 @@
+.storm-about-new {
+  position: relative;
+  min-height: 100vh;
+  background-color: #171616; // Nero più profondo per far risaltare il background
+  color: #fff;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  padding: 80px 20px;
+  overflow-x: hidden;
+
+  // BACKGROUND WEAPONS FISSO - Ottimizzato
+// BACKGROUND WEAPONS - Posizionato in basso, dietro e trasparente
+  .fixed-weapons-bg {
+    position: fixed;
+    bottom: 0;         // Attaccato al fondo della pagina
+    left: 0;
+    width: 100vw;
+    height: 450px;     // Altezza limitata per restare solo in basso
+    
+    // CORREZIONE NOME FILE: weapons.png (plurale)
+    background: url('/weapon.png') no-repeat bottom center; 
+    background-size: contain; 
+    
+    opacity: 0.12;     // Trasparenza delicata (0.1 = 10%)
+    z-index: 0;        // Dietro a tutti i contenuti (che hanno z-index 1 o 2)
+    pointer-events: none;
+
+    // SFUMATURA: Fa sì che l'immagine non si tagli di colpo in alto
+    mask-image: linear-gradient(to top, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+  }
+
+  .about-header {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-bottom: 80px;
+
+    .subtitle { color: #FF9000; font-weight: 900; letter-spacing: 4px; font-size: 0.85rem; text-transform: uppercase; }
+    h1 { font-size: 4rem; font-weight: 900; margin: 10px 0; letter-spacing: -2px; text-transform: uppercase; }
+    .header-line { 
+      height: 6px; 
+      width: 120px; 
+      background: #FF9000; 
+      margin: 0 auto;
+      clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); // Linea a trapezio stile Storm
+    }
+  }
+
+  .about-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .identity-section {
+    .section-label {
+      font-weight: 900;
+      font-size: 0.9rem;
+      color: rgba(255, 144, 0, 0.6); // Arancione soffuso invece del bianco
+      margin-bottom: 25px;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      border-left: 3px solid #FF9000;
+      padding-left: 15px;
+    }
+  }
+
+  // STILE CARD PROFILO (Ade, Darko, Playco)
+  .profile-card {
+    background: rgba(15, 15, 15, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 45px;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+    &:hover {
+      border-color: #FF9000;
+      transform: translateY(-8px);
+      background: rgba(25, 25, 25, 0.95);
+      box-shadow: 0 15px 40px rgba(255, 144, 0, 0.15); // Glow arancione al passaggio
+    }
+
+    .profile-header {
+      margin-bottom: 25px;
+      i { color: #FF9000; font-size: 2rem; margin-bottom: 12px; display: block; }
+      h2 { font-size: 2.2rem; font-weight: 900; margin: 0; text-transform: uppercase; letter-spacing: -1px; }
+      .role { 
+        color: #FF9000; 
+        font-weight: 800; 
+        font-size: 0.9rem; 
+        text-transform: uppercase; 
+        letter-spacing: 1px;
+        background: rgba(255, 144, 0, 0.1);
+        padding: 2px 8px;
+        border-radius: 3px;
+      }
+    }
+
+    .profile-body {
+      p { 
+        color: #ddd; 
+        line-height: 1.8; 
+        font-style: italic; 
+        font-size: 1.15rem; 
+        border-left: 2px solid rgba(255, 144, 0, 0.3);
+        padding-left: 20px;
+      }
+    }
+  }
+
+  // STILE CARD ULTIMATE NINJA
+  .partner-card {
+    background: linear-gradient(90deg, rgba(255, 144, 0, 0.15) 0%, rgba(0, 0, 0, 0.8) 100%);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 144, 0, 0.3);
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+
+    &::after { // Effetto raggio di luce
+      content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(45deg, transparent, rgba(255,144,0,0.05), transparent);
+    }
+
+    .partner-logo i { 
+      font-size: 5rem; 
+      color: #fff; 
+      filter: drop-shadow(0 0 15px #FF9000);
+    }
+    .partner-text {
+      h2 { font-weight: 900; font-size: 2.2rem; margin-bottom: 15px; color: #FF9000; }
+      p { color: #ccc; line-height: 1.7; font-size: 1.1rem; strong { color: #fff; } }
+    }
+  }
+}
+
+// Ottimizzazione Mobile
+@media (max-width: 992px) {
+  .about-header h1 { font-size: 3rem; }
+  .partner-card { flex-direction: column; text-align: center; padding: 40px 25px; }
+  .profile-card { padding: 30px; }
+  .fixed-weapons-bg { opacity: 0.08; } // Ancora più leggero su mobile
+}

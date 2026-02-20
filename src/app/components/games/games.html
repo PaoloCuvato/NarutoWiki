@@ -1,1 +1,54 @@
-<p>games works!</p>
+<div class="games-wrapper">
+  @if (!activeGameId) {
+    <header class="games-header">
+      <span class="subtitle">NINJA RECORDS</span>
+      <h1>THE STORM SERIES</h1>
+      <div class="header-line"></div>
+    </header>
+
+    <div class="games-grid">
+      @for (game of stormGames; track game.id) {
+        <div class="ninja-card-anchor" (click)="selectGame(game.id)">
+          
+          <p-card class="storm-card">
+            <ng-template pTemplate="content">
+              <div class="logo-area">
+                <img [src]="game.logo" [alt]="game.name" class="game-logo">
+              </div>
+
+              <h2 class="game-title">{{ game.name }}</h2>
+
+              <div class="ninja-divider"></div>
+
+              <div class="details-section">
+                <span>VIEW DETAILS</span>
+                <i class="pi pi-chevron-right"></i>
+              </div>
+            </ng-template>
+          </p-card>
+
+        </div>
+      }
+    </div>
+  } @else {
+    <div class="active-game-view">
+      <div class="nav-bar">
+        <p-button 
+          label="BACK TO GAMES" 
+          icon="pi pi-arrow-left" 
+          [text]="true"
+          styleClass="p-btn-back"
+          (click)="resetSelection()">
+        </p-button>
+      </div>
+
+      <div class="game-component-render">
+        @if (activeGameId === 'storm1') { <app-storm1></app-storm1> }
+        @else if (activeGameId === 'storm2') { <app-storm2></app-storm2> }
+        @else if (activeGameId === 'storm3') { <app-storm3></app-storm3> }
+        @else if (activeGameId === 'storm4') { <app-storm4></app-storm4> }
+        @else if (activeGameId === 'stormconn') { <app-storm-cons></app-storm-cons> }
+      </div>
+    </div>
+  }
+</div>

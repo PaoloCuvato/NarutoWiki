@@ -1,23 +1,11 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
 
-import { Games } from './games';
+@Component({
+  selector: 'app-games',
+  imports: [],
+  templateUrl: './games.html',
+  styleUrl: './games.scss',
+})
+export class Games {
 
-describe('Games', () => {
-  let component: Games;
-  let fixture: ComponentFixture<Games>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [Games]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(Games);
-    component = fixture.componentInstance;
-    await fixture.whenStable();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+}

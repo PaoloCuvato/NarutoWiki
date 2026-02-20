@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router';
 import { appConfig } from './app.config';
 import { Homepage } from './components/homepage/homepage';
-import { Games } from './components/games/games';
+
 import { Community } from './components/community/community';
 import { Resources } from './components/resources/resources';
 import { Faq } from './components/faq/faq';
 import { About } from './components/about/about';
+import { Games } from './components/games/games';
 
 export const routes: Routes = [
 { path: 'home', component: Homepage },

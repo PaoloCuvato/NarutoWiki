@@ -1,0 +1,209 @@
+// TAVOLO COLORI DEFINITIVI STILE STORMWIKI
+$card-background: rgba(10, 10, 10, 0.82); // Nero opaco trasparente per mostrare Hiruzen sotto!
+$inner-background: #0a0a0a;  // Grigio scurissimo per contrasto interno tabelle
+$ninja-orange: #ff9000;      // Arancione dei titoli e dettagli della home
+$ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
+
+.leaderboard-wrapper {
+  // 1. VIA IL BACKGROUND-COLOR NERO DI PRIMA! METTIAMO HIRUZEN CON OPACITÀ BILANCIATA
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), 
+              url('/hiruzen.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+
+  .nav-bar {
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+  }
+
+  .leaderboard-header {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin: 5px 0;
+      letter-spacing: 1px;
+    }
+    .subtitle {
+      color: $ninja-orange;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+    }
+    .header-line {
+      width: 60px;
+      height: 4px;
+      background: $ninja-orange;
+      border-radius: 2px;
+      margin-top: 5px;
+    }
+  }
+}
+
+// CONTENITORE CON EFFETTO SFOCATURA SULLO SFONDO (BACKDROP BLUR)
+.table-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 2px solid $ninja-orange;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(255, 144, 0, 0.2);
+  backdrop-filter: blur(8px); // Sfoca leggermente la faccia di Hiruzen dietro la tabella per una leggibilità da pro!
+}
+
+::ng-deep .p-datatable-storm {
+  .p-datatable-thead > tr > th {
+    background: rgba(17, 17, 17, 0.95) !important; // Sfondo testata semi-trasparente scuro
+    color: $ninja-orange !important;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 18px 20px;
+    border-bottom: 2px solid $ninja-orange !important;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 0.95rem;
+
+    // Icone di ordinamento PrimeNG
+    .p-sortable-column-icon {
+      color: #666 !important;
+    }
+    &:hover {
+      background: #161616 !important;
+      color: #ffffff !important;
+      .p-sortable-column-icon { color: $ninja-orange !important; }
+    }
+    &.p-highlight {
+      color: #ffffff !important;
+      .p-sortable-column-icon { color: $ninja-orange !important; }
+    }
+  }
+
+  .p-datatable-tbody > tr {
+    background: $card-background !important; // 2. REALE TRASPARENZA SULLE RIGHE DELLA TABELLA
+    color: #ffffff !important;
+    transition: all 0.2s ease;
+
+    & > td {
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; // Linea di divisione sottilissima
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    // EFFETTO HOVER COMPATTO BLU COERENTE CON IL RENDERING
+    &:hover {
+      background: rgba(0, 140, 255, 0.15) !important;
+      cursor: pointer;
+      & > td {
+        color: #ffffff;
+        border-bottom-color: $ninja-blue !important;
+      }
+      .score-cell { color: $ninja-blue; }
+    }
+  }
+
+  // Paginatore PrimeNG adattato al tema scuro trasparente
+  .p-paginator {
+    background: rgba(15, 15, 15, 0.9) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 10px !important;
+
+    .p-paginator-page, .p-paginator-next, .p-paginator-last, .p-paginator-first, .p-paginator-prev {
+      color: #888 !important;
+      min-width: 2.5rem !important;
+      height: 2.5rem !important;
+      border-radius: 6px;
+      
+      &:hover {
+        background: rgba(255, 144, 0, 0.1) !important;
+        color: $ninja-orange !important;
+      }
+      &.p-highlight {
+        background: $ninja-orange !important;
+        color: #000000 !important;
+        font-weight: 800;
+      }
+    }
+  }
+}
+
+// UTILITY CELL STYLE
+.text-center { text-align: center; }
+.text-end { text-align: right; }
+
+.username-cell { font-weight: 700; font-size: 1.05rem; }
+.level-cell { font-weight: bold; color: #ccc; }
+.score-cell { font-weight: 800; color: $ninja-orange; font-size: 1.15rem; transition: color 0.2s; }
+
+.stats-cell {
+  font-weight: bold;
+  font-size: 0.95rem;
+  .wins { color: #2ecc71; }
+  .divider { color: #444; margin: 0 4px; }
+  .losses { color: #e74c3c; }
+}
+
+// CLAN LABELS
+.clan-tag {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  background: #161616;
+  border: 1px solid #333;
+  color: #aaa;
+
+  &.uzumaki { color: #ff4757; border-color: rgba(255, 71, 87, 0.4); background: rgba(255, 71, 87, 0.05); }
+  &.uchiha { color: #5352ed; border-color: rgba(83, 82, 237, 0.4); background: rgba(83, 82, 237, 0.05); }
+  &.hatake { color: #2ed573; border-color: rgba(46, 213, 115, 0.4); background: rgba(46, 213, 115, 0.05); }
+}
+
+// BADGE DEI COLPETTI DI PODIO (1°, 2°, 3°)
+.rank-badge {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 6px;
+  background: #1e1e1e;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #888;
+
+  &.badge-1 { background: #f1c40f; color: #000; box-shadow: 0 0 10px rgba(241, 196, 15, 0.3); }
+  &.badge-2 { background: #95a5a6; color: #000; box-shadow: 0 0 10px rgba(149, 165, 166, 0.3); }
+  &.badge-3 { background: #e67e22; color: #fff; box-shadow: 0 0 10px rgba(230, 126, 34, 0.3); }
+}
+
+// --- SOVRASCRITTURA PULSANTE BACK (NO SFONDO BIANCO) ---
+::ng-deep .p-btn-back {
+  background: transparent !important;
+  border: none !important;
+  color: $ninja-orange !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  padding: 0 !important;
+  box-shadow: none !important;
+
+  .p-button-icon {
+    color: $ninja-orange !important;
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin-right: 8px;
+  }
+
+  &:hover {
+    background: transparent !important;
+    color: $ninja-blue !important;
+    .p-button-icon { color: $ninja-blue !important; }
+  }
+}

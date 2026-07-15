@@ -7,10 +7,12 @@ import { Resources } from './components/resources/resources';
 import { Faq } from './components/faq/faq';
 import { About } from './components/about/about';
 import { Games } from './components/games/games';
+import { Matchmaking } from './components/matchmaking/matchmaking';
 
 export const routes: Routes = [
 { path: 'home', component: Homepage },
 { path: 'games', component: Games },
+{ path: 'matchmaking', component: Matchmaking },
 { path: 'community', component: Community },
 { path: 'resources', component: Resources },
 { path: 'faq', component: Faq },

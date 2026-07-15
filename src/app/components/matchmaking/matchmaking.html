@@ -1,0 +1,49 @@
+<div class="viewport-wrapper">
+  <div class="lobby-container">
+    
+    @for (lobby of lobbies; track lobby.PostId) {
+      
+      <p-card 
+        (click)="goToDiscord(lobby.PostId)" 
+        class="clickable-card"
+        [style]="{ width: '380px', 'background-color': 'rgba(15, 15, 15, 0.85)', 'color': '#ffffff', 'border': '1px solid #333' }">
+        
+        <!-- Header con il logo del gioco e lo stato ACTIVE -->
+        <ng-template pTemplate="header">
+          <div class="card-header-bar">
+            <!-- Recupera dinamicamente il logo dalla cartella public/stormLogos -->
+            <img [src]="getGameLogo(lobby.game)" [alt]="lobby.game" class="game-logo" />
+            <p-tag [value]="lobby.Status" severity="success"></p-tag>
+          </div>
+        </ng-template>
+
+        <!-- Corpo della Card -->
+        <div class="lobby-details">
+          <h3 class="host-name">Host: {{ lobby.playerName }}</h3>
+          <p class="lobby-subtitle">{{ lobby.lobbyType }} • {{ lobby.regionTarget }}</p>
+          
+          <hr class="divider">
+
+          <div class="stats-grid">
+            <div><strong>Platform:</strong> {{ lobby.platform }}</div>
+            <div><strong>Conn:</strong> {{ lobby.connetionType }}</div>
+            <div><strong>Target:</strong> {{ lobby.skillTarget }}</div>
+            <div><strong>FPS:</strong> {{ lobby.fps }}fps</div>
+          </div>
+        </div>
+
+        <!-- Footer con il tempo di creazione -->
+        <ng-template pTemplate="footer">
+          <span class="creation-date">Created: {{ lobby.creationTime | date:'shortTime' }}</span>
+        </ng-template>
+
+      </p-card>
+
+    } @empty {
+      <div class="no-lobbies">
+        <h2>Nessuna lobby attiva al momento</h2>
+      </div>
+    }
+
+  </div>
+</div>

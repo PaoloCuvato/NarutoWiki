@@ -1,4 +1,4 @@
-/* Reset per assicurarsi che nessun elemento esterno crei scroll */
+/* Reset per bloccare categoricamente lo scroll */
 :host {
   display: block;
   width: 100%;
@@ -9,21 +9,17 @@
 .viewport-wrapper {
   width: 100vw;
   height: 100vh;
-  max-height: 100vh; /* Forza il blocco dell'altezza */
+  max-height: 100vh;
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Include padding e bordi nel calcolo dell'altezza */
+  box-sizing: border-box;
   
-  /* Sfondo con pain.jpg */
   background-image: url('/pain.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
-  /* Rimuove qualsiasi barra di scorrimento, orizzontale o verticale */
   overflow: hidden !important; 
   
-  /* Centra perfettamente il contenuto */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,82 +29,130 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 30px;
   flex-wrap: wrap;
-  max-width: 90vw;
+  max-width: 95vw;
   max-height: 90vh;
-  overflow: hidden; /* Impedisce alle card di sbordare */
 }
 
-/* Interazione con le card */
-.clickable-card {
-  cursor: pointer;
+/* --- STILE PRIME NG CARD (NARUTO EDITION) --- */
+.naruto-card {
   display: block;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 8px;
-  overflow: hidden;
-  backdrop-filter: blur(5px);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+
+  &:hover {
+    transform: translateY(-8px) scale(1.02);
+    /* Glow Arancione Chakra */
+    box-shadow: 0 12px 30px rgba(255, 114, 0, 0.45);
+  }
+
+  // Rimuove eventuali padding interni predefiniti di PrimeNG che rompono il layout arrotondato
+  ::ng-deep .p-card {
+    border-radius: 20px !important;
+  }
 }
 
-.clickable-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(222, 93, 53, 0.4); 
-}
-
+/* Header interno */
 .card-header-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 15px 5px 15px;
+  padding: 20px 20px 5px 20px;
 }
 
 .game-logo {
-  height: 45px;
+  height: 40px;
   width: auto;
   object-fit: contain;
 }
 
+/* Dettagli interni */
 .lobby-details {
-  padding: 10px 0;
-}
+  padding: 0 5px;
 
-.host-name {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #fff;
-}
+  .host-section {
+    display: flex;
+    flex-direction: column;
 
-.lobby-subtitle {
-  margin: 4px 0 0 0;
-  font-size: 0.85rem;
-  color: #bbb;
+    .host-label {
+      font-size: 0.7rem;
+      color: #ff7200; /* Arancione Naruto */
+      font-weight: bold;
+      letter-spacing: 1.5px;
+    }
+
+    .host-name {
+      margin: 0;
+      font-size: 1.4rem;
+      color: #ffffff;
+    }
+  }
+
+  .lobby-subtitle {
+    margin: 4px 0 0 0;
+    font-size: 0.85rem;
+    color: #bbb;
+  }
 }
 
 .divider {
   border: 0;
   height: 1px;
-  background: rgba(255, 255, 255, 0.15);
-  margin: 12px 0;
+  background: rgba(255, 114, 0, 0.2);
+  margin: 15px 0;
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12px;
+  border-radius: 12px;
   font-size: 0.9rem;
   color: #eee;
 }
 
-.creation-date {
-  font-size: 0.75rem;
-  color: #888;
+/* Footer e Pulsante PrimeNG Discord */
+.card-footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
 }
 
+/* Personalizzazione specifica per il p-button di Discord */
+::ng-deep .p-button-discord {
+  background-color: #5865F2 !important; /* Blurple Discord */
+  border: none !important;
+  font-weight: bold !important;
+  transition: background-color 0.2s ease, transform 0.1s ease !important;
+  box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
+
+  &:hover {
+    background-color: #4752c4 !important; /* Colore più scuro */
+  }
+
+  &:active {
+    transform: scale(0.98) !important;
+  }
+}
+
+.creation-date {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+/* Schermata Errore senza Lobby */
 .no-lobbies {
   color: white;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.85);
   padding: 20px 40px;
-  border-radius: 10px;
-  border: 1px solid #222;
+  border-radius: 15px;
+  border: 2px solid #ff7200;
   text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }

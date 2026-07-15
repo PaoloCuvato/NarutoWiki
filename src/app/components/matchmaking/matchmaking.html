@@ -4,14 +4,19 @@
     @for (lobby of lobbies; track lobby.PostId) {
       
       <p-card 
-        (click)="goToDiscord(lobby.PostId)" 
-        class="clickable-card"
-        [style]="{ width: '380px', 'background-color': 'rgba(15, 15, 15, 0.85)', 'color': '#ffffff', 'border': '1px solid #333' }">
+        class="naruto-card"
+        [style]="{ 
+          'width': '380px', 
+          'background-color': 'rgba(10, 10, 10, 0.85)', 
+          'color': '#ffffff', 
+          'border': '2px solid #ff7200', 
+          'border-radius': '20px',
+          'overflow': 'hidden'
+        }">
         
         <!-- Header con il logo del gioco e lo stato ACTIVE -->
         <ng-template pTemplate="header">
           <div class="card-header-bar">
-            <!-- Recupera dinamicamente il logo dalla cartella public/stormLogos -->
             <img [src]="getGameLogo(lobby.game)" [alt]="lobby.game" class="game-logo" />
             <p-tag [value]="lobby.Status" severity="success"></p-tag>
           </div>
@@ -19,7 +24,10 @@
 
         <!-- Corpo della Card -->
         <div class="lobby-details">
-          <h3 class="host-name">Host: {{ lobby.playerName }}</h3>
+          <div class="host-section">
+            <span class="host-label">HOST</span>
+            <h3 class="host-name">{{ lobby.playerName }}</h3>
+          </div>
           <p class="lobby-subtitle">{{ lobby.lobbyType }} • {{ lobby.regionTarget }}</p>
           
           <hr class="divider">
@@ -30,11 +38,21 @@
             <div><strong>Target:</strong> {{ lobby.skillTarget }}</div>
             <div><strong>FPS:</strong> {{ lobby.fps }}fps</div>
           </div>
+           <br class="divider">
         </div>
 
-        <!-- Footer con il tempo di creazione -->
+        <!-- Footer con Bottone PrimeNG e Data -->
         <ng-template pTemplate="footer">
-          <span class="creation-date">Created: {{ lobby.creationTime | date:'shortTime' }}</span>
+          <div class="card-footer-content">
+            <p-button 
+              label="JOIN LOBBY" 
+              icon="pi pi-discord" 
+              styleClass="p-button-discord"
+              [style]="{ 'width': '100%', 'border-radius': '12px' }"
+              (onClick)="goToDiscord(lobby.PostId)">
+            </p-button>
+            <span class="creation-date">Created: {{ lobby.creationTime | date:'shortTime' }}</span>
+          </div>
         </ng-template>
 
       </p-card>

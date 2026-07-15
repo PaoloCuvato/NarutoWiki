@@ -1,0 +1,63 @@
+<div class="leaderboard-wrapper">
+  <div class="leaderboard-header">
+    <span class="subtitle">| SHINOBI RANKINGS</span>
+    <h1>Leaderboard</h1>
+    <div class="header-line"></div>
+  </div>
+
+  <div class="table-container">
+    <p-table [value]="ninjaList" 
+             [paginator]="true" 
+             [rows]="10" 
+             [responsiveLayout]="'scroll'"
+             styleClass="p-datatable-storm">
+      
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="width: 8%" class="text-center">Rank</th>
+          <th pSortableColumn="username" style="width: 22%">Username <p-sortIcon field="username"></p-sortIcon></th>
+          <th pSortableColumn="clan" style="width: 15%">Clan <p-sortIcon field="clan"></p-sortIcon></th>
+          
+          <th style="width: 25%">Title</th> 
+          
+          <th pSortableColumn="level" style="width: 10%" class="text-center">Level <p-sortIcon field="level"></p-sortIcon></th>
+          <th style="width: 10%" class="text-center">W / L</th>
+          <th pSortableColumn="score" style="width: 10%" class="text-end">Score <p-sortIcon field="score"></p-sortIcon></th>
+        </tr>
+      </ng-template>
+      
+      <ng-template pTemplate="body" let-ninja let-rowIndex="rowIndex">
+        <tr>
+          <td class="text-center">
+            <span class="rank-badge badge-{{rowIndex + 1}}">
+              {{rowIndex + 1}}
+            </span>
+          </td>
+          <td class="username-cell">{{ninja.username}}</td>
+          <td>
+            <span class="clan-tag" [ngClass]="ninja.clan.toLowerCase()">
+              {{ninja.clan}}
+            </span>
+          </td>
+
+          <td>
+            <span class="ninja-title-tag">
+              {{ getNinjaTitle(ninja.score) }}
+            </span>
+          </td>
+
+          <td class="text-center level-cell">{{ninja.level}}</td>
+          <td class="text-center stats-cell">
+            <span class="wins">{{ninja.wins}}</span>
+            <span class="divider">/</span>
+            <span class="losses">{{ninja.losses}}</span>
+          </td>
+          <td class="text-end score-cell">
+            {{ninja.score | number}}
+          </td>
+        </tr>
+      </ng-template>
+
+    </p-table>
+  </div>
+</div>

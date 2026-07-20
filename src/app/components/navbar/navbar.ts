@@ -35,7 +35,7 @@ export class Navbar implements OnInit {
   userAvatar: string = 'https://cdn.discordapp.com/embed/avatars/0.png';
 
   // Discord OAuth2 Configuration
-  private readonly CLIENT_ID = 'YOUR_DISCORD_CLIENT_ID';
+  private readonly CLIENT_ID = '1310173685268746262';
   private readonly REDIRECT_URI = encodeURIComponent('http://localhost:4200/callback');
 
   ngOnInit() {

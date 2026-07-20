@@ -11,30 +11,100 @@
     <a routerLink="/games" routerLinkActive="active-link" class="nav-item">
       <span class="dot"></span> GAMES
     </a>
-        <a routerLink="/matchmaking" routerLinkActive="active-link" class="nav-item">
+    <a routerLink="/matchmaking" routerLinkActive="active-link" class="nav-item">
       <span class="dot"></span> MATCHMAKING
     </a>
-     <a routerLink="/community" routerLinkActive="active-link" class="nav-item">
+    <a routerLink="/community" routerLinkActive="active-link" class="nav-item">
       <span class="dot"></span> COMMUNITY
     </a>
-        <a routerLink="/leaderboard" routerLinkActive="active-link" class="nav-item">
+    <a routerLink="/leaderboard" routerLinkActive="active-link" class="nav-item">
       <span class="dot"></span> LEADERBOARD
     </a>
-     <a routerLink="/resources" routerLinkActive="active-link" class="nav-item">
+    <a routerLink="/resources" routerLinkActive="active-link" class="nav-item">
       <span class="dot"></span> RESOURCES
     </a>
-     <a routerLink="/faq" routerLinkActive="active-link" class="nav-item">
+    <a routerLink="/faq" routerLinkActive="active-link" class="nav-item">
       <span class="dot"></span> FAQ
     </a>
-     <a routerLink="/about" routerLinkActive="active-link" class="nav-item">
+    <a routerLink="/about" routerLinkActive="active-link" class="nav-item">
       <span class="dot"></span> ABOUT US
     </a>
   </div>
+
+  <!-- Structure and original button with dropdown -->
   <div class="action-section">
     <button class="storm-menu-btn" (click)="menu.toggle($event)">
-      <i class="pi pi-bars"></i>
-      <span class="btn-text">MENU</span>
+      @if (isLoggedIn) {
+        <img [src]="userAvatar" class="discord-avatar" alt="Avatar" />
+        <span class="btn-text">{{ username }}</span>
+      } @else {
+        <i class="pi pi-bars"></i>
+        <span class="btn-text">MENU</span>
+      }
     </button>
+    
     <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
   </div>
 </nav>
+
+<!-- Disclaimer Modal with Custom Shield Banner -->
+<p-dialog 
+  header="DISCORD AUTHENTICATION & PRIVACY NOTICE" 
+  [(visible)]="displayModal" 
+  [modal]="true" 
+  [style]="{ width: '90vw', 'max-width': '520px' }"
+  [draggable]="false" 
+  [resizable]="false"
+  styleClass="discord-dialog">
+
+  <div class="dialog-content">
+    
+    <!-- Custom Discord Banner con Scudino e Testo -->
+    <div class="custom-discord-banner">
+      <i class="pi pi-shield banner-icon"></i>
+      <div class="banner-body">
+        <strong class="banner-title">READ WITH ATTENTION</strong>
+        <p class="banner-desc">
+          To use Matchmaking and community features, sign in with Discord OAuth2. 
+          We prioritize your account security.
+        </p>
+      </div>
+    </div>
+
+    <!-- Privacy Details -->
+    <div class="privacy-details">
+      <ul>
+        <li>
+          <i class="pi pi-check-circle check-icon"></i>
+          <span><strong>No Passwords Stored:</strong> Managed safely by Discord OAuth2.</span>
+        </li>
+        <li>
+          <i class="pi pi-check-circle check-icon"></i>
+          <span><strong>Public Data Only:</strong> We store your <code>Discord ID</code>, <code>Username</code>, and <code>Avatar</code>.</span>
+        </li>
+        <li>
+          <i class="pi pi-check-circle check-icon"></i>
+          <span><strong>Minimal Access:</strong> Only requests <code>identify</code> scope.</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <ng-template pTemplate="footer">
+    <div class="dialog-footer">
+      <p-button 
+        label="Cancel" 
+        icon="pi pi-times" 
+        styleClass="p-button-text cancel-btn" 
+        (click)="displayModal = false">
+      </p-button>
+      <p-button 
+        label="Proceed with Discord" 
+        icon="pi pi-discord" 
+        styleClass="p-button-discord" 
+        (click)="redirectToDiscord()">
+      </p-button>
+    </div>
+  </ng-template>
+</p-dialog>

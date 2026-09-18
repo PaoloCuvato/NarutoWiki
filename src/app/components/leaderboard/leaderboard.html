@@ -1,15 +1,26 @@
 <div class="leaderboard-wrapper">
-  <!-- NUVOLE DECORATIVE DORATE -->
-  <img src="xct_cld2_I1.png" class="ninja-cloud top-left" alt="cloud decoration">
-  <img src="xct_cld2_I1.png" class="ninja-cloud top-right" alt="cloud decoration">
+  
+  <!-- CONTENITORE NUVOLE DI SFONDO (Sempre dietro a tutto) -->
+  <div class="clouds-container">
+    <!-- Gruppo Sinistra (3 nuvole a diverse altezze che scorrono) -->
+    <img src="cloud.png" class="cloud-item cloud-left-1" alt="cloud">
+    <img src="cloud.png" class="cloud-item cloud-left-2" alt="cloud">
+    <img src="cloud.png" class="cloud-item cloud-left-3" alt="cloud">
+    
+    <!-- Gruppo Destra (3 nuvole a diverse altezze che scorrono dall'altro lato) -->
+    <img src="cloud.png" class="cloud-item cloud-right-1" alt="cloud">
+    <img src="cloud.png" class="cloud-item cloud-right-2" alt="cloud">
+    <img src="cloud.png" class="cloud-item cloud-right-3" alt="cloud">
+  </div>
 
-  <div class="leaderboard-header">
+
+  <div class="leaderboard-header" style="position: relative; z-index: 2;">
     <span class="subtitle">| SHINOBI RANKINGS</span>
     <h1>Leaderboard</h1>
     <div class="header-line"></div>
   </div>
 
-  <div class="table-container">
+  <div class="table-container" style="position: relative; z-index: 2;">
     <p-table [value]="ninjaList" 
              [paginator]="true" 
              [rows]="10" 

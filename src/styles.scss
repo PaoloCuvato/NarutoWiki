@@ -3,19 +3,47 @@
 @import "primeicons/primeicons.css";
 /* Stili base di PrimeNG */
 
-/* Il resto del tuo codice (colori arancione/blu, ecc.) */
-
 /* Variabili Colore Ninja */
 $naruto-orange: #FF9000;
 $rasengan-blue: #00A3FF;
 $manga-black: #1A1A1A;
 $pure-white: #FFFFFF;
 
+/* --- RESET GLOBALE E GESTIONE SCROLLBAR CUSTOM --- */
+html {
+    overflow-x: hidden; /* Blocca totalmente la scrollbar orizzontale in basso */
+    
+    /* Scrollbar custom per Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #FF9000 #1A1A1A;
+}
+
 body {
-    margin: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     background-color: $pure-white;
     color: $manga-black;
     font-family: 'Inter', -apple-system, sans-serif;
+    overflow-x: hidden;
+
+    /* Scrollbar custom verticale per Chrome, Safari, Edge e Opera */
+    &::-webkit-scrollbar {
+        width: 10px; /* Spessore della barra */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #1A1A1A; /* Traccia scura in stile manga */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $naruto-orange; /* Colore arancione Naruto per la barretta */
+        border-radius: 5px;
+        border: 2px solid #1A1A1A; /* Crea un effetto distacco pulito */
+
+        &:hover {
+            background: darken($naruto-orange, 10%); /* Più scuro al passaggio del mouse */
+        }
+    }
 }
 
 /* --- CLASSI PERSONALIZZATE PER I COMPONENTI --- */

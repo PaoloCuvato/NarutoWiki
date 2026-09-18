@@ -1,11 +1,15 @@
-import { Component, OnInit, inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { TieredMenuModule } from 'primeng/tieredmenu';
 import { ButtonModule } from 'primeng/button';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, MessageService } from 'primeng/api';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { DialogModule } from 'primeng/dialog';
 import { MessageModule } from 'primeng/message';
+import { ToastModule } from 'primeng/toast';
+import { AvatarModule } from 'primeng/avatar'; 
+import { Auth } from '../../service/auth'; // Importa il service Auth
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -17,14 +21,20 @@ import { MessageModule } from 'primeng/message';
     RouterLinkActive,
     DialogModule,  
     MessageModule,  
+    ToastModule,
+    AvatarModule      
   ],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
+  providers: [MessageService]
 })
-export class Navbar implements OnInit {
+export class Navbar implements OnInit, OnDestroy {
 
-  // Iniezione di PLATFORM_ID per gestire l'SSR (Server-Side Rendering)
   private platformId = inject(PLATFORM_ID);
+  private messageService = inject(MessageService);
+  private authService = inject(Auth);
+
+  private userSub!: Subscription;
 
   items: MenuItem[] | undefined;
 
@@ -32,26 +42,32 @@ export class Navbar implements OnInit {
   displayModal: boolean = false;
   isLoggedIn: boolean = false;
   username: string = 'Ninja User';
-  userAvatar: string = 'https://cdn.discordapp.com/embed/avatars/0.png';
+  userAvatar: string = ''; 
 
   // Discord OAuth2 Configuration
   private readonly CLIENT_ID = '1310173685268746262';
   private readonly REDIRECT_URI = encodeURIComponent('http://localhost:4200/callback');
 
   ngOnInit() {
-    // Esegui la lettura da localStorage e il setup solo lato BROWSER
-    if (isPlatformBrowser(this.platformId)) {
-      const savedUser = localStorage.getItem('discord_user');
-      if (savedUser) {
-        const user = JSON.parse(savedUser);
+    // Sottoscrizione reattiva al service Auth per catturare il login in tempo reale
+    this.userSub = this.authService.user$.subscribe(user => {
+      if (user) {
         this.isLoggedIn = true;
         this.username = user.username;
         this.userAvatar = user.avatarUrl;
+      } else {
+        this.isLoggedIn = false;
+        this.username = 'Ninja User';
+        this.userAvatar = '';
       }
-    }
+      this.updateMenu();
+    });
+  }
 
-    // Inizializza il menu a tendina
-    this.updateMenu();
+  ngOnDestroy() {
+    if (this.userSub) {
+      this.userSub.unsubscribe();
+    }
   }
 
   updateMenu() {
@@ -81,10 +97,14 @@ export class Navbar implements OnInit {
         {
           label: 'Login via Discord',
           icon: 'pi pi-discord',
-          command: () => { this.showLoginDialog(); }
+          command: () => { this.openLoginModal(); }
         }
       ];
     }
+  }
+
+  openLoginModal() {
+    this.displayModal = true;
   }
 
   showLoginDialog() {
@@ -99,12 +119,32 @@ export class Navbar implements OnInit {
     }
   }
 
+  triggerSuccessfulLogin(username: string, avatarUrl: string) {
+    // Aggiorna tramite il service auth, che a sua volta emetterà il nuovo stato via Observable
+    this.authService.setLoginData({ username, avatarUrl });
+
+    this.messageService.add({
+      severity: 'success',
+      summary: 'Success',
+      detail: 'Successfully logged in via Discord',
+      life: 4000
+    });
+  }
+
   logout() {
     if (isPlatformBrowser(this.platformId)) {
-      localStorage.removeItem('discord_user');
-      this.isLoggedIn = false;
-      this.updateMenu();
-      window.location.reload();
+      this.authService.logout(); // Pulisce tramite il service
+      
+      this.messageService.add({
+        severity: 'info',
+        summary: 'Logged Out',
+        detail: 'You have been logged out successfully',
+        life: 3000
+      });
+
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
     }
   }
 }

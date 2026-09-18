@@ -1,3 +1,11 @@
+// MAPPA DEI COLORI (Palette a tema Storm Chapters)
+$c-orange: #ff9000;         // Storm 1 / Default
+$c-blue: #0077ff;          // Storm 3 / Connections (Blu Elettrico)
+$c-gold: #e5a912;          // Storm 4 (Oro Caldo e Luminoso)
+$c-purple: #5b3674;        // Viola Gastly
+$c-red: #ff4757;            // Rosso 
+$c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
+
 /* --- NAVBAR CONTAINER --- */
 .storm-navbar {
   display: flex;
@@ -5,14 +13,15 @@
   align-items: center;
   padding: 0 40px;
   height: 80px;
-  background-color: #000 !important; /* Pure black */
-  border-bottom: 3px solid #FF9000;  /* Orange accent line */
+  background-color: #000 !important;
+  border-bottom: 3px solid $c-orange; // Default
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: border-color 0.3s ease;
 }
 
-/* --- LOGO & TITLE (STORM WIKI) --- */
+/* --- LOGO & TITLE --- */
 .logo-section {
   display: flex;
   align-items: center;
@@ -20,25 +29,23 @@
 
   img {
     height: 50px;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8)) brightness(0.7) contrast(120%) saturate(80%);
+    transition: filter 0.3s ease;
   }
 
   .navbar-title {
-    /* Reset to force crisp white color */
     background: none !important;
     -webkit-text-fill-color: white !important;
     color: white !important;
-    
     font-size: 1.5rem;
     font-weight: 900;
     letter-spacing: 2px;
     text-transform: uppercase;
-    
-    /* Sage Red accent border */
-    border-left: 4px solid #FF9000 !important; 
+    border-left: 4px solid $c-orange !important; 
     padding-left: 12px;
     line-height: 1;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s ease;
   }
 }
 
@@ -61,67 +68,199 @@
     .dot {
       width: 8px;
       height: 8px;
-      background-color: #00A2FF; /* Chakra Blue */
       border-radius: 50%;
       opacity: 0;
-      box-shadow: 0 0 8px #00A2FF;
       transition: opacity 0.3s;
     }
 
-    &:hover {
-      color: #FF9000;
-      transform: translateY(-2px);
-      .dot { opacity: 1; }
+    /* --- 1° ELEMENTO: ARANCIONE (Storm 1) --- */
+    &:nth-child(1) {
+      .dot { background-color: $c-orange; box-shadow: 0 0 8px $c-orange; }
+      &:hover, &.active-link {
+        color: $c-orange !important;
+        .dot { opacity: 1 !important; }
+      }
     }
-  }
 
-  .active-link {
-    color: #FF9000 !important;
-    .dot { opacity: 1 !important; }
+    /* --- 2° ELEMENTO: BLU ELETTRICO (Storm 3 / Connections) --- */
+    &:nth-child(2) {
+      .dot { background-color: $c-blue; box-shadow: 0 0 8px $c-blue; }
+      &:hover, &.active-link {
+        color: $c-blue !important;
+        .dot { opacity: 1 !important; }
+      }
+    }
+
+    /* --- 3° ELEMENTO: ORO (Storm 4) --- */
+    &:nth-child(3) {
+      .dot { background-color: $c-gold; box-shadow: 0 0 8px $c-gold; }
+      &:hover, &.active-link {
+        color: $c-gold !important;
+        .dot { opacity: 1 !important; }
+      }
+    }
+
+    /* --- 4° ELEMENTO: VIOLA GASTLY --- */
+    &:nth-child(4) {
+      .dot { background-color: $c-purple; box-shadow: 0 0 8px $c-purple; }
+      &:hover, &.active-link {
+        color: $c-purple !important;
+        .dot { opacity: 1 !important; }
+      }
+    }
+
+    /* --- 5° ELEMENTO: ROSSO --- */
+    &:nth-child(5) {
+      .dot { background-color: $c-red; box-shadow: 0 0 8px $c-red; }
+      &:hover, &.active-link {
+        color: $c-red !important;
+        .dot { opacity: 1 !important; }
+      }
+    }
+
+    /* --- 6° ELEMENTO: ACCIAIO / METALLO --- */
+    &:nth-child(6) {
+      .dot { background-color: $c-steel; box-shadow: 0 0 8px $c-steel; }
+      &:hover, &.active-link {
+        color: $c-steel !important;
+        .dot { opacity: 1 !important; }
+      }
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+    }
   }
 }
 
-/* --- MENU BUTTON (ORANGE BORDER -> RED HOVER) --- */
+/* --- CAMBIO TEMA DINAMICO NAVBAR & LOGO FILTERS --- */
+.storm-navbar {
+  // 1. Arancione (Storm 1)
+  &:has(.links-section .nav-item:nth-child(1).active-link) {
+    border-bottom-color: $c-orange;
+    .logo-section {
+      .navbar-title { border-left-color: $c-orange !important; }
+      img { filter: drop-shadow(0 0 5px rgba(255, 144, 0, 0.3)) brightness(0.8) contrast(110%) saturate(100%); }
+    }
+    .storm-menu-btn { border-color: $c-orange; i, .btn-text { color: $c-orange; } }
+  }
+
+  // 2. Blu Elettrico (Storm 3 / Connections)
+  &:has(.links-section .nav-item:nth-child(2).active-link) {
+    border-bottom-color: $c-blue;
+    .logo-section {
+      .navbar-title { border-left-color: $c-blue !important; }
+      img { filter: drop-shadow(0 0 6px rgba(0, 119, 255, 0.4)) brightness(0.85) contrast(120%) hue-rotate(185deg) saturate(140%); }
+    }
+    .storm-menu-btn { border-color: $c-blue; i, .btn-text { color: $c-blue; } }
+  }
+
+  // 3. Oro (Storm 4)
+  &:has(.links-section .nav-item:nth-child(3).active-link) {
+    border-bottom-color: $c-gold;
+    .logo-section {
+      .navbar-title { border-left-color: $c-gold !important; }
+      img { filter: drop-shadow(0 0 6px rgba(229, 169, 18, 0.4)) brightness(0.9) contrast(115%) sepia(80%) hue-rotate(5deg) saturate(180%); }
+    }
+    .storm-menu-btn { border-color: $c-gold; i, .btn-text { color: $c-gold; } }
+  }
+
+  // 4. Viola Gastly
+  &:has(.links-section .nav-item:nth-child(4).active-link) {
+    border-bottom-color: $c-purple;
+    .logo-section {
+      .navbar-title { border-left-color: $c-purple !important; }
+      img { filter: drop-shadow(0 0 5px rgba(91, 54, 116, 0.4)) brightness(0.75) contrast(115%) hue-rotate(240deg); }
+    }
+    .storm-menu-btn { border-color: $c-purple; i, .btn-text { color: $c-purple; } }
+  }
+
+  // 5. Rosso
+  &:has(.links-section .nav-item:nth-child(5).active-link) {
+    border-bottom-color: $c-red;
+    .logo-section {
+      .navbar-title { border-left-color: $c-red !important; }
+      img { filter: drop-shadow(0 0 5px rgba(255, 71, 87, 0.3)) brightness(0.8) contrast(110%) hue-rotate(330deg); }
+    }
+    .storm-menu-btn { border-color: $c-red; i, .btn-text { color: $c-red; } }
+  }
+
+  // 6. Acciaio / Metallo
+  &:has(.links-section .nav-item:nth-child(6).active-link) {
+    border-bottom-color: $c-steel;
+    .logo-section {
+      .navbar-title { border-left-color: $c-steel !important; }
+      img { filter: drop-shadow(0 0 5px rgba(138, 155, 168, 0.4)) brightness(0.9) contrast(130%) grayscale(80%); }
+    }
+    .storm-menu-btn { border-color: $c-steel; i, .btn-text { color: $c-steel; } }
+  }
+}
+
+/* --- MENU BUTTON (Centratura verticale e orizzontale perfetta) --- */
 .storm-menu-btn {
   background: transparent;
-  border: 2px solid #FF9000; /* Orange Border */
+  border: 2px solid $c-orange;
   color: #fff;
-  padding: 8px 18px;
+  padding: 0 20px !important;       /* Padding orizzontale, azzerato il verticale */
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-radius: 4px;
+  display: inline-flex !important;
+  align-items: center !important;     /* Centra verticalmente in modo assoluto */
+  justify-content: center !important; /* Centra nel mezzo */
+  gap: 12px !important;               
+  border-radius: 8px !important;      
+  height: 48px !important;            /* Altezza fissa rigorosa per bloccare il centerY */
+  box-sizing: border-box;
   font-weight: bold;
+  vertical-align: middle;
   transition: all 0.3s ease;
 
   i {
-    color: #FF9000; /* Orange Icon */
     transition: all 0.3s ease;
   }
 
   &:hover {
-    border-color: #D10000; /* Sage Red */
-    color: #D10000;
-    box-shadow: 0 0 15px rgba(209, 0, 0, 0.6);
+    border-color: #ff4757 !important;
+    color: #ff4757 !important;
+    box-shadow: 0 0 15px rgba(255, 71, 87, 0.6);
     
-    i { color: #D10000; }
-    .btn-text { color: #D10000; }
+    i { color: #ff4757 !important; }
+    .btn-text { color: #ff4757 !important; }
   }
 }
 
-/* Avatar inside the menu button when logged in */
-.discord-avatar {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  margin-right: 4px;
-  vertical-align: middle;
+/* --- AVATAR CENTRATO NEL BOTTONE (PrimeNG Override) --- */
+::ng-deep .discord-avatar-prime.large-user-avatar {
+  width: 32px !important;  
+  height: 32px !important; 
+  margin: 0 !important;               /* Rimuove margini indesiderati di PrimeNG */
+  background-color: #2b2d31 !important;
+  color: #fff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0;
+
+  &.empty-avatar {
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+  }
+  
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .pi-user {
+    font-size: 1.1rem !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+  }
 }
 
 /* --- DISCORD MODAL STYLING (p-dialog) --- */
 ::ng-deep .discord-dialog {
-  border: 2px solid #FF9000 !important; /* Bordo Arancione Storm */
+  border: 2px solid $c-orange !important;
   border-radius: 8px !important;
   box-shadow: 0 0 25px rgba(255, 144, 0, 0.25) !important;
   overflow: hidden;
@@ -139,7 +278,7 @@
     }
 
     .p-dialog-header-icon {
-      color: #FF9000 !important;
+      color: $c-orange !important;
       &:hover {
         background-color: rgba(255, 144, 0, 0.15) !important;
       }
@@ -152,7 +291,6 @@
     padding: 1.5rem !important;
   }
 
-  /* Footer con pulsanti ben spaziati */
   .p-dialog-footer {
     background-color: #121318 !important;
     border-top: 1px solid rgba(255, 144, 0, 0.2) !important;
@@ -162,7 +300,7 @@
       display: flex !important;
       justify-content: flex-end !important;
       align-items: center !important;
-      gap: 20px !important; /* Distanza tra i pulsanti */
+      gap: 20px !important;
     }
   }
 }
@@ -173,15 +311,13 @@
   align-items: flex-start !important;
   gap: 14px !important;
   margin-bottom: 1.5rem !important;
-
-  /* Sfondo scuro con bordo arancione */
   background-color: rgba(255, 144, 0, 0.08);
-  border: 1.5px solid #FF9000;
+  border: 1.5px solid $c-orange;
   border-radius: 8px;
   padding: 1rem 1.2rem;
 
   .banner-icon {
-    color: #FF9000; /* Scudo Arancione */
+    color: $c-orange;
     font-size: 1.6rem;
     margin-top: 2px;
     flex-shrink: 0;
@@ -198,7 +334,7 @@
       letter-spacing: 1px;
       display: block;
       margin-bottom: 0.2rem;
-      color: #FF9000; /* Testo READ WITH ATTENTION Arancione */
+      color: $c-orange;
       text-transform: uppercase;
     }
 
@@ -229,14 +365,14 @@
       line-height: 1.35;
 
       .check-icon {
-        color: #23a55a; /* Discord Green */
+        color: #23a55a;
         font-size: 1.1rem;
         margin-top: 2px;
       }
 
       code {
         background-color: #121318;
-        color: #FF9000;
+        color: $c-orange;
         padding: 2px 6px;
         border-radius: 4px;
         font-family: monospace;
@@ -274,7 +410,7 @@
 /* --- ADVANCED DROPDOWN MENU STYLING (p-tieredMenu) --- */
 ::ng-deep .p-tieredmenu {
   background: #0d0e12 !important;
-  border: 2px solid #FF9000 !important;
+  border: 2px solid $c-orange !important;
   border-radius: 6px !important;
   box-shadow: 0 0 20px rgba(255, 144, 0, 0.35) !important;
   padding: 6px !important;
@@ -311,11 +447,11 @@
       background-color: rgba(255, 144, 0, 0.15) !important;
       
       .p-menuitem-text {
-        color: #FF9000 !important;
+        color: $c-orange !important;
       }
 
       .p-menuitem-icon {
-        color: #FF9000 !important;
+        color: $c-orange !important;
         transform: scale(1.1);
       }
     }
@@ -324,5 +460,17 @@
   .p-menu-separator {
     border-top: 1px solid rgba(255, 144, 0, 0.3) !important;
     margin: 6px 0 !important;
+  }
+}
+
+/* Effetto hover sul pulsante di login */
+.login-btn {
+  &:hover {
+    border-color: #5865F2 !important;
+    color: #5865F2 !important;
+    box-shadow: 0 0 15px rgba(88, 101, 242, 0.4);
+    
+    i { color: #5865F2 !important; }
+    .btn-text { color: #5865F2 !important; }
   }
 }

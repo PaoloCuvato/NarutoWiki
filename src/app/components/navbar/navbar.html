@@ -31,21 +31,33 @@
     </a>
   </div>
 
-  <!-- Structure and original button with dropdown -->
+  <!-- Auth / User Section -->
   <div class="action-section">
-    <button class="storm-menu-btn" (click)="menu.toggle($event)">
-      @if (isLoggedIn) {
-        <img [src]="userAvatar" class="discord-avatar" alt="Avatar" />
+    @if (isLoggedIn) {
+      <!-- Pulsante con Avatar PrimeNG quando loggato -->
+      <button class="storm-menu-btn logged-in-btn" (click)="menu.toggle($event)">
+        @if (userAvatar) {
+          <p-avatar [image]="userAvatar" shape="circle" styleClass="discord-avatar-prime"></p-avatar>
+        } @else {
+          <!-- Immagine vuota/segnaposto con icona utente se manca l'avatar -->
+          <p-avatar icon="pi pi-user" shape="circle" styleClass="discord-avatar-prime empty-avatar"></p-avatar>
+        }
         <span class="btn-text">{{ username }}</span>
-      } @else {
-        <i class="pi pi-bars"></i>
-        <span class="btn-text">MENU</span>
-      }
-    </button>
+      </button>
+    } @else {
+      <!-- Pulsante Login pulito quando non loggato (apre il modale) -->
+      <button class="storm-menu-btn login-btn" (click)="openLoginModal()">
+        <p-avatar icon="pi pi-user" shape="circle" styleClass="large-user-avatar"></p-avatar>
+        <span class="btn-text">LOGIN</span>
+      </button>
+    }
     
     <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
   </div>
 </nav>
+
+<!-- Toast per i messaggi di notifica PrimeNG -->
+<p-toast></p-toast>
 
 <!-- Disclaimer Modal with Custom Shield Banner -->
 <p-dialog 

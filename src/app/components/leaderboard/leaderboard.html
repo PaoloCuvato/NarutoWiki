@@ -1,4 +1,8 @@
 <div class="leaderboard-wrapper">
+  <!-- NUVOLE DECORATIVE DORATE -->
+  <img src="xct_cld2_I1.png" class="ninja-cloud top-left" alt="cloud decoration">
+  <img src="xct_cld2_I1.png" class="ninja-cloud top-right" alt="cloud decoration">
+
   <div class="leaderboard-header">
     <span class="subtitle">| SHINOBI RANKINGS</span>
     <h1>Leaderboard</h1>
@@ -17,9 +21,7 @@
           <th style="width: 8%" class="text-center">Rank</th>
           <th pSortableColumn="username" style="width: 22%">Username <p-sortIcon field="username"></p-sortIcon></th>
           <th pSortableColumn="clan" style="width: 15%">Clan <p-sortIcon field="clan"></p-sortIcon></th>
-          
           <th style="width: 25%">Title</th> 
-          
           <th pSortableColumn="level" style="width: 10%" class="text-center">Level <p-sortIcon field="level"></p-sortIcon></th>
           <th style="width: 10%" class="text-center">W / L</th>
           <th pSortableColumn="score" style="width: 10%" class="text-end">Score <p-sortIcon field="score"></p-sortIcon></th>
@@ -39,13 +41,11 @@
               {{ninja.clan}}
             </span>
           </td>
-
           <td>
             <span class="ninja-title-tag">
               {{ getNinjaTitle(ninja.score) }}
             </span>
           </td>
-
           <td class="text-center level-cell">{{ninja.level}}</td>
           <td class="text-center stats-cell">
             <span class="wins">{{ninja.wins}}</span>

@@ -4,15 +4,37 @@ $inner-background: #0a0a0a;  // Grigio scurissimo per contrasto interno tabelle
 $ninja-orange: #ff9000;      // Arancione dei titoli e dettagli della home
 $ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
 
+// --- NASCONDE LA SCROLLBAR A DESTRA SU TUTTI I BROWSER ---
+:host {
+  display: block;
+  // Nasconde la scrollbar per Firefox
+  scrollbar-width: none; 
+  // Nasconde la scrollbar per IE e Edge
+  -ms-overflow-style: none; 
+
+  // Nasconde la scrollbar per Chrome, Safari e Opera
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    background: transparent;
+  }
+}
+
 .leaderboard-wrapper {
   // 1. VIA IL BACKGROUND-COLOR NERO DI PRIMA! METTIAMO HIRUZEN CON OPACITÀ BILANCIATA
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), 
-              url('/hiruzen.jpeg') no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url('/madaraVsHash.png') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
   padding: 40px 20px;
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
+
+  // Assicuriamoci che anche qui non compaia la barra
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .nav-bar {
     max-width: 1200px;
@@ -205,5 +227,34 @@ $ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
     background: transparent !important;
     color: $ninja-blue !important;
     .p-button-icon { color: $ninja-blue !important; }
+  }
+}
+.leaderboard-wrapper {
+  position: relative; // Fondamentale per agganciare le nuvole in posizione assoluta
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url('/madaraVsHash.png') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+
+  // --- NUVOLE DECORATIVE NINJA ---
+  .ninja-cloud {
+    position: absolute;
+    width: 220px; // Regola la dimensione in base alla resa visiva
+    pointer-events: none; // Evita che blocchino i click sulla pagina
+    z-index: 5;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+
+    &.top-left {
+      top: 10px;
+      left: 15px;
+    }
+
+    &.top-right {
+      top: 10px;
+      right: 15px;
+      transform: scaleX(-1); // Specchia l'immagine per renderla simmetrica sul lato destro
+    }
   }
 }

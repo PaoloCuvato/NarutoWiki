@@ -9,6 +9,7 @@ import { About } from './components/about/about';
 import { Games } from './components/games/games';
 import { Matchmaking } from './components/matchmaking/matchmaking';
 import { Callback } from './components/callback/callback'; 
+import { Leaderboard } from './components/leaderboard/leaderboard';
 
 export const routes: Routes = [
 { path: 'home', component: Homepage },
@@ -16,6 +17,7 @@ export const routes: Routes = [
 { path: 'matchmaking', component: Matchmaking },
 { path: 'community', component: Community },
 { path: 'resources', component: Resources },
+{ path: 'leaderboard', component: Leaderboard },
 { path: 'faq', component: Faq },
 { path: 'about', component: About },
 { path: 'callback', component: Callback }, 

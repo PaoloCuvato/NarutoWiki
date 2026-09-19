@@ -91,7 +91,7 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
       }
     }
 
-    /* --- 3° ELEMENTO: ORO (Storm 4) --- */
+    /* --- 3° ELEMENTO: ORO (Storm 4 - Matchmaking con Dropdown) --- */
     &:nth-child(3) {
       .dot { background-color: $c-gold; box-shadow: 0 0 8px $c-gold; }
       &:hover, &.active-link {
@@ -129,6 +129,24 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
 
     &:hover {
       transform: translateY(-2px);
+    }
+  }
+}
+
+/* --- STILE AGGIUNTIVO PER IL DROPDOWN MATCHMAKING --- */
+.dropdown-trigger {
+  cursor: pointer;
+  user-select: none;
+
+  .dropdown-arrow {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+    margin-left: 2px;
+  }
+
+  &:hover {
+    .dropdown-arrow {
+      transform: translateY(2px);
     }
   }
 }
@@ -196,19 +214,19 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
   }
 }
 
-/* --- MENU BUTTON (Centratura verticale e orizzontale perfetta) --- */
+/* --- MENU BUTTON --- */
 .storm-menu-btn {
   background: transparent;
   border: 2px solid $c-orange;
   color: #fff;
-  padding: 0 20px !important;       /* Padding orizzontale, azzerato il verticale */
+  padding: 0 20px !important;      
   cursor: pointer;
   display: inline-flex !important;
-  align-items: center !important;     /* Centra verticalmente in modo assoluto */
-  justify-content: center !important; /* Centra nel mezzo */
-  gap: 12px !important;               
+  align-items: center !important;    
+  justify-content: center !important; 
+  gap: 12px !important;              
   border-radius: 8px !important;      
-  height: 48px !important;            /* Altezza fissa rigorosa per bloccare il centerY */
+  height: 48px !important;            
   box-sizing: border-box;
   font-weight: bold;
   vertical-align: middle;
@@ -228,11 +246,11 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
   }
 }
 
-/* --- AVATAR CENTRATO NEL BOTTONE (PrimeNG Override) --- */
+/* --- AVATAR CENTRATO NEL BOTTONE --- */
 ::ng-deep .discord-avatar-prime.large-user-avatar {
   width: 32px !important;  
   height: 32px !important; 
-  margin: 0 !important;               /* Rimuove margini indesiderati di PrimeNG */
+  margin: 0 !important;              
   background-color: #2b2d31 !important;
   color: #fff !important;
   display: inline-flex !important;
@@ -407,59 +425,89 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
   }
 }
 
-/* --- ADVANCED DROPDOWN MENU STYLING (p-tieredMenu) --- */
-::ng-deep .p-tieredmenu {
-  background: #0d0e12 !important;
-  border: 2px solid $c-orange !important;
-  border-radius: 6px !important;
-  box-shadow: 0 0 20px rgba(255, 144, 0, 0.35) !important;
-  padding: 6px !important;
-  margin-top: 8px !important;
+/* --- ADVANCED DROPDOWN MENU STYLING (p-tieredMenu & p-menubar) --- */
+::ng-deep {
+  .p-tieredmenu, .p-menubar {
+    background: #0d0e12 !important;
+    border: 2px solid $c-orange !important;
+    border-radius: 6px !important;
+    box-shadow: 0 0 20px rgba(255, 144, 0, 0.35) !important;
+    padding: 6px !important;
+    margin-top: 16px !important;
 
-  .p-tieredmenu-root-list {
-    padding: 0 !important;
-  }
-
-  .p-menuitem-link {
-    background: transparent !important;
-    padding: 10px 16px !important;
-    border-radius: 4px !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    transition: all 0.2s ease-in-out !important;
-
-    .p-menuitem-text {
-      color: #FFFFFF !important;
-      font-weight: 700 !important;
-      font-size: 0.95rem !important;
-      letter-spacing: 0.5px !important;
-      text-transform: uppercase;
+    .p-menuitem {
+      margin: 2px 0 !important;
     }
 
-    .p-menuitem-icon {
-      color: #5865F2 !important;
-      font-size: 1.2rem !important;
-      transition: all 0.2s ease !important;
+    .p-menuitem-content {
+      background: transparent !important;
+      border-radius: 4px !important;
+      transition: background-color 0.2s ease-in-out !important;
+
+      &:hover {
+        background-color: rgba(255, 144, 0, 0.15) !important;
+
+        .p-menuitem-link {
+          background: transparent !important;
+          
+          &::before {
+            opacity: 1 !important; /* Mostra il pallino in hover */
+          }
+
+          .p-menuitem-text,
+          .p-menuitem-icon,
+          .p-submenu-icon {
+            color: $c-orange !important;
+          }
+        }
+      }
     }
 
-    &:hover {
-      background-color: rgba(255, 144, 0, 0.15) !important;
-      
+    .p-menuitem-link {
+      background: transparent !important;
+      padding: 10px 14px !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      text-decoration: none !important;
+      position: relative !important;
+
+      /* Pallino luminoso nascosto a riposo */
+      &::before {
+        content: '' !important;
+        display: inline-block !important;
+        width: 7px !important;
+        height: 7px !important;
+        border-radius: 50% !important;
+        background-color: $c-orange !important;
+        box-shadow: 0 0 8px $c-orange !important;
+        opacity: 0 !important;
+        transition: opacity 0.2s ease !important;
+        flex-shrink: 0 !important;
+      }
+
+      /* Testo e icone bianche a riposo */
       .p-menuitem-text {
-        color: $c-orange !important;
+        color: #FFFFFF !important;
+        font-weight: 800 !important;
+        font-size: 0.95rem !important;
+        letter-spacing: 0.5px !important;
+        text-transform: uppercase !important;
+        transition: color 0.2s ease !important;
       }
 
-      .p-menuitem-icon {
-        color: $c-orange !important;
-        transform: scale(1.1);
+      .p-menuitem-icon, 
+      .p-submenu-icon {
+        color: #FFFFFF !important;
+        font-size: 1.1rem !important;
+        transition: color 0.2s ease !important;
       }
     }
-  }
 
-  .p-menu-separator {
-    border-top: 1px solid rgba(255, 144, 0, 0.3) !important;
-    margin: 6px 0 !important;
+    .p-menu-separator {
+      border-top: 1px solid rgba(255, 144, 0, 0.3) !important;
+      margin: 6px 0 !important;
+    }
   }
 }
 

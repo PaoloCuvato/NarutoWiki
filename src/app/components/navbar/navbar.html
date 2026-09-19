@@ -11,14 +11,15 @@
     <a routerLink="/games" routerLinkActive="active-link" class="nav-item">
       <span class="dot"></span> GAMES
     </a>
-    <a routerLink="/matchmaking" routerLinkActive="active-link" class="nav-item">
-      <span class="dot"></span> MATCHMAKING
+    
+    <!-- MATCHMAKING CON DROPDOWN -->
+    <a class="nav-item dropdown-trigger" (click)="matchmakingMenu.toggle($event)">
+      <span class="dot"></span> MATCHMAKING <i class="pi pi-angle-down dropdown-arrow"></i>
     </a>
+    <p-tieredMenu #matchmakingMenu [model]="matchmakingItems" [popup]="true"></p-tieredMenu>
+
     <a routerLink="/community" routerLinkActive="active-link" class="nav-item">
       <span class="dot"></span> COMMUNITY
-    </a>
-    <a routerLink="/leaderboard" routerLinkActive="active-link" class="nav-item">
-      <span class="dot"></span> LEADERBOARD
     </a>
     <a routerLink="/resources" routerLinkActive="active-link" class="nav-item">
       <span class="dot"></span> RESOURCES
@@ -34,18 +35,15 @@
   <!-- Auth / User Section -->
   <div class="action-section">
     @if (isLoggedIn) {
-      <!-- Pulsante con Avatar PrimeNG quando loggato -->
       <button class="storm-menu-btn logged-in-btn" (click)="menu.toggle($event)">
         @if (userAvatar) {
           <p-avatar [image]="userAvatar" shape="circle" styleClass="discord-avatar-prime"></p-avatar>
         } @else {
-          <!-- Immagine vuota/segnaposto con icona utente se manca l'avatar -->
           <p-avatar icon="pi pi-user" shape="circle" styleClass="discord-avatar-prime empty-avatar"></p-avatar>
         }
         <span class="btn-text">{{ username }}</span>
       </button>
     } @else {
-      <!-- Pulsante Login pulito quando non loggato (apre il modale) -->
       <button class="storm-menu-btn login-btn" (click)="openLoginModal()">
         <p-avatar icon="pi pi-user" shape="circle" styleClass="large-user-avatar"></p-avatar>
         <span class="btn-text">LOGIN</span>

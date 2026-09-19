@@ -14,10 +14,10 @@ import { Leaderboard } from './components/leaderboard/leaderboard';
 export const routes: Routes = [
 { path: 'home', component: Homepage },
 { path: 'games', component: Games },
-{ path: 'matchmaking', component: Matchmaking },
+{ path: 'matchmaking/lobbies', component: Matchmaking },
 { path: 'community', component: Community },
 { path: 'resources', component: Resources },
-{ path: 'leaderboard', component: Leaderboard },
+{ path: 'matchmaking/leaderboard', component: Leaderboard },
 { path: 'faq', component: Faq },
 { path: 'about', component: About },
 { path: 'callback', component: Callback }, 

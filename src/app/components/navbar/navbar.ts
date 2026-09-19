@@ -8,7 +8,7 @@ import { DialogModule } from 'primeng/dialog';
 import { MessageModule } from 'primeng/message';
 import { ToastModule } from 'primeng/toast';
 import { AvatarModule } from 'primeng/avatar'; 
-import { Auth } from '../../service/auth'; // Importa il service Auth
+import { Auth } from '../../service/auth';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -37,6 +37,7 @@ export class Navbar implements OnInit, OnDestroy {
   private userSub!: Subscription;
 
   items: MenuItem[] | undefined;
+  matchmakingItems: MenuItem[] | undefined;
 
   // Login state and modal management
   displayModal: boolean = false;
@@ -49,6 +50,20 @@ export class Navbar implements OnInit, OnDestroy {
   private readonly REDIRECT_URI = encodeURIComponent('http://localhost:4200/callback');
 
   ngOnInit() {
+    // Configurazione del sottomenu a tendina Matchmaking
+    this.matchmakingItems = [
+      {
+        label: 'Lobbies',
+        icon: 'pi pi-sitemap',
+        routerLink: '/matchmaking/lobbies'
+      },
+      {
+        label: 'Leaderboard',
+        icon: 'pi pi-chart-bar',
+        routerLink: 'matchmaking/leaderboard'
+      }
+    ];
+
     // Sottoscrizione reattiva al service Auth per catturare il login in tempo reale
     this.userSub = this.authService.user$.subscribe(user => {
       if (user) {
@@ -120,7 +135,6 @@ export class Navbar implements OnInit, OnDestroy {
   }
 
   triggerSuccessfulLogin(username: string, avatarUrl: string) {
-    // Aggiorna tramite il service auth, che a sua volta emetterà il nuovo stato via Observable
     this.authService.setLoginData({ username, avatarUrl });
 
     this.messageService.add({
@@ -133,7 +147,7 @@ export class Navbar implements OnInit, OnDestroy {
 
   logout() {
     if (isPlatformBrowser(this.platformId)) {
-      this.authService.logout(); // Pulisce tramite il service
+      this.authService.logout();
       
       this.messageService.add({
         severity: 'info',

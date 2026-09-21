@@ -1,121 +1,348 @@
-/* --- 1. CONFIGURAZIONE ANGULAR COMPONENT --- */
 :host {
     display: block;
     position: relative;
     width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
-    background-color: #000;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95));
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #fff;
 }
 
-/* --- 2. RESET GLOBALE & SCROLL --- */
 html, body {
     margin: 0 !important;
     padding: 0 !important;
     width: 100%;
     overflow-x: hidden;
-    background-color: #000;
 }
 
-/* --- 3. SFONDO VIDEO LOCALE (.MP4) --- */
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-    overflow: hidden;
-    pointer-events: none; /* Impedisce qualsiasi interazione col mouse */
-}
-
-/* Overlay per scurire il video e far risaltare i testi */
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.45); /* Regola l'oscurità (da 0.1 a 0.9) */
-    z-index: 1;
-}
-
-/* Il tag video si adatta a tutto schermo mantenendo le proporzioni */
-.bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover; /* Taglia leggermente i bordi per riempire lo schermo senza distorsioni */
-    z-index: 0;
-}
-
-/* --- 4. CONTENUTI IN PRIMO PIANO --- */
-.hero-banner, 
-.database-section,
-.top-title {
-    position: relative;
-    z-index: 2; /* Rimangono sopra al video e all'overlay */
-}
-
-/* --- 5. STILI SINGOLI ELEMENTI --- */
+/* Banners */
 .hero-banner {
     width: 100%;
     margin: 0;
     padding: 0;
     display: block;
     line-height: 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
 }
 
-.hero-banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
+/* Sezione Intro / Welcome */
+.wiki-intro-section {
+    position: relative;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, rgba(20, 19, 26, 0.9), rgba(10, 10, 13, 0.95));
+    backdrop-filter: blur(10px);
+    border-top: 2px solid rgba(255, 144, 0, 0.4);
+    border-bottom: 2px solid rgba(255, 144, 0, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #FF9000, #00E5FF, transparent);
+    }
+
+    .intro-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Badge Welcome abbellito e ben visibile */
+    .styled-welcome-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, rgba(255, 144, 0, 0.15), rgba(255, 144, 0, 0.05));
+        border: 1px solid rgba(255, 144, 0, 0.4);
+        padding: 8px 22px;
+        border-radius: 30px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 15px rgba(255, 144, 0, 0.15);
+
+        i {
+            color: #FF9000;
+            font-size: 0.85rem;
+        }
+
+        span {
+            color: #FF9000;
+            font-weight: 900;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+    }
+
+    /* Titolo bianco pulito */
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+        color: #ffffff;
+        text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .intro-desc {
+        color: #d1d1d6;
+        font-size: 1.15rem;
+        line-height: 1.8;
+        max-width: 850px;
+        margin: 0 auto 35px auto;
+
+        strong {
+            color: #FF9000;
+            font-weight: 700;
+        }
+    }
+
+    /* Le 3 card originali */
+    .intro-features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 30px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+
+        .feature-card {
+            background: rgba(30, 28, 38, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+
+            &:hover {
+                border-color: #FF9000;
+                transform: translateY(-5px);
+                background: rgba(35, 32, 45, 0.9);
+                box-shadow: 0 8px 20px rgba(255, 144, 0, 0.15);
+
+                i {
+                    color: #FF9000;
+                    transform: scale(1.1);
+                }
+            }
+
+            i {
+                font-size: 1.8rem;
+                color: #FF9000;
+                margin-bottom: 12px;
+                display: block;
+                transition: transform 0.3s ease, color 0.3s ease;
+            }
+
+            h4 {
+                font-size: 1.05rem;
+                font-weight: 800;
+                color: #fff;
+                margin: 0 0 6px 0;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            p {
+                font-size: 0.85rem;
+                color: #aaa;
+                margin: 0;
+                line-height: 1.5;
+            }
+        }
+    }
 }
 
-.top-title {
-    color: #fff; 
-    background-color: rgba(0, 0, 0, 0.8);
-    margin: 0;
-    padding: 20px 15px;
-    border-left: 10px solid #FF9000;
-    font-size: 1.8rem;
-}
-
+/* Game Data Section */
 .database-section {
-    padding: 2rem;
+    padding: 40px 20px;
+    background-color: rgba(25, 24, 24, 0.85);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    .database-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
 }
 
 .database-title {
     color: #fff;
-    border-left: 10px solid #FF9000;
+    border-left: 6px solid #FF9000;
     padding-left: 15px;
     margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .button-group {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
-/* Posizionamento del pulsante audio in primo piano */
-.audio-control-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 10; /* Assicura che sia cliccabile e sopra il video */
-    
-    .audio-btn {
-        background-color: rgba(0, 0, 0, 0.6) !important;
-        border-color: #FF9000 !important;
-        color: #fff !important;
-        
+
+/* Community Videos Section */
+.community-videos-section {
+    padding: 50px 20px 70px 20px;
+    background-color: #1c1a24;
+    border-top: 3px solid #FF9000;
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
+
+    .section-header {
+        max-width: 1300px;
+        margin: 0 auto 20px auto;
+        padding: 0 10px;
+
+        .highlight-title {
+            border-left-color: #FF9000;
+        }
+
+        .section-sub {
+            color: #aaa;
+            font-size: 0.95rem;
+            margin: -10px 0 20px 21px;
+        }
+    }
+
+    .videos-scroll-container {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        padding: 10px 40px 30px 20px; 
+        max-width: 1300px;
+        margin: 0 auto;
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .video-card {
+        min-width: 280px;
+        max-width: 280px;
+        background: #252231;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        flex-shrink: 0;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
         &:hover {
-            background-color: rgba(255, 144, 0, 0.8) !important;
+            border-color: #FF9000;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 144, 0, 0.25);
+
+            .play-overlay {
+                background: rgba(0, 0, 0, 0.4);
+                i {
+                    transform: scale(1.15);
+                    color: #FF9000;
+                }
+            }
+        }
+
+        .video-thumbnail {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            background: #111;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            .play-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.35);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.3s ease;
+
+                i {
+                    font-size: 2.8rem;
+                    color: #fff;
+                    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+                    transition: transform 0.3s ease, color 0.3s ease;
+                }
+            }
+
+            .video-badge {
+                position: absolute;
+                bottom: 8px;
+                left: 8px;
+                font-size: 0.75rem;
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: 700;
+                background: rgba(0, 0, 0, 0.75);
+                padding: 3px 8px;
+                border-radius: 4px;
+                backdrop-filter: blur(4px);
+            }
+        }
+
+        .video-info {
+            padding: 15px;
+
+            h3 {
+                font-size: 0.95rem;
+                font-weight: 800;
+                margin: 0 0 6px 0;
+                color: #fff;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            p {
+                font-size: 0.8rem;
+                color: #bbb;
+                margin: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
     }
 }

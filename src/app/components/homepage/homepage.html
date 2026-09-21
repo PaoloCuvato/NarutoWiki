@@ -1,36 +1,128 @@
-<!-- 
- <div class="video-background">
-    <div class="video-overlay"></div>
-    <video #bgVideo autoplay loop playsinline class="bg-video">
-        <source src="Outro.mp4" type="video/mp4">
-        Il tuo browser non supporta i video HTML5.
-    </video>
-</div>
--->
-
-
-<!-- 
-<div class="audio-control-container">
-    <p-button 
-        [icon]="isMuted ? 'pi pi-volume-off' : 'pi pi-volume-up'" 
-        [label]="isMuted ? 'Attiva Audio' : 'Disattiva Audio'" 
-        (onClick)="toggleAudio(bgVideo)" 
-        [outlined]="true" 
-        styleClass="p-button-secondary audio-btn">
-    </p-button>
-</div>
--->
-
+<!-- BANNONE IMMAGINE IN ALTO -->
 <div class="hero-banner">
   <img src="StormSeries.jpeg" alt="Naruto Storm Banner">
 </div>
 
+<!-- SEZIONE INTRODUTTIVA / WELCOME -->
+<section class="wiki-intro-section">
+  <div class="intro-container">
+    <div class="styled-welcome-badge">
+      <i class="pi-ticket"></i>
+      <span>WELCOME TO OUR WIKI</span>
+      <i class="pi-wave-pulse"></i>
+    </div>
+    
+    <h2>WHAT IS THE ULTIMATE NINJA STORM WIKI?</h2>
+    
+    <p class="intro-desc">
+      A comprehensive project born from community passion. Here you will find detailed information relative to 
+      <strong>every game and character</strong> in the saga, advanced guides, matchmaking leaderboards, community projects, 
+      and updates on official tournaments and events hosted for players worldwide.
+    </p>
 
-<div class="database-section">
-  <h1 class="database-title">SHINOBI DATABASE</h1>
-  <div class="button-group">
-    <p-button label="Naruto" icon="pi pi-bolt" class="accent-naruto"></p-button>
-    <p-button label="Sasuke" icon="pi pi-moon" class="accent-rasengan"></p-button>
-    <p-button label="Impostazioni" [outlined]="true" styleClass="p-button-secondary"></p-button>
+    <!-- Le 3 card originali -->
+    <div class="intro-features">
+      <div class="feature-card">
+        <i class="pi pi-database"></i>
+        <h4>Game Data</h4>
+        <p>Detailed stats, move lists, and technical data for every character across the entire saga.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="pi pi-compass"></i>
+        <h4>Advanced Guides</h4>
+        <p>Advanced tech, cancels, competitive level combos, and guides created by top players.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="pi pi-trophy"></i>
+        <h4>Leaderboards & Events</h4>
+        <p>Updated matchmaking leaderboards and news on official tournaments and events.</p>
+      </div>
+    </div>
   </div>
-</div>
+</section>
+
+<!-- GAME DATA SECTION -->
+<section class="database-section">
+  <div class="database-container">
+    <h2 class="database-title">GAME DATA</h2>
+    <div class="button-group">
+      <p-button label="Naruto" icon="pi pi-bolt" styleClass="accent-naruto"></p-button>
+      <p-button label="Sasuke" icon="pi pi-moon" styleClass="accent-rasengan"></p-button>
+      <p-button label="Settings" [outlined]="true" styleClass="p-button-secondary"></p-button>
+    </div>
+  </div>
+</section> 
+
+<!-- STRISCIA VIDEO DELLA COMMUNITY -->
+<section class="community-videos-section">
+  <div class="section-header">
+    <h2 class="database-title highlight-title">COMMUNITY HIGHLIGHTS & VIDEOS</h2>
+    <p class="section-sub">Watch the latest guides and best matches directly from the Storm community!</p>
+  </div>
+  
+  <div class="videos-scroll-container">
+    
+    <!-- Video 1 -->
+    <a href="https://www.youtube.com/watch?v=iICtzinSyq0" target="_blank" class="video-card">
+      <div class="video-thumbnail">
+        <img src="/narutoAndSasuke.png" alt="How To Pre Stun Cancel">
+        <div class="play-overlay">
+          <i class="pi pi-play-circle"></i>
+        </div>
+        <span class="video-badge">Guide & Tips</span>
+      </div>
+      <div class="video-info">
+        <h3>How To Pre Stun Cancel</h3>
+        <p>Naruto Storm Connections - Puppet Of Azrael</p>
+      </div>
+    </a>
+
+    <!-- Video 2 -->
+    <a href="https://youtu.be/1pHzUdeReb4" target="_blank" class="video-card">
+      <div class="video-thumbnail">
+        <img src="/narutoAndSasuke.png" alt="Nanashi Uchiha Guide">
+        <div class="play-overlay">
+          <i class="pi pi-play-circle"></i>
+        </div>
+        <span class="video-badge">Character Guide</span>
+      </div>
+      <div class="video-info">
+        <h3>Nanashi Uchiha Guide</h3>
+        <p>Naruto Storm Connections - Burrell</p>
+      </div>
+    </a>
+
+    <!-- Video 3 -->
+    <a href="https://www.youtube.com/watch?v=iICtzinSyq0" target="_blank" class="video-card">
+      <div class="video-thumbnail">
+        <img src="/narutoAndSasuke.png" alt="Top 10 Epic Comebacks">
+        <div class="play-overlay">
+          <i class="pi pi-play-circle"></i>
+        </div>
+        <span class="video-badge">Gameplay</span>
+      </div>
+      <div class="video-info">
+        <h3>Top 10 Epic Comebacks</h3>
+        <p>Best moments from recent community matches.</p>
+      </div>
+    </a>
+
+    <!-- Video 4 -->
+    <a href="https://youtu.be/1pHzUdeReb4" target="_blank" class="video-card">
+      <div class="video-thumbnail">
+        <img src="/narutoAndSasuke.png" alt="Storm League Season 4 Finals">
+        <div class="play-overlay">
+          <i class="pi pi-play-circle"></i>
+        </div>
+        <span class="video-badge">Tournament</span>
+      </div>
+      <div class="video-info">
+        <h3>Storm League Season 4 Finals</h3>
+        <p>Full match replay of the grand tournament.</p>
+      </div>
+    </a>
+
+  </div>
+</section>

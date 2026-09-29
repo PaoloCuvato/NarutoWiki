@@ -1,0 +1,168 @@
+.tournament-wrapper {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  .tournament-header {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+      
+      i {
+        color: #ff5722;
+        margin-right: 10px;
+      }
+    }
+
+    p {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+  }
+
+  .steps-container {
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
+  // Forza lo stile della card e dei componenti interni
+  ::ng-deep {
+    .tournament-card {
+      background: rgba(20, 20, 25, 0.95) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      border-radius: 12px !important;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+      color: #fff !important;
+      display: block;
+      padding: 1.5rem;
+
+      .p-card-body {
+        padding: 0 !important;
+      }
+
+      .step-pane {
+        h3 {
+          color: #fff;
+          font-size: 1.2rem;
+          margin-bottom: 15px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          padding-bottom: 8px;
+        }
+
+        .step-desc {
+          color: #bbb;
+          font-size: 0.9rem;
+          margin-bottom: 20px;
+        }
+
+        .field {
+          margin-bottom: 20px;
+
+          label {
+            display: block;
+            color: #ccc;
+            margin-bottom: 6px;
+            font-weight: 500;
+            font-size: 0.9rem;
+          }
+
+          .w-full, input, p-select {
+            width: 100% !important;
+          }
+
+          input[pInputText] {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+            padding: 10px 14px;
+            border-radius: 6px;
+
+            &:focus {
+              border-color: #ff5722;
+              outline: none;
+            }
+          }
+        }
+
+        .checkbox-group {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          margin-top: 15px;
+
+          .field-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+
+            label {
+              cursor: pointer;
+              font-size: 0.95rem;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      .review-step {
+        .review-list {
+          list-style: none;
+          padding: 0;
+          
+          li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #ddd;
+
+            strong {
+              color: #fff;
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+
+      .form-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      &.success-card {
+        text-align: center;
+        padding: 40px 20px !important;
+
+        .success-icon {
+          font-size: 4rem;
+          color: #22c55e;
+          margin-bottom: 20px;
+        }
+
+        h3 {
+          color: #fff;
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+        }
+
+        p {
+          color: #aaa;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

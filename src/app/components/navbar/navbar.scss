@@ -151,10 +151,10 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
   }
 }
 
-/* --- CAMBIO TEMA DINAMICO NAVBAR & LOGO FILTERS --- */
+/* --- CAMBIO TEMA DINAMICO NAVBAR & LOGO FILTERS VIA CLASSI TS --- */
 .storm-navbar {
-  // 1. Arancione (Storm 1)
-  &:has(.links-section .nav-item:nth-child(1).active-link) {
+  // 1. Arancione (Homepage / Default)
+  &.theme-homepage {
     border-bottom-color: $c-orange;
     .logo-section {
       .navbar-title { border-left-color: $c-orange !important; }
@@ -163,8 +163,8 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
     .storm-menu-btn { border-color: $c-orange; i, .btn-text { color: $c-orange; } }
   }
 
-  // 2. Blu Elettrico (Storm 3 / Connections)
-  &:has(.links-section .nav-item:nth-child(2).active-link) {
+  // 2. Blu Elettrico (Games)
+  &.theme-games {
     border-bottom-color: $c-blue;
     .logo-section {
       .navbar-title { border-left-color: $c-blue !important; }
@@ -173,8 +173,8 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
     .storm-menu-btn { border-color: $c-blue; i, .btn-text { color: $c-blue; } }
   }
 
-  // 3. Oro (Storm 4)
-  &:has(.links-section .nav-item:nth-child(3).active-link) {
+  // 3. Oro (Matchmaking)
+  &.theme-matchmaking {
     border-bottom-color: $c-gold;
     .logo-section {
       .navbar-title { border-left-color: $c-gold !important; }
@@ -183,8 +183,8 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
     .storm-menu-btn { border-color: $c-gold; i, .btn-text { color: $c-gold; } }
   }
 
-  // 4. Viola Gastly
-  &:has(.links-section .nav-item:nth-child(4).active-link) {
+  // 4. Viola Gastly (Community)
+  &.theme-community {
     border-bottom-color: $c-purple;
     .logo-section {
       .navbar-title { border-left-color: $c-purple !important; }
@@ -193,8 +193,8 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
     .storm-menu-btn { border-color: $c-purple; i, .btn-text { color: $c-purple; } }
   }
 
-  // 5. Rosso
-  &:has(.links-section .nav-item:nth-child(5).active-link) {
+  // 5. Rosso (Resources)
+  &.theme-resources {
     border-bottom-color: $c-red;
     .logo-section {
       .navbar-title { border-left-color: $c-red !important; }
@@ -203,8 +203,8 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
     .storm-menu-btn { border-color: $c-red; i, .btn-text { color: $c-red; } }
   }
 
-  // 6. Acciaio / Metallo
-  &:has(.links-section .nav-item:nth-child(6).active-link) {
+  // 6. Acciaio / Metallo (FAQ / About)
+  &.theme-faq, &.theme-about {
     border-bottom-color: $c-steel;
     .logo-section {
       .navbar-title { border-left-color: $c-steel !important; }

@@ -1,32 +1,56 @@
-<nav class="storm-navbar">
+<nav [class]="'storm-navbar ' + getActiveTheme()">
   <div class="logo-section">
     <img src="StormLogoFranchise.png" alt="logo-section">
     <span class="navbar-title">ULTIMATE NINJA STORM WIKI</span>
   </div>
 
   <div class="links-section">
-    <a routerLink="/home" routerLinkActive="active-link" class="nav-item">
+    <!-- HOMEPAGE -->
+    <a routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
       <span class="dot"></span> HOMEPAGE
     </a>
-    <a routerLink="/games" routerLinkActive="active-link" class="nav-item">
-      <span class="dot"></span> GAMES
-    </a>
     
-    <!-- MATCHMAKING CON DROPDOWN -->
-    <a class="nav-item dropdown-trigger" (click)="matchmakingMenu.toggle($event)">
+    <!-- GAMES -->
+    <a routerLink="/games" routerLinkActive="active-link" class="nav-item dropdown-trigger" 
+       (mouseenter)="showDropdown($event, gamesMenu)" 
+       (mouseleave)="hideDropdown(gamesMenu)">
+      <span class="dot"></span> GAMES <i class="pi pi-angle-down dropdown-arrow"></i>
+    </a>
+    <p-tieredMenu #gamesMenu [model]="gamesItems" [popup]="true"
+       (mouseenter)="showDropdown($event, gamesMenu)" 
+       (mouseleave)="hideDropdown(gamesMenu)"></p-tieredMenu>
+    
+    <!-- MATCHMAKING -->
+    <a routerLink="/matchmaking" routerLinkActive="active-link" class="nav-item dropdown-trigger" 
+       (mouseenter)="showDropdown($event, matchmakingMenu)" 
+       (mouseleave)="hideDropdown(matchmakingMenu)">
       <span class="dot"></span> MATCHMAKING <i class="pi pi-angle-down dropdown-arrow"></i>
     </a>
-    <p-tieredMenu #matchmakingMenu [model]="matchmakingItems" [popup]="true"></p-tieredMenu>
+    <p-tieredMenu #matchmakingMenu [model]="matchmakingItems" [popup]="true"
+       (mouseenter)="showDropdown($event, matchmakingMenu)" 
+       (mouseleave)="hideDropdown(matchmakingMenu)"></p-tieredMenu>
 
-    <a routerLink="/community" routerLinkActive="active-link" class="nav-item">
-      <span class="dot"></span> COMMUNITY
+    <!-- COMMUNITY -->
+    <a routerLink="/community" routerLinkActive="active-link" class="nav-item dropdown-trigger" 
+       (mouseenter)="showDropdown($event, communityMenu)" 
+       (mouseleave)="hideDropdown(communityMenu)">
+      <span class="dot"></span> COMMUNITY <i class="pi pi-angle-down dropdown-arrow"></i>
     </a>
+    <p-tieredMenu #communityMenu [model]="communityItems" [popup]="true"
+       (mouseenter)="showDropdown($event, communityMenu)" 
+       (mouseleave)="hideDropdown(communityMenu)"></p-tieredMenu>
+
+    <!-- RESOURCES -->
     <a routerLink="/resources" routerLinkActive="active-link" class="nav-item">
       <span class="dot"></span> RESOURCES
     </a>
+
+    <!-- FAQ -->
     <a routerLink="/faq" routerLinkActive="active-link" class="nav-item">
       <span class="dot"></span> FAQ
     </a>
+
+    <!-- ABOUT US -->
     <a routerLink="/about" routerLinkActive="active-link" class="nav-item">
       <span class="dot"></span> ABOUT US
     </a>

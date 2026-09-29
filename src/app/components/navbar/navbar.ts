@@ -3,13 +3,13 @@ import { isPlatformBrowser } from '@angular/common';
 import { TieredMenuModule } from 'primeng/tieredmenu';
 import { ButtonModule } from 'primeng/button';
 import { MenuItem, MessageService } from 'primeng/api';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, NavigationEnd } from '@angular/router';
 import { DialogModule } from 'primeng/dialog';
 import { MessageModule } from 'primeng/message';
 import { ToastModule } from 'primeng/toast';
 import { AvatarModule } from 'primeng/avatar'; 
 import { Auth } from '../../service/auth';
-import { Subscription } from 'rxjs';
+import { Subscription, filter } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -19,10 +19,10 @@ import { Subscription } from 'rxjs';
     ButtonModule,
     RouterLink, 
     RouterLinkActive,
-    DialogModule,  
+    DialogModule,   
     MessageModule,  
     ToastModule,
-    AvatarModule      
+    AvatarModule        
   ],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
@@ -33,24 +33,42 @@ export class Navbar implements OnInit, OnDestroy {
   private platformId = inject(PLATFORM_ID);
   private messageService = inject(MessageService);
   private authService = inject(Auth);
+  private router = inject(Router);
 
   private userSub!: Subscription;
+  private routerSub!: Subscription;
 
   items: MenuItem[] | undefined;
+  
+  gamesItems: MenuItem[] | undefined;
   matchmakingItems: MenuItem[] | undefined;
+  communityItems: MenuItem[] | undefined;
 
-  // Login state and modal management
   displayModal: boolean = false;
   isLoggedIn: boolean = false;
   username: string = 'Ninja User';
   userAvatar: string = ''; 
 
-  // Discord OAuth2 Configuration
   private readonly CLIENT_ID = '1310173685268746262';
   private readonly REDIRECT_URI = encodeURIComponent('http://localhost:4200/callback');
 
+  // Timer per gestire l'hover fluido senza far sparire il menu a metà tragitto
+  private hideTimeout: any = null;
+
   ngOnInit() {
-    // Configurazione del sottomenu a tendina Matchmaking
+    this.gamesItems = [
+      {
+        label: 'Storm Series',
+        icon: 'pi pi-bolt',
+        routerLink: ['/games/storm-series']
+      },
+      {
+        label: 'Legacy Series',
+        icon: 'pi pi-history',
+        routerLink: ['/games/legacy-series']
+      }
+    ];
+
     this.matchmakingItems = [
       {
         label: 'Lobbies',
@@ -60,11 +78,36 @@ export class Navbar implements OnInit, OnDestroy {
       {
         label: 'Leaderboard',
         icon: 'pi pi-chart-bar',
-        routerLink: 'matchmaking/leaderboard'
+        routerLink: '/matchmaking/leaderboard'
       }
     ];
 
-    // Sottoscrizione reattiva al service Auth per catturare il login in tempo reale
+    this.communityItems = [
+      {
+        label: 'Projects',
+        icon: 'pi pi-folder',
+        routerLink: ['/projects']
+      },
+      {
+        label: 'Tournaments',
+        icon: 'pi pi-trophy',
+        routerLink: ['/tournaments']
+      },
+      {
+        label: 'Events',
+        icon: 'pi pi-calendar',
+        routerLink: ['/events']
+      },
+      {
+        separator: true
+      },
+      {
+        label: 'Community Highlights',
+        icon: 'pi pi-star',
+        routerLink: ['/community-highlights']
+      }
+    ];
+
     this.userSub = this.authService.user$.subscribe(user => {
       if (user) {
         this.isLoggedIn = true;
@@ -77,12 +120,53 @@ export class Navbar implements OnInit, OnDestroy {
       }
       this.updateMenu();
     });
+
+    if (isPlatformBrowser(this.platformId)) {
+      this.routerSub = this.router.events.pipe(
+        filter(event => event instanceof NavigationEnd)
+      ).subscribe(() => {});
+    }
   }
 
   ngOnDestroy() {
     if (this.userSub) {
       this.userSub.unsubscribe();
     }
+    if (this.routerSub) {
+      this.routerSub.unsubscribe();
+    }
+  }
+
+  // --- GESTIONE HOVER FLUIDA (EVITA LA CHIusura ACCIDENTALE) ---
+  showDropdown(event: MouseEvent, menu: any) {
+    // Se c'è un timer di chiusura attivo, lo blocchiamo (il mouse è tornato sul link o sul menu)
+    if (this.hideTimeout) {
+      clearTimeout(this.hideTimeout);
+      this.hideTimeout = null;
+    }
+    if (menu && typeof menu.show === 'function') {
+      menu.show(event);
+    }
+  }
+
+  hideDropdown(menu: any) {
+    // Diamo un piccolo margine di tempo (150ms) prima di chiuderlo, così fai in tempo a spostarti sul menu
+    this.hideTimeout = setTimeout(() => {
+      if (menu && typeof menu.hide === 'function') {
+        menu.hide();
+      }
+    }, 150);
+  }
+
+  getActiveTheme(): string {
+    const url = this.router.url;
+    if (url.includes('/games')) return 'theme-games';
+    if (url.includes('/matchmaking')) return 'theme-matchmaking';
+    if (url.includes('/community') || url.includes('/projects') || url.includes('/tournaments') || url.includes('/events') || url.includes('/community-highlights')) return 'theme-community';
+    if (url.includes('/resources')) return 'theme-resources';
+    if (url.includes('/faq')) return 'theme-faq';
+    if (url.includes('/about')) return 'theme-about';
+    return 'theme-homepage';
   }
 
   updateMenu() {

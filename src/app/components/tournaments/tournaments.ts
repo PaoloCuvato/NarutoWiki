@@ -86,25 +86,34 @@ export class Tournaments implements OnInit {
 loadTournaments() {
     this.tournamentService.getTopTournaments().subscribe({
       next: (data: any[]) => {
-        // Mappiamo i dati grezzi del back-end nelle proprietà attese dall'HTML e dal model
-        const mappedTournaments: TournamentModal[] = data.map(t => ({
-          id: t.id,
-          title: t.name, // L'HTML legge .title invece di .name
-          game: 'Naruto x Boruto: Ultimate Ninja Storm Connections',
-          platform: 'start.gg',
-          // Prende la prima immagine da start.gg o mette un'immagine di fallback a tema
-          bannerUrl: (t.images && t.images.length > 0) ? t.images[0].url : 'https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=600&auto=format&fit=crop',
-          dateRange: t.startAt ? new Date(t.startAt * 1000).toLocaleDateString() : 'Upcoming',
-          location: 'Online',
-          attendees: t.numAttendees || 0,
-          badgeStatus: 'In Progress',
-          badgeColor: '#9333ea',
-          externalUrl: t.slug ? 'https://start.gg/' + t.slug : '#' // L'HTML legge .externalUrl per aprire il link
-        }));
+        const now = new Date(); // Data e ora odierna
+
+        const mappedTournaments: TournamentModal[] = data.map(t => {
+          // Convertiamo il timestamp di start.gg in un oggetto Data JavaScript
+          const tournamentDate = t.startAt ? new Date(t.startAt * 1000) : null;
+          
+          // Controlliamo se la data del torneo è nel passato rispetto a oggi
+          const isPast = tournamentDate && tournamentDate < now;
+
+          return {
+            id: t.id,
+            title: t.name,
+            game: 'Naruto x Boruto: Ultimate Ninja Storm Connections',
+            platform: 'start.gg',
+            bannerUrl: (t.images && t.images.length > 0) ? t.images[0].url : 'https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=600&auto=format&fit=crop',
+            dateRange: tournamentDate ? tournamentDate.toLocaleDateString() : 'Upcoming',
+            location: 'Online',
+            attendees: t.numAttendees || 0,
+            // Stato dinamico in base alla data
+            badgeStatus: isPast ? 'Finished' : 'Registration Open',
+            badgeColor: isPast ? '#6b7280' : '#9333ea', // Grigio se finito, viola se attivo
+            externalUrl: t.slug ? 'https://start.gg/' + t.slug : '#'
+          };
+        });
 
         const topTen = mappedTournaments.slice(0, 10);
-        this.featuredTournaments = topTen.slice(0, 5); // Primi 5 in evidenza
-        this.pastTournaments = topTen.slice(5, 10);    // Dal 6° al 10° nei passati
+        this.featuredTournaments = topTen.slice(0, 5); 
+        this.pastTournaments = topTen.slice(5, 10);    
       },
       error: (err) => {
         console.error('Errore nel caricamento dei tornei:', err);

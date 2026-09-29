@@ -13,91 +13,101 @@
     </p-button>
   </div>
 
-  <!-- Featured / Active Tournaments -->
-  <section class="tournaments-section">
-    <h2 class="section-title"><i class="pi pi-bolt"></i> Featured & Upcoming</h2>
-    
-    <div class="tournaments-grid">
-      @for (tournament of featuredTournaments; track tournament.id) {
-        <div class="tournament-card" (click)="openTournament(tournament)">
-          <div class="card-banner">
-            <img 
-              [src]="tournament.bannerUrl" 
-              [alt]="tournament.title" 
-              (error)="$any($event.target).src='https://placehold.co/600x300/1e1b4b/818cf8?text=Tournament'" 
-            />
-            <span class="status-badge" [style.backgroundColor]="tournament.badgeColor">
-              {{ tournament.badgeStatus }}
-            </span>
-          </div>
-
-          <div class="card-content">
-            <span class="game-tag">{{ tournament.game }}</span>
-            <h3 class="tournament-title">{{ tournament.title }}</h3>
-            
-            <div class="tournament-details">
-              <div class="detail-item">
-                <i class="pi pi-calendar"></i>
-                <span>{{ tournament.dateRange }}</span>
-              </div>
-              <div class="detail-item">
-                <i class="pi pi-map-marker"></i>
-                <span>{{ tournament.location }}</span>
-              </div>
-              <div class="detail-item">
-                <i class="pi pi-users"></i>
-                <span>{{ tournament.attendees }} Entrants</span>
-              </div>
-            </div>
-
-            <div class="card-action">
-              <button class="btn-bracket">
-                <i class="pi pi-external-link"></i> View Bracket
-              </button>
-            </div>
-          </div>
-        </div>
-      }
+  <!-- STATO DI CARICAMENTO (SPINNER) -->
+  @if (isLoading) {
+    <div class="flex flex-column align-items-center justify-content-center p-8 my-6">
+      <i class="pi pi-spin pi-spinner text-purple" style="font-size: 3rem;"></i>
+      <p class="mt-3 text-color-secondary font-semibold">Searching tournaments.Sorry for the delay ...</p>
     </div>
-  </section>
-
-  <!-- Past Events Section -->
-  <section class="tournaments-section mt-5">
-    <h2 class="section-title"><i class="pi pi-history"></i> Past Events</h2>
+  } @else {
+    <!-- CONTENUTO VISIBILE SOLO A CARICAMENTO COMPLETATO -->
     
-    <div class="tournaments-grid">
-      @for (tournament of pastTournaments; track tournament.id) {
-        <div class="tournament-card past-card">
-          <div class="card-banner">
-            <img 
-              [src]="tournament.bannerUrl" 
-              [alt]="tournament.title" 
-              (error)="$any($event.target).src='https://placehold.co/600x300/1e1b4b/818cf8?text=Past+Event'" 
-            />
-            <span class="status-badge" [style.backgroundColor]="tournament.badgeColor">
-              {{ tournament.badgeStatus }}
-            </span>
-          </div>
+    <!-- Featured / Active Tournaments -->
+    <section class="tournaments-section">
+      <h2 class="section-title"><i class="pi pi-bolt"></i> Featured & Upcoming</h2>
+      
+      <div class="tournaments-grid">
+        @for (tournament of featuredTournaments; track tournament.id) {
+          <div class="tournament-card" (click)="openTournament(tournament)">
+            <div class="card-banner">
+              <img 
+                [src]="tournament.bannerUrl" 
+                [alt]="tournament.title" 
+                (error)="$any($event.target).src='https://placehold.co/600x300/1e1b4b/818cf8?text=Tournament'" 
+              />
+              <span class="status-badge" [style.backgroundColor]="tournament.badgeColor">
+                {{ tournament.badgeStatus }}
+              </span>
+            </div>
 
-          <div class="card-content">
-            <span class="game-tag">{{ tournament.game }}</span>
-            <h3 class="tournament-title">{{ tournament.title }}</h3>
-            
-            <div class="tournament-details">
-              <div class="detail-item">
-                <i class="pi pi-calendar"></i>
-                <span>{{ tournament.dateRange }}</span>
+            <div class="card-content">
+              <span class="game-tag">{{ tournament.game }}</span>
+              <h3 class="tournament-title">{{ tournament.title }}</h3>
+              
+              <div class="tournament-details">
+                <div class="detail-item">
+                  <i class="pi pi-calendar"></i>
+                  <span>{{ tournament.dateRange }}</span>
+                </div>
+                <div class="detail-item">
+                  <i class="pi pi-map-marker"></i>
+                  <span>{{ tournament.location }}</span>
+                </div>
+                <div class="detail-item">
+                  <i class="pi pi-users"></i>
+                  <span>{{ tournament.attendees }} Entrants</span>
+                </div>
               </div>
-              <div class="detail-item">
-                <i class="pi pi-users"></i>
-                <span>{{ tournament.attendees }} Entrants</span>
+
+              <div class="card-action">
+                <button class="btn-bracket">
+                  <i class="pi pi-external-link"></i> View Bracket
+                </button>
               </div>
             </div>
           </div>
-        </div>
-      }
-    </div>
-  </section>
+        }
+      </div>
+    </section>
+
+    <!-- Past Events Section -->
+    <section class="tournaments-section mt-5">
+      <h2 class="section-title"><i class="pi pi-history"></i> Past Events</h2>
+      
+      <div class="tournaments-grid">
+        @for (tournament of pastTournaments; track tournament.id) {
+          <div class="tournament-card past-card">
+            <div class="card-banner">
+              <img 
+                [src]="tournament.bannerUrl" 
+                [alt]="tournament.title" 
+                (error)="$any($event.target).src='https://placehold.co/600x300/1e1b4b/818cf8?text=Past+Event'" 
+              />
+              <span class="status-badge" [style.backgroundColor]="tournament.badgeColor">
+                {{ tournament.badgeStatus }}
+              </span>
+            </div>
+
+            <div class="card-content">
+              <span class="game-tag">{{ tournament.game }}</span>
+              <h3 class="tournament-title">{{ tournament.title }}</h3>
+              
+              <div class="tournament-details">
+                <div class="detail-item">
+                  <i class="pi pi-calendar"></i>
+                  <span>{{ tournament.dateRange }}</span>
+                </div>
+                <div class="detail-item">
+                  <i class="pi pi-users"></i>
+                  <span>{{ tournament.attendees }} Entrants</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+  }
 </div>
 
 <!-- Modal Popup PrimeNG -->
@@ -111,7 +121,7 @@
 
   <div class="tournament-wrapper">
     
-    <!-- Intestazione identica allo Screenshot 2 -->
+    <!-- Intestazione -->
     <div class="tournament-header">
       <h2><i class="pi pi-trophy main-trophy-icon"></i> CREATE YOUR TOURNAMENT</h2>
       <p>Setup brackets, sync with Challonge, start.gg, and broadcast on Discord.</p>

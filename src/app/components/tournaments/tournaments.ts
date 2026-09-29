@@ -37,6 +37,9 @@ export class Tournaments implements OnInit {
 
   // Gestione modal popup
   displayModal: boolean = false;
+  
+  // Variabile per gestire lo stato di caricamento (spinner)
+  isLoading: boolean = false;
 
   steps: MenuItem[] = [];
   activeIndex: number = 0;
@@ -83,16 +86,15 @@ export class Tournaments implements OnInit {
     this.loadTournaments();
   }
 
-loadTournaments() {
+  loadTournaments() {
+    this.isLoading = true; // Attiva lo spinner / stato di caricamento
+    
     this.tournamentService.getTopTournaments().subscribe({
       next: (data: any[]) => {
-        const now = new Date(); // Data e ora odierna
+        const now = new Date();
 
         const mappedTournaments: TournamentModal[] = data.map(t => {
-          // Convertiamo il timestamp di start.gg in un oggetto Data JavaScript
           const tournamentDate = t.startAt ? new Date(t.startAt * 1000) : null;
-          
-          // Controlliamo se la data del torneo è nel passato rispetto a oggi
           const isPast = tournamentDate && tournamentDate < now;
 
           return {
@@ -104,9 +106,8 @@ loadTournaments() {
             dateRange: tournamentDate ? tournamentDate.toLocaleDateString() : 'Upcoming',
             location: 'Online',
             attendees: t.numAttendees || 0,
-            // Stato dinamico in base alla data
             badgeStatus: isPast ? 'Finished' : 'Registration Open',
-            badgeColor: isPast ? '#6b7280' : '#9333ea', // Grigio se finito, viola se attivo
+            badgeColor: isPast ? '#6b7280' : '#9333ea',
             externalUrl: t.slug ? 'https://start.gg/' + t.slug : '#'
           };
         });
@@ -114,9 +115,12 @@ loadTournaments() {
         const topTen = mappedTournaments.slice(0, 10);
         this.featuredTournaments = topTen.slice(0, 5); 
         this.pastTournaments = topTen.slice(5, 10);    
+        
+        this.isLoading = false; // Disattiva lo spinner a caricamento completato
       },
       error: (err) => {
         console.error('Errore nel caricamento dei tornei:', err);
+        this.isLoading = false; // Disattiva lo spinner anche in caso di errore
         this.messageService.add({
           severity: 'error',
           summary: 'Error',

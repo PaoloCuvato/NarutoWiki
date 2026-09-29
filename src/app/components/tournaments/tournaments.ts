@@ -83,10 +83,26 @@ export class Tournaments implements OnInit {
     this.loadTournaments();
   }
 
-  loadTournaments() {
+loadTournaments() {
     this.tournamentService.getTopTournaments().subscribe({
-      next: (data) => {
-        const topTen = data.slice(0, 10);
+      next: (data: any[]) => {
+        // Mappiamo i dati grezzi del back-end nelle proprietà attese dall'HTML e dal model
+        const mappedTournaments: TournamentModal[] = data.map(t => ({
+          id: t.id,
+          title: t.name, // L'HTML legge .title invece di .name
+          game: 'Naruto x Boruto: Ultimate Ninja Storm Connections',
+          platform: 'start.gg',
+          // Prende la prima immagine da start.gg o mette un'immagine di fallback a tema
+          bannerUrl: (t.images && t.images.length > 0) ? t.images[0].url : 'https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=600&auto=format&fit=crop',
+          dateRange: t.startAt ? new Date(t.startAt * 1000).toLocaleDateString() : 'Upcoming',
+          location: 'Online',
+          attendees: t.numAttendees || 0,
+          badgeStatus: 'In Progress',
+          badgeColor: '#9333ea',
+          externalUrl: t.slug ? 'https://start.gg/' + t.slug : '#' // L'HTML legge .externalUrl per aprire il link
+        }));
+
+        const topTen = mappedTournaments.slice(0, 10);
         this.featuredTournaments = topTen.slice(0, 5); // Primi 5 in evidenza
         this.pastTournaments = topTen.slice(5, 10);    // Dal 6° al 10° nei passati
       },

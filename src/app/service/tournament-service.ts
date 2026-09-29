@@ -16,8 +16,8 @@ export class TournamentService {
 
   getTopTournaments(): Observable<TournamentModal[]> {
     return this.http.get<TournamentModal[]>(this.apiUrl).pipe(
-      // Prende solo i primi 10 elementi della lista
-      map(tournaments => tournaments.slice(0, 10))
+      // Prende solo i primi 20 elementi della lista
+      map(tournaments => tournaments.slice(0, 20))
     );
   }
 }

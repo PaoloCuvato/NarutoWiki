@@ -48,8 +48,8 @@ export class Tournaments implements OnInit {
 
   games = [
     { label: 'Naruto x Boruto: Ultimate Ninja Storm Connections', value: 'storm_connections' },
-    { label: 'Street Fighter 6', value: 'sf6' },
-    { label: '2XKO', value: '2xko' }
+    { label: 'Naruto Ultimate Ninja Storm 4 RTB', value: 'storm_4' },
+    { label: 'Naruto Ultimate Ninja Storm Evolution', value: 'storm_evolution' },
   ];
 
   formats = [
@@ -61,6 +61,8 @@ export class Tournaments implements OnInit {
   regions = [
     { label: 'Europe (EU)', value: 'eu' },
     { label: 'North America (NA)', value: 'na' },
+    { label: 'South America (SA)', value: 'sa' },
+    { label: 'Middle East (ME)', value: 'me' },
     { label: 'Asia (AS)', value: 'asia' }
   ];
 
@@ -86,49 +88,49 @@ export class Tournaments implements OnInit {
     this.loadTournaments();
   }
 
-  loadTournaments() {
-    this.isLoading = true; // Attiva lo spinner / stato di caricamento
-    
-    this.tournamentService.getTopTournaments().subscribe({
-      next: (data: any[]) => {
-        const now = new Date();
+loadTournaments() {
+  this.isLoading = true;
 
-        const mappedTournaments: TournamentModal[] = data.map(t => {
-          const tournamentDate = t.startAt ? new Date(t.startAt * 1000) : null;
-          const isPast = tournamentDate && tournamentDate < now;
+  this.tournamentService.getTopTournaments().subscribe({
+    next: (data: any[]) => {
+      const now = new Date();
 
-          return {
-            id: t.id,
-            title: t.name,
-            game: 'Naruto x Boruto: Ultimate Ninja Storm Connections',
-            platform: 'start.gg',
-            bannerUrl: (t.images && t.images.length > 0) ? t.images[0].url : 'https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=600&auto=format&fit=crop',
-            dateRange: tournamentDate ? tournamentDate.toLocaleDateString() : 'Upcoming',
-            location: 'Online',
-            attendees: t.numAttendees || 0,
-            badgeStatus: isPast ? 'Finished' : 'Registration Open',
-            badgeColor: isPast ? '#6b7280' : '#9333ea',
-            externalUrl: t.slug ? 'https://start.gg/' + t.slug : '#'
-          };
-        });
+      const mappedTournaments: TournamentModal[] = data.map(t => {
+        const tournamentDate = t.startAt ? new Date(t.startAt * 1000) : null;
+        const isPast = tournamentDate ? tournamentDate < now : false;
 
-        const topTen = mappedTournaments.slice(0, 10);
-        this.featuredTournaments = topTen.slice(0, 5); 
-        this.pastTournaments = topTen.slice(5, 10);    
-        
-        this.isLoading = false; // Disattiva lo spinner a caricamento completato
-      },
-      error: (err) => {
-        console.error('Errore nel caricamento dei tornei:', err);
-        this.isLoading = false; // Disattiva lo spinner anche in caso di errore
-        this.messageService.add({
-          severity: 'error',
-          summary: 'Error',
-          detail: 'Could not load tournaments from the service.'
-        });
-      }
-    });
-  }
+        return {
+          id: t.id,
+          title: t.name,
+          game: 'Naruto x Boruto: Ultimate Ninja Storm Connections',
+          platform: 'start.gg',
+          bannerUrl: (t.images && t.images.length > 0) ? t.images[0].url : 'https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=600&auto=format&fit=crop',
+          dateRange: tournamentDate ? tournamentDate.toLocaleDateString() : 'Upcoming',
+          location: 'Online',
+          attendees: t.numAttendees || 0,
+          badgeStatus: isPast ? 'Finished' : 'Registration Open',
+          badgeColor: isPast ? '#6b7280' : '#9333ea',
+          externalUrl: t.slug ? 'https://start.gg/' + t.slug : '#'
+        };
+      });
+
+      // Se ne arrivano 20: 
+      // Prendi i primi 8 per i Featured e i successivi (da index 8 a 20) per i Past
+      this.featuredTournaments = mappedTournaments.slice(0, 8);
+this.pastTournaments = mappedTournaments.slice(8, 14);
+      this.isLoading = false;
+    },
+    error: (err) => {
+      console.error('Errore nel caricamento dei tornei:', err);
+      this.isLoading = false;
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Error',
+        detail: 'Could not load tournaments from the service.'
+      });
+    }
+  });
+}
 
   private initForm() {
     this.tournamentForm = this.fb.group({

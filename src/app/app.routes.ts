@@ -10,12 +10,14 @@ import { Games } from './components/games/games';
 import { Matchmaking } from './components/matchmaking/matchmaking';
 import { Callback } from './components/callback/callback'; 
 import { Leaderboard } from './components/leaderboard/leaderboard';
+import { Tournaments } from './components/tournaments/tournaments';
 
 export const routes: Routes = [
 { path: 'home', component: Homepage },
 { path: 'games', component: Games },
 { path: 'matchmaking/lobbies', component: Matchmaking },
 { path: 'community', component: Community },
+{ path: 'community/tournaments', component: Tournaments }, // <--- Aggiunta qui
 { path: 'resources', component: Resources },
 { path: 'matchmaking/leaderboard', component: Leaderboard },
 { path: 'faq', component: Faq },

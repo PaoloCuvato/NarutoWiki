@@ -11,19 +11,8 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { ToastModule } from 'primeng/toast';
 import { DialogModule } from 'primeng/dialog';
 
-export interface Tournament {
-  id: string;
-  title: string;
-  game: string;
-  bannerUrl: string;
-  badgeStatus: 'Registration Open' | 'In Progress' | 'Finished';
-  badgeColor: string;
-  dateRange: string;
-  location: string;
-  attendees: number;
-  platform: 'start.gg' | 'challonge' | 'custom';
-  externalUrl?: string;
-}
+import { TournamentService } from '../../service/tournament-service';
+import { TournamentModal } from '../../modals/tournament-modal';
 
 @Component({
   selector: 'app-tournaments',
@@ -72,64 +61,15 @@ export class Tournaments implements OnInit {
     { label: 'Asia (AS)', value: 'asia' }
   ];
 
-  // Data mock per i tornei visibili in pagina
-  featuredTournaments: Tournament[] = [
-    {
-      id: '1',
-      title: 'Shinobi Showdown 2026',
-      game: 'Naruto x Boruto: Ultimate Ninja Storm Connections',
-      bannerUrl: '/connections.png', 
-      badgeStatus: 'Registration Open',
-      badgeColor: '#22c55e',
-      dateRange: 'Oct 10th - 12th, 2026',
-      location: 'Online',
-      attendees: 64,
-      platform: 'start.gg',
-      externalUrl: 'https://start.gg'
-    },
-    {
-      id: '2',
-      title: 'Ultimate Storm League S2',
-      game: 'Naruto x Boruto: Ultimate Ninja Storm Connections',
-      bannerUrl: '/connections.png', 
-      badgeStatus: 'Registration Open',
-      badgeColor: '#22c55e',
-      dateRange: 'Nov 5th - 6th, 2026',
-      location: 'Milano, IT',
-      attendees: 128,
-      platform: 'challonge',
-      externalUrl: 'https://challonge.com'
-    }
-  ];
+  // Liste tipizzate con TournamentModal
+  featuredTournaments: TournamentModal[] = [];
+  pastTournaments: TournamentModal[] = [];
 
-  pastTournaments: Tournament[] = [
-    {
-      id: '3',
-      title: 'Summer Ninja Clash #3',
-      game: 'Naruto x Boruto: Ultimate Ninja Storm Connections',
-      bannerUrl: '/connections.png', 
-      badgeStatus: 'Finished',
-      badgeColor: '#6b7280',
-      dateRange: 'Aug 15th, 2026',
-      location: 'Online',
-      attendees: 42,
-      platform: 'start.gg'
-    },
-    {
-      id: '4',
-      title: 'Infinite Burst Championship',
-      game: 'Naruto x Boruto: Ultimate Ninja Storm Connections',
-      bannerUrl: '/connections.png', 
-      badgeStatus: 'Finished',
-      badgeColor: '#6b7280',
-      dateRange: 'Jul 18th, 2026',
-      location: 'Online',
-      attendees: 85,
-      platform: 'challonge'
-    }
-  ];
-
-  constructor(private fb: FormBuilder, private messageService: MessageService) {}
+  constructor(
+    private fb: FormBuilder, 
+    private messageService: MessageService,
+    private tournamentService: TournamentService
+  ) {}
 
   ngOnInit() {
     this.steps = [
@@ -140,6 +80,25 @@ export class Tournaments implements OnInit {
     ];
 
     this.initForm();
+    this.loadTournaments();
+  }
+
+  loadTournaments() {
+    this.tournamentService.getTopTournaments().subscribe({
+      next: (data) => {
+        const topTen = data.slice(0, 10);
+        this.featuredTournaments = topTen.slice(0, 5); // Primi 5 in evidenza
+        this.pastTournaments = topTen.slice(5, 10);    // Dal 6° al 10° nei passati
+      },
+      error: (err) => {
+        console.error('Errore nel caricamento dei tornei:', err);
+        this.messageService.add({
+          severity: 'error',
+          summary: 'Error',
+          detail: 'Could not load tournaments from the service.'
+        });
+      }
+    });
   }
 
   private initForm() {
@@ -201,7 +160,7 @@ export class Tournaments implements OnInit {
     this.displayModal = false;
   }
 
-  openTournament(tournament: Tournament) {
+  openTournament(tournament: TournamentModal) {
     if (tournament.externalUrl) {
       window.open(tournament.externalUrl, '_blank');
     }

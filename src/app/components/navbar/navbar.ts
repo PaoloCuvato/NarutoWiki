@@ -52,8 +52,9 @@ export class Navbar implements OnInit, OnDestroy {
   private readonly CLIENT_ID = '1310173685268746262';
   private readonly REDIRECT_URI = encodeURIComponent('http://localhost:4200/callback');
 
-  // Timer per gestire l'hover fluido senza far sparire il menu a metà tragitto
+  // Gestione hover e menu attivi per evitare sovrapposizioni
   private hideTimeout: any = null;
+  private activeMenu: any = null;
 
   ngOnInit() {
     this.gamesItems = [
@@ -137,23 +138,33 @@ export class Navbar implements OnInit, OnDestroy {
     }
   }
 
-  // --- GESTIONE HOVER FLUIDA (EVITA LA CHIusura ACCIDENTALE) ---
+  // --- GESTIONE HOVER FLUIDA E CHIUSURA IMMEDIATA DEI MENU INCROCIATI ---
   showDropdown(event: MouseEvent, menu: any) {
-    // Se c'è un timer di chiusura attivo, lo blocchiamo (il mouse è tornato sul link o sul menu)
     if (this.hideTimeout) {
       clearTimeout(this.hideTimeout);
       this.hideTimeout = null;
     }
+
+    // Se c'è già un menu aperto ed è diverso da questo, chiudilo subito!
+    if (this.activeMenu && this.activeMenu !== menu) {
+      if (typeof this.activeMenu.hide === 'function') {
+        this.activeMenu.hide();
+      }
+    }
+
     if (menu && typeof menu.show === 'function') {
+      this.activeMenu = menu;
       menu.show(event);
     }
   }
 
   hideDropdown(menu: any) {
-    // Diamo un piccolo margine di tempo (150ms) prima di chiuderlo, così fai in tempo a spostarti sul menu
     this.hideTimeout = setTimeout(() => {
       if (menu && typeof menu.hide === 'function') {
         menu.hide();
+        if (this.activeMenu === menu) {
+          this.activeMenu = null;
+        }
       }
     }, 150);
   }

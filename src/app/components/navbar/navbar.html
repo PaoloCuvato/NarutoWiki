@@ -20,8 +20,8 @@
        (mouseenter)="showDropdown($event, gamesMenu)" 
        (mouseleave)="hideDropdown(gamesMenu)"></p-tieredMenu>
     
-    <!-- MATCHMAKING -->
-    <a routerLink="/matchmaking" routerLinkActive="active-link" class="nav-item dropdown-trigger" 
+    <!-- MATCHMAKING (Senza routerLink, apre solo il menu a tendina senza navigare) -->
+    <a class="nav-item dropdown-trigger" 
        (mouseenter)="showDropdown($event, matchmakingMenu)" 
        (mouseleave)="hideDropdown(matchmakingMenu)">
       <span class="dot"></span> MATCHMAKING <i class="pi pi-angle-down dropdown-arrow"></i>

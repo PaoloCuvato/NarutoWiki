@@ -1,133 +1,157 @@
-<div class="tournament-wrapper">
-  
-  <div class="tournament-header">
-    <h2><i class="pi pi-trophy"></i> CREATE TOURNAMENT WIZARD</h2>
-    <p>Setup brackets, sync with Challonge, start.gg, and broadcast on Discord.</p>
-  </div>
+<!-- Navbar/Page Action Container -->
+<div class="action-bar-container">
+  <p-button 
+    label="CREATE TOURNAMENT" 
+    icon="pi pi-trophy" 
+    (click)="openModal()" 
+    styleClass="btn-trigger-modal">
+  </p-button>
+</div>
 
-  @if (!successMessage) {
-    <!-- Stepper di PrimeNG -->
-    <div class="steps-container mb-4">
-      <p-steps [model]="steps" [(activeIndex)]="activeIndex" [readonly]="false"></p-steps>
+<!-- Modal Popup PrimeNG con Tema Viola -->
+<p-dialog 
+  [(visible)]="displayModal" 
+  [modal]="true" 
+  [dismissableMask]="true"
+  [draggable]="false"
+  [resizable]="false"
+  styleClass="purple-tournament-dialog">
+
+  <div class="tournament-wrapper">
+    
+    <!-- Intestazione con Icona Trofeo Viola -->
+    <div class="tournament-header">
+      <h2><i class="pi pi-trophy main-trophy-icon"></i> CREATE YOUR TOURNAMENT</h2>
+      <p>Setup brackets, sync with Challonge, start.gg, and broadcast on Discord.</p>
     </div>
 
-    <p-card styleClass="tournament-card">
-      <form [formGroup]="tournamentForm">
-
-        <!-- STEP 0: General Info -->
-        @if (activeIndex === 0) {
-          <div class="step-pane">
-            <h3>1. General Information</h3>
-            
-            <div class="field">
-              <label>Tournament Name *</label>
-              <input pInputText formControlName="name" placeholder="e.g., Storm Connections Weekly #1" class="w-full" />
-            </div>
-
-            <div class="field">
-              <label>Game *</label>
-              <p-select [options]="games" formControlName="game" placeholder="Select a fighting game" optionLabel="label" optionValue="value" styleClass="w-full"></p-select>
-            </div>
-
-            <div class="field">
-              <label>Region *</label>
-              <p-select [options]="regions" formControlName="region" optionLabel="label" optionValue="value" styleClass="w-full"></p-select>
-            </div>
-          </div>
-        }
-
-        <!-- STEP 1: Multi-Platform Selection -->
-        @if (activeIndex === 1) {
-          <div class="step-pane" formGroupName="platforms">
-            <h3>2. Hosting & Integration Platforms</h3>
-            <p class="step-desc">Select one or multiple platforms to synchronize your tournament:</p>
-            
-            <div class="checkbox-group">
-              <div class="field-checkbox">
-                <p-checkbox formControlName="challonge" [binary]="true" inputId="challongeCheck"></p-checkbox>
-                <label for="challongeCheck"><strong>Challonge</strong> (Automated Bracket Generation)</label>
-              </div>
-
-              <div class="field-checkbox">
-                <p-checkbox formControlName="startgg" [binary]="true" inputId="startggCheck"></p-checkbox>
-                <label for="startggCheck"><strong>start.gg</strong> (Esports Tournament Platform)</label>
-              </div>
-
-              <div class="field-checkbox">
-                <p-checkbox formControlName="discord" [binary]="true" inputId="discordCheck"></p-checkbox>
-                <label for="discordCheck"><strong>Discord</strong> (Server Event & Announcements)</label>
-              </div>
-            </div>
-          </div>
-        }
-
-        <!-- STEP 2: Settings & Formats -->
-        @if (activeIndex === 2) {
-          <div class="step-pane">
-            <h3>3. Format & Settings</h3>
-            
-            <div class="field">
-              <label>Bracket Format</label>
-              <p-select [options]="formats" formControlName="format" optionLabel="label" optionValue="value" styleClass="w-full"></p-select>
-            </div>
-
-            <div class="field">
-              <label>Max Participants</label>
-              <input pInputText type="number" formControlName="maxParticipants" class="w-full" />
-            </div>
-
-            <div class="field">
-              <label>Discord Announcement Channel</label>
-              <input pInputText formControlName="discordChannel" class="w-full" />
-            </div>
-          </div>
-        }
-
-        <!-- STEP 3: Review -->
-        @if (activeIndex === 3) {
-          <div class="step-pane review-step">
-            <h3>4. Review & Launch</h3>
-            <p>Verify your details before launching the tournament:</p>
-            
-            <ul class="review-list">
-              <li><strong>Name:</strong> {{ tournamentForm.get('name')?.value }}</li>
-              <li><strong>Region:</strong> {{ tournamentForm.get('region')?.value | uppercase }}</li>
-              <li><strong>Format:</strong> {{ tournamentForm.get('format')?.value }}</li>
-              <li><strong>Max Slots:</strong> {{ tournamentForm.get('maxParticipants')?.value }}</li>
-              <li><strong>Platforms:</strong> 
-                @if (tournamentForm.get('platforms.challonge')?.value) { [Challonge] }
-                @if (tournamentForm.get('platforms.startgg')?.value) { [start.gg] }
-                @if (tournamentForm.get('platforms.discord')?.value) { [Discord] }
-              </li>
-            </ul>
-          </div>
-        }
-
-        <!-- Bottoni di Navigazione -->
-        <div class="form-footer flex justify-content-between mt-4">
-          <p-button label="Back" icon="pi pi-arrow-left" (click)="prev()" [disabled]="activeIndex === 0" styleClass="p-button-secondary"></p-button>
-          
-          @if (activeIndex < steps.length - 1) {
-            <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" (click)="next()"></p-button>
-          } @else {
-            <p-button label="Create Tournament" icon="pi pi-check" (click)="onSubmit()" styleClass="p-button-success"></p-button>
-          }
-        </div>
-
-      </form>
-    </p-card>
-  } @else {
-    <!-- Schermata di Successo Finale -->
-    <p-card styleClass="tournament-card success-card text-center">
-      <div class="success-content">
-        <i class="pi pi-check-circle success-icon"></i>
-        <h3>Tournament Created Successfully!</h3>
-        <p>Your tournament has been successfully deployed and synced with the selected platforms.</p>
-        <p-button label="Create Another Tournament" icon="pi pi-plus" (click)="successMessage = false; activeIndex = 0; tournamentForm.reset()" styleClass="mt-3"></p-button>
+    @if (!successMessage) {
+      <!-- Stepper PrimeNG -->
+      <div class="steps-container mb-4">
+        <p-steps [model]="steps" [(activeIndex)]="activeIndex" [readonly]="false"></p-steps>
       </div>
-    </p-card>
-  }
 
-</div>
+      <p-card styleClass="tournament-card">
+        <form [formGroup]="tournamentForm">
+
+          <!-- STEP 0: General Info -->
+          @if (activeIndex === 0) {
+            <div class="step-pane">
+              <h3>1. General Information</h3>
+              
+              <div class="field">
+                <label>Tournament Name *</label>
+                <input pInputText formControlName="name" placeholder="e.g., Storm Connections Weekly #1" class="w-full" />
+              </div>
+
+              <div class="field">
+                <label>Game *</label>
+                <p-select [options]="games" formControlName="game" placeholder="Select a fighting game" optionLabel="label" optionValue="value" styleClass="w-full"></p-select>
+              </div>
+
+              <div class="field">
+                <label>Region *</label>
+                <p-select [options]="regions" formControlName="region" optionLabel="label" optionValue="value" styleClass="w-full"></p-select>
+              </div>
+            </div>
+          }
+
+          <!-- STEP 1: Multi-Platform Selection -->
+          @if (activeIndex === 1) {
+            <div class="step-pane" formGroupName="platforms">
+              <h3>2. Hosting & Integration Platforms</h3>
+              <p class="step-desc">Select one or multiple platforms to synchronize your tournament:</p>
+              
+              <div class="checkbox-group">
+                <div class="field-checkbox">
+                  <p-checkbox formControlName="challonge" [binary]="true" inputId="challongeCheck"></p-checkbox>
+                  <label for="challongeCheck"><strong>Challonge</strong> (Automated Bracket Generation)</label>
+                </div>
+
+                <div class="field-checkbox">
+                  <p-checkbox formControlName="startgg" [binary]="true" inputId="startggCheck"></p-checkbox>
+                  <label for="startggCheck"><strong>start.gg</strong> (Esports Tournament Platform)</label>
+                </div>
+
+                <div class="field-checkbox">
+                  <p-checkbox formControlName="discord" [binary]="true" inputId="discordCheck"></p-checkbox>
+                  <label for="discordCheck"><strong>Discord</strong> (Server Event & Announcements)</label>
+                </div>
+              </div>
+            </div>
+          }
+
+          <!-- STEP 2: Settings & Formats -->
+          @if (activeIndex === 2) {
+            <div class="step-pane">
+              <h3>3. Format & Settings</h3>
+              
+              <div class="field">
+                <label>Bracket Format</label>
+                <p-select [options]="formats" formControlName="format" optionLabel="label" optionValue="value" styleClass="w-full"></p-select>
+              </div>
+
+              <div class="field">
+                <label>Max Participants</label>
+                <input pInputText type="number" formControlName="maxParticipants" class="w-full" />
+              </div>
+
+              <div class="field">
+                <label>Discord Announcement Channel</label>
+                <input pInputText formControlName="discordChannel" class="w-full" />
+              </div>
+            </div>
+          }
+
+          <!-- STEP 3: Review -->
+          @if (activeIndex === 3) {
+            <div class="step-pane review-step">
+              <h3>4. Review & Launch</h3>
+              <p class="step-desc">Verify your details before launching the tournament:</p>
+              
+              <ul class="review-list">
+                <li><span>Name:</span> <strong>{{ tournamentForm.get('name')?.value || '-' }}</strong></li>
+                <li><span>Region:</span> <strong>{{ (tournamentForm.get('region')?.value | uppercase) || '-' }}</strong></li>
+                <li><span>Format:</span> <strong>{{ tournamentForm.get('format')?.value || '-' }}</strong></li>
+                <li><span>Max Slots:</span> <strong>{{ tournamentForm.get('maxParticipants')?.value || '-' }}</strong></li>
+                <li>
+                  <span>Platforms:</span> 
+                  <strong class="platform-tags">
+                    @if (tournamentForm.get('platforms.challonge')?.value) { <span class="tag">Challonge</span> }
+                    @if (tournamentForm.get('platforms.startgg')?.value) { <span class="tag">start.gg</span> }
+                    @if (tournamentForm.get('platforms.discord')?.value) { <span class="tag">Discord</span> }
+                  </strong>
+                </li>
+              </ul>
+            </div>
+          }
+
+          <!-- Bottoni di Navigazione -->
+          <div class="form-footer flex justify-content-between mt-4">
+            <p-button label="Back" icon="pi pi-arrow-left" (click)="prev()" [disabled]="activeIndex === 0" styleClass="p-button-secondary"></p-button>
+            
+            @if (activeIndex < steps.length - 1) {
+              <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" (click)="next()" styleClass="p-button-purple"></p-button>
+            } @else {
+              <p-button label="Create Tournament" icon="pi pi-check" (click)="onSubmit()" styleClass="p-button-success"></p-button>
+            }
+          </div>
+
+        </form>
+      </p-card>
+    } @else {
+      <!-- Schermata Successo -->
+      <p-card styleClass="tournament-card success-card text-center">
+        <div class="success-content">
+          <i class="pi pi-check-circle success-icon"></i>
+          <h3>Tournament Created Successfully!</h3>
+          <p>Your tournament has been successfully deployed and synced with the selected platforms.</p>
+          <p-button label="Create Another Tournament" icon="pi pi-plus" (click)="resetForm()" styleClass="mt-3 p-button-purple"></p-button>
+        </div>
+      </p-card>
+    }
+
+  </div>
+</p-dialog>
 
 <p-toast></p-toast>

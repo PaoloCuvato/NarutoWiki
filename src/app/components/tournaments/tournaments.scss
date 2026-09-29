@@ -1,8 +1,113 @@
+:host {
+  display: block;
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+/* Contenitore per il pulsante principale centrato sotto la barra */
+.action-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  width: 100%;
+}
+
+/* Pulsante Trigger "CREA TORNEO" - Viola Neon */
+::ng-deep .btn-trigger-modal {
+  background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+  padding: 12px 28px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 22px rgba(168, 85, 247, 0.5) !important;
+  letter-spacing: 1px;
+  transition: all 0.3s ease !important;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 32px rgba(168, 85, 247, 0.8) !important;
+    background: linear-gradient(135deg, #b666ff 0%, #8b28e0 100%) !important;
+  }
+}
+
+/* Modal Popup PrimeNG - Tema Viola Shinobi */
+::ng-deep .purple-tournament-dialog {
+  /* Fix Anti-Aliasing & Angoli Arrotondati */
+  overflow: hidden !important; 
+  border: 2px solid #a855f7 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 0 35px rgba(168, 85, 247, 0.4), 0 10px 40px rgba(0, 0, 0, 0.95) !important;
+  width: 100%;
+  max-width: 750px;
+  background-color: #000000 !important;
+
+  .p-dialog-header,
+  .p-dialog-content,
+  .p-dialog-footer {
+    background: #000000 !important;
+    border: none !important;
+    outline: none !important;
+  }
+
+  .p-dialog-header {
+    padding: 1.25rem 1.5rem 0 1.5rem !important;
+
+    .p-dialog-header-close {
+      color: #aaaaaa !important;
+      outline: none !important;
+      &:hover {
+        color: #a855f7 !important;
+        background: rgba(168, 85, 247, 0.15) !important;
+      }
+    }
+  }
+
+  .p-dialog-content {
+    padding: 0 1.5rem 1.5rem 1.5rem !important;
+  }
+
+  /* Personalizzazione Steps / Stepper PrimeNG in Viola */
+  .p-steps {
+    .p-steps-item {
+      .p-menuitem-link {
+        background: transparent !important;
+        
+        .p-steps-number {
+          border: 2px solid rgba(255, 255, 255, 0.2);
+          color: #aaa;
+          background: #121216;
+        }
+        .p-steps-title {
+          color: #aaa;
+        }
+      }
+
+      &.p-highlight .p-menuitem-link {
+        .p-steps-number {
+          background: #a855f7 !important;
+          border-color: #a855f7 !important;
+          color: #ffffff !important;
+          box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+        }
+        .p-steps-title {
+          color: #ffffff !important;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+/* Wrapper Interno */
 .tournament-wrapper {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 0 20px;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 10px 10px 20px 10px;
   box-sizing: border-box;
+  background: #000000;
 
   .tournament-header {
     text-align: center;
@@ -10,13 +115,20 @@
 
     h2 {
       font-size: 1.8rem;
-      font-weight: 700;
+      font-weight: 800;
       color: #fff;
       margin-bottom: 8px;
-      
-      i {
-        color: #ff5722;
-        margin-right: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+
+      i.main-trophy-icon {
+        color: #a855f7;
+        font-size: 2.4rem;
+        text-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
       }
     }
 
@@ -31,13 +143,12 @@
     width: 100%;
   }
 
-  // Forza lo stile della card e dei componenti interni
   ::ng-deep {
     .tournament-card {
-      background: rgba(20, 20, 25, 0.95) !important;
-      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      background: rgba(14, 14, 18, 0.96) !important;
+      border: 1px solid rgba(168, 85, 247, 0.2) !important;
       border-radius: 12px !important;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
       color: #fff !important;
       display: block;
       padding: 1.5rem;
@@ -77,15 +188,16 @@
           }
 
           input[pInputText] {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(0, 0, 0, 0.6);
             border: 1px solid rgba(255, 255, 255, 0.15);
             color: #fff;
             padding: 10px 14px;
             border-radius: 6px;
 
             &:focus {
-              border-color: #ff5722;
+              border-color: #a855f7;
               outline: none;
+              box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
             }
           }
         }
@@ -115,19 +227,37 @@
         }
       }
 
+      /* Review Step */
       .review-step {
         .review-list {
           list-style: none;
           padding: 0;
-          
+
           li {
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             color: #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
             strong {
-              color: #fff;
-              margin-right: 8px;
+              color: #c084fc;
+
+              &.platform-tags {
+                display: flex;
+                gap: 6px;
+
+                .tag {
+                  background: rgba(168, 85, 247, 0.2);
+                  border: 1px solid #a855f7;
+                  color: #ffffff;
+                  padding: 2px 8px;
+                  border-radius: 4px;
+                  font-size: 0.85rem;
+                  font-weight: 600;
+                }
+              }
             }
           }
         }
@@ -140,6 +270,17 @@
         margin-top: 30px;
         padding-top: 15px;
         border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+        .p-button-purple {
+          background: #a855f7 !important;
+          border-color: #a855f7 !important;
+          color: #ffffff !important;
+
+          &:hover {
+            background: #9333ea !important;
+            border-color: #9333ea !important;
+          }
+        }
       }
 
       &.success-card {

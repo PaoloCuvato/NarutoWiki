@@ -6,9 +6,10 @@ import { StepsModule } from 'primeng/steps';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
-import { SelectModule } from 'primeng/select'; // <--- Aggiornato a SelectModule
+import { SelectModule } from 'primeng/select';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ToastModule } from 'primeng/toast';
+import { DialogModule } from 'primeng/dialog'; // <--- Importato DialogModule
 
 @Component({
   selector: 'app-tournaments',
@@ -20,16 +21,20 @@ import { ToastModule } from 'primeng/toast';
     CardModule,
     ButtonModule,
     InputTextModule,
-    SelectModule, // <--- Inserito qui
+    SelectModule,
     CheckboxModule,
-    ToastModule
+    ToastModule,
+    DialogModule // <--- Inserito qui
   ],
   templateUrl: './tournaments.html',
   styleUrl: './tournaments.scss',
   providers: [MessageService]
 })
 export class Tournaments implements OnInit {
-  
+
+  // Gestione modale popup
+  displayModal: boolean = false;
+
   steps: MenuItem[] = [];
   activeIndex: number = 0;
   tournamentForm!: FormGroup;
@@ -63,6 +68,10 @@ export class Tournaments implements OnInit {
       { label: 'Review' }
     ];
 
+    this.initForm();
+  }
+
+  private initForm() {
     this.tournamentForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       game: [null, Validators.required],
@@ -80,9 +89,13 @@ export class Tournaments implements OnInit {
     });
   }
 
+  openModal() {
+    this.displayModal = true;
+  }
+
   next() {
-    if (this.activeIndex === 0 && this.tournamentForm.get('name')?.invalid) {
-      this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Please enter a valid tournament name.' });
+    if (this.activeIndex === 0 && (this.tournamentForm.get('name')?.invalid || this.tournamentForm.get('game')?.invalid)) {
+      this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Please fill in all required general information.' });
       return;
     }
     if (this.activeIndex < this.steps.length - 1) {
@@ -108,5 +121,11 @@ export class Tournaments implements OnInit {
         detail: 'Tournament created and synced successfully.'
       });
     }
+  }
+
+  resetForm() {
+    this.successMessage = false;
+    this.activeIndex = 0;
+    this.initForm();
   }
 }

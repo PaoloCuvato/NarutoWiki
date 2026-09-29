@@ -1,14 +1,106 @@
-<!-- Navbar/Page Action Container -->
-<div class="action-bar-container">
-  <p-button 
-    label="CREATE TOURNAMENT" 
-    icon="pi pi-trophy" 
-    (click)="openModal()" 
-    styleClass="btn-trigger-modal">
-  </p-button>
+<div class="tournaments-page">
+  <!-- Header / Action Bar -->
+  <div class="action-bar-container">
+    <div class="page-title">
+      <h1><i class="pi pi-trophy text-purple"></i> Tournaments Hub</h1>
+      <p>Browse ongoing tournaments or create your own competitive event.</p>
+    </div>
+    <p-button 
+      label="CREATE TOURNAMENT" 
+      icon="pi pi-trophy" 
+      (click)="openModal()" 
+      styleClass="btn-trigger-modal">
+    </p-button>
+  </div>
+
+  <!-- Featured / Active Tournaments -->
+  <section class="tournaments-section">
+    <h2 class="section-title"><i class="pi pi-bolt"></i> Featured & Upcoming</h2>
+    
+    <div class="tournaments-grid">
+      @for (tournament of featuredTournaments; track tournament.id) {
+        <div class="tournament-card" (click)="openTournament(tournament)">
+          <div class="card-banner">
+            <img 
+              [src]="tournament.bannerUrl" 
+              [alt]="tournament.title" 
+              (error)="$any($event.target).src='https://placehold.co/600x300/1e1b4b/818cf8?text=Tournament'" 
+            />
+            <span class="status-badge" [style.backgroundColor]="tournament.badgeColor">
+              {{ tournament.badgeStatus }}
+            </span>
+          </div>
+
+          <div class="card-content">
+            <span class="game-tag">{{ tournament.game }}</span>
+            <h3 class="tournament-title">{{ tournament.title }}</h3>
+            
+            <div class="tournament-details">
+              <div class="detail-item">
+                <i class="pi pi-calendar"></i>
+                <span>{{ tournament.dateRange }}</span>
+              </div>
+              <div class="detail-item">
+                <i class="pi pi-map-marker"></i>
+                <span>{{ tournament.location }}</span>
+              </div>
+              <div class="detail-item">
+                <i class="pi pi-users"></i>
+                <span>{{ tournament.attendees }} Entrants</span>
+              </div>
+            </div>
+
+            <div class="card-action">
+              <button class="btn-bracket">
+                <i class="pi pi-external-link"></i> View Bracket
+              </button>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Past Events Section -->
+  <section class="tournaments-section mt-5">
+    <h2 class="section-title"><i class="pi pi-history"></i> Past Events</h2>
+    
+    <div class="tournaments-grid">
+      @for (tournament of pastTournaments; track tournament.id) {
+        <div class="tournament-card past-card">
+          <div class="card-banner">
+            <img 
+              [src]="tournament.bannerUrl" 
+              [alt]="tournament.title" 
+              (error)="$any($event.target).src='https://placehold.co/600x300/1e1b4b/818cf8?text=Past+Event'" 
+            />
+            <span class="status-badge" [style.backgroundColor]="tournament.badgeColor">
+              {{ tournament.badgeStatus }}
+            </span>
+          </div>
+
+          <div class="card-content">
+            <span class="game-tag">{{ tournament.game }}</span>
+            <h3 class="tournament-title">{{ tournament.title }}</h3>
+            
+            <div class="tournament-details">
+              <div class="detail-item">
+                <i class="pi pi-calendar"></i>
+                <span>{{ tournament.dateRange }}</span>
+              </div>
+              <div class="detail-item">
+                <i class="pi pi-users"></i>
+                <span>{{ tournament.attendees }} Entrants</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
 </div>
 
-<!-- Modal Popup PrimeNG con Tema Viola -->
+<!-- Modal Popup PrimeNG -->
 <p-dialog 
   [(visible)]="displayModal" 
   [modal]="true" 
@@ -19,19 +111,19 @@
 
   <div class="tournament-wrapper">
     
-    <!-- Intestazione con Icona Trofeo Viola -->
+    <!-- Intestazione identica allo Screenshot 2 -->
     <div class="tournament-header">
       <h2><i class="pi pi-trophy main-trophy-icon"></i> CREATE YOUR TOURNAMENT</h2>
       <p>Setup brackets, sync with Challonge, start.gg, and broadcast on Discord.</p>
     </div>
 
     @if (!successMessage) {
-      <!-- Stepper PrimeNG -->
-      <div class="steps-container mb-4">
+      <!-- Stepper PrimeNG Custom -->
+      <div class="steps-container">
         <p-steps [model]="steps" [(activeIndex)]="activeIndex" [readonly]="false"></p-steps>
       </div>
 
-      <p-card styleClass="tournament-card">
+      <div class="tournament-card-form">
         <form [formGroup]="tournamentForm">
 
           <!-- STEP 0: General Info -->
@@ -56,7 +148,7 @@
             </div>
           }
 
-          <!-- STEP 1: Multi-Platform Selection -->
+          <!-- STEP 1: Platforms -->
           @if (activeIndex === 1) {
             <div class="step-pane" formGroupName="platforms">
               <h3>2. Hosting & Integration Platforms</h3>
@@ -81,7 +173,7 @@
             </div>
           }
 
-          <!-- STEP 2: Settings & Formats -->
+          <!-- STEP 2: Settings -->
           @if (activeIndex === 2) {
             <div class="step-pane">
               <h3>3. Format & Settings</h3>
@@ -127,7 +219,7 @@
           }
 
           <!-- Bottoni di Navigazione -->
-          <div class="form-footer flex justify-content-between mt-4">
+          <div class="form-footer">
             <p-button label="Back" icon="pi pi-arrow-left" (click)="prev()" [disabled]="activeIndex === 0" styleClass="p-button-secondary"></p-button>
             
             @if (activeIndex < steps.length - 1) {
@@ -138,17 +230,17 @@
           </div>
 
         </form>
-      </p-card>
+      </div>
     } @else {
-      <!-- Schermata Successo -->
-      <p-card styleClass="tournament-card success-card text-center">
+      <!-- Successo -->
+      <div class="tournament-card-form text-center">
         <div class="success-content">
           <i class="pi pi-check-circle success-icon"></i>
           <h3>Tournament Created Successfully!</h3>
-          <p>Your tournament has been successfully deployed and synced with the selected platforms.</p>
+          <p>Your tournament has been successfully deployed and synced.</p>
           <p-button label="Create Another Tournament" icon="pi pi-plus" (click)="resetForm()" styleClass="mt-3 p-button-purple"></p-button>
         </div>
-      </p-card>
+      </div>
     }
 
   </div>

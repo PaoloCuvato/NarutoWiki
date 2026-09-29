@@ -9,7 +9,21 @@ import { InputTextModule } from 'primeng/inputtext';
 import { SelectModule } from 'primeng/select';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ToastModule } from 'primeng/toast';
-import { DialogModule } from 'primeng/dialog'; // <--- Importato DialogModule
+import { DialogModule } from 'primeng/dialog';
+
+export interface Tournament {
+  id: string;
+  title: string;
+  game: string;
+  bannerUrl: string;
+  badgeStatus: 'Registration Open' | 'In Progress' | 'Finished';
+  badgeColor: string;
+  dateRange: string;
+  location: string;
+  attendees: number;
+  platform: 'start.gg' | 'challonge' | 'custom';
+  externalUrl?: string;
+}
 
 @Component({
   selector: 'app-tournaments',
@@ -24,7 +38,7 @@ import { DialogModule } from 'primeng/dialog'; // <--- Importato DialogModule
     SelectModule,
     CheckboxModule,
     ToastModule,
-    DialogModule // <--- Inserito qui
+    DialogModule
   ],
   templateUrl: './tournaments.html',
   styleUrl: './tournaments.scss',
@@ -32,7 +46,7 @@ import { DialogModule } from 'primeng/dialog'; // <--- Importato DialogModule
 })
 export class Tournaments implements OnInit {
 
-  // Gestione modale popup
+  // Gestione modal popup
   displayModal: boolean = false;
 
   steps: MenuItem[] = [];
@@ -58,6 +72,63 @@ export class Tournaments implements OnInit {
     { label: 'Asia (AS)', value: 'asia' }
   ];
 
+  // Data mock per i tornei visibili in pagina
+  featuredTournaments: Tournament[] = [
+    {
+      id: '1',
+      title: 'Shinobi Showdown 2026',
+      game: 'Naruto x Boruto: Ultimate Ninja Storm Connections',
+      bannerUrl: '/connections.png', 
+      badgeStatus: 'Registration Open',
+      badgeColor: '#22c55e',
+      dateRange: 'Oct 10th - 12th, 2026',
+      location: 'Online',
+      attendees: 64,
+      platform: 'start.gg',
+      externalUrl: 'https://start.gg'
+    },
+    {
+      id: '2',
+      title: 'Ultimate Storm League S2',
+      game: 'Naruto x Boruto: Ultimate Ninja Storm Connections',
+      bannerUrl: '/connections.png', 
+      badgeStatus: 'Registration Open',
+      badgeColor: '#22c55e',
+      dateRange: 'Nov 5th - 6th, 2026',
+      location: 'Milano, IT',
+      attendees: 128,
+      platform: 'challonge',
+      externalUrl: 'https://challonge.com'
+    }
+  ];
+
+  pastTournaments: Tournament[] = [
+    {
+      id: '3',
+      title: 'Summer Ninja Clash #3',
+      game: 'Naruto x Boruto: Ultimate Ninja Storm Connections',
+      bannerUrl: '/connections.png', 
+      badgeStatus: 'Finished',
+      badgeColor: '#6b7280',
+      dateRange: 'Aug 15th, 2026',
+      location: 'Online',
+      attendees: 42,
+      platform: 'start.gg'
+    },
+    {
+      id: '4',
+      title: 'Infinite Burst Championship',
+      game: 'Naruto x Boruto: Ultimate Ninja Storm Connections',
+      bannerUrl: '/connections.png', 
+      badgeStatus: 'Finished',
+      badgeColor: '#6b7280',
+      dateRange: 'Jul 18th, 2026',
+      location: 'Online',
+      attendees: 85,
+      platform: 'challonge'
+    }
+  ];
+
   constructor(private fb: FormBuilder, private messageService: MessageService) {}
 
   ngOnInit() {
@@ -74,7 +145,7 @@ export class Tournaments implements OnInit {
   private initForm() {
     this.tournamentForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
-      game: [null, Validators.required],
+      game: ['storm_connections', Validators.required],
       region: ['eu', Validators.required],
       
       platforms: this.fb.group({
@@ -127,5 +198,12 @@ export class Tournaments implements OnInit {
     this.successMessage = false;
     this.activeIndex = 0;
     this.initForm();
+    this.displayModal = false;
+  }
+
+  openTournament(tournament: Tournament) {
+    if (tournament.externalUrl) {
+      window.open(tournament.externalUrl, '_blank');
+    }
   }
 }

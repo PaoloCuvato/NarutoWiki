@@ -503,4 +503,40 @@
       font-size: 0.9rem;
     }
   }
+/* Stile per i consigli sulle piattaforme (coerente con .privacy-details) */
+.tournament-guidelines {
+  background: #ff880042;
+  border: 1px solid #ffaa00;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tournament-guidelines ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tournament-guidelines li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.tournament-guidelines li:last-child {
+  margin-bottom: 0;
+}
+
+.tournament-guidelines .guideline-icon {
+  color: #ffaa00;
+  font-size: 1rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
 }

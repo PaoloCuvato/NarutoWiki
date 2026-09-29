@@ -27,8 +27,8 @@ import { TournamentModal } from '../../modals/tournament-modal';
     SelectModule,
     CheckboxModule,
     ToastModule,
-    DialogModule
-  ],
+    DialogModule,
+],
   templateUrl: './tournaments.html',
   styleUrl: './tournaments.scss',
   providers: [MessageService]

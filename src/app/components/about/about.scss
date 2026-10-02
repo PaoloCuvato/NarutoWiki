@@ -144,20 +144,6 @@
     }
   }
 
-  // ==========================================
-  // GRIGLIA CONTENT CREATORS (Compatta, Icona + Nome affiancati)
-  // ==========================================
-  .identity-section {
-    .contributors-grid {
-      // Se vuoi applicare la griglia a più colonne specifica per i content creators:
-      // (Assicurati di wrappare i content creators nella loro classe o usa un selettore mirato)
-    }
-  }
-
-  // Seleziona la griglia dei creator (basata sul fatto che usano .creator-card o simile)
-  .contributors-grid {
-    // Regola generica, ma per i content creators usiamo un layout dedicato se desideri colonne multiple strette:
-  }
 
   // Ridefiniamo la visualizzazione specifica per i box dei Content Creators
   .creator-card {

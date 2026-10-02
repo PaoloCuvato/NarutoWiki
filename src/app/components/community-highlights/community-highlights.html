@@ -1,1 +1,119 @@
-<p>community-highlights works!</p>
+<div class="community-page-wrapper">
+  
+  <!-- CONTENITORE PRINCIPALE (Layout Stile Leaderboard Ninja con Bordo Arancione) -->
+  <div class="main-ninja-card">
+
+    <!-- HEADER PRINCIPALE IN INGLESE -->
+    <div class="section-header">
+      <span class="sub-header-tag">| COMMUNITY HIGHLIGHTS</span>
+      <h1 class="main-title">STORM COMMUNITY MEDIA</h1>
+      <p class="subtitle">Watch top community creators, latest match highlights, and gameplay guide playlists.</p>
+    </div>
+
+    <!-- LOADING STATE CON SPINNER PRIMENG -->
+    <div *ngIf="isLoading" class="state-container">
+      <p-progressSpinner strokeWidth="3" ariaLabel="Loading media content"></p-progressSpinner>
+      <p class="state-text">Fetching Shinobi Content...</p>
+    </div>
+
+    <!-- ERROR STATE -->
+    <div *ngIf="errorMessage && !isLoading" class="state-container error">
+      <i class="pi pi-exclamation-triangle error-icon"></i>
+      <p>{{ errorMessage }}</p>
+      <button pButton label="Retry" icon="pi pi-refresh" class="p-button-outlined p-button-warning" (click)="loadHighlights()"></button>
+    </div>
+
+    <!-- CONTENUTI -->
+    <div *ngIf="!isLoading && !errorMessage" class="content-body">
+
+      <!-- 1. YOUTUBERS / CREATORS (4 Estratti Casualmente) -->
+      <section class="content-block">
+        <div class="block-header">
+          <h2><span class="orange-pipe">|</span> FEATURED CREATORS</h2>
+        </div>
+
+        <div class="creators-grid">
+          <div class="creator-card" *ngFor="let creator of featuredCreators">
+            <div class="creator-header">
+              <p-avatar [image]="creator.avatarUrl" shape="circle" size="large" class="creator-avatar"></p-avatar>
+              <div class="creator-meta">
+                <h3 class="creator-name">{{ creator.name }}</h3>
+                <a [href]="creator.customUrl" target="_blank" rel="noopener noreferrer" class="channel-link">Visit Channel</a>
+              </div>
+            </div>
+
+            <!-- Ultimo video del canale -->
+            <div class="creator-latest-video" *ngIf="creator.latestVideo">
+              <a [href]="creator.latestVideo.youtubeUrl" target="_blank" rel="noopener noreferrer" class="video-link">
+                <div class="thumb-box">
+                  <img [src]="creator.latestVideo.thumbnail" [alt]="creator.latestVideo.title" />
+                  <div class="play-overlay">
+                    <i class="pi pi-play-circle"></i>
+                  </div>
+                </div>
+                <div class="video-info">
+                  <span class="badge badge-orange">LATEST UPLOAD</span>
+                  <p class="v-title" [title]="creator.latestVideo.title">{{ creator.latestVideo.title }}</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. RECENT COMMUNITY VIDEOS -->
+      <section class="content-block">
+        <div class="block-header">
+          <h2><span class="orange-pipe">|</span> RECENT HIGHLIGHTS</h2>
+        </div>
+
+        <div class="videos-grid">
+          <div class="video-card" *ngFor="let video of randomVideos">
+            <a [href]="video.youtubeUrl" target="_blank" rel="noopener noreferrer">
+              <div class="thumb-box">
+                <img [src]="video.thumbnail" [alt]="video.title" loading="lazy" />
+                <div class="play-overlay">
+                  <i class="pi pi-play-circle"></i>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="badge badge-orange">COMMUNITY VIDEO</span>
+                <h4 class="v-title" [title]="video.title">{{ video.title }}</h4>
+                <p class="channel-name">{{ video.channelTitle }}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. GUIDES & PLAYLISTS (In fondo alla pagina) -->
+      <section class="content-block">
+        <div class="block-header">
+          <h2><span class="orange-pipe">|</span> GUIDES & PLAYLISTS</h2>
+        </div>
+
+        <div class="videos-grid">
+          <div class="video-card playlist-card" *ngFor="let playlist of pinnedPlaylists">
+            <a [href]="playlist.youtubeUrl" target="_blank" rel="noopener noreferrer">
+              <div class="thumb-box">
+                <img [src]="playlist.thumbnail" [alt]="playlist.title" loading="lazy" />
+                <span class="playlist-badge">
+                  <i class="pi pi-list"></i> {{ playlist.itemCount }} VIDEOS
+                </span>
+                <div class="play-overlay">
+                  <i class="pi pi-play-circle"></i>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="badge badge-purple">GUIDE PLAYLIST</span>
+                <h4 class="v-title" [title]="playlist.title">{{ playlist.title }}</h4>
+                <p class="channel-name">{{ playlist.channelTitle }}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>

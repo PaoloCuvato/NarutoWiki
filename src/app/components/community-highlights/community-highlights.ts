@@ -1,11 +1,13 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { YoutubeVideo } from '../../modals/youtube-video';
-import { YoutubePlaylist } from '../../modals/youtube-playlist';
-import { YoutubeService, CommunityHighlightsData, CreatorChannel } from '../../service/youtube';
+import { YoutubeService } from '../../service/youtube';
 import { ButtonModule } from 'primeng/button';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { AvatarModule } from 'primeng/avatar';
+import { CardModule } from 'primeng/card';
+import { CreatorHighlightDto } from '../../modals/creator-highlight-dto';
+import { YoutubePlaylist } from '../../modals/youtube-playlist';
+import { YoutubeVideo } from '../../modals/youtube-video';
 
 @Component({
   selector: 'app-community-highlights',
@@ -14,17 +16,18 @@ import { AvatarModule } from 'primeng/avatar';
     CommonModule,
     ProgressSpinnerModule,
     ButtonModule,
-    AvatarModule
+    AvatarModule,
+    CardModule
   ],
   templateUrl: './community-highlights.html',
-  styleUrl: './community-highlights.scss',
+  styleUrl: './community-highlights.scss'
 })
 export class CommunityHighlights implements OnInit {
   private youtubeService = inject(YoutubeService);
 
-  featuredCreators: CreatorChannel[] = [];
-  randomVideos: YoutubeVideo[] = [];
-  pinnedPlaylists: YoutubePlaylist[] = [];
+  featuredCreators: CreatorHighlightDto[] = [];
+  recentHighlights: YoutubeVideo[] = [];
+  guidesAndPlaylists: YoutubePlaylist[] = [];
   isLoading = true;
   errorMessage = '';
 
@@ -37,17 +40,23 @@ export class CommunityHighlights implements OnInit {
     this.errorMessage = '';
 
     this.youtubeService.getHighlightsData().subscribe({
-      next: (data: CommunityHighlightsData) => {
-        this.featuredCreators = data.featuredCreators;
-        this.randomVideos = data.randomVideos;
-        this.pinnedPlaylists = data.pinnedPlaylists;
+      next: (data) => {
+        this.featuredCreators = data.featuredCreators || [];
+        this.recentHighlights = data.recentHighlights || [];
+        this.guidesAndPlaylists = data.guidesAndPlaylists || [];
         this.isLoading = false;
       },
       error: (err) => {
         console.error('Error loading community highlights:', err);
-        this.errorMessage = 'Unable to load community content. Please try again later.';
+        this.errorMessage = 'Impossibile caricare i contenuti della community. Riprova più tardi.';
         this.isLoading = false;
       }
     });
+  }
+
+  openLink(url: string): void {
+    if (url) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
   }
 }

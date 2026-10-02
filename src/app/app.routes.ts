@@ -11,13 +11,15 @@ import { Matchmaking } from './components/matchmaking/matchmaking';
 import { Callback } from './components/callback/callback'; 
 import { Leaderboard } from './components/leaderboard/leaderboard';
 import { Tournaments } from './components/tournaments/tournaments';
+import { LegacyGames } from './components/legacy-games/legacy-games';
 
 export const routes: Routes = [
 { path: 'home', component: Homepage },
-{ path: 'games', component: Games },
+{ path: 'games/storm-series', component: Games },
+{ path: 'games/legacy-series', component: LegacyGames },
 { path: 'matchmaking/lobbies', component: Matchmaking },
 { path: 'community', component: Community },
-{ path: 'community/tournaments', component: Tournaments }, // <--- Aggiunta qui
+{ path: 'community/tournaments', component: Tournaments },
 { path: 'resources', component: Resources },
 { path: 'matchmaking/leaderboard', component: Leaderboard },
 { path: 'faq', component: Faq },

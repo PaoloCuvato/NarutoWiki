@@ -12,16 +12,25 @@ import { Callback } from './components/callback/callback';
 import { Leaderboard } from './components/leaderboard/leaderboard';
 import { Tournaments } from './components/tournaments/tournaments';
 import { LegacyGames } from './components/legacy-games/legacy-games';
+import { CommunityHighlights } from './components/community-highlights/community-highlights';
+import { CommunityEvents } from './components/community-events/community-events';
+import { CommunityProjects } from './components/community-projects/community-projects';
 
 export const routes: Routes = [
 { path: 'home', component: Homepage },
 { path: 'games/storm-series', component: Games },
 { path: 'games/legacy-series', component: LegacyGames },
+
 { path: 'matchmaking/lobbies', component: Matchmaking },
-{ path: 'community', component: Community },
-{ path: 'community/tournaments', component: Tournaments },
-{ path: 'resources', component: Resources },
 { path: 'matchmaking/leaderboard', component: Leaderboard },
+
+{ path: 'community', component: Community },
+{ path: 'community/projects', component: CommunityProjects },
+{ path: 'community/tournaments', component: Tournaments },
+{ path: 'community/events', component: CommunityEvents },
+{ path: 'community/highlights', component: CommunityHighlights },
+
+{ path: 'resources', component: Resources },
 { path: 'faq', component: Faq },
 { path: 'about', component: About },
 { path: 'callback', component: Callback }, 

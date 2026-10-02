@@ -87,7 +87,7 @@ export class Navbar implements OnInit, OnDestroy {
       {
         label: 'Projects',
         icon: 'pi pi-folder',
-        routerLink: ['/projects']
+        routerLink: ['/community/projects'] // <-- Modificato da '/projects' a '/community/projects'
       },
       {
         label: 'Tournaments',
@@ -97,7 +97,7 @@ export class Navbar implements OnInit, OnDestroy {
       {
         label: 'Events',
         icon: 'pi pi-calendar',
-        routerLink: ['/events']
+        routerLink: ['/community/events'] // <-- Modificato da '/events' a '/community/events'
       },
       {
         separator: true
@@ -105,7 +105,7 @@ export class Navbar implements OnInit, OnDestroy {
       {
         label: 'Community Highlights',
         icon: 'pi pi-star',
-        routerLink: ['/community-highlights']
+        routerLink: ['/community/highlights'] // <-- Modificato da '/community-highlights' a '/community/highlights'
       }
     ];
 

@@ -30,7 +30,7 @@ export class LegacyGames {
     
   { id: 'ninjaHeroes', name: 'Ultimate Ninja Heroes', logo: 'stormLogos/NUNH.png' }, 
   { id: 'ninjaHeroes2', name: 'Ultimate Ninja Heroes 2', logo: 'stormLogos/NUNH2TPF.jpg' }, 
-  { id: 'ninjaHeroes3', name: 'Ultimate Ninja Heroes 3', logo: 'stormLogos/NSUNH3G.png' }, 
+  { id: 'ninjaHeroes3', name: 'Ultimate Ninja Heroes 3', logo: 'stormLogos/NSUNH3.png' }, 
   { id: 'ninjaImpact', name: 'Ultimate Ninja Impact', logo: 'stormLogos/NSUNI.png' }, 
   ];
 

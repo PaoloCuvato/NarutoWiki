@@ -55,7 +55,7 @@ $text-muted: #94a3b8;
     position: relative;
     z-index: 2;
 
-    .breadcrumb-tag {
+    .eyebrow {
       display: block;
       margin-bottom: 5px;
       color: $accent-purple;
@@ -74,14 +74,6 @@ $text-muted: #94a3b8;
       text-transform: uppercase;
     }
 
-    .header-line {
-      width: 55px;
-      height: 2px;
-      margin: 12px auto 14px;
-      background: $accent-purple;
-      box-shadow: 0 0 10px $accent-purple-glow;
-    }
-
     p {
       margin: 0 auto;
       max-width: 600px;
@@ -96,24 +88,32 @@ $text-muted: #94a3b8;
     position: relative;
     z-index: 2;
 
-    h2 {
+    .section-heading {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
       margin-bottom: 1.2rem;
-      color: $accent-purple;
-      font-size: 0.95rem;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
 
-      &::before {
-        content: '';
-        display: inline-block;
+      .section-heading-line {
         width: 3px;
         height: 14px;
         background: $accent-purple;
         border-radius: 2px;
+      }
+
+      h2 {
+        margin: 0 0 2px;
+        color: $accent-purple;
+        font-size: 0.95rem;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin: 0;
+        color: $text-muted;
+        font-size: 0.8rem;
       }
     }
   }
@@ -136,37 +136,49 @@ $text-muted: #94a3b8;
       }
 
       .creator-header {
-        display: flex;
-        align-items: center;
-        gap: 0.9rem;
         margin-bottom: 1.2rem;
 
-        ::ng-deep .creator-avatar {
-          background-color: #1a1528 !important;
-          border: 1.5px solid $accent-purple !important;
-        }
-
-        .creator-meta {
+        .creator-profile {
           display: flex;
-          flex-direction: column;
+          align-items: center; /* Mette in asse orizzontale l'avatar e il testo */
+          gap: 0.9rem;          /* Spazio tra il cerchietto e il nome/link */
 
-          .creator-name {
-            color: #fff;
-            font-size: 1.1rem;
-            font-weight: 800;
+          ::ng-deep .creator-avatar {
+            background-color: #1a1528 !important;
+            border: 1.5px solid $accent-purple !important;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
           }
 
-          .channel-link {
-            margin-top: 2px;
-            color: $accent-purple;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-decoration: none;
-            transition: color 0.2s;
+          .creator-meta {
+            display: flex;
+            flex-direction: column; /* Mette il nome sopra e il link sotto a destra */
 
-            &:hover {
-              color: #a78bfa;
-              text-decoration: underline;
+            .creator-name {
+              color: #fff;
+              font-size: 1.1rem;
+              font-weight: 800;
+              line-height: 1.2;
+            }
+
+            .channel-link {
+              margin-top: 2px;
+              color: $accent-purple;
+              font-size: 0.75rem;
+              font-weight: 700;
+              text-decoration: none;
+              transition: color 0.2s;
+              display: inline-flex;
+              align-items: center;
+              gap: 4px;
+
+              &:hover {
+                color: #a78bfa;
+                text-decoration: underline;
+              }
             }
           }
         }
@@ -218,7 +230,7 @@ $text-muted: #94a3b8;
       transform: translateY(-4px);
       box-shadow: 0 10px 25px $accent-purple-glow;
 
-      .play-overlay i {
+      .play-overlay .play-button i {
         color: #fff;
         transform: scale(1.15);
       }
@@ -240,6 +252,13 @@ $text-muted: #94a3b8;
         object-position: center;
       }
 
+      .thumbnail-gradient {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.4));
+        pointer-events: none;
+      }
+
       .play-overlay {
         position: absolute;
         inset: 0;
@@ -249,7 +268,7 @@ $text-muted: #94a3b8;
         background: rgba(0, 0, 0, 0.35);
         transition: background 0.2s;
 
-        i {
+        .play-button i {
           color: rgba(255, 255, 255, 0.85);
           font-size: 2.2rem;
           transition: transform 0.2s, color 0.2s;
@@ -289,8 +308,7 @@ $text-muted: #94a3b8;
         }
       }
 
-      .video-title,
-      h4 {
+      h3 {
         display: -webkit-box;
         margin: 0 0 0.5rem;
         overflow: hidden;

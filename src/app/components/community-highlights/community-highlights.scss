@@ -327,10 +327,30 @@ $text-muted: #94a3b8;
       }
 
       .sub-info {
-        margin-top: auto;
-        color: $text-muted;
-        font-size: 0.75rem;
-      }
+              margin-top: auto;
+              color: $text-muted;
+              font-size: 0.75rem;
+              display: flex;             /* Mette icona e testo sulla stessa linea */
+              align-items: center;       /* Allinea perfettamente in verticale */
+              gap: 6px;                  /* Crea il giusto spazietto tra l'icona e la scritta */
+
+              i {
+                color: $accent-purple;   /* Rende l'icona del video del colore viola coordinato */
+                font-size: 0.85rem;      /* Regola leggermente la dimensione se necessario */
+              }
+            }.sub-info {
+              margin-top: auto;
+              color: $text-muted;
+              font-size: 0.75rem;
+              display: flex;             /* Mette icona e testo sulla stessa linea */
+              align-items: center;       /* Allinea perfettamente in verticale */
+              gap: 6px;                  /* Crea il giusto spazietto tra l'icona e la scritta */
+
+              i {
+                color: $accent-purple;   /* Rende l'icona del video del colore viola coordinato */
+                font-size: 0.85rem;      /* Regola leggermente la dimensione se necessario */
+              }
+            }
     }
   }
 }

@@ -20,7 +20,7 @@ $text-muted: #94a3b8;
   position: relative;
   background-color: #08060b;
   min-height: 100vh;
-  padding: 40px;
+  padding: 40px 40px;
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
   overflow: hidden;
@@ -50,53 +50,57 @@ $text-muted: #94a3b8;
 
   .header-title {
     max-width: 1400px;
-    margin: 0 auto 45px;
+    margin: 0 auto 50px;
     text-align: center;
     position: relative;
     z-index: 2;
 
     .eyebrow {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 4px;   /* Avvicinato molto di più al titolo grande */
       color: $accent-purple;
-      font-size: 0.85rem;
+      font-size: 1.1rem;
       font-weight: 800;
-      letter-spacing: 2.5px;
+      letter-spacing: 3px;
       text-transform: uppercase;
+      text-shadow: 0 0 10px $accent-purple-glow;
     }
 
     h1 {
-      margin: 0;
+      margin: 0 0 15px 0;
       color: #fff;
-      font-size: 2.8rem;
+      font-size: 3.2rem;
       font-weight: 900;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
+    /* Il trattino sotto il titolo principale è stato completamente rimosso */
+
     p {
-      margin: 10px auto 0;
-      max-width: 700px;
+      margin: 0 auto;
+      max-width: 750px;
       color: $text-muted;
-      font-size: 1.05rem;
+      font-size: 1.15rem;
+      line-height: 1.5;
     }
   }
 
   .section-block {
     max-width: 1400px;
-    margin: 0 auto 3.5rem;
+    margin: 0 auto 4rem;
     position: relative;
     z-index: 2;
 
     .section-heading {
       display: flex;
       align-items: center;
-      gap: 16px;          /* Spazio maggiore tra il trattino e il testo */
-      margin-bottom: 1.5rem;
+      gap: 16px;
+      margin-bottom: 1.8rem;
 
       .section-heading-line {
-        width: 6px;       /* Trattino reso molto più spesso/largo */
-        height: 32px;     /* Trattino reso molto più alto */
+        width: 6px;
+        height: 32px;
         background: $accent-purple;
         border-radius: 4px;
         box-shadow: 0 0 12px $accent-purple-glow;
@@ -105,7 +109,7 @@ $text-muted: #94a3b8;
       h2 {
         margin: 0 0 4px;
         color: $accent-purple;
-        font-size: 1.4rem; /* Titolo della sezione molto più grande */
+        font-size: 1.4rem;
         font-weight: 800;
         letter-spacing: 1.5px;
         text-transform: uppercase;
@@ -114,7 +118,7 @@ $text-muted: #94a3b8;
       p {
         margin: 0;
         color: $text-muted;
-        font-size: 0.95rem; /* Sottotitolo più grande e leggibile */
+        font-size: 0.95rem;
       }
     }
   }

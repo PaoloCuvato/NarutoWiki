@@ -1,13 +1,14 @@
 // --- TAVOLO COLORI DEFINITIVI STILE STORMWIKI ---
-$card-background: rgba(14, 15, 20, 0.85);
-$inner-background: #0a0a0a;
-$ninja-orange: #ff9000;
-$ninja-blue: #008cff;
+$card-background: rgba(10, 10, 10, 0.82); // Nero opaco trasparente per mostrare lo sfondo sotto!
+$inner-background: #0a0a0a;  // Grigio scurissimo per contrasto interno tabelle
+$ninja-orange: #ff9000;      // Arancione dei titoli e dettagli della home
+$ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
 
+// --- NASCONDE LA SCROLLBAR A DESTRA SU TUTTI I BROWSER ---
 :host {
   display: block;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 
   &::-webkit-scrollbar {
     display: none;
@@ -16,237 +17,316 @@ $ninja-blue: #008cff;
   }
 }
 
-.community-container {
+.leaderboard-wrapper {
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url('/madaraVsHash.png') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
-  padding: 40px 40px;
+  padding: 60px 20px;
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
-  overflow: hidden;
+  overflow: hidden; // Nasconde le nuvole quando escono dai bordi dello schermo
 
-  .loading-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-    gap: 1rem;
-    color: $ninja-orange;
-    z-index: 2;
-    position: relative;
+  // --- CENTRATURA VERTICALE PERFETTA ---
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
 
-  .error-banner {
-    text-align: center;
-    padding: 3rem;
-    color: #ff4757;
-    background: rgba(20, 22, 31, 0.9);
-    border: 1px solid rgba(255, 71, 87, 0.3);
-    border-radius: 8px;
-    z-index: 2;
+  .nav-bar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
     position: relative;
+    z-index: 2;
   }
 
-  .header-title {
-    max-width: 1300px;
-    margin: 0 auto 35px auto;
+  .leaderboard-header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 45px auto; // <--- SPAZIO AUMENTATO TRA TITOLO E TABELLA
     position: relative;
     z-index: 2;
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.8rem;
       font-weight: 900;
       text-transform: uppercase;
-      margin: 0 0 8px 0;
+      margin: 5px 0;
       letter-spacing: 1px;
     }
-    p {
-      color: #94a3b8;
-      font-size: 0.95rem;
-      margin: 0;
-    }
-  }
-
-  .section-block {
-    max-width: 1300px;
-    margin: 0 auto 3rem auto;
-    position: relative;
-    z-index: 2;
-
-    h2 {
-      font-size: 1.1rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      margin-bottom: 1.2rem;
+    .subtitle {
       color: $ninja-orange;
-      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+    }
+    .header-line {
+      width: 60px;
+      height: 4px;
+      background: $ninja-orange;
+      border-radius: 2px;
+      margin-top: 5px;
+    }
+  }
+}
+
+// --- CONTENITORE NUVOLE DI SFONDO (MOLTO LENTE E SEMPRE PRESENTI) ---
+.clouds-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; // Rigorosamente dietro la tabella e l'intestazione
+  pointer-events: none; // I click passano attraverso
+  overflow: hidden;
+}
+
+.cloud-item {
+  position: absolute;
+  opacity: 0.55; // Sfumate perfettamente sullo sfondo
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.6));
+  will-change: transform;
+}
+
+/* --- 3 NUVOLE DA SINISTRA (Entrano, attraversano ed escono prima di tornare) --- */
+.cloud-left-1 {
+  top: 6%;
+  left: -700px; // Estremità sinistra fuori schermo
+  width: 650px;
+  animation: extremeSlideLeft 110s ease-in-out infinite alternate;
+  animation-delay: 0s;
+}
+
+.cloud-left-2 {
+  top: 36%;
+  left: -700px;
+  width: 500px;
+  animation: extremeSlideLeft 90s ease-in-out infinite alternate;
+  animation-delay: -35s;
+}
+
+.cloud-left-3 {
+  top: 66%;
+  left: -700px;
+  width: 700px;
+  animation: extremeSlideLeft 130s ease-in-out infinite alternate;
+  animation-delay: -70s;
+}
+
+/* --- 3 NUVOLE DA DESTRA (Entrano, attraversano ed escono prima di tornare) --- */
+.cloud-right-1 {
+  top: 18%;
+  right: -700px; // Estremità destra fuori schermo
+  width: 550px;
+  animation: extremeSlideRight 95s ease-in-out infinite alternate;
+  animation-delay: -20s;
+  transform: scaleX(-1); // Specchiata
+}
+
+.cloud-right-2 {
+  top: 48%;
+  right: -700px;
+  width: 620px;
+  animation: extremeSlideRight 120s ease-in-out infinite alternate;
+  animation-delay: -50s;
+  transform: scaleX(-1);
+}
+
+.cloud-right-3 {
+  top: 78%;
+  right: -700px;
+  width: 480px;
+  animation: extremeSlideRight 100s ease-in-out infinite alternate;
+  animation-delay: -10s;
+  transform: scaleX(-1);
+}
+
+// CONTENITORE CON EFFETTO SFOCATURA SULLO SFONDO (BACKDROP BLUR)
+.table-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 2px solid $ninja-orange;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(255, 144, 0, 0.2);
+  backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 2; // Sopra alle nuvole di sfondo
+}
+
+::ng-deep .p-datatable-storm {
+  .p-datatable-thead > tr > th {
+    background: rgba(17, 17, 17, 0.95) !important;
+    color: $ninja-orange !important;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 18px 20px;
+    border-bottom: 2px solid $ninja-orange !important;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 0.95rem;
+
+    .p-sortable-column-icon {
+      color: #666 !important;
+    }
+    &:hover {
+      background: #161616 !important;
+      color: #ffffff !important;
+      .p-sortable-column-icon { color: $ninja-orange !important; }
+    }
+    &.p-highlight {
+      color: #ffffff !important;
+      .p-sortable-column-icon { color: $ninja-orange !important; }
     }
   }
 
-  .creators-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.8rem;
-
-    .creator-box {
-      background: $card-background;
-      border: 1px solid rgba(255, 144, 0, 0.25);
-      border-radius: 12px;
-      padding: 1.5rem;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-
-      .creator-header {
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-        margin-bottom: 1.2rem;
-
-        ::ng-deep .creator-avatar {
-          background-color: #1a1e29 !important;
-          border: 1px solid $ninja-orange !important;
-        }
-
-        .creator-meta {
-          display: flex;
-          flex-direction: column;
-
-          .creator-name {
-            font-weight: 800;
-            font-size: 1.05rem;
-            color: #fff;
-          }
-
-          .channel-link {
-            font-size: 0.75rem;
-            color: $ninja-orange;
-            text-decoration: none;
-            font-weight: 700;
-            margin-top: 2px;
-            &:hover {
-              color: $ninja-blue;
-              text-decoration: underline;
-            }
-          }
-        }
-      }
-
-      .creator-videos-row {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.2rem;
-
-        @media (max-width: 1200px) {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        @media (max-width: 768px) {
-          grid-template-columns: 1fr;
-        }
-      }
-    }
-  }
-
-  .media-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.2rem;
-
-    @media (max-width: 1200px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  // --- STILE CARD VIDEO (Comune sia per creator che per recent/playlists) ---
-  .mini-video-card, .media-card {
-    background: $inner-background;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
+  .p-datatable-tbody > tr {
+    background: $card-background !important;
+    color: #ffffff !important;
     transition: all 0.2s ease;
 
+    & > td {
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
     &:hover {
-      border-color: $ninja-blue;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0, 140, 255, 0.25);
-
-      .play-overlay i {
-        color: $ninja-blue;
-        transform: scale(1.1);
+      background: rgba(0, 140, 255, 0.15) !important;
+      cursor: pointer;
+      & > td {
+        color: #ffffff;
+        border-bottom-color: $ninja-blue !important;
       }
+      .score-cell { color: $ninja-blue; }
     }
+  }
 
-    .thumbnail-container {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16/9;
-      background: #000;
+  .p-paginator {
+    background: rgba(15, 15, 15, 0.9) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 10px !important;
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .p-paginator-page, .p-paginator-next, .p-paginator-last, .p-paginator-first, .p-paginator-prev {
+      color: #888 !important;
+      min-width: 2.5rem !important;
+      height: 2.5rem !important;
+      border-radius: 6px;
+      
+      &:hover {
+        background: rgba(255, 144, 0, 0.1) !important;
+        color: $ninja-orange !important;
       }
-
-      .play-overlay {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(0, 0, 0, 0.3);
-        transition: background 0.2s;
-
-        i {
-          font-size: 2.2rem;
-          color: rgba(255, 255, 255, 0.9);
-          transition: transform 0.2s, color 0.2s;
-        }
-      }
-    }
-
-    .video-info, .media-details {
-      padding: 0.9rem;
-
-      .badge-label {
-        font-size: 0.65rem;
+      &.p-highlight {
+        background: $ninja-orange !important;
+        color: #000000 !important;
         font-weight: 800;
-        color: $ninja-orange;
-        letter-spacing: 0.5px;
-        display: block;
-        margin-bottom: 0.3rem;
-
-        &.community-badge {
-          color: #ff9000;
-        }
-
-        &.playlist-badge {
-          color: $ninja-blue;
-        }
-      }
-
-      .video-title, h4 {
-        font-size: 0.85rem;
-        font-weight: 700;
-        color: #f1f5f9;
-        margin: 0 0 0.4rem 0;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        line-height: 1.3;
-      }
-
-      .sub-info {
-        font-size: 0.75rem;
-        color: #888;
       }
     }
+  }
+}
+
+// UTILITY CELL STYLE
+.text-center { text-align: center; }
+.text-end { text-align: right; }
+
+.username-cell { font-weight: 700; font-size: 1.05rem; }
+.level-cell { font-weight: bold; color: #ccc; }
+.score-cell { font-weight: 800; color: $ninja-orange; font-size: 1.15rem; transition: color 0.2s; }
+
+.stats-cell {
+  font-weight: bold;
+  font-size: 0.95rem;
+  .wins { color: #2ecc71; }
+  .divider { color: #444; margin: 0 4px; }
+  .losses { color: #e74c3c; }
+}
+
+// CLAN LABELS
+.clan-tag {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  background: #161616;
+  border: 1px solid #333;
+  color: #aaa;
+
+  &.uzumaki { color: #ff4757; border-color: rgba(255, 71, 87, 0.4); background: rgba(255, 71, 87, 0.05); }
+  &.uchiha { color: #5352ed; border-color: rgba(83, 82, 237, 0.4); background: rgba(83, 82, 237, 0.05); }
+  &.hatake { color: #2ed573; border-color: rgba(46, 213, 115, 0.4); background: rgba(46, 213, 115, 0.05); }
+}
+
+// BADGE DEI PODI (1°, 2°, 3°)
+.rank-badge {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 6px;
+  background: #1e1e1e;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #888;
+
+  &.badge-1 { background: #f1c40f; color: #000; box-shadow: 0 0 10px rgba(241, 196, 15, 0.3); }
+  &.badge-2 { background: #95a5a6; color: #000; box-shadow: 0 0 10px rgba(149, 165, 166, 0.3); }
+  &.badge-3 { background: #e67e22; color: #fff; box-shadow: 0 0 10px rgba(230, 126, 34, 0.3); }
+}
+
+// --- SOVRASCRITTURA PULSANTE BACK ---
+::ng-deep .p-btn-back {
+  background: transparent !important;
+  border: none !important;
+  color: $ninja-orange !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  padding: 0 !important;
+  box-shadow: none !important;
+
+  .p-button-icon {
+    color: $ninja-orange !important;
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin-right: 8px;
+  }
+
+  &:hover {
+    background: transparent !important;
+    color: $ninja-blue !important;
+    .p-button-icon { color: $ninja-blue !important; }
+  }
+}
+
+// --- ANIMAZIONI LUNGHE E FLUIDE DA ESTREMITÀ A ESTREMITÀ ---
+@keyframes extremeSlideLeft {
+  0% {
+    transform: translateX(0); // Parte da left: -700px (completamente fuori bordo a sinistra)
+  }
+  100% {
+    transform: translateX(calc(100vw + 1400px)); // Attraversa tutto lo schermo ed esce completamente a destra
+  }
+}
+
+@keyframes extremeSlideRight {
+  0% {
+    transform: scaleX(-1) translateX(0); // Parte da right: -700px (completamente fuori bordo a destra)
+  }
+  100% {
+    transform: scaleX(-1) translateX(calc(100vw + 1400px)); // Attraversa tutto lo schermo ed esce completamente a sinistra
   }
 }

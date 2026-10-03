@@ -1,7 +1,6 @@
-// --- TAVOLO COLORI DEFINITIVI STILE TOURNEYS HUB (VIOLA & DARK) ---
-$card-background: #121019; // Sfondo card scuro e uniforme
-$inner-background: #0f0d14; // Sfondo interno video card
-$accent-purple: #8b5cf6;  // Viola principale (pulsanti, bordi, dettagli)
+$card-background: #121019;
+$inner-background: #0f0d14;
+$accent-purple: #8b5cf6;
 $accent-purple-glow: rgba(139, 92, 246, 0.25);
 $text-muted: #94a3b8;
 
@@ -12,16 +11,16 @@ $text-muted: #94a3b8;
 
   &::-webkit-scrollbar {
     display: none;
-    width: 0px;
+    width: 0;
     background: transparent;
   }
 }
 
 .community-container {
   position: relative;
-  background-color: #08060b; // Sfondo generale scuro profondo
+  background-color: #08060b;
   min-height: 100vh;
-  padding: 40px 40px;
+  padding: 40px;
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
   overflow: hidden;
@@ -34,8 +33,8 @@ $text-muted: #94a3b8;
     height: 50vh;
     gap: 1rem;
     color: $accent-purple;
-    z-index: 2;
     position: relative;
+    z-index: 2;
   }
 
   .error-banner {
@@ -45,57 +44,68 @@ $text-muted: #94a3b8;
     background: rgba(20, 16, 28, 0.9);
     border: 1px solid rgba(255, 71, 87, 0.3);
     border-radius: 12px;
-    z-index: 2;
     position: relative;
+    z-index: 2;
   }
 
   .header-title {
     max-width: 1400px;
-    margin: 0 auto 35px auto;
+    margin: 0 auto 35px;
+    text-align: center;
     position: relative;
     z-index: 2;
 
     .breadcrumb-tag {
-      font-size: 0.75rem;
-      font-weight: 800;
+      display: block;
+      margin-bottom: 5px;
       color: $accent-purple;
-      letter-spacing: 1.5px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      display: inline-block;
-      margin-bottom: 6px;
     }
 
     h1 {
-      font-size: 2.5rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      margin: 0 0 8px 0;
-      letter-spacing: 1px;
-      color: #ffffff;
-    }
-    p {
-      color: $text-muted;
-      font-size: 0.95rem;
       margin: 0;
+      color: #fff;
+      font-size: 2.3rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .header-line {
+      width: 55px;
+      height: 2px;
+      margin: 12px auto 14px;
+      background: $accent-purple;
+      box-shadow: 0 0 10px $accent-purple-glow;
+    }
+
+    p {
+      margin: 0 auto;
+      max-width: 600px;
+      color: $text-muted;
+      font-size: 0.85rem;
     }
   }
 
   .section-block {
     max-width: 1400px;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 3rem;
     position: relative;
     z-index: 2;
 
     h2 {
-      font-size: 0.95rem;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      margin-bottom: 1.2rem;
-      color: $accent-purple;
-      text-transform: uppercase;
       display: flex;
       align-items: center;
       gap: 8px;
+      margin-bottom: 1.2rem;
+      color: $accent-purple;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
 
       &::before {
         content: '';
@@ -114,10 +124,10 @@ $text-muted: #94a3b8;
     gap: 1.8rem;
 
     .creator-box {
+      padding: 1.5rem;
       background: $card-background;
       border: 1px solid rgba(139, 92, 246, 0.15);
       border-radius: 14px;
-      padding: 1.5rem;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       transition: border-color 0.2s ease;
 
@@ -141,18 +151,19 @@ $text-muted: #94a3b8;
           flex-direction: column;
 
           .creator-name {
-            font-weight: 800;
-            font-size: 1.1rem;
             color: #fff;
+            font-size: 1.1rem;
+            font-weight: 800;
           }
 
           .channel-link {
-            font-size: 0.75rem;
-            color: $accent-purple;
-            text-decoration: none;
-            font-weight: 700;
             margin-top: 2px;
+            color: $accent-purple;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-decoration: none;
             transition: color 0.2s;
+
             &:hover {
               color: #a78bfa;
               text-decoration: underline;
@@ -169,6 +180,7 @@ $text-muted: #94a3b8;
         @media (max-width: 1200px) {
           grid-template-columns: repeat(2, 1fr);
         }
+
         @media (max-width: 768px) {
           grid-template-columns: 1fr;
         }
@@ -184,21 +196,22 @@ $text-muted: #94a3b8;
     @media (max-width: 1200px) {
       grid-template-columns: repeat(2, 1fr);
     }
+
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
     }
   }
 
-  // --- STILE CARD VIDEO (Stile Tournaments Hub) ---
-  .mini-video-card, .media-card {
+  .mini-video-card,
+  .media-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     background: $inner-background;
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 10px;
-    overflow: hidden;
     cursor: pointer;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    flex-direction: column;
 
     &:hover {
       border-color: $accent-purple;
@@ -214,13 +227,17 @@ $text-muted: #94a3b8;
     .thumbnail-container {
       position: relative;
       width: 100%;
-      aspect-ratio: 16/9;
-      background: #050507;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: transparent;
 
       img {
+        display: block;
         width: 100%;
         height: 100%;
+        max-width: none;
         object-fit: cover;
+        object-position: center;
       }
 
       .play-overlay {
@@ -233,30 +250,31 @@ $text-muted: #94a3b8;
         transition: background 0.2s;
 
         i {
-          font-size: 2.2rem;
           color: rgba(255, 255, 255, 0.85);
+          font-size: 2.2rem;
           transition: transform 0.2s, color 0.2s;
         }
       }
     }
 
-    .video-info, .media-details {
-      padding: 1rem;
+    .video-info,
+    .media-details {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
+      padding: 1rem;
 
       .badge-label {
         align-self: flex-start;
-        font-size: 0.6rem;
-        font-weight: 800;
+        margin-bottom: 0.5rem;
+        padding: 2px 8px;
         color: #fff;
         background: rgba(139, 92, 246, 0.2);
         border: 1px solid rgba(139, 92, 246, 0.4);
-        padding: 2px 8px;
         border-radius: 4px;
+        font-size: 0.6rem;
+        font-weight: 800;
         letter-spacing: 0.5px;
-        margin-bottom: 0.5rem;
         text-transform: uppercase;
 
         &.community-badge {
@@ -271,23 +289,24 @@ $text-muted: #94a3b8;
         }
       }
 
-      .video-title, h4 {
+      .video-title,
+      h4 {
+        display: -webkit-box;
+        margin: 0 0 0.5rem;
+        overflow: hidden;
+        color: #f8fafc;
         font-size: 0.9rem;
         font-weight: 700;
-        color: #f8fafc;
-        margin: 0 0 0.5rem 0;
-        display: -webkit-box;
+        line-height: 1.4;
+        -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        line-height: 1.4;
       }
 
       .sub-info {
-        font-size: 0.75rem;
-        color: $text-muted;
         margin-top: auto;
+        color: $text-muted;
+        font-size: 0.75rem;
       }
     }
   }

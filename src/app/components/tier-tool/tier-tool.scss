@@ -4,9 +4,6 @@
   padding: 2rem 1rem;
   color: #ffffff;
   font-family: system-ui, -apple-system, sans-serif;
-  //background-image: url('/forest.png'); // Percorso alla tua immagine
- // background-size: cover;
-  //background-position: center;
 
   .tier-box {
     max-width: 1200px;
@@ -18,7 +15,6 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
   }
 
-  // Header & Bottoni Personalizzati
   .header-bar {
     display: flex;
     flex-wrap: wrap;
@@ -36,8 +32,9 @@
         font-weight: 800;
         color: #ffffff;
       }
+
       p {
-        margin: 0.25rem 0 0 0;
+        margin: 0.25rem 0 0;
         color: #8888a0;
         font-size: 0.875rem;
       }
@@ -49,7 +46,6 @@
       align-items: center;
       gap: 0.5rem;
 
-      // Stile unificato per i pulsanti custom
       .custom-btn {
         display: inline-flex;
         align-items: center;
@@ -106,7 +102,45 @@
     }
   }
 
-  // Canvas Area per Export
+  .upload-status-area {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .upload-loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.85rem 1rem;
+      background-color: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      border-radius: 6px;
+      color: #93c5fd;
+      font-size: 0.875rem;
+      font-weight: 500;
+
+      i {
+        font-size: 1rem;
+      }
+    }
+
+    .upload-success-message {
+      width: 100%;
+      margin: 0;
+
+      ::ng-deep .p-message-wrapper {
+        padding: 0.75rem 1rem;
+      }
+
+      ::ng-deep .p-message-text {
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+    }
+  }
+
   .canvas-area {
     background-color: #0a0a0f;
     padding: 0.5rem;
@@ -119,7 +153,6 @@
     gap: 0.5rem;
   }
 
-  // Singola riga Tier
   .tier-row {
     display: flex;
     background-color: #12121a;
@@ -200,7 +233,6 @@
     }
   }
 
-  // Card dell'immagine
   .item-card {
     width: 70px;
     height: 70px;
@@ -251,7 +283,6 @@
     border: 2px dashed #ffffff;
   }
 
-  // Section Unranked & Banner
   .unranked-box {
     margin-top: 2rem;
     padding-top: 1.5rem;

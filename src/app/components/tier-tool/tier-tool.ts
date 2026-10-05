@@ -2,12 +2,11 @@ import { Component, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/co
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DragDropModule, CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { ColorPickerModule } from 'primeng/colorpicker';
 import { TooltipModule } from 'primeng/tooltip';
-
+import { MessageModule } from 'primeng/message';
 import html2canvas from 'html2canvas';
 
 export interface TierItem {
@@ -33,10 +32,11 @@ export interface TierRow {
     ButtonModule,
     InputTextModule,
     ColorPickerModule,
-    TooltipModule
+    TooltipModule,
+    MessageModule
   ],
   templateUrl: './tier-tool.html',
-  styleUrl: './tier-tool.scss',
+  styleUrl: './tier-tool.scss'
 })
 export class TierTool {
   @ViewChild('exportArea') exportArea!: ElementRef;
@@ -54,42 +54,74 @@ export class TierTool {
   ];
 
   unrankedItems: TierItem[] = [];
-  successMessage: string | null = null;
+  isUploading = false;
+  uploadCompleted = false;
 
   get connectedToIds(): string[] {
     return [...this.tiers.map(t => t.id), 'unranked-pool'];
   }
 
   triggerFileInput() {
+    this.uploadCompleted = false;
     this.fileInput.nativeElement.click();
   }
 
   onImageUpload(event: any) {
     const files = event.target.files;
-    if (files && files.length > 0) {
-      let processed = 0;
-      for (let file of files) {
-        const reader = new FileReader();
-        reader.onload = (e: any) => {
-          this.unrankedItems.push({
-            id: 'item-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7),
-            url: e.target.result,
-            name: file.name
-          });
-          processed++;
-          if (processed === files.length) {
-            this.successMessage = `${files.length} images successfully loaded!`;
-            this.cdr.detectChanges();
 
-            setTimeout(() => {
-              this.successMessage = null;
-              this.cdr.detectChanges();
-            }, 4000);
-          }
-        };
-        reader.readAsDataURL(file);
-      }
+    if (!files || files.length === 0) {
+      return;
     }
+
+    this.isUploading = true;
+    this.uploadCompleted = false;
+    this.cdr.detectChanges();
+
+    let processed = 0;
+    const totalFiles = files.length;
+
+    for (const file of files) {
+      const reader = new FileReader();
+
+      reader.onload = (e: any) => {
+        this.unrankedItems.push({
+          id: 'item-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7),
+          url: e.target.result,
+          name: file.name
+        });
+
+        processed++;
+
+        if (processed === totalFiles) {
+          this.isUploading = false;
+          this.uploadCompleted = true;
+          this.cdr.detectChanges();
+
+          setTimeout(() => {
+            this.uploadCompleted = false;
+            this.cdr.detectChanges();
+          }, 6000);
+        }
+      };
+
+      reader.onerror = () => {
+        processed++;
+
+        if (processed === totalFiles) {
+          this.isUploading = false;
+          this.uploadCompleted = true;
+          this.cdr.detectChanges();
+
+          setTimeout(() => {
+            this.uploadCompleted = false;
+            this.cdr.detectChanges();
+          }, 6000);
+        }
+      };
+
+      reader.readAsDataURL(file);
+    }
+
     event.target.value = '';
   }
 
@@ -101,7 +133,7 @@ export class TierTool {
         event.previousContainer.data,
         event.container.data,
         event.previousIndex,
-        event.currentIndex,
+        event.currentIndex
       );
     }
   }
@@ -117,6 +149,7 @@ export class TierTool {
 
   deleteTier(index: number) {
     const removed = this.tiers.splice(index, 1)[0];
+
     if (removed && removed.items.length > 0) {
       this.unrankedItems.push(...removed.items);
     }
@@ -130,7 +163,10 @@ export class TierTool {
   }
 
   exportImage(format: 'png' | 'jpeg') {
-    if (!this.exportArea) return;
+    if (!this.exportArea) {
+      return;
+    }
+
     const element = this.exportArea.nativeElement;
 
     html2canvas(element, {

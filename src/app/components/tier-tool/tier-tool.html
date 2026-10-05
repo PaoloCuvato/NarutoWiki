@@ -1,0 +1,247 @@
+<div class="tier-tool-wrapper">
+  
+  <div class="tier-box">
+    
+    <!-- Top Bar Controlli -->
+    <div class="header-bar">
+      <div class="title-section">
+        <h1>Tier List Tool</h1>
+        <p>Carica le immagini, trascinale nei tier e scarica il risultato.</p>
+      </div>
+
+      <div class="actions-section">
+        <input 
+          type="file" 
+          #fileInput 
+          style="display: none;" 
+          accept="image/*" 
+          multiple 
+          (change)="onImageImport($event)">
+
+        <button class="custom-btn upload-btn" (click)="triggerFileInput()">
+          <i class="pi pi-upload"></i> Upload File
+        </button>
+
+        <button class="custom-btn add-btn" (click)="addTier()">
+          <i class="pi pi-plus"></i> Add Tier
+        </button>
+
+        <button class="custom-btn reset-btn" (click)="resetAll()">
+          <i class="pi pi-refresh"></i> Reset
+        </button>
+        
+        <button class="custom-btn png-btn" (click)="exportToPng()">
+          <i class="pi pi-download"></i> PNG
+        </button>
+      </div>
+    </div>
+
+    <!-- AREA DI ESPORTAZIONE (Tier Canvas) -->
+    <div #tierListCanvas class="canvas-area">
+      <div class="tier-rows-container">
+        
+        @for (tier of tiers; track tier.id; let i = $index) {
+          <div class="tier-row">
+            
+            <!-- Box Label Colore + Input Nome -->
+            <div class="tier-header" [style.background-color]="tier.color">
+              <input type="text" [(ngModel)]="tier.name" class="tier-title-input" />
+              <div class="tier-color-control">
+                <p-colorPicker [(ngModel)]="tier.color" appendTo="body" pTooltip="Cambia Colore"></p-colorPicker>
+              </div>
+            </div>
+
+            <!-- Zona Drop PrimeNG -->
+            <div 
+              pDroppable 
+              (onDrop)="onDropToTier(tier)" 
+              class="tier-drop-zone">
+              
+              @for (item of tier.items; track item.id) {
+                <div 
+                  pDraggable 
+                  (onDragStart)="onDragStart(item)" 
+                  (onDragEnd)="onDragEnd()"
+                  class="item-card" 
+                  [pTooltip]="item.name">
+                  <img [src]="item.url" [alt]="item.name" />
+                </div>
+              }
+
+            </div>
+
+            <!-- Pulsante Elimina Riga -->
+            <div class="tier-right-action">
+              <button pButton icon="pi pi-trash" class="p-button-text p-button-danger delete-btn" (click)="deleteTier(i)" pTooltip="Elimina Tier"></button>
+            </div>
+
+          </div>
+        }
+
+      </div>
+    </div>
+
+    <!-- AREA UNRANKED (File Caricati) -->
+    <div class="unranked-box">
+      
+      <div class="refresh-banner">
+        <i class="pi pi-info-circle"></i>
+        <span>Dopo aver caricato i file, per favore clicca di nuovo sulla pagina o sull'area sottostante se non compaiono subito.</span>
+      </div>
+
+      <div class="unranked-header">
+        <h3>File da classificare</h3>
+        <span class="count-badge">{{ unrankedItems.length }} files</span>
+      </div>
+
+      <div 
+        pDroppable 
+        (onDrop)="onDropToUnranked()" 
+        class="unranked-drop-zone">
+        
+        @for (item of unrankedItems; track item.id) {
+          <div 
+            pDraggable 
+            (onDragStart)="onDragStart(item)" 
+            (onDragEnd)="onDragEnd()"
+            class="item-card" 
+            [pTooltip]="item.name">
+            <img [src]="item.url" [alt]="item.name" />
+          </div>
+        }
+
+        @if (unrankedItems.length === 0) {
+          <div class="empty-msg">
+            <i class="pi pi-images"></i>
+            <p>Usa il pulsante <strong>Upload File</strong> in alto per caricare le immagini.</p>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+
+</div><div class="tier-tool-wrapper">
+  
+  <div class="tier-box">
+    
+    <!-- Top Bar Controlli -->
+    <div class="header-bar">
+      <div class="title-section">
+        <h1>Tier List Tool</h1>
+        <p>Carica le immagini, trascinale nei tier e scarica il risultato.</p>
+      </div>
+
+      <div class="actions-section">
+        <input 
+          type="file" 
+          #fileInput 
+          style="display: none;" 
+          accept="image/*" 
+          multiple 
+          (change)="onImageImport($event)">
+
+        <button class="custom-btn upload-btn" (click)="triggerFileInput()">
+          <i class="pi pi-upload"></i> Upload File
+        </button>
+
+        <button class="custom-btn add-btn" (click)="addTier()">
+          <i class="pi pi-plus"></i> Add Tier
+        </button>
+
+        <button class="custom-btn reset-btn" (click)="resetAll()">
+          <i class="pi pi-refresh"></i> Reset
+        </button>
+        
+        <button class="custom-btn png-btn" (click)="exportToPng()">
+          <i class="pi pi-download"></i> PNG
+        </button>
+      </div>
+    </div>
+
+    <!-- AREA DI ESPORTAZIONE (Tier Canvas) -->
+    <div #tierListCanvas class="canvas-area">
+      <div class="tier-rows-container">
+        
+        @for (tier of tiers; track tier.id; let i = $index) {
+          <div class="tier-row">
+            
+            <!-- Box Label Colore + Input Nome -->
+            <div class="tier-header" [style.background-color]="tier.color">
+              <input type="text" [(ngModel)]="tier.name" class="tier-title-input" />
+              <div class="tier-color-control">
+                <p-colorPicker [(ngModel)]="tier.color" appendTo="body" pTooltip="Cambia Colore"></p-colorPicker>
+              </div>
+            </div>
+
+            <!-- Zona Drop PrimeNG -->
+            <div 
+              pDroppable 
+              (onDrop)="onDropToTier(tier)" 
+              class="tier-drop-zone">
+              
+              @for (item of tier.items; track item.id) {
+                <div 
+                  pDraggable 
+                  (onDragStart)="onDragStart(item)" 
+                  (onDragEnd)="onDragEnd()"
+                  class="item-card" 
+                  [pTooltip]="item.name">
+                  <img [src]="item.url" [alt]="item.name" />
+                </div>
+              }
+
+            </div>
+
+            <!-- Pulsante Elimina Riga -->
+            <div class="tier-right-action">
+              <button pButton icon="pi pi-trash" class="p-button-text p-button-danger delete-btn" (click)="deleteTier(i)" pTooltip="Elimina Tier"></button>
+            </div>
+
+          </div>
+        }
+
+      </div>
+    </div>
+
+    <!-- AREA UNRANKED (File Caricati) -->
+    <div class="unranked-box">
+      
+      <div class="refresh-banner">
+        <i class="pi pi-info-circle"></i>
+        <span>Dopo aver caricato i file, per favore clicca di nuovo sulla pagina o sull'area sottostante se non compaiono subito.</span>
+      </div>
+
+      <div class="unranked-header">
+        <h3>File da classificare</h3>
+        <span class="count-badge">{{ unrankedItems.length }} files</span>
+      </div>
+
+      <div 
+        pDroppable 
+        (onDrop)="onDropToUnranked()" 
+        class="unranked-drop-zone">
+        
+        @for (item of unrankedItems; track item.id) {
+          <div 
+            pDraggable 
+            (onDragStart)="onDragStart(item)" 
+            (onDragEnd)="onDragEnd()"
+            class="item-card" 
+            [pTooltip]="item.name">
+            <img [src]="item.url" [alt]="item.name" />
+          </div>
+        }
+
+        @if (unrankedItems.length === 0) {
+          <div class="empty-msg">
+            <i class="pi pi-images"></i>
+            <p>Usa il pulsante <strong>Upload File</strong> in alto per caricare le immagini.</p>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+
+</div>

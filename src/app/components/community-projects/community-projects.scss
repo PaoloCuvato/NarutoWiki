@@ -1,18 +1,24 @@
 $outer-background: #121212; 
 
-// Palette colori per i megastriscioni a sfondo continuo
+// Palette colori Evo (Viola)
 $evo-bg-color: #1a0b2e; 
 $evo-accent: #9d00ff;
 $evo-magenta: #ff007f;
 
+// Palette colori Mod Manager (Blu)
 $mod-bg-color: #05192d; 
 $mod-accent: #008cff;
 $mod-cyan: #00e5ff;
 
+// Palette colori Storm Connection Tool (Verde Ninja / Oro)
+$tool-bg-color: #0b1f14; 
+$tool-accent: #00ff88;
+$tool-gold: #ffb700;
+
 .projects-wrapper {
   background-color: $outer-background !important;
   min-height: 100vh;
-  padding: 60px 0 100px 0; // Padding laterale azzerato per far estendere i banner a tutto schermo
+  padding: 60px 0 100px 0;
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
 
@@ -57,10 +63,10 @@ $mod-cyan: #00e5ff;
 .projects-container {
   display: flex;
   flex-direction: column;
-  gap: 0; // I megastriscioni si susseguono senza spazi vuoti standard, separati direttamente dal loro design
+  gap: 0;
 }
 
-// Stile del Megastriscione Full-Width (Niente card, occupa tutta la larghezza dello schermo)
+// Stile dei Megastriscioni Full-Width
 .full-width-banner {
   width: 100%;
   background-size: cover;
@@ -111,7 +117,27 @@ $mod-cyan: #00e5ff;
     .trailer-link:hover { color: $mod-accent; }
   }
 
-  // Strisce colorate decorative orizzontali stile banner
+  // Tema Verde/Oro per Storm Connection Tool
+  &.tool-section {
+    background-color: $tool-bg-color;
+    background-blend-mode: overlay;
+
+    .banner-stripe { background: linear-gradient(90deg, transparent, $tool-accent, $tool-gold, transparent); }
+    .project-tagline { color: $tool-gold; }
+    .download-btn {
+      background: $tool-accent;
+      color: #000;
+      box-shadow: 0 0 25px rgba($tool-accent, 0.4);
+      &:hover {
+        background: $tool-gold;
+        box-shadow: 0 0 35px rgba($tool-gold, 0.6);
+      }
+    }
+    .video-frame { border-color: rgba($tool-accent, 0.6); }
+    .trailer-link:hover { color: $tool-accent; }
+  }
+
+  // Strisce decorative orizzontali
   .banner-stripe {
     height: 3px;
     width: 100%;
@@ -124,7 +150,7 @@ $mod-cyan: #00e5ff;
     &.bottom-stripe { margin-top: 45px; }
   }
 
-  // Contenuto interno centrato e ben distribuito
+  // Contenuto interno
   .banner-content-wrapper {
     max-width: 1300px;
     margin: 0 auto;
@@ -216,7 +242,7 @@ $mod-cyan: #00e5ff;
       .video-frame {
         position: relative;
         width: 100%;
-        padding-bottom: 56.25%; // Rapporto 16:9
+        padding-bottom: 56.25%;
         height: 0;
         border-radius: 20px;
         overflow: hidden;
@@ -230,7 +256,7 @@ $mod-cyan: #00e5ff;
           left: 0;
           width: 100%;
           height: 100%;
-          pointer-events: none; // Permette di mantenere il video in background senza bloccare i click
+          pointer-events: none;
         }
       }
     }

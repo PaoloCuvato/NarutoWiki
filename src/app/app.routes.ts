@@ -15,6 +15,7 @@ import { LegacyGames } from './components/legacy-games/legacy-games';
 import { CommunityHighlights } from './components/community-highlights/community-highlights';
 import { CommunityEvents } from './components/community-events/community-events';
 import { CommunityProjects } from './components/community-projects/community-projects';
+import { TierTool } from './components/tier-tool/tier-tool';
 
 export const routes: Routes = [
 { path: 'home', component: Homepage },
@@ -31,6 +32,11 @@ export const routes: Routes = [
 { path: 'community/highlights', component: CommunityHighlights },
 
 { path: 'resources', component: Resources },
+// { path: 'resources/game-resources', component: GameResources },
+// { path: 'resources/modding-resources', component: ModdingResources },
+// { path: 'resources/patch-notes', component: PatchNotes },
+{ path: 'tier-tool', component: TierTool },
+
 { path: 'faq', component: Faq },
 { path: 'about', component: About },
 { path: 'callback', component: Callback }, 

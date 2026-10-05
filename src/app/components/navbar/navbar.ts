@@ -43,6 +43,7 @@ export class Navbar implements OnInit, OnDestroy {
   gamesItems: MenuItem[] | undefined;
   matchmakingItems: MenuItem[] | undefined;
   communityItems: MenuItem[] | undefined;
+  resourcesItems: MenuItem[] | undefined;
 
   displayModal: boolean = false;
   isLoggedIn: boolean = false;
@@ -109,6 +110,33 @@ export class Navbar implements OnInit, OnDestroy {
       }
     ];
 
+    this.resourcesItems = [
+  {
+    label: 'Game Resources',
+    icon: 'pi pi-desktop',
+    routerLink: ['/resources/game-resources']
+  },
+  {
+    label: 'Modding Resources',
+    icon: 'pi pi-cog',
+    routerLink: ['/resources/modding-resources']
+  },
+  {
+    label: 'Patch Notes',
+    icon: 'pi pi-file-edit',
+    routerLink: ['/resources/patch-notes']
+  },
+  {
+    separator: true
+  },
+  {
+    label: 'Tier List Tool',
+    icon: 'pi pi-list',
+    routerLink: ['/tier-tool']
+  }
+];
+
+
     this.userSub = this.authService.user$.subscribe(user => {
       if (user) {
         this.isLoggedIn = true;
@@ -169,16 +197,16 @@ export class Navbar implements OnInit, OnDestroy {
     }, 150);
   }
 
-  getActiveTheme(): string {
-    const url = this.router.url;
-    if (url.includes('/games')) return 'theme-games';
-    if (url.includes('/matchmaking')) return 'theme-matchmaking';
-    if (url.includes('/community') || url.includes('/projects') || url.includes('/tournaments') || url.includes('/events') || url.includes('/community-highlights')) return 'theme-community';
-    if (url.includes('/resources')) return 'theme-resources';
-    if (url.includes('/faq')) return 'theme-faq';
-    if (url.includes('/about')) return 'theme-about';
-    return 'theme-homepage';
-  }
+    getActiveTheme(): string {
+      const url = this.router.url;
+      if (url.includes('/games')) return 'theme-games';
+      if (url.includes('/matchmaking')) return 'theme-matchmaking';
+      if (url.includes('/community') || url.includes('/projects') || url.includes('/tournaments') || url.includes('/events') || url.includes('/community-highlights')) return 'theme-community';
+      if (url.includes('/resources') || url.includes('/tier-tool')) return 'theme-resources';
+      if (url.includes('/faq')) return 'theme-faq';
+      if (url.includes('/about')) return 'theme-about';
+      return 'theme-homepage';
+    }
 
   updateMenu() {
     if (this.isLoggedIn) {

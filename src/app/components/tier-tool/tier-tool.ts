@@ -1,10 +1,9 @@
 import { Component, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { DragDropModule, CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
-// Import Moduli PrimeNG
 import { ButtonModule } from 'primeng/button';
-import { DragDropModule } from 'primeng/dragdrop';
 import { InputTextModule } from 'primeng/inputtext';
 import { ColorPickerModule } from 'primeng/colorpicker';
 import { TooltipModule } from 'primeng/tooltip';
@@ -19,7 +18,7 @@ export interface TierItem {
 
 export interface TierRow {
   id: string;
-  name: string;
+  label: string;
   color: string;
   items: TierItem[];
 }
@@ -30,8 +29,8 @@ export interface TierRow {
   imports: [
     CommonModule,
     FormsModule,
-    ButtonModule,
     DragDropModule,
+    ButtonModule,
     InputTextModule,
     ColorPickerModule,
     TooltipModule
@@ -40,30 +39,32 @@ export interface TierRow {
   styleUrl: './tier-tool.scss',
 })
 export class TierTool {
-  @ViewChild('tierListCanvas') tierListCanvas!: ElementRef;
+  @ViewChild('exportArea') exportArea!: ElementRef;
   @ViewChild('fileInput') fileInput!: ElementRef;
 
   constructor(private cdr: ChangeDetectorRef) {}
 
-  draggedItem: TierItem | null = null;
-
-  // Tier di default
   tiers: TierRow[] = [
-    { id: '1', name: 'S', color: '#ff7f7f', items: [] },
-    { id: '2', name: 'A', color: '#ffbf7f', items: [] },
-    { id: '3', name: 'B', color: '#ffdf7f', items: [] },
-    { id: '4', name: 'C', color: '#ffff7f', items: [] },
-    { id: '5', name: 'D', color: '#bfff7f', items: [] }
+    { id: 'tier-s', label: 'S', color: '#ff7f7f', items: [] },
+    { id: 'tier-a', label: 'A', color: '#ffbf7f', items: [] },
+    { id: 'tier-b', label: 'B', color: '#ffff7f', items: [] },
+    { id: 'tier-c', label: 'C', color: '#7fff7f', items: [] },
+    { id: 'tier-d', label: 'D', color: '#7fbfff', items: [] },
+    { id: 'tier-f', label: 'F', color: '#ff7fff', items: [] }
   ];
 
   unrankedItems: TierItem[] = [];
+  successMessage: string | null = null;
+
+  get connectedToIds(): string[] {
+    return [...this.tiers.map(t => t.id), 'unranked-pool'];
+  }
 
   triggerFileInput() {
     this.fileInput.nativeElement.click();
   }
 
-  // Importa le immagini caricate dall'utente tramite input file nativo
-  onImageImport(event: any) {
+  onImageUpload(event: any) {
     const files = event.target.files;
     if (files && files.length > 0) {
       let processed = 0;
@@ -71,13 +72,19 @@ export class TierTool {
         const reader = new FileReader();
         reader.onload = (e: any) => {
           this.unrankedItems.push({
-            id: Math.random().toString(36).substring(2, 9),
+            id: 'item-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7),
             url: e.target.result,
             name: file.name
           });
           processed++;
           if (processed === files.length) {
+            this.successMessage = `${files.length} images successfully loaded!`;
             this.cdr.detectChanges();
+
+            setTimeout(() => {
+              this.successMessage = null;
+              this.cdr.detectChanges();
+            }, 4000);
           }
         };
         reader.readAsDataURL(file);
@@ -86,42 +93,24 @@ export class TierTool {
     event.target.value = '';
   }
 
-  // Gestione Drag & Drop
-  onDragStart(item: TierItem) {
-    this.draggedItem = item;
-  }
-
-  onDragEnd() {
-    this.draggedItem = null;
-  }
-
-  onDropToTier(targetTier: TierRow) {
-    if (this.draggedItem) {
-      this.removeItemFromAll(this.draggedItem);
-      targetTier.items.push(this.draggedItem);
+  onDrop(event: CdkDragDrop<TierItem[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
     }
   }
 
-  onDropToUnranked() {
-    if (this.draggedItem) {
-      this.removeItemFromAll(this.draggedItem);
-      this.unrankedItems.push(this.draggedItem);
-    }
-  }
-
-  private removeItemFromAll(item: TierItem) {
-    this.unrankedItems = this.unrankedItems.filter(i => i.id !== item.id);
-    this.tiers.forEach(tier => {
-      tier.items = tier.items.filter(i => i.id !== item.id);
-    });
-  }
-
-  // Aggiunge una nuova riga alla lista
   addTier() {
     this.tiers.push({
-      id: Math.random().toString(36).substring(2, 9),
-      name: 'NEW',
-      color: '#7fbfff',
+      id: 'tier-' + Date.now(),
+      label: 'NEW',
+      color: '#bf7fff',
       items: []
     });
   }
@@ -140,18 +129,18 @@ export class TierTool {
     });
   }
 
-  // Esporta l'area in un file PNG
-  exportToPng() {
-    if (!this.tierListCanvas) return;
-    const element = this.tierListCanvas.nativeElement;
+  exportImage(format: 'png' | 'jpeg') {
+    if (!this.exportArea) return;
+    const element = this.exportArea.nativeElement;
 
     html2canvas(element, {
       useCORS: true,
-      backgroundColor: '#0a0a0f'
-    }).then((canvas) => {
+      backgroundColor: '#0a0a0f',
+      scale: 2
+    }).then(canvas => {
       const link = document.createElement('a');
-      link.download = 'tier-list.png';
-      link.href = canvas.toDataURL('image/png');
+      link.download = `tier-list.${format}`;
+      link.href = canvas.toDataURL(`image/${format}`, 0.95);
       link.click();
     });
   }

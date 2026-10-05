@@ -44,10 +44,18 @@
        (mouseenter)="showDropdown($event, communityMenu)" 
        (mouseleave)="hideDropdown(communityMenu)"></p-tieredMenu>
 
-    <!-- RESOURCES -->
-    <a routerLink="/resources" routerLinkActive="active-link" class="nav-item">
-      <span class="dot"></span> RESOURCES
+<!-- RESOURCES -->
+    <a class="nav-item dropdown-trigger" 
+      style="cursor: pointer;"
+      routerLinkActive="active-link"
+      (mouseenter)="showDropdown($event, resourcesMenu)" 
+      (mouseleave)="hideDropdown(resourcesMenu)"
+      (click)="$event.preventDefault()">
+      <span class="dot"></span> RESOURCES <i class="pi pi-angle-down dropdown-arrow"></i>
     </a>
+    <p-tieredMenu #resourcesMenu [model]="resourcesItems" [popup]="true"
+      (mouseenter)="showDropdown($event, resourcesMenu)" 
+      (mouseleave)="hideDropdown(resourcesMenu)"></p-tieredMenu>
 
     <!-- FAQ -->
     <a routerLink="/faq" routerLinkActive="active-link" class="nav-item">

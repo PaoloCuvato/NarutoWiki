@@ -1,24 +1,25 @@
 $outer-background: #121212; 
 
-// Palette colori per i due grandi banner a sfondo colorato
-$evo-bg-color: #1a0b2e;   // Sfumatura di viola scuro per Evo
+// Palette colori per i megastriscioni a sfondo continuo
+$evo-bg-color: #1a0b2e; 
 $evo-accent: #9d00ff;
 $evo-magenta: #ff007f;
 
-$mod-bg-color: #05192d;   // Sfumatura di blu scuro per il Mod Manager
+$mod-bg-color: #05192d; 
 $mod-accent: #008cff;
 $mod-cyan: #00e5ff;
 
 .projects-wrapper {
   background-color: $outer-background !important;
   min-height: 100vh;
-  padding: 60px 20px 100px 20px;
+  padding: 60px 0 100px 0; // Padding laterale azzerato per far estendere i banner a tutto schermo
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
 
   .projects-header {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+    padding: 0 20px;
     
     .subtitle { 
       color: $evo-accent; 
@@ -54,28 +55,27 @@ $mod-cyan: #00e5ff;
 }
 
 .projects-container {
-  max-width: 1350px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 80px; // Spazio ampio tra i due banner
+  gap: 0; // I megastriscioni si susseguono senza spazi vuoti standard, separati direttamente dal loro design
 }
 
-// Stile del grande rettangolo a sfondo colorato (Banner immersivo senza card rigide)
-.project-banner-section {
+// Stile del Megastriscione Full-Width (Niente card, occupa tutta la larghezza dello schermo)
+.full-width-banner {
   width: 100%;
-  border-radius: 30px;
-  padding: 40px 50px;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 50px;
   position: relative;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
-  overflow: hidden;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
 
   // Tema Viola per Evo
-  &.evo-theme {
-    background: linear-gradient(135deg, #12071f 0%, $evo-bg-color 100%);
-    border: 1px solid rgba($evo-accent, 0.3);
+  &.evo-section {
+    background-color: $evo-bg-color;
+    background-blend-mode: overlay;
 
-    .stripe { background: linear-gradient(90deg, transparent, $evo-accent, $evo-magenta, transparent); }
+    .banner-stripe { background: linear-gradient(90deg, transparent, $evo-accent, $evo-magenta, transparent); }
     .project-tagline { color: $evo-magenta; }
     .download-btn {
       background: $evo-accent;
@@ -86,16 +86,16 @@ $mod-cyan: #00e5ff;
         box-shadow: 0 0 35px rgba($evo-magenta, 0.6);
       }
     }
-    .video-frame { border-color: rgba($evo-accent, 0.5); }
+    .video-frame { border-color: rgba($evo-accent, 0.6); }
     .trailer-link:hover { color: $evo-accent; }
   }
 
   // Tema Blu per Mod Manager
-  &.mod-theme {
-    background: linear-gradient(135deg, #030f1a 0%, $mod-bg-color 100%);
-    border: 1px solid rgba($mod-accent, 0.3);
+  &.mod-section {
+    background-color: $mod-bg-color;
+    background-blend-mode: overlay;
 
-    .stripe { background: linear-gradient(90deg, transparent, $mod-accent, $mod-cyan, transparent); }
+    .banner-stripe { background: linear-gradient(90deg, transparent, $mod-accent, $mod-cyan, transparent); }
     .project-tagline { color: $mod-cyan; }
     .download-btn {
       background: $mod-accent;
@@ -107,26 +107,30 @@ $mod-cyan: #00e5ff;
         box-shadow: 0 0 35px rgba($mod-cyan, 0.6);
       }
     }
-    .video-frame { border-color: rgba($mod-accent, 0.5); }
+    .video-frame { border-color: rgba($mod-accent, 0.6); }
     .trailer-link:hover { color: $mod-accent; }
   }
 
-  // Strisce colorate decorative nel banner
-  .stripe {
+  // Strisce colorate decorative orizzontali stile banner
+  .banner-stripe {
     height: 3px;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     border-radius: 5px;
-    opacity: 0.8;
+    opacity: 0.9;
     
-    &.top-stripe { margin-bottom: 30px; }
-    &.bottom-stripe { margin-top: 30px; }
+    &.top-stripe { margin-bottom: 45px; }
+    &.bottom-stripe { margin-top: 45px; }
   }
 
-  // Contenuto interno del banner
-  .banner-inner-content {
+  // Contenuto interno centrato e ben distribuito
+  .banner-content-wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1.1fr 1.2fr;
-    gap: 50px;
+    gap: 60px;
     align-items: center;
 
     &.reverse {
@@ -134,8 +138,8 @@ $mod-cyan: #00e5ff;
 
       @media (max-width: 900px) {
         grid-template-columns: 1fr;
-        .project-video-side { order: 1; }
-        .project-text-side { order: 2; }
+        .banner-video { order: 1; }
+        .banner-text { order: 2; }
       }
     }
 
@@ -144,9 +148,9 @@ $mod-cyan: #00e5ff;
       gap: 30px;
     }
 
-    .project-text-side {
+    .banner-text {
       .project-title {
-        font-size: 2.3rem;
+        font-size: 2.5rem;
         font-weight: 900;
         text-transform: uppercase;
         margin: 0 0 5px 0;
@@ -165,12 +169,12 @@ $mod-cyan: #00e5ff;
 
       .project-description {
         color: #d0d0d0;
-        font-size: 1.05rem;
+        font-size: 1.1rem;
         line-height: 1.7;
         margin-bottom: 30px;
       }
 
-      .project-actions {
+      .banner-actions {
         display: flex;
         align-items: center;
         gap: 20px;
@@ -206,18 +210,18 @@ $mod-cyan: #00e5ff;
       }
     }
 
-    .project-video-side {
+    .banner-video {
       width: 100%;
 
       .video-frame {
         position: relative;
         width: 100%;
-        padding-bottom: 56.25%; // 16:9 Aspect Ratio
+        padding-bottom: 56.25%; // Rapporto 16:9
         height: 0;
         border-radius: 20px;
         overflow: hidden;
         border: 2px solid;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
         background: #000000;
 
         iframe {
@@ -226,7 +230,7 @@ $mod-cyan: #00e5ff;
           left: 0;
           width: 100%;
           height: 100%;
-          pointer-events: none; // Il video scorre in background senza interferire con i click
+          pointer-events: none; // Permette di mantenere il video in background senza bloccare i click
         }
       }
     }

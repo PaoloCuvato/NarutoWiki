@@ -1,0 +1,249 @@
+<div class="patch-notes-wrapper">
+
+  <div class="patch-notes-content">
+    <div class="patch-header">
+      <span class="patch-kicker">STORMWIKI</span>
+      <h1>PATCH NOTES</h1>
+      <div class="header-line"></div>
+      <p>Balance updates, gameplay changes and character adjustments</p>
+    </div>
+
+    <p-tabs value="0" class="game-tabs">
+      <p-tablist>
+        <p-tab value="0">
+          <span class="tab-number">01</span>
+          <span>STORM CONNECTIONS</span>
+        </p-tab>
+
+        <p-tab value="1">
+          <span class="tab-number">02</span>
+          <span>STORM EVOLUTION</span>
+        </p-tab>
+      </p-tablist>
+
+      <p-tabpanels>
+        <p-tabpanel value="0">
+          <div class="game-intro">
+            <div>
+              <span class="section-label">NARUTO X BORUTO</span>
+              <h2>STORM CONNECTIONS</h2>
+            </div>
+            <span class="patch-count">{{ getPatchCount(connectionsPatches) }} PATCHES</span>
+          </div>
+
+          <p-accordion class="patch-accordion">
+            @for (patch of connectionsPatches; track patch.version) {
+              <p-accordion-panel [value]="patch.version">
+                <p-accordion-header>
+                  <div class="patch-summary">
+                    <div class="patch-version">
+                      {{ patch.version }}
+                    </div>
+
+                    <div class="patch-title">
+                      <span>{{ patch.title }}</span>
+                      <small>{{ patch.releaseDate }}</small>
+                    </div>
+
+                    <div class="patch-arrow">
+                      <i class="pi pi-chevron-down"></i>
+                    </div>
+                  </div>
+                </p-accordion-header>
+
+                <p-accordion-content>
+                  <div class="patch-content">
+                    <div class="patch-overview">
+                      <span class="content-label">OVERVIEW</span>
+
+                      <ul>
+                        @for (highlight of patch.highlights; track highlight) {
+                          <li>
+                            <i class="pi pi-angle-right"></i>
+                            <span>{{ highlight }}</span>
+                          </li>
+                        }
+                      </ul>
+                    </div>
+
+                    @if (patch.systemChanges.length > 0) {
+                      <div class="change-section">
+                        <div class="section-heading">
+                          <span></span>
+                          <h3>SYSTEM CHANGES</h3>
+                        </div>
+
+                        <div class="change-list">
+                          @for (change of patch.systemChanges; track change.category + change.description) {
+                            <div class="system-change">
+                              <div class="change-category">
+                                {{ change.category }}
+                              </div>
+
+                              <div class="change-description">
+                                {{ change.description }}
+                              </div>
+                            </div>
+                          }
+                        </div>
+                      </div>
+                    }
+
+                    @if (patch.characterAdjustments.length > 0) {
+                      <div class="change-section">
+                        <div class="section-heading">
+                          <span></span>
+                          <h3>CHARACTER ADJUSTMENTS</h3>
+                        </div>
+
+                        <div class="character-list">
+                          @for (character of patch.characterAdjustments; track character.character) {
+                            <div class="character-card">
+                              <div class="character-header">
+                                <div class="character-name">
+                                  {{ character.character }}
+                                </div>
+
+                                <div
+                                  class="change-type"
+                                  [class.buff]="character.type === 'Buff'"
+                                  [class.nerf]="character.type === 'Nerf'"
+                                  [class.adjustment]="character.type === 'Adjustment'">
+                                  {{ character.type }}
+                                </div>
+                              </div>
+
+                              <ul>
+                                @for (detail of character.details; track detail) {
+                                  <li>
+                                    <i class="pi pi-angle-right"></i>
+                                    <span>{{ detail }}</span>
+                                  </li>
+                                }
+                              </ul>
+                            </div>
+                          }
+                        </div>
+                      </div>
+                    }
+                  </div>
+                </p-accordion-content>
+              </p-accordion-panel>
+            }
+          </p-accordion>
+        </p-tabpanel>
+
+        <p-tabpanel value="1">
+          <div class="game-intro">
+            <div>
+              <span class="section-label">COMMUNITY PROJECT</span>
+              <h2>STORM EVOLUTION</h2>
+            </div>
+            <span class="patch-count">{{ getPatchCount(evolutionPatches) }} PATCH</span>
+          </div>
+
+          <p-accordion class="patch-accordion">
+            @for (patch of evolutionPatches; track patch.version) {
+              <p-accordion-panel [value]="patch.version">
+                <p-accordion-header>
+                  <div class="patch-summary">
+                    <div class="patch-version">
+                      {{ patch.version }}
+                    </div>
+
+                    <div class="patch-title">
+                      <span>{{ patch.title }}</span>
+                      <small>{{ patch.releaseDate }}</small>
+                    </div>
+
+                    <div class="patch-arrow">
+                      <i class="pi pi-chevron-down"></i>
+                    </div>
+                  </div>
+                </p-accordion-header>
+
+                <p-accordion-content>
+                  <div class="patch-content">
+                    <div class="patch-overview">
+                      <span class="content-label">OVERVIEW</span>
+
+                      <ul>
+                        @for (highlight of patch.highlights; track highlight) {
+                          <li>
+                            <i class="pi pi-angle-right"></i>
+                            <span>{{ highlight }}</span>
+                          </li>
+                        }
+                      </ul>
+                    </div>
+
+                    @if (patch.systemChanges.length > 0) {
+                      <div class="change-section">
+                        <div class="section-heading">
+                          <span></span>
+                          <h3>SYSTEM CHANGES</h3>
+                        </div>
+
+                        <div class="change-list">
+                          @for (change of patch.systemChanges; track change.category + change.description) {
+                            <div class="system-change">
+                              <div class="change-category">
+                                {{ change.category }}
+                              </div>
+
+                              <div class="change-description">
+                                {{ change.description }}
+                              </div>
+                            </div>
+                          }
+                        </div>
+                      </div>
+                    }
+
+                    @if (patch.characterAdjustments.length > 0) {
+                      <div class="change-section">
+                        <div class="section-heading">
+                          <span></span>
+                          <h3>CHARACTER ADJUSTMENTS</h3>
+                        </div>
+
+                        <div class="character-list">
+                          @for (character of patch.characterAdjustments; track character.character) {
+                            <div class="character-card">
+                              <div class="character-header">
+                                <div class="character-name">
+                                  {{ character.character }}
+                                </div>
+
+                                <div
+                                  class="change-type"
+                                  [class.buff]="character.type === 'Buff'"
+                                  [class.nerf]="character.type === 'Nerf'"
+                                  [class.adjustment]="character.type === 'Adjustment'">
+                                  {{ character.type }}
+                                </div>
+                              </div>
+
+                              <ul>
+                                @for (detail of character.details; track detail) {
+                                  <li>
+                                    <i class="pi pi-angle-right"></i>
+                                    <span>{{ detail }}</span>
+                                  </li>
+                                }
+                              </ul>
+                            </div>
+                          }
+                        </div>
+                      </div>
+                    }
+                  </div>
+                </p-accordion-content>
+              </p-accordion-panel>
+            }
+          </p-accordion>
+        </p-tabpanel>
+      </p-tabpanels>
+    </p-tabs>
+  </div>
+</div>

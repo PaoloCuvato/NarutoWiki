@@ -16,6 +16,9 @@ import { CommunityHighlights } from './components/community-highlights/community
 import { CommunityEvents } from './components/community-events/community-events';
 import { CommunityProjects } from './components/community-projects/community-projects';
 import { TierTool } from './components/tier-tool/tier-tool';
+import { PatchNotes } from './components/patch-notes/patch-notes';
+import { ModdingResources } from './components/modding-resources/modding-resources';
+import { GameResources } from './components/game-resources/game-resources';
 
 export const routes: Routes = [
 { path: 'home', component: Homepage },
@@ -32,9 +35,9 @@ export const routes: Routes = [
 { path: 'community/highlights', component: CommunityHighlights },
 
 { path: 'resources', component: Resources },
-// { path: 'resources/game-resources', component: GameResources },
-// { path: 'resources/modding-resources', component: ModdingResources },
-// { path: 'resources/patch-notes', component: PatchNotes },
+{ path: 'resources/game-resources', component: GameResources },
+{ path: 'resources/modding-resources', component: ModdingResources },
+{ path: 'resources/patch-notes', component: PatchNotes },
 { path: 'tier-tool', component: TierTool },
 
 { path: 'faq', component: Faq },

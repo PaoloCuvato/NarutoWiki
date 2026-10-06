@@ -1,6 +1,7 @@
 $card-background: rgba(10, 10, 10, 0.82);
 $inner-background: #0a0a0a;
-$ninja-orange: #ff9000;
+$ninja-red: #b83a3a;
+$ninja-red-light: #c94b4b;
 $ninja-blue: #008cff;
 
 :host {
@@ -19,7 +20,7 @@ $ninja-blue: #008cff;
   position: relative;
   min-height: 100vh;
   padding: 60px 20px;
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.88)), url('/forest.png') no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.88)), url('/lord_kabuto.png') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
@@ -45,7 +46,7 @@ $ninja-blue: #008cff;
 
   .patch-kicker {
     display: block;
-    color: $ninja-orange;
+    color: $ninja-red;
     font-size: 0.82rem;
     font-weight: 900;
     letter-spacing: 3px;
@@ -65,7 +66,7 @@ $ninja-blue: #008cff;
     width: 60px;
     height: 4px;
     margin-top: 10px;
-    background: $ninja-orange;
+    background: $ninja-red;
     border-radius: 2px;
   }
 
@@ -82,7 +83,7 @@ $ninja-blue: #008cff;
 
   .p-tablist {
     background: rgba(10, 10, 10, 0.92) !important;
-    border: 1px solid rgba(255, 144, 0, 0.25) !important;
+    border: 1px solid rgba(184, 58, 58, 0.25) !important;
     border-radius: 10px 10px 0 0;
   }
 
@@ -107,7 +108,7 @@ $ninja-blue: #008cff;
       color: #fff !important;
 
       .tab-number {
-        color: $ninja-orange;
+        color: $ninja-red;
       }
     }
 
@@ -115,14 +116,14 @@ $ninja-blue: #008cff;
       color: #fff !important;
 
       .tab-number {
-        color: $ninja-orange;
+        color: $ninja-red;
       }
     }
   }
 
   .p-tablist-active-bar {
     height: 3px !important;
-    background: $ninja-orange !important;
+    background: $ninja-red !important;
   }
 
   .p-tabpanels {
@@ -141,7 +142,7 @@ $ninja-blue: #008cff;
   .section-label {
     display: block;
     margin-bottom: 4px;
-    color: $ninja-orange;
+    color: $ninja-red;
     font-size: 0.72rem;
     font-weight: 900;
     letter-spacing: 2px;
@@ -157,10 +158,10 @@ $ninja-blue: #008cff;
 
   .patch-count {
     padding: 6px 11px;
-    border: 1px solid rgba(255, 144, 0, 0.35);
+    border: 1px solid rgba(184, 58, 58, 0.35);
     border-radius: 4px;
-    color: $ninja-orange;
-    background: rgba(255, 144, 0, 0.06);
+    color: $ninja-red-light;
+    background: rgba(184, 58, 58, 0.06);
     font-size: 0.72rem;
     font-weight: 900;
     letter-spacing: 1px;
@@ -175,7 +176,7 @@ $ninja-blue: #008cff;
 
   .p-accordionpanel {
     overflow: hidden;
-    border: 1px solid rgba(255, 144, 0, 0.22) !important;
+    border: 1px solid rgba(184, 58, 58, 0.22) !important;
     border-radius: 9px !important;
     background: rgba(10, 10, 10, 0.82) !important;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
@@ -183,12 +184,12 @@ $ninja-blue: #008cff;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
-      border-color: rgba(255, 144, 0, 0.5) !important;
+      border-color: rgba(184, 58, 58, 0.5) !important;
     }
 
     &[data-p-active='true'] {
-      border-color: rgba(255, 144, 0, 0.65) !important;
-      box-shadow: 0 0 25px rgba(255, 144, 0, 0.08);
+      border-color: rgba(184, 58, 58, 0.65) !important;
+      box-shadow: 0 0 25px rgba(184, 58, 58, 0.08);
     }
   }
 
@@ -223,7 +224,7 @@ $ninja-blue: #008cff;
   padding: 0 22px;
 
   .patch-version {
-    color: $ninja-orange;
+    color: $ninja-red-light;
     font-size: 1.05rem;
     font-weight: 900;
     letter-spacing: 0.5px;
@@ -251,7 +252,8 @@ $ninja-blue: #008cff;
 
   .patch-arrow {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    padding-left: 2px;
 
     i {
       color: #666;
@@ -263,14 +265,14 @@ $ninja-blue: #008cff;
 
 ::ng-deep .p-accordionpanel[data-p-active='true'] {
   .patch-arrow i {
-    color: $ninja-orange;
+    color: $ninja-red-light;
     transform: rotate(180deg);
   }
 }
 
 .patch-content {
   padding: 28px 30px 32px;
-  border-top: 1px solid rgba(255, 144, 0, 0.12);
+  border-top: 1px solid rgba(184, 58, 58, 0.12);
 }
 
 .patch-overview {
@@ -279,7 +281,7 @@ $ninja-blue: #008cff;
   .content-label {
     display: block;
     margin-bottom: 13px;
-    color: $ninja-orange;
+    color: $ninja-red-light;
     font-size: 0.7rem;
     font-weight: 900;
     letter-spacing: 2px;
@@ -304,7 +306,7 @@ $ninja-blue: #008cff;
 
     i {
       margin-top: 3px;
-      color: $ninja-orange;
+      color: $ninja-red-light;
       font-size: 0.75rem;
       flex-shrink: 0;
     }
@@ -324,7 +326,7 @@ $ninja-blue: #008cff;
   span {
     width: 4px;
     height: 18px;
-    background: $ninja-orange;
+    background: $ninja-red;
     border-radius: 2px;
   }
 
@@ -359,15 +361,15 @@ $ninja-blue: #008cff;
   }
 
   &:hover {
-    background: rgba(0, 140, 255, 0.08);
+    background: rgba(184, 58, 58, 0.08);
 
     .change-category {
-      color: $ninja-blue;
+      color: $ninja-red-light;
     }
   }
 
   .change-category {
-    color: $ninja-orange;
+    color: $ninja-red-light;
     font-size: 0.73rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -396,8 +398,8 @@ $ninja-blue: #008cff;
   transition: border-color 0.2s ease, background 0.2s ease;
 
   &:hover {
-    background: rgba(0, 140, 255, 0.07);
-    border-color: rgba(0, 140, 255, 0.3);
+    background: rgba(184, 58, 58, 0.07);
+    border-color: rgba(184, 58, 58, 0.3);
   }
 
   .character-header {
@@ -456,14 +458,14 @@ $ninja-blue: #008cff;
   }
 
   &.nerf {
-    color: #e74c3c;
-    border-color: rgba(231, 76, 60, 0.35);
-    background: rgba(231, 76, 60, 0.07);
+    color: #c94b4b;
+    border-color: rgba(201, 75, 75, 0.35);
+    background: rgba(201, 75, 75, 0.07);
   }
 
   &.adjustment {
     color: $ninja-blue;
-    border-color: rgba(0, 140, 255, 0.35);
+    border-color: rgba(0, 140, 255, 0.719);
     background: rgba(0, 140, 255, 0.07);
   }
 }

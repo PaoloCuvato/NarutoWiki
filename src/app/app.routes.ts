@@ -19,6 +19,8 @@ import { TierTool } from './components/tier-tool/tier-tool';
 import { PatchNotes } from './components/patch-notes/patch-notes';
 import { ModdingResources } from './components/modding-resources/modding-resources';
 import { GameResources } from './components/game-resources/game-resources';
+import { CookiePolicy } from './components/cookie-policy/cookie-policy';
+import { PrivacyPolicy } from './components/privacy-policy/privacy-policy';
 
 export const routes: Routes = [
 { path: 'home', component: Homepage },
@@ -43,6 +45,9 @@ export const routes: Routes = [
 { path: 'faq', component: Faq },
 { path: 'about', component: About },
 { path: 'callback', component: Callback }, 
+
+{ path: 'privacy-policy', component: PrivacyPolicy },
+{ path: 'cookie-policy', component: CookiePolicy },
 
 { path: '', redirectTo: '/home', pathMatch: 'full' }, // Se l'URL è vuoto, vai in Home
 { path: '**', redirectTo: '/home' } // Se l'utente scrive un URL a caso, torna in Home

@@ -1,0 +1,14 @@
+<div class="cookie-banner-overlay" *ngIf="showBanner">
+  <div class="cookie-banner-content">
+    <h3>Cookie Directive</h3>
+    <p>
+      This site uses technical and analytical cookies to optimize your experience. 
+      Accept all cookies or reject non-essential ones. Read our 
+      <a routerLink="/cookie-policy" target="_blank" (click)="closeBannerOnClick()">Cookie Policy</a>.
+    </p>
+    <div class="cookie-buttons">
+      <button class="btn-accept" (click)="acceptAll()">Accept All</button>
+      <button class="btn-reject" (click)="rejectAll()">Reject Non-Essential</button>
+    </div>
+  </div>
+</div>

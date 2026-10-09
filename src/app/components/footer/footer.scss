@@ -1,3 +1,94 @@
+/* --- Cookie Banner integrato (Sopra il footer) --- */
+.cookie-banner-overlay {
+  width: 100%;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 24px 40px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 4px solid #ff8c00;
+  box-sizing: border-box;
+}
+
+.cookie-banner-content {
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.cookie-text-area {
+  h3 {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    color: #ff8c00;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 13px;
+    color: #b5b5b5;
+    line-height: 1.5;
+
+    a {
+      color: #ff8c00;
+      text-decoration: underline;
+
+      &:hover {
+        color: #ffa500;
+      }
+    }
+  }
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+
+  button {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-accept {
+    background-color: #ff8c00;
+    color: #121212;
+
+    &:hover {
+      background-color: #ffa500;
+      box-shadow: 0 0 12px rgba(255, 140, 0, 0.4);
+    }
+  }
+
+  .btn-reject {
+    background-color: #1e1e1e;
+    color: #cccccc;
+    border: 1px solid #444 !important;
+
+    &:hover {
+      background-color: #2a2a2a;
+      color: #ffffff;
+      border-color: #666 !important;
+    }
+  }
+}
+
+
+/* --- Footer Principale --- */
 .storm-footer {
   width: 100%;
   margin-top: auto;
@@ -23,7 +114,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    max-width: 75%; // Leggermente più largo per il disclaimer
+    max-width: 75%;
 
     .copyright {
       font-weight: 900;
@@ -34,7 +125,7 @@
     }
 
     .disclaimer {
-      font-size: 0.72rem; // Leggermente aumentato per leggibilità
+      font-size: 0.82rem;
       line-height: 1.5;
       margin: 5px 0 0 0;
       color: #1a1a1a;
@@ -43,7 +134,7 @@
       
       strong {
         font-weight: 800;
-        color: #000; // I nomi dei brand sono in nero pieno per risaltare
+        color: #000;
       }
     }
   }
@@ -74,23 +165,68 @@
       font-size: 1.4rem;
     }
   }
+
+  .legal-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0 8px 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    a, .cookie-settings-btn {
+      color: #000;
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      font-family: inherit;
+
+      &:hover {
+        text-decoration: underline;
+        color: #ffffff;
+      }
+    }
+  }
 }
 
 /* Ottimizzazione Mobile */
 @media (max-width: 992px) {
-  .footer-container {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-    padding: 40px 20px;
+  .cookie-banner-overlay {
+    padding: 20px;
   }
-  
-  .footer-section {
-    max-width: 100%;
-    align-items: center;
+  .cookie-banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .cookie-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
 
-    .disclaimer {
+  .storm-footer {
+    .footer-container {
+      flex-direction: column;
+      gap: 30px;
       text-align: center;
+      padding: 40px 20px;
+    }
+    
+    .footer-section {
+      max-width: 100%;
+      align-items: center;
+
+      .disclaimer {
+        text-align: center;
+      }
+    }
+
+    .legal-links {
+      justify-content: center;
     }
   }
 }

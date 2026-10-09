@@ -1,18 +1,15 @@
-import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-footer',
-  standalone: true,
+  selector: 'app-cookie-banner',
   imports: [CommonModule, RouterModule],
-  templateUrl: './footer.html',
-  styleUrl: './footer.scss',
+  templateUrl: './cookie-banner.html',
+  styleUrl: './cookie-banner.scss',
 })
-export class Footer implements OnInit {
-  showBanner: boolean = false;
-
-  @Output() openCookieBanner = new EventEmitter<void>();
+export class CookieBanner {
+showBanner: boolean = false;
 
   ngOnInit() {
     const consent = localStorage.getItem('cookie_consent');
@@ -31,16 +28,11 @@ export class Footer implements OnInit {
     this.showBanner = false;
   }
 
-  closeBanner() {
+  closeBannerOnClick() {
     this.showBanner = false;
   }
 
-  openBanner() {
+  public openBanner() {
     this.showBanner = true;
-  }
-
-  openCookieSettings() {
-    this.openBanner();
-    this.openCookieBanner.emit();
   }
 }

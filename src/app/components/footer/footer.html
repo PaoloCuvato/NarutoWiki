@@ -1,14 +1,41 @@
+<!-- Il banner dei cookie appare qui, esattamente sopra al footer -->
+<div class="cookie-banner-overlay" *ngIf="showBanner">
+  <div class="cookie-banner-content">
+    <div class="cookie-text-area">
+      <h3>Cookie Directive</h3>
+      <p>
+        This site uses technical and analytical cookies to optimize your experience. Accept all cookies or reject non-essential ones. Read our 
+        <a routerLink="/cookie-policy" (click)="closeBanner()">Cookie Policy</a>.
+      </p>
+    </div>
+    <div class="cookie-buttons">
+      <button class="btn-accept" (click)="acceptAll()">Accept All</button>
+      <button class="btn-reject" (click)="rejectAll()">Reject Non-Essential</button>
+    </div>
+  </div>
+</div>
+
+<!-- Il tuo footer originale con la barra arancione -->
 <footer class="storm-footer">
   <div class="footer-accent"></div>
 
   <div class="footer-container">
     <div class="footer-section left">
       <p class="copyright">© 2026 ULTIMATE NINJA STORM WIKI. A Fan-made Project.</p>
+    
       <p class="disclaimer">
         Naruto, Naruto Shippuden and Boruto are trademarks of <strong>Masashi Kishimoto / Shueisha, TV Tokyo and Pierrot</strong>. 
         This site is an unofficial fan resource and is not affiliated with or endorsed by <strong>Bandai Namco Entertainment</strong> or <strong>CyberConnect2</strong>.
         All game assets and logos are property of their respective owners.
       </p>
+
+            <div class="legal-links">
+        <a routerLink="/privacy-policy">Privacy Policy</a>
+        <span class="separator">•</span>
+        <a routerLink="/cookie-policy">Cookie Policy</a>
+        <span class="separator">•</span>
+        <button type="button" class="cookie-settings-btn" (click)="openBanner()">Cookie Settings</button>
+      </div>
     </div>
 
     <div class="footer-section right">

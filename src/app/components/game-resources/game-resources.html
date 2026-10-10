@@ -1,1 +1,55 @@
-<p>game-resources works!</p>
+<div class="game-resources-wrapper">
+  <div class="game-resources-content">
+    
+    <!-- Header Principale -->
+    <header class="patch-header">
+      <span class="patch-kicker">STORMWIKI HUB</span>
+      <h1>NINJA ARCHIVES</h1>
+      <div class="header-line"></div>
+      <p>Technical data, combat analysis and competitive resources</p>
+    </header>
+
+    <!-- Contenitore Tab e Tabella -->
+    <p-tabs [(value)]="activeIndex" styleClass="game-tabs">
+      <p-tablist>
+        <p-tab [value]="0">
+          <span class="tab-badge">01 </span>
+          <span class="tab-title">CHARACTER COOLDOWN</span>
+        </p-tab>
+        <p-tab [value]="1">
+          <span class="tab-badge">02 </span>
+          <span class="tab-title">SUPPORT LAB</span>
+        </p-tab>
+        <p-tab [value]="2">
+          <span class="tab-badge">03 </span>
+          <span class="tab-title">JUTSU DATABASE</span>
+        </p-tab>
+        <p-tab [value]="3">
+          <span class="tab-badge">04 </span>
+          <span class="tab-title">COMBO LAB</span>
+        </p-tab>
+      </p-tablist>
+
+      <p-tabpanels>
+        <p-tabpanel [value]="0">
+          <div class="table-frame">
+            <app-character-cooldown></app-character-cooldown>
+          </div>
+        </p-tabpanel>
+
+        <p-tabpanel [value]="1">
+          <!-- Contenuto Support Lab -->
+        </p-tabpanel>
+
+        <p-tabpanel [value]="2">
+          <!-- Contenuto Jutsu Database -->
+        </p-tabpanel>
+
+        <p-tabpanel [value]="3">
+          <!-- Contenuto Combo Lab -->
+        </p-tabpanel>
+      </p-tabpanels>
+    </p-tabs>
+
+  </div>
+</div>

@@ -1,0 +1,91 @@
+<div class="cooldowns-container">
+  <!-- Toolbar superiore identica alla tabella cooldown -->
+  <div class="table-header-toolbar">
+    <div class="table-info">
+      <span class="info-badge">OTG STATUS</span>
+      <span class="info-text">Jutsu & Awakening Ground Hit Compatibility</span>
+    </div>
+
+    <div class="search-box">
+      <input 
+        type="text" 
+        pInputText 
+        [(ngModel)]="searchValue" 
+        (input)="dt.filterGlobal($any($event.target).value, 'contains')" 
+        placeholder="Search character or notes..."
+      />
+    </div>
+  </div>
+
+  <!-- Tabella PrimeNG con ordinamento, paginazione e ricerca globale -->
+  <p-table
+    #dt
+    [value]="jutsuList"
+    [paginator]="true"
+    [rows]="15"
+    [rowsPerPageOptions]="[10, 15, 25, 50, 100]"
+    [globalFilterFields]="['character', 'notes']"
+    styleClass="p-datatable-ninja"
+    [responsiveLayout]="'scroll'"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="character" class="col-character">
+          CHARACTER <p-sortIcon field="character"></p-sortIcon>
+        </th>
+        <th pSortableColumn="baseJ1">
+          BASE J1 <p-sortIcon field="baseJ1"></p-sortIcon>
+        </th>
+        <th pSortableColumn="baseJ2">
+          BASE J2 <p-sortIcon field="baseJ2"></p-sortIcon>
+        </th>
+        <th pSortableColumn="awkJ1">
+          AWK J1 <p-sortIcon field="awkJ1"></p-sortIcon>
+        </th>
+        <th pSortableColumn="awkJ2">
+          AWK J2 <p-sortIcon field="awkJ2"></p-sortIcon>
+        </th>
+        <th class="col-notes">GUIDE NOTES</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-item>
+      <tr>
+        <td class="col-character">
+          <strong>{{ item.character }}</strong>
+        </td>
+        <td>
+          <span class="otg-pill" [class.yes]="isYes(item.baseJ1)" [class.no]="!isYes(item.baseJ1)">
+            {{ item.baseJ1 }}
+          </span>
+        </td>
+        <td>
+          <span class="otg-pill" [class.yes]="isYes(item.baseJ2)" [class.no]="!isYes(item.baseJ2)">
+            {{ item.baseJ2 }}
+          </span>
+        </td>
+        <td>
+          <span class="otg-pill" [class.yes]="isYes(item.awkJ1)" [class.no]="!isYes(item.awkJ1)">
+            {{ item.awkJ1 }}
+          </span>
+        </td>
+        <td>
+          <span class="otg-pill" [class.yes]="isYes(item.awkJ2)" [class.no]="!isYes(item.awkJ2)">
+            {{ item.awkJ2 }}
+          </span>
+        </td>
+        <td class="col-notes-text">
+          <span>{{ item.notes }}</span>
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="6" class="empty-msg">
+          No matching ninja found.
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

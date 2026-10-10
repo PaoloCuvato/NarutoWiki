@@ -50,12 +50,12 @@ $text-sub: #cbd5e1;
     text-transform: uppercase;
   }
 
-  /* Trattino sotto NINJA ARCHIVES a colore fisso (senza sfumatura) */
+  /* Trattino sotto NINJA ARCHIVES a colore fisso solido */
   .header-line {
     width: 80px;
     height: 4px;
     margin-top: 12px;
-    background: $ninja-red-bright !important; /* Colore rosso solido e nitido */
+    background: $ninja-red-bright !important;
     border-radius: 2px;
   }
 
@@ -93,14 +93,14 @@ $text-sub: #cbd5e1;
     display: none !important;
   }
 
-  /* Singolo Pulsante Tab - Colori vividi e ben visibili */
+  /* Singolo Pulsante Tab */
   .p-tab, p-tab {
     flex: 1 1 0% !important;
     padding: 12px 16px !important;
     background: transparent !important;
     border: 1px solid transparent !important;
     border-radius: 8px !important;
-    color: #94a3b8 !important; /* Grigio chiaro leggibile */
+    color: #94a3b8 !important;
     transition: all 0.2s ease !important;
     cursor: pointer;
     display: flex !important;
@@ -136,16 +136,18 @@ $text-sub: #cbd5e1;
       }
     }
 
-    /* Tab Selezionato */
+    /* Tab Selezionato - Bordo inferiore BIANCO nitido */
     &[aria-selected='true'],
     &.p-tab-active {
       color: #ffffff !important;
-      background: $ninja-red-solid !important; /* Rosso solido per massimo contrasto */
-      border: 1px solid $ninja-red-bright !important;
+      background: linear-gradient(135deg, rgba(184, 58, 58, 0.35) 0%, rgba(80, 15, 15, 0.5) 100%) !important;
+      border: 1px solid rgba(255, 42, 85, 0.4) !important;
+      border-bottom: 2px solid #ffffff !important; /* <--- Bordo inferiore bianco */
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15) !important;
 
       .tab-badge {
-        background: #ffffff;
-        color: $ninja-red-solid;
+        background: #ffffff !important;
+        color: #0d1017 !important;
       }
     }
   }
@@ -172,7 +174,7 @@ $text-sub: #cbd5e1;
       border: none !important;
     }
 
-    /* Header Tabella - Contrasto elevato */
+    /* Header Tabella */
     .p-datatable-thead > tr > th {
       background: rgba(20, 28, 45, 0.95) !important;
       color: #ffffff !important;
@@ -195,7 +197,7 @@ $text-sub: #cbd5e1;
       }
     }
 
-    /* PAGINATORE IN BASSO - Risolto il problema che copriva tutto */
+    /* PAGINATORE IN BASSO */
     .p-paginator {
       background: transparent !important;
       border-top: 1px solid rgba(255, 255, 255, 0.12) !important;

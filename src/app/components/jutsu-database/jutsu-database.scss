@@ -1,0 +1,187 @@
+$ninja-red: #b83a3a;
+$ninja-red-light: #e64a4a;
+$ninja-red-glow: rgba(230, 74, 74, 0.35);
+
+.cooldowns-container {
+  width: 100%;
+}
+
+.table-header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  .table-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .info-badge {
+      background: rgba(184, 58, 58, 0.2);
+      border: 1px solid $ninja-red-light;
+      color: $ninja-red-light;
+      font-size: 0.72rem;
+      font-weight: 900;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 1px;
+    }
+
+    .info-text {
+      color: #888888;
+      font-size: 0.85rem;
+    }
+  }
+
+  .search-box {
+    position: relative;
+    min-width: 250px;
+
+    input {
+      width: 100%;
+      padding: 10px 14px;
+      background: rgba(18, 18, 18, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 0.88rem;
+      transition: all 0.25s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $ninja-red-light;
+        box-shadow: 0 0 10px $ninja-red-glow;
+      }
+    }
+  }
+}
+
+/* OVERRIDE COMPLETO TABELLA PRIMENG IDENTICO ALLO SCREENSHOT */
+::ng-deep .p-datatable-ninja {
+  .p-datatable-wrapper {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(12, 12, 12, 0.85);
+  }
+
+  /* Intestazione Tabella */
+  .p-datatable-thead > tr > th {
+    background: rgba(20, 20, 20, 0.95) !important;
+    color: #ffffff !important;
+    padding: 14px 16px !important;
+    font-size: 0.8rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px !important;
+    border-bottom: 2px solid rgba(184, 58, 58, 0.4) !important;
+    text-transform: uppercase;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: rgba(30, 30, 30, 0.95) !important;
+    }
+
+    .p-sortable-column-icon {
+      color: $ninja-red-light !important;
+      margin-left: 6px;
+    }
+  }
+
+  /* Righe Dati */
+  .p-datatable-tbody > tr {
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: rgba(184, 58, 58, 0.08) !important;
+    }
+
+    > td {
+      padding: 12px 16px !important;
+      color: #cccccc;
+      font-size: 0.88rem;
+
+      &.col-character {
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      &.col-notes-text {
+        color: #999999;
+        font-size: 0.8rem;
+        font-style: italic;
+      }
+    }
+  }
+
+  /* Pillole YES / NO OTG Stile Screenshot */
+  .otg-pill {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+    min-width: 48px;
+
+    /* YES Verde brillante con pillola scura e bordo verde */
+    &.yes {
+      background: rgba(46, 204, 113, 0.12);
+      border: 1px solid rgba(46, 204, 113, 0.5);
+      color: #2ecc71;
+    }
+
+    /* NO neutro scuro */
+    &.no {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #888888;
+    }
+  }
+
+  /* Paginatore con il cerchietto della pagina attiva in Verde come nello screenshot */
+  .p-paginator {
+    background: rgba(15, 15, 15, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-top: none !important;
+    border-radius: 0 0 12px 12px !important;
+    padding: 10px !important;
+
+    .p-paginator-element {
+      color: #888888 !important;
+      border-radius: 50% !important; // Cerchietto perfetto
+      width: 32px !important;
+      height: 32px !important;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+        color: #ffffff !important;
+      }
+
+      /* Pagina attiva (Pallino bianco/verde acqua come nello screenshot) */
+      &.p-highlight {
+        background: #ffffff !important;
+        color: #0d0d0d !important;
+        font-weight: 900 !important;
+      }
+    }
+  }
+
+  .empty-msg {
+    text-align: center;
+    padding: 30px !important;
+    color: #777;
+    font-style: italic;
+  }
+}

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NinjaCard } from '../../ninja-card/ninja-card';
+
 @Component({
   selector: 'app-storm1',
   standalone: true,
@@ -11,394 +12,416 @@ import { NinjaCard } from '../../ninja-card/ninja-card';
 export class Storm1 {
   
   // Dati di prova per i personaggi giocabili
-
-playableCharacters = [
-  {
-    name: 'Naruto Uzumaki',
-    image: 'naruto.png',
+  playableCharacters = [
+    {
+      name: 'Naruto Uzumaki',
+      image: 'characters/l_nrt1.png',
       dashcutType: 'Strikeback',
       dashcutIcon: '/support_type/asst_at_counter.png',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
     {
-    name: 'Sasuke Uchiha',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_cover.png',
-    dashcutType: 'Coverfire',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Sakura Haruno',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_ckr.png',
-    dashcutType: 'Charge Assist',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Neji Hyuga',
-    image: 'naruto.png',
+      name: 'Sasuke Uchiha',
+      image: 'characters/l_ssk1.png',
+      dashcutIcon: '/support_type/asst_sp_cover.png',
+      dashcutType: 'Coverfire',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Sakura Haruno',
+      image: 'characters/l_skr1.png',
+      dashcutIcon: '/support_type/asst_sp_ckr.png',
+      dashcutType: 'Charge Assist',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Neji Hyuga',
+      image: 'characters/l_nej1.png',
       dashcutType: 'Secret Substitution',
       dashcutIcon: '/support_type/asst_scf_oug.png',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Tenten',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_cover.png',
-    dashcutType: 'Coverfire',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Rock Lee',
-    image: 'naruto.png',
-    dashcutIcon: 'strikeback.png',
-    dashcutType: 'strikeback',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Shikamaru Nara',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_cover.png',
-    dashcutType: 'Coverfire',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Ino Yamanaka',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_ckr.png',
-    dashcutType: 'Charge Assist',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Choji Akimichi',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_cut.png',
-    dashcutType: 'Dashcut',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Hinata Hyuga',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_ckr.png',
-    dashcutType: 'Charge Assist',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Kiba Inuzuka',
-    image: 'naruto.png',
-    dashcutIcon: 'strikeback.png',
-    dashcutType: 'Strikeback',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Shino Aburame',
-    image: 'naruto.png',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Tenten',
+      image: 'characters/l_ten1.png',
+      dashcutIcon: '/support_type/asst_sp_cover.png',
+      dashcutType: 'Coverfire',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Rock Lee',
+      image: 'characters/l_roc1.png',
+      dashcutIcon: 'strikeback.png',
+      dashcutType: 'strikeback',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Shikamaru Nara',
+      image: 'characters/l_sik1.png',
+      dashcutIcon: '/support_type/asst_sp_cover.png',
+      dashcutType: 'Coverfire',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Ino Yamanaka',
+      image: 'characters/l_ino1.png',
+      dashcutIcon: '/support_type/asst_sp_ckr.png',
+      dashcutType: 'Charge Assist',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Choji Akimichi',
+      image: 'characters/l_tyo1.png',
+      dashcutIcon: '/support_type/asst_sp_cut.png',
+      dashcutType: 'Dashcut',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Hinata Hyuga',
+      image: 'characters/l_hnt1.png',
+      dashcutIcon: '/support_type/asst_sp_ckr.png',
+      dashcutType: 'Charge Assist',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Kiba Inuzuka',
+      image: 'characters/l_kib1.png',
+      dashcutIcon: 'strikeback.png',
+      dashcutType: 'Strikeback',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Shino Aburame',
+      image: 'characters/l_sin1.png',
       dashcutType: 'Break Guard',
       dashcutIcon: '/support_type/asst_at_guard.png',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Gaara',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_guard.png',
-    dashcutType: 'Charge Guard',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Temari',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_cover.png',
-    dashcutType: 'Coverfire',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Kankuro',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_guard.png',
-    dashcutType: 'Charge Guard',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Kakashi Hatake',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_guard.png',
-    dashcutType: 'Charge Guard',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Might Guy',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_cut.png',
-    dashcutType: 'Dashcut',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Hiruzen Sarutobi',
-    image: 'naruto.png',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Gaara',
+      image: 'characters/l_gar1.png',
+      dashcutIcon: '/support_type/asst_sp_guard.png',
+      dashcutType: 'Charge Guard',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Temari',
+      image: 'characters/l_tmr1.png',
+      dashcutIcon: '/support_type/asst_sp_cover.png',
+      dashcutType: 'Coverfire',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Kankuro',
+      image: 'characters/l_knk1.png',
+      dashcutIcon: '/support_type/asst_sp_guard.png',
+      dashcutType: 'Charge Guard',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Kakashi Hatake',
+      image: 'characters/l_kks1.png',
+      dashcutIcon: '/support_type/asst_sp_guard.png',
+      dashcutType: 'Charge Guard',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Might Guy',
+      image: 'characters/l_guy1.png',
+      dashcutIcon: '/support_type/asst_sp_cut.png',
+      dashcutType: 'Dashcut',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Hiruzen Sarutobi',
+      image: 'characters/l_hrz1.png',
       dashcutType: 'Secret Substitution',
       dashcutIcon: '/support_type/asst_scf_oug.png',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
     {
-    name: 'Tsunade Senju',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_ckr.png',
-    dashcutType: 'Charge Assist',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },
+      name: 'Tsunade Senju',
+      image: 'characters/l_tnd1.png',
+      dashcutIcon: '/support_type/asst_sp_ckr.png',
+      dashcutType: 'Charge Assist',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
     {
-    name: 'Jiraiya',
-    image: 'naruto.png',
+      name: 'Jiraiya',
+      image: 'characters/l_jry1.png',
       dashcutType: 'Secret Substitution',
       dashcutIcon: '/support_type/asst_scf_oug.png',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },
-      {
-    name: 'Orochimaru',
-    image: 'naruto.png',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Orochimaru',
+      image: 'characters/l_orc1.png',
       dashcutType: 'Break Guard',
       dashcutIcon: '/support_type/asst_at_guard.png',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
     {
-    name: 'Itachi Uchiha',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_guard.png',
-    dashcutType: 'Charge Guard',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Kisame Hoshigaki',
-    image: 'naruto.png',
+      name: 'Itachi Uchiha',
+      image: 'characters/l_itc1.png',
+      dashcutIcon: '/support_type/asst_sp_guard.png',
+      dashcutType: 'Charge Guard',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Kisame Hoshigaki',
+      image: 'characters/l_ksm1.png',
       dashcutType: 'Break Guard',
       dashcutIcon: '/support_type/asst_at_guard.png',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
     {
-    name: 'Kabuto Yakushi',
-    image: 'naruto.png',
-    dashcutIcon: '/support_type/asst_sp_ckr.png',
-    dashcutType: 'Charge Assist',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  },  {
-    name: 'Kimimaro',
-    image: 'naruto.png',
+      name: 'Kabuto Yakushi',
+      image: 'characters/l_kbt1.png',
+      dashcutIcon: '/support_type/asst_sp_ckr.png',
+      dashcutType: 'Charge Assist',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    },
+    {
+      name: 'Kimimaro',
+      image: 'characters/l_kmm1.png',
       dashcutType: 'Secret Substitution',
       dashcutIcon: '/support_type/asst_scf_oug.png',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/3.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/11.png' }
-    ]
-  }
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 2', icon: 'items/3.png' },
+        { name: 'Item 3', icon: 'items/8.png' },
+        { name: 'Item 4', icon: 'items/11.png' }
+      ]
+    }
+  ];
 
-];
-
-
-  // Dati di prova per i supporti (per ora usiamo sempre Naruto come richiesto)
+  // Dati di prova per i supporti
   supportCharacters = [
     {
       name: 'Asuma Sarutobi',
-      image: 'forest.png',
+      image: 'characters/l_asm1.png',
       dashcutType: 'Secret Substitution',
       dashcutIcon: '/support_type/asst_scf_oug.png',
+      tierIcon: 'rate_a_l.png',
       itemsets: [
         { name: 'Item 1', icon: 'rate_a_l.png' },
         { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
-        {
+    {
       name: 'Kurenai Yuhi',
-      image: 'forest.png',
+      image: 'characters/i_kur.png',
       dashcutIcon: '/support_type/asst_sp_cover.png',
       dashcutType: 'Coverfire',
+      tierIcon: 'rate_a_l.png',
       itemsets: [
         { name: 'Item 1', icon: 'rate_a_l.png' },
         { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
-        {
+    {
       name: 'Shizune Kato',
-      image: 'forest.png',
+      image: 'characters/i_shi.png',
       dashcutType: 'Strikeback',
-      dashcutIcon: 'public/rate_a_l.png',
+      dashcutIcon: '/support_type/asst_at_counter.png',
+      tierIcon: 'rate_a_l.png',
       itemsets: [
         { name: 'Item 1', icon: 'rate_a_l.png' },
         { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
-        {
+    {
       name: 'Anko Mitarashi',
-      image: 'forest.png',
+      image: 'characters/i_anko.png',
       dashcutType: 'Strikeback',
-      dashcutIcon: 'public/rate_a_l.png',
+      dashcutIcon: '/support_type/asst_at_counter.png',
+      tierIcon: 'rate_a_l.png',
       itemsets: [
         { name: 'Item 1', icon: 'rate_a_l.png' },
         { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
-        {
+    {
       name: 'First Hokage',
-      image: 'forest.png',
+      image: 'characters/l_hsm1.png',
       dashcutIcon: '/support_type/asst_sp_guard.png',
       dashcutType: 'Charge Guard',
+      tierIcon: 'rate_a_l.png',
       itemsets: [
         { name: 'Item 1', icon: 'rate_a_l.png' },
         { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
-        {
+    {
       name: 'Second Hokage',
-      image: 'forest.png',
+      image: 'characters/l_tbm1.png',
       dashcutIcon: '/support_type/asst_at_counter.png',
       dashcutType: 'Strikeback',
+      tierIcon: 'rate_a_l.png',
       itemsets: [
         { name: 'Item 1', icon: 'rate_a_l.png' },
         { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
-        {
+    {
       name: 'Jirobo',
-      image: 'forest.png',
+      image: 'characters/l_jrb1.png',
       dashcutType: 'Break Guard',
       dashcutIcon: '/support_type/asst_at_guard.png',
+      tierIcon: 'rate_a_l.png',
       itemsets: [
         { name: 'Item 1', icon: 'rate_a_l.png' },
         { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
-        {
+    {
       name: 'Kidomaru',
-      image: 'forest.png',
+      image: 'characters/l_kdm1.png',
       dashcutIcon: '/support_type/asst_sp_cover.png',
       dashcutType: 'Coverfire',
       tierIcon: 'rate_a_l.png',    
@@ -406,9 +429,10 @@ playableCharacters = [
         { name: 'Item 1', icon: 'rate_a_l.png' },
         { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
-    },{
+    },
+    {
       name: 'Sakon',
-      image: 'forest.png',
+      image: 'characters/l_skn1.png',
       dashcutIcon: '/support_type/asst_sp_guard.png',
       dashcutType: 'Charge Guard',
       tierIcon: 'rate_a_l.png',
@@ -419,7 +443,7 @@ playableCharacters = [
     },
     {
       name: 'Tayuya',
-      image: 'forest.png',
+      image: 'characters/l_tyy1.png',
       dashcutType: 'Strikeback',
       dashcutIcon: '/support_type/asst_at_counter.png',
       tierIcon: 'rate_a_l.png',

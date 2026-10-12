@@ -1,1 +1,44 @@
-<p>storm1 works!</p>
+<div class="cooldowns-container">
+  
+  <!-- Intestazione in stile Ninja Archives -->
+  <div class="archive-header">
+    <div class="subtitle-tag">STORM 1 ROSTER</div>
+    <h1 class="main-title">CHARACTER ARCHIVES</h1>
+    <p class="description">Explore playable characters and support types available in the database.</p>
+  </div>
+
+  <!-- SEZIONE 1: PLAYABLE CHARACTERS -->
+  <div class="section-block">
+    <div class="section-header-bar">
+      <span class="badge-num">01</span>
+      <h2>PLAYABLE CHARACTERS</h2>
+    </div>
+
+    <div class="cards-grid">
+      @for (char of playableCharacters; track $index) {
+        <app-ninja-card 
+          [character]="char" 
+          (cardClick)="onCardClick($event)">
+        </app-ninja-card>
+      }
+    </div>
+  </div>
+
+  <!-- SEZIONE 2: SUPPORT -->
+  <div class="section-block" style="margin-top: 40px;">
+    <div class="section-header-bar">
+      <span class="badge-num">02</span>
+      <h2>SUPPORT CHARACTERS</h2>
+    </div>
+
+    <div class="cards-grid">
+      @for (char of supportCharacters; track $index) {
+        <app-ninja-card 
+          [character]="char" 
+          (cardClick)="onCardClick($event)">
+        </app-ninja-card>
+      }
+    </div>
+  </div>
+
+</div>

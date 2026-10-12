@@ -1,21 +1,30 @@
+
 <div class="ninja-card" (click)="onClick()">
-  <!-- Immagine e badge in alto a sinistra (es. Dashcut) -->
   <div class="card-image-container">
-    <img [src]="character.image" [alt]="character.name" class="character-img" />
-    <div class="top-badge" [title]="character.dashcutType">
-      <img [src]="character.dashcutIcon" alt="badge" />
+    <img
+      [src]="character.image"
+      [alt]="character.name"
+      class="character-img"
+    />
+
+    <div class="dashcut-badge" [title]="character.dashcutType || 'Dashcut'">
+      <img [src]="character.dashcutIcon" alt="Dashcut" />
+    </div>
+
+    <div class="top-badge tier-badge" title="Tier">
+      <img [src]="character.tierIcon" alt="Tier" />
     </div>
   </div>
 
-  <!-- Nome e pallini itemset in basso -->
   <div class="card-footer-content">
     <div class="character-name">{{ character.name }}</div>
+
     <div class="itemsets-row">
-        @for (item of character.itemsets; track item) {
+      @for (item of character.itemsets; track item.name) {
         <div class="itemset-dot" [title]="item.name">
-            <img [src]="item.icon" alt="item" />
+          <img [src]="item.icon" [alt]="item.name" />
         </div>
-        }
+      }
     </div>
   </div>
 </div>

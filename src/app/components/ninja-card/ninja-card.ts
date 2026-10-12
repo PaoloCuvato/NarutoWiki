@@ -1,3 +1,4 @@
+
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
@@ -7,11 +8,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './ninja-card.scss',
 })
 export class NinjaCard {
-  
-@Input() character: any;
-@Output() cardClick = new EventEmitter<any>();
+  @Input() character: any;
+  @Output() cardClick = new EventEmitter<any>();
 
   onClick() {
     this.cardClick.emit(this.character);
+  }
+
+  toggleItem(item: any) {
+    item.selected = !item.selected;
   }
 }

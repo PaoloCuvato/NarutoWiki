@@ -10,42 +10,50 @@
 
   <div *ngIf="character" class="modal-body-layout">
     
-    <!-- BARRA SUPERIORE -->
+    <!-- TOP BAR -->
     <div class="modal-top-bar">
       <div class="char-header-info">
         <h2 class="char-title">{{ character.name }}</h2>
       </div>
-      <button class="close-btn" (click)="closeModal()">✖ CHIUDI</button>
+      <button class="close-btn" (click)="closeModal()">✖ CLOSE</button>
     </div>
 
-    <!-- CONTENUTO A 2 COLONNE -->
+    <!-- MAIN GRID -->
     <div class="modal-grid-content">
       
-      <!-- COLONNA SINISTRA: Render -->
+      <!-- LEFT COLUMN -->
       <div class="left-column">
         <div class="render-box">
           <img [src]="character.image" [alt]="character.name" class="character-render" />
         </div>
+
+        <!-- ITEMSETS SECTION (CIRCULAR ICONS ONLY) -->
+        <div class="itemsets-section" *ngIf="character.itemsets?.length">
+          <h3 class="section-subtitle">ITEMSETS</h3>
+          <div class="itemsets-container">
+            <div class="itemset-circle" *ngFor="let item of character.itemsets" [title]="item.name">
+              <img [src]="item.icon" [alt]="item.name" />
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- COLONNA DESTRA: Nuovi p-tabs di PrimeNG -->
+      <!-- RIGHT COLUMN -->
       <div class="right-column">
         <p-tabs value="0">
           
-          <!-- Lista delle schede/tab -->
           <p-tablist>
             <p-tab value="0">📑 Overview</p-tab>
             <p-tab value="1">🛡️ Frame Data & Tech</p-tab>
-            <p-tab value="2">📖 Guide</p-tab>
+            <p-tab value="2">📖 Guides</p-tab>
           </p-tablist>
 
-          <!-- Contenuto dei pannelli -->
           <p-tabpanels>
             
             <!-- TAB 0: OVERVIEW -->
             <p-tabpanel value="0">
               <div class="info-section" *ngIf="character.jutsu">
-                <h3>JUTSU PRINCIPALE</h3>
+                <h3>MAIN JUTSU</h3>
                 <ul>
                   <li *ngFor="let j of character.jutsu">{{ j }}</li>
                 </ul>
@@ -55,15 +63,6 @@
                 <h3>ULTIMATE JUTSU (UJ)</h3>
                 <ul>
                   <li *ngFor="let uj of character.ultimateJutsu">{{ uj }}</li>
-                </ul>
-              </div>
-
-              <div class="info-section" *ngIf="character.itemsets?.length">
-                <h3>ITEMSETS / OGGETTI</h3>
-                <ul>
-                  <li *ngFor="let item of character.itemsets">
-                    {{ item.name }}
-                  </li>
                 </ul>
               </div>
             </p-tabpanel>
@@ -93,7 +92,7 @@
             <!-- TAB 2: GUIDES -->
             <p-tabpanel value="2">
               <div class="guide-box">
-                <p>{{ character.guides || 'Guida in arrivo per questo personaggio.' }}</p>
+                <p>{{ character.guides || 'Guide coming soon for this character.' }}</p>
               </div>
             </p-tabpanel>
 

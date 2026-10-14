@@ -13,7 +13,6 @@
     overflow: hidden;
   }
 
-  /* Nasconde l'header nativo di PrimeNG per usare la nostra top-bar custom */
   .p-dialog-header {
     display: none !important;
   }
@@ -25,7 +24,7 @@
   }
 }
 
-/* 2. Nuova sintassi PrimeNG Tabs (p-tabs) */
+/* 2. Nuova sintassi PrimeNG Tabs */
 ::ng-deep .right-column {
   p-tabs {
     display: flex;
@@ -33,7 +32,6 @@
     width: 100%;
   }
 
-  /* Linea di navigazione delle Tab */
   p-tablist, .p-tablist {
     display: flex;
     gap: 8px;
@@ -43,7 +41,6 @@
     background: transparent !important;
   }
 
-  /* Singola Tab */
   p-tab, .p-tab {
     background: rgba(255, 255, 255, 0.03) !important;
     color: #9ca3af !important;
@@ -62,7 +59,6 @@
       border-color: rgba(168, 85, 247, 0.4) !important;
     }
 
-    /* Tab Selezionata / Attiva */
     &[aria-selected="true"], &.p-tab-active {
       background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%) !important;
       color: #ffffff !important;
@@ -71,7 +67,6 @@
     }
   }
 
-  /* Contenitore dei Pannelli */
   p-tabpanels, .p-tabpanels {
     background: transparent !important;
     padding: 0 !important;
@@ -91,7 +86,6 @@
 .modal-body-layout {
   display: flex;
   flex-direction: column;
-  height: 100%;
 
   /* Barra Superiore */
   .modal-top-bar {
@@ -112,7 +106,6 @@
       text-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
     }
 
-    /* Pulsante X Chiudi in stile Gaming */
     .close-btn {
       background: rgba(239, 68, 68, 0.1);
       border: 1px solid #ef4444;
@@ -133,32 +126,90 @@
     }
   }
 
-  /* Struttura a 2 Colonne */
+  /* Struttura principale a 2 colonne (Allineate in alto) */
   .modal-grid-content {
     display: grid;
-    grid-template-columns: 32% 65%;
-    gap: 3%;
+    grid-template-columns: 240px 1fr; /* Colonna sinistra a larghezza fissa compatta */
+    gap: 1.5rem;
+    align-items: start; /* IMPORANTE: Allinea la card in alto senza tirarla in basso */
 
-    /* Colonna Sinistra - Render Immagine */
+    /* COLONNA SINISTRA: Card compatta e proporzionata */
     .left-column {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: column;
       background: radial-gradient(circle at center, rgba(168, 85, 247, 0.08) 0%, rgba(13, 13, 18, 0.95) 100%);
       border: 1px solid rgba(255, 255, 255, 0.07);
       border-radius: 10px;
-      padding: 1.5rem;
+      padding: 1rem;
       box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+      width: 100%;
 
-      .character-render {
-        max-height: 380px;
-        width: auto;
-        object-fit: contain;
-        filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.7));
+      /* Box immagine fissa e contenuta */
+      .render-box {
+        width: 100%;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .character-render {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+          filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.7));
+        }
+      }
+
+      /* Sezione Itemsets attaccata sotto l'immagine */
+      .itemsets-section {
+        margin-top: 0.8rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 0.8rem;
+
+        .section-subtitle {
+          font-size: 0.68rem;
+          color: #c084fc;
+          font-weight: 800;
+          letter-spacing: 1px;
+          margin-bottom: 0.6rem;
+          text-transform: uppercase;
+          text-align: center;
+        }
+
+        .itemsets-container {
+          display: flex;
+          gap: 8px;
+          justify-content: center;
+          align-items: center;
+
+          .itemset-circle {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #181820;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: all 0.2s ease;
+
+            &:hover {
+              border-color: #a855f7;
+              transform: scale(1.1);
+            }
+
+            img {
+              width: 95%;
+              height: 95%;
+              object-fit: contain;
+            }
+          }
+        }
       }
     }
 
-    /* Colonna Destra - Sezioni Dati */
+    /* COLONNA DESTRA */
     .right-column {
       display: flex;
       flex-direction: column;
@@ -194,7 +245,6 @@
         }
       }
 
-      /* Griglia Frame Data (Jail, Pressure, Gap) */
       .tech-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -224,7 +274,6 @@
         }
       }
 
-      /* Box della Guida */
       .guide-box {
         background: rgba(255, 255, 255, 0.02);
         border: 1px solid rgba(255, 255, 255, 0.06);

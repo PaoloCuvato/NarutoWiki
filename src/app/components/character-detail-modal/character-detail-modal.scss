@@ -1,0 +1,239 @@
+/* ==========================================
+   STILE STORM WIKI - PRIMENG OVERRIDES
+   ========================================== */
+
+/* 1. Finestra Modale PrimeNG (p-dialog) */
+::ng-deep .storm-wiki-modal {
+  .p-dialog {
+    background: #0d0d12 !important;
+    border: 1px solid rgba(168, 85, 247, 0.3) !important;
+    box-shadow: 0 0 35px rgba(168, 85, 247, 0.25), 0 0 10px rgba(0, 0, 0, 0.8) !important;
+    border-radius: 12px !important;
+    color: #ffffff !important;
+    overflow: hidden;
+  }
+
+  /* Nasconde l'header nativo di PrimeNG per usare la nostra top-bar custom */
+  .p-dialog-header {
+    display: none !important;
+  }
+
+  .p-dialog-content {
+    background: #0d0d12 !important;
+    padding: 1.5rem !important;
+    border-radius: 12px;
+  }
+}
+
+/* 2. Nuova sintassi PrimeNG Tabs (p-tabs) */
+::ng-deep .right-column {
+  p-tabs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Linea di navigazione delle Tab */
+  p-tablist, .p-tablist {
+    display: flex;
+    gap: 8px;
+    border-bottom: 2px solid #1f1f2e;
+    padding-bottom: 4px;
+    margin-bottom: 1.5rem;
+    background: transparent !important;
+  }
+
+  /* Singola Tab */
+  p-tab, .p-tab {
+    background: rgba(255, 255, 255, 0.03) !important;
+    color: #9ca3af !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 10px 18px !important;
+    border-radius: 6px 6px 0 0 !important;
+    font-weight: 700 !important;
+    font-size: 0.88rem !important;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: #ffffff !important;
+      background: rgba(168, 85, 247, 0.15) !important;
+      border-color: rgba(168, 85, 247, 0.4) !important;
+    }
+
+    /* Tab Selezionata / Attiva */
+    &[aria-selected="true"], &.p-tab-active {
+      background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%) !important;
+      color: #ffffff !important;
+      border-color: #a855f7 !important;
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
+    }
+  }
+
+  /* Contenitore dei Pannelli */
+  p-tabpanels, .p-tabpanels {
+    background: transparent !important;
+    padding: 0 !important;
+    color: #e5e7eb;
+  }
+
+  p-tabpanel, .p-tabpanel {
+    background: transparent !important;
+  }
+}
+
+
+/* ==========================================
+   LAYOUT E DESIGN INTERNO DEL MODALE
+   ========================================== */
+
+.modal-body-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  /* Barra Superiore */
+  .modal-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+
+    .char-title {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin: 0;
+      text-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+    }
+
+    /* Pulsante X Chiudi in stile Gaming */
+    .close-btn {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid #ef4444;
+      color: #ef4444;
+      padding: 8px 16px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      border-radius: 6px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: #ef4444;
+        color: #ffffff;
+        box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+      }
+    }
+  }
+
+  /* Struttura a 2 Colonne */
+  .modal-grid-content {
+    display: grid;
+    grid-template-columns: 32% 65%;
+    gap: 3%;
+
+    /* Colonna Sinistra - Render Immagine */
+    .left-column {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at center, rgba(168, 85, 247, 0.08) 0%, rgba(13, 13, 18, 0.95) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+
+      .character-render {
+        max-height: 380px;
+        width: auto;
+        object-fit: contain;
+        filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.7));
+      }
+    }
+
+    /* Colonna Destra - Sezioni Dati */
+    .right-column {
+      display: flex;
+      flex-direction: column;
+
+      .info-section {
+        margin-bottom: 1.5rem;
+
+        h3 {
+          color: #c084fc;
+          font-size: 0.85rem;
+          font-weight: 800;
+          letter-spacing: 1px;
+          margin-bottom: 0.6rem;
+          border-left: 3px solid #a855f7;
+          padding-left: 10px;
+          text-transform: uppercase;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 8px 14px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: #d1d5db;
+          }
+        }
+      }
+
+      /* Griglia Frame Data (Jail, Pressure, Gap) */
+      .tech-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+
+        .tech-box {
+          background: rgba(168, 85, 247, 0.04);
+          border: 1px solid rgba(168, 85, 247, 0.2);
+          padding: 14px;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+
+          .tech-label {
+            font-size: 0.75rem;
+            color: #a855f7;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+          }
+
+          .tech-value {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
+          }
+        }
+      }
+
+      /* Box della Guida */
+      .guide-box {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 1.2rem;
+        border-radius: 8px;
+        line-height: 1.6;
+        color: #d1d5db;
+        font-size: 0.95rem;
+      }
+    }
+  }
+}

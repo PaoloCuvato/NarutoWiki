@@ -1,0 +1,106 @@
+<p-dialog 
+  [(visible)]="visible" 
+  (onHide)="closeModal()"
+  [modal]="true" 
+  [dismissableMask]="true"
+  [draggable]="false"
+  [resizable]="false"
+  styleClass="storm-wiki-modal"
+  [style]="{ width: '85vw', maxWidth: '1200px', height: '85vh' }">
+
+  <div *ngIf="character" class="modal-body-layout">
+    
+    <!-- BARRA SUPERIORE -->
+    <div class="modal-top-bar">
+      <div class="char-header-info">
+        <h2 class="char-title">{{ character.name }}</h2>
+      </div>
+      <button class="close-btn" (click)="closeModal()">✖ CHIUDI</button>
+    </div>
+
+    <!-- CONTENUTO A 2 COLONNE -->
+    <div class="modal-grid-content">
+      
+      <!-- COLONNA SINISTRA: Render -->
+      <div class="left-column">
+        <div class="render-box">
+          <img [src]="character.image" [alt]="character.name" class="character-render" />
+        </div>
+      </div>
+
+      <!-- COLONNA DESTRA: Nuovi p-tabs di PrimeNG -->
+      <div class="right-column">
+        <p-tabs value="0">
+          
+          <!-- Lista delle schede/tab -->
+          <p-tablist>
+            <p-tab value="0">📑 Overview</p-tab>
+            <p-tab value="1">🛡️ Frame Data & Tech</p-tab>
+            <p-tab value="2">📖 Guide</p-tab>
+          </p-tablist>
+
+          <!-- Contenuto dei pannelli -->
+          <p-tabpanels>
+            
+            <!-- TAB 0: OVERVIEW -->
+            <p-tabpanel value="0">
+              <div class="info-section" *ngIf="character.jutsu">
+                <h3>JUTSU PRINCIPALE</h3>
+                <ul>
+                  <li *ngFor="let j of character.jutsu">{{ j }}</li>
+                </ul>
+              </div>
+
+              <div class="info-section" *ngIf="character.ultimateJutsu">
+                <h3>ULTIMATE JUTSU (UJ)</h3>
+                <ul>
+                  <li *ngFor="let uj of character.ultimateJutsu">{{ uj }}</li>
+                </ul>
+              </div>
+
+              <div class="info-section" *ngIf="character.itemsets?.length">
+                <h3>ITEMSETS / OGGETTI</h3>
+                <ul>
+                  <li *ngFor="let item of character.itemsets">
+                    {{ item.name }}
+                  </li>
+                </ul>
+              </div>
+            </p-tabpanel>
+
+            <!-- TAB 1: FRAME DATA -->
+            <p-tabpanel value="1">
+              <div class="tech-grid">
+                <div class="tech-box">
+                  <span class="tech-label">JAIL:</span>
+                  <span class="tech-value">{{ character.frameData?.jail || 'N/A' }}</span>
+                </div>
+                <div class="tech-box">
+                  <span class="tech-label">COMBO GAP:</span>
+                  <span class="tech-value">{{ character.frameData?.comboGap || 'N/A' }}</span>
+                </div>
+                <div class="tech-box">
+                  <span class="tech-label">PRESSURE:</span>
+                  <span class="tech-value">{{ character.frameData?.pressure || 'N/A' }}</span>
+                </div>
+                <div class="tech-box">
+                  <span class="tech-label">COMBO CANCEL:</span>
+                  <span class="tech-value">{{ character.frameData?.comboCancel || 'N/A' }}</span>
+                </div>
+              </div>
+            </p-tabpanel>
+
+            <!-- TAB 2: GUIDES -->
+            <p-tabpanel value="2">
+              <div class="guide-box">
+                <p>{{ character.guides || 'Guida in arrivo per questo personaggio.' }}</p>
+              </div>
+            </p-tabpanel>
+
+          </p-tabpanels>
+        </p-tabs>
+      </div>
+
+    </div>
+  </div>
+</p-dialog>

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NinjaCard } from '../../ninja-card/ninja-card';
+import { CharacterDetailModal } from '../../character-detail-modal/character-detail-modal';
 
 @Component({
   selector: 'app-storm1',
   standalone: true,
-  imports: [CommonModule, NinjaCard],
+  imports: [CommonModule, NinjaCard, CharacterDetailModal],
   templateUrl: './storm1.html',
   styleUrl: './storm1.scss',
 })
@@ -454,7 +455,13 @@ export class Storm1 {
     }
   ];
 
-  onCardClick(char: any) {
-    console.log('Hai cliccato su:', char.name);
+  // --- AGGIUNGI QUESTE VARIABILI ---
+  isModalOpen: boolean = false;
+  selectedCharacter: any = null;
+
+  // --- AGGIUNGI QUESTO METODO ---
+  onCardClick(character: any) {
+    this.selectedCharacter = character; // Salva il personaggio cliccato
+    this.isModalOpen = true;            // Apre la modale
   }
 }

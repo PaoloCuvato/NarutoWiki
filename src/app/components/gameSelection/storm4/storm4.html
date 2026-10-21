@@ -1,1 +1,112 @@
-<p>storm4 works!</p>
+<div class="character-page-container">
+  <!-- HEADER PERSONAGGIO -->
+  <div class="header-section">
+    <div class="header-info">
+      <div class="accent-line">SCHEDA PERSONAGGIO</div>
+      <h1 class="character-name">{{ character.name }}</h1>
+      <p class="character-subtitle">{{ character.subtitle }}</p>
+      
+      <div class="info-badges">
+        <span class="info-tag">Villaggio: {{ character.village }}</span>
+        <span class="info-tag">Clan: {{ character.clan }}</span>
+      </div>
+    </div>
+    
+    <div class="header-image">
+      <div class="character-image-wrapper">
+        <img [src]="character.image" [alt]="character.name" class="character-img" />
+      </div>
+    </div>
+  </div>
+
+  <!-- SEZIONE JUTSU (3 Video locali in loop) -->
+  <div class="section-container">
+    <div class="section-title">
+      <span class="title-bar"></span>
+      <h2>JUTSU</h2>
+    </div>
+
+    <div class="cards-grid grid-3">
+      @for (jutsu of jutsuList; track $index) {
+        <div class="custom-card">
+          <div class="video-container">
+            <video 
+              [src]="jutsu.videoUrl" 
+              autoplay 
+              muted 
+              loop 
+              playsinline>
+            </video>
+          </div>
+          <div class="card-content">
+            <div class="skill-title">{{ jutsu.title }}</div>
+            <div class="skill-desc">{{ jutsu.description }}</div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- SEZIONE ULTIMATE JUTSU (2 Video locali in loop) -->
+  <div class="section-container">
+    <div class="section-title">
+      <span class="title-bar"></span>
+      <h2>ULTIMATE JUTSU</h2>
+    </div>
+
+    <div class="cards-grid grid-2">
+      @for (ultimate of ultimateJutsuList; track $index) {
+        <div class="custom-card ultimate-card">
+          <div class="video-container">
+            <video 
+              [src]="ultimate.videoUrl" 
+              autoplay 
+              muted 
+              loop 
+              playsinline>
+            </video>
+          </div>
+          <div class="card-content">
+            <div class="skill-title ultimate-title">{{ ultimate.title }}</div>
+            <div class="skill-desc">{{ ultimate.description }}</div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- SEZIONE TEAM -->
+  <div class="section-container">
+    <div class="section-title">
+      <span class="title-bar"></span>
+      <h2>TEAMS</h2>
+    </div>
+
+    <div class="cards-grid grid-3">
+      @for (team of teams; track team.name) {
+        <div class="custom-card team-card">
+          <h3 class="team-name">{{ team.name }}</h3>
+          <p class="team-desc">{{ team.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- SEZIONE GUIDE (4 Placeholder) -->
+  <div class="section-container">
+    <div class="section-title">
+      <span class="title-bar"></span>
+      <h2>GUIDE & STRATEGIE</h2>
+    </div>
+
+    <div class="cards-grid grid-4">
+      @for (guide of guides; track $index) {
+        <div class="custom-card guide-card">
+          <div class="guide-icon"><i class="pi pi-book"></i></div>
+          <h3 class="guide-title">{{ guide.title }}</h3>
+          <p class="guide-desc">{{ guide.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</div>

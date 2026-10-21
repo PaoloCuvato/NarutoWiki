@@ -21,7 +21,7 @@ export class Storm1 {
       dashcutIcon: '/support_type/asst_at_counter.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_02_col_09.png' },
         { name: 'Item 2', icon: 'items/c_bat_183.png' },
         { name: 'Item 3', icon: 'items/8.png' },
         { name: 'Item 4', icon: 'items/c_bat_162.png' }
@@ -34,7 +34,7 @@ export class Storm1 {
       dashcutType: 'Coverfire',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_02_col_10.png' },
         { name: 'Item 2', icon: 'items/c_bat_213.png' },
         { name: 'Item 3', icon: 'items/c_bat_186.png' },
         { name: 'Item 4', icon: 'items/c_bat_198.png' }
@@ -47,7 +47,7 @@ export class Storm1 {
       dashcutType: 'Charge Assist',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_03_col_01.png' },
         { name: 'Item 2', icon: 'items/c_bat_168.png' },
         { name: 'Item 3', icon: 'items/c_bat_171.png' },
         { name: 'Item 4', icon: 'items/c_bat_186.png' }
@@ -60,7 +60,7 @@ export class Storm1 {
       dashcutIcon: '/support_type/asst_scf_oug.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_03_col_03.png' },
         { name: 'Item 2', icon: 'items/c_bat_183.png' },
         { name: 'Item 3', icon: 'items/c_bat_216.png' },
         { name: 'Item 4', icon: 'items/c_bat_165.png' }
@@ -73,7 +73,7 @@ export class Storm1 {
       dashcutType: 'Coverfire',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_03_col_04.png' },
         { name: 'Item 2', icon: 'items/c_bat_213.png' },
         { name: 'Item 3', icon: 'items/c_bat_186.png' },
         { name: 'Item 4', icon: 'items/c_bat_183.png' },
@@ -86,7 +86,7 @@ export class Storm1 {
       dashcutType: 'strikeback',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_03_col_02.png' },
         { name: 'Item 2', icon: 'items/c_bat_216.png' },
         { name: 'Item 3', icon: 'items/c_bat_174.png' },
         { name: 'Item 4', icon: 'items/c_bat_162.png' }
@@ -99,7 +99,7 @@ export class Storm1 {
       dashcutType: 'Coverfire',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_03_col_05.png' },
         { name: 'Item 2', icon: 'items/c_bat_183.png' },
         { name: 'Item 3', icon: 'items/c_bat_216.png' },
         { name: 'Item 4', icon: 'items/c_bat_198.png' }
@@ -112,7 +112,7 @@ export class Storm1 {
       dashcutType: 'Charge Assist',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_03_col_07.png' },
         { name: 'Item 2', icon: 'items/c_bat_168.png' },
         { name: 'Item 3', icon: 'items/c_bat_177.png' },
         { name: 'Item 4', icon: 'items/c_bat_186.png' }
@@ -125,7 +125,7 @@ export class Storm1 {
       dashcutType: 'Dashcut',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_03_col_06.png' },
         { name: 'Item 2', icon: 'items/c_bat_165.png' },
         { name: 'Item 3', icon: 'items/c_bat_213.png' },
         { name: 'Item 4', icon: 'items/c_bat_162.png' }
@@ -138,7 +138,7 @@ export class Storm1 {
       dashcutType: 'Charge Assist',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_03_col_10.png' },
         { name: 'Item 2', icon: 'items/c_bat_168.png' },
         { name: 'Item 3', icon: 'items/c_bat_180.png' },
         { name: 'Item 4', icon: 'items/c_bat_183.png' }
@@ -151,7 +151,7 @@ export class Storm1 {
       dashcutType: 'Strikeback',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_03_col_08.png' },
         { name: 'Item 2', icon: 'items/c_bat_213.png' },
         { name: 'Item 3', icon: 'items/c_bat_171.png' },
         { name: 'Item 4', icon: 'items/c_bat_198.png' }
@@ -164,7 +164,7 @@ export class Storm1 {
       dashcutIcon: '/support_type/asst_at_guard.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_03_col_09.png' },
         { name: 'Item 2', icon: 'items/c_bat_171.png' },
         { name: 'Item 3', icon: 'items/c_bat_206.png' },
         { name: 'Item 4', icon: 'items/c_bat_186.png' }
@@ -177,7 +177,7 @@ export class Storm1 {
       dashcutType: 'Charge Guard',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_04_col_01.png' },
         { name: 'Item 2', icon: 'items/c_bat_186.png' },
         { name: 'Item 3', icon: 'items/c_bat_171.png' },
         { name: 'Item 4', icon: 'items/c_bat_162.png' }
@@ -190,7 +190,7 @@ export class Storm1 {
       dashcutType: 'Coverfire',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_04_col_03.png' },
         { name: 'Item 2', icon: 'items/c_bat_216.png' },
         { name: 'Item 3', icon: 'items/c_bat_180.png' },
         { name: 'Item 4', icon: 'items/c_bat_183.png' }
@@ -203,7 +203,7 @@ export class Storm1 {
       dashcutType: 'Charge Guard',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_04_col_02.png' },
         { name: 'Item 2', icon: 'items/c_bat_186.png' },
         { name: 'Item 3', icon: 'items/c_bat_206.png' },
         { name: 'Item 4', icon: 'items/c_bat_216.png' }
@@ -211,12 +211,12 @@ export class Storm1 {
     },
     {
       name: 'Kakashi Hatake',
-      image: 'characters/l_kks1.png',
+      image: 'characters/l_kks2.png',
       dashcutIcon: '/support_type/asst_sp_guard.png',
       dashcutType: 'Charge Guard',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_04_col_04.png' },
         { name: 'Item 2', icon: 'items/c_bat_186.png' },
         { name: 'Item 3', icon: 'items/c_bat_171.png' },
         { name: 'Item 4', icon: 'items/c_bat_213.png' }
@@ -229,7 +229,7 @@ export class Storm1 {
       dashcutType: 'Dashcut',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_04_col_05.png' },
         { name: 'Item 2', icon: 'items/c_bat_168.png' },
         { name: 'Item 3', icon: 'items/c_bat_174.png' },
         { name: 'Item 4', icon: 'items/c_bat_216.png' }
@@ -242,7 +242,7 @@ export class Storm1 {
       dashcutIcon: '/support_type/asst_scf_oug.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_04_col_08.png' },
         { name: 'Item 2', icon: 'items/c_bat_186.png' },
         { name: 'Item 3', icon: 'items/c_bat_171.png' },
         { name: 'Item 4', icon: 'items/c_bat_198.png' }
@@ -255,7 +255,7 @@ export class Storm1 {
       dashcutType: 'Charge Assist',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_04_col_07.png' },
         { name: 'Item 2', icon: 'items/c_bat_198.png' },
         { name: 'Item 3', icon: 'items/c_bat_183.png' },
         { name: 'Item 4', icon: 'items/c_bat_162.png' }
@@ -268,7 +268,7 @@ export class Storm1 {
       dashcutIcon: '/support_type/asst_scf_oug.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_04_col_06.png' },
         { name: 'Item 2', icon: 'items/c_bat_213.png' },
         { name: 'Item 3', icon: 'items/c_bat_216.png' },
         { name: 'Item 4', icon: 'items/c_bat_165.png' }
@@ -281,7 +281,7 @@ export class Storm1 {
       dashcutIcon: '/support_type/asst_at_guard.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_04_col_09.png' },
         { name: 'Item 2', icon: 'items/c_bat_213.png' },
         { name: 'Item 3', icon: 'items/c_bat_177.png' },
         { name: 'Item 4', icon: 'items/c_bat_183.png' }
@@ -294,7 +294,7 @@ export class Storm1 {
       dashcutType: 'Charge Guard',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_05_col_02.png' },
         { name: 'Item 2', icon: 'items/c_bat_186.png' },
         { name: 'Item 3', icon: 'items/c_bat_180.png' },
         { name: 'Item 4', icon: 'items/c_bat_198.png' }
@@ -307,7 +307,7 @@ export class Storm1 {
       dashcutIcon: '/support_type/asst_at_guard.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_05_col_01.png' },
         { name: 'Item 2', icon: 'items/c_bat_168.png' },
         { name: 'Item 3', icon: 'items/c_bat_177.png' },
         { name: 'Item 4', icon: 'items/c_bat_183.png' }
@@ -320,7 +320,7 @@ export class Storm1 {
       dashcutType: 'Charge Assist',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_04_col_10.png' },
         { name: 'Item 2', icon: 'items/c_bat_216.png' },
         { name: 'Item 3', icon: 'items/c_bat_168.png' },
         { name: 'Item 4', icon: 'items/c_bat_162.png' }
@@ -333,7 +333,7 @@ export class Storm1 {
       dashcutIcon: '/support_type/asst_scf_oug.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/1.png' },
+        { name: 'Item 1', icon: 'items/s1/item_row_05_col_01.png' },
         { name: 'Item 2', icon: 'items/c_bat_213.png' },
         { name: 'Item 3', icon: 'items/c_bat_171.png' },
         { name: 'Item 4', icon: 'items/c_bat_198.png' }

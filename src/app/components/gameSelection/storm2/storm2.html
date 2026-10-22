@@ -1,1 +1,34 @@
-<p>storm2 works!</p>
+<div class="cooldowns-container">
+  
+  <!-- Intestazione in stile Ninja Archives -->
+  <div class="archive-header">
+    <div class="subtitle-tag">STORM 2 ROSTER</div>
+    <h1 class="main-title">CHARACTER ARCHIVES</h1>
+    <p class="description">Explore playable characters and support types available in the database.</p>
+  </div>
+
+  <!-- SEZIONE 1: PLAYABLE CHARACTERS -->
+  <div class="section-block">
+    <div class="section-header-bar">
+      <span class="badge-num">01</span>
+      <h2>PLAYABLE CHARACTERS</h2>
+    </div>
+
+    <div class="cards-grid">
+      @for (char of playableCharacters; track $index) {
+        <app-ninja-card 
+          [character]="char" 
+          (cardClick)="onCardClick($event)">
+        </app-ninja-card>
+      }
+    </div>
+  </div>
+
+
+</div>
+
+<!-- 🛑 AGGIUNGI QUESTO COMPONENTE IN FONDO AL FILE 🛑 -->
+<app-character-detail-modal
+  [(visible)]="isModalOpen"
+  [character]="selectedCharacter">
+</app-character-detail-modal>

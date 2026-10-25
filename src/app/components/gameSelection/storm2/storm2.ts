@@ -20,8 +20,8 @@ playableCharacters = [
     dashcutIcon: '/support_type/asst_at_counter.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-      { name: 'Item 1', icon: 'items/s1/item_row_02_col_09.png' },
-      { name: 'Item 2', icon: 'items/c_bat_183.png' },
+      { name: 'Item 1', icon: 'items/s2/item_row_02_col_07.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
       { name: 'Item 3', icon: 'items/8.png' },
       { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
@@ -33,10 +33,11 @@ playableCharacters = [
     dashcutIcon: '/support_type/asst_sp_ckr.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-      { name: 'Item 1', icon: 'items/s1/item_row_03_col_01.png' },
-      { name: 'Item 2', icon: 'items/c_bat_168.png' },
-      { name: 'Item 3', icon: 'items/c_bat_171.png' },
-      { name: 'Item 4', icon: 'items/c_bat_186.png' }
+      { name: 'Item 1', icon: 'items/s2/item_row_04_col_03.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_203.png' },
+
     ]
   },
   {
@@ -45,7 +46,11 @@ playableCharacters = [
     dashcutType: '',
     dashcutIcon: '',
     tierIcon: 'rate_a_l.png',
-    itemsets: []
+    itemsets: [      
+      { name: 'Item 1', icon: 'items/s2/item_row_04_col_04.png' },
+      { name: 'Item 2', icon: 'items/c_bat_183.png' },
+      { name: 'Item 3', icon: 'items/c_bat_174.png' },
+      { name: 'Item 4', icon: 'items/c_bat_165.png' },]
   },
   {
     name: 'Sage Naruto',
@@ -54,10 +59,10 @@ playableCharacters = [
     dashcutIcon: '/support_type/asst_sp_guard.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-      { name: 'Item 1', icon: 'items/s1/item_row_04_col_04.png' },
-      { name: 'Item 2', icon: 'items/c_bat_186.png' },
-      { name: 'Item 3', icon: 'items/c_bat_171.png' },
-      { name: 'Item 4', icon: 'items/c_bat_213.png' }
+      { name: 'Item 1', icon: 'items/s2/item_row_03_col_10.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
   {
@@ -67,19 +72,24 @@ playableCharacters = [
     dashcutIcon: '/support_type/asst_sp_cut.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-      { name: 'Item 1', icon: 'items/s1/item_row_04_col_05.png' },
+      { name: 'Item 1', icon: 'items/s2/item_row_06_col_07.png' },
       { name: 'Item 2', icon: 'items/c_bat_168.png' },
-      { name: 'Item 3', icon: 'items/c_bat_174.png' },
-      { name: 'Item 4', icon: 'items/c_bat_216.png' }
+      { name: 'Item 3', icon: 'items/c_bat_183.png' },
+      { name: 'Item 4', icon: 'items/c_bat_165.png' }
     ]
   },
   {
     name: 'Suigetsu',
-    image: 'characters/l_asm1.png',
+    image: 'characters/l_sgt1.png',
     dashcutType: '',
     dashcutIcon: '',
     tierIcon: 'rate_a_l.png',
-    itemsets: []
+    itemsets: [
+      { name: 'Item 1', icon: 'items/s2/item_row_06_col_05.png' },
+      { name: 'Item 2', icon: 'items/c_bat_174.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
   },
   {
     name: 'Kirin Sasuke',
@@ -88,9 +98,9 @@ playableCharacters = [
     dashcutIcon: '/support_type/asst_sp_cover.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-      { name: 'Item 1', icon: 'items/s1/item_row_03_col_05.png' },
-      { name: 'Item 2', icon: 'items/c_bat_183.png' },
-      { name: 'Item 3', icon: 'items/c_bat_216.png' },
+      { name: 'Item 1', icon: 'items/s2/item_row_04_col_01.png' },
+      { name: 'Item 2', icon: 'items/c_bat_174.png' },
+      { name: 'Item 3', icon: 'items/c_bat_183.png' },
       { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
   },
@@ -101,10 +111,10 @@ playableCharacters = [
     dashcutIcon: '/support_type/asst_sp_cut.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-      { name: 'Item 1', icon: 'items/s1/item_row_03_col_06.png' },
-      { name: 'Item 2', icon: 'items/c_bat_165.png' },
-      { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+      { name: 'Item 1', icon: 'items/s2/item_row_04_col_06.png' },
+      { name: 'Item 2', icon: 'items/c_bat_183.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_165.png' }
     ]
   },
   {
@@ -114,10 +124,10 @@ playableCharacters = [
     dashcutIcon: '/support_type/asst_sp_ckr.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-      { name: 'Item 1', icon: 'items/s1/item_row_03_col_07.png' },
-      { name: 'Item 2', icon: 'items/c_bat_168.png' },
-      { name: 'Item 3', icon: 'items/c_bat_177.png' },
-      { name: 'Item 4', icon: 'items/c_bat_186.png' }
+      { name: 'Item 1', icon: 'items/s2/item_row_04_col_05.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
   },
   {

@@ -1,1 +1,241 @@
-<p>modding-resources works!</p>
+<div class="modding-resources">
+  <div class="modding-header">
+    <span class="header-kicker">COMMUNITY & CREATIONS</span>
+    <h1>NARUTO STORM MODDING HUB</h1>
+    <div class="header-line"></div>
+    <p>Explore tools, resources and tutorials for the Naruto Ultimate Ninja Storm series.</p>
+  </div>
+
+  <div class="modding-container">
+    <p-tabs [(value)]="activeTab" class="storm-modding-tabs">
+      <p-tablist>
+        <p-tab value="tools">
+          <span class="tab-index">01</span>
+          <i class="pi pi-wrench"></i>
+          <span class="tab-label">MODDING TOOLS</span>
+        </p-tab>
+
+        <p-tab value="guides">
+          <span class="tab-index">02</span>
+          <i class="pi pi-book"></i>
+          <span class="tab-label">TUTORIALS & GUIDES</span>
+        </p-tab>
+      </p-tablist>
+
+      <p-tabpanels>
+        <p-tabpanel value="tools">
+          @if (activeTab === 'tools') {
+            <section class="tools-section">
+              <div class="section-header">
+                <div class="section-heading">
+                  <span class="section-kicker">MODDING RESOURCES</span>
+                  <h2>MODDING TOOLS</h2>
+                  <p>Discover editors, frameworks, utilities and community resources for Naruto Storm modding.</p>
+                </div>
+
+                <div class="section-counter">
+                  <strong>{{ tools.length }}</strong>
+                  <span>RESOURCES</span>
+                </div>
+              </div>
+
+              <div class="tools-toolbar">
+                <div class="search-box">
+                  <i class="pi pi-search"></i>
+
+                  <input
+                    type="text"
+                    [(ngModel)]="searchQuery"
+                    placeholder="Search modding tools..."
+                    aria-label="Search modding tools"
+                  />
+
+                  @if (searchQuery) {
+                    <button
+                      type="button"
+                      class="clear-search"
+                      (click)="searchQuery = ''"
+                      aria-label="Clear search"
+                    >
+                      <i class="pi pi-times"></i>
+                    </button>
+                  }
+                </div>
+
+                <span class="results-count">
+                  {{ filteredTools.length }} RESULTS
+                </span>
+              </div>
+
+              <div class="category-filters">
+                @for (category of categories; track category) {
+                  <button
+                    type="button"
+                    class="category-button"
+                    [class.active]="selectedCategory === category"
+                    (click)="selectCategory(category)"
+                  >
+                    {{ category }}
+                  </button>
+                }
+              </div>
+
+              <div class="tools-grid">
+                @for (tool of filteredTools; track tool.name) {
+                  <article class="tool-card">
+                    <div class="tool-card-header">
+                      <span class="tool-category">{{ tool.category }}</span>
+                      <i class="pi pi-wrench"></i>
+                    </div>
+
+                    <div class="tool-card-body">
+                      <h3>{{ tool.name }}</h3>
+                      <p>{{ tool.description }}</p>
+                    </div>
+
+                    <div class="tool-card-footer">
+                      @if (tool.url) {
+                        <a
+                          [href]="tool.url"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="resource-link"
+                        >
+                          VIEW RESOURCE
+                          <i class="pi pi-external-link"></i>
+                        </a>
+                      } @else {
+                        <span class="resource-unavailable">
+                          <i class="pi pi-info-circle"></i>
+                          LINK NOT PROVIDED
+                        </span>
+                      }
+
+                      @if (tool.extraUrl) {
+                        <a
+                          [href]="tool.extraUrl"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="extra-link"
+                        >
+                          {{ tool.extraLabel || 'MORE INFO' }}
+                          <i class="pi pi-external-link"></i>
+                        </a>
+                      }
+
+                      @if (tool.fileName) {
+                        <span class="file-name">{{ tool.fileName }}</span>
+                      }
+                    </div>
+                  </article>
+                } @empty {
+                  <div class="empty-results">
+                    <i class="pi pi-search"></i>
+                    <h3>No tools found</h3>
+                    <p>Try changing your search or category filter.</p>
+                    <button
+                      type="button"
+                      (click)="resetFilters()"
+                    >
+                      RESET FILTERS
+                    </button>
+                  </div>
+                }
+              </div>
+            </section>
+          }
+        </p-tabpanel>
+
+        <p-tabpanel value="guides">
+          @if (activeTab === 'guides') {
+            <section class="guides-section">
+              <div class="section-header">
+                <div class="section-heading">
+                  <span class="section-kicker">MODDING DOCUMENTATION</span>
+                  <h2>TUTORIALS & GUIDES</h2>
+                  <p>Learn how to create, edit and manage Naruto Storm modifications.</p>
+                </div>
+
+                <div class="section-counter">
+                  <strong>{{ chapters.length }}</strong>
+                  <span>CHAPTERS</span>
+                </div>
+              </div>
+
+              <div class="guides-introduction">
+                <div class="introduction-icon">
+                  <i class="pi pi-book"></i>
+                </div>
+
+                <div class="introduction-text">
+                  <h3>MODDING DOCUMENTATION</h3>
+                  <p>Choose a chapter below to expand its contents and explore the available information.</p>
+                </div>
+              </div>
+
+              <p-accordion
+                [(value)]="expandedChapters"
+                [multiple]="true"
+                class="storm-guides-accordion"
+              >
+                @for (chapter of chapters; track chapter.id) {
+                  <p-accordion-panel [value]="chapter.id.toString()">
+                    <p-accordion-header>
+                      <div class="chapter-header">
+                        <span class="chapter-number">
+                          {{ chapter.id.toString().padStart(2, '0') }}
+                        </span>
+
+                        <div class="chapter-heading">
+                          <h3>{{ chapter.title }}</h3>
+                          <p>{{ chapter.description }}</p>
+                        </div>
+
+                        <span class="chapter-counter">
+                          {{ chapter.steps.length }} STEPS
+                        </span>
+                      </div>
+                    </p-accordion-header>
+
+                    <p-accordion-content>
+                      <div class="chapter-body">
+                        <div class="chapter-introduction">
+                          <span>
+                            CHAPTER {{ chapter.id.toString().padStart(2, '0') }}
+                          </span>
+                          <p>{{ chapter.description }}</p>
+                        </div>
+
+                        <div class="steps-list">
+                          @for (step of chapter.steps; track $index) {
+                            <div class="step-card">
+                              <span class="step-number">
+                                {{ ($index + 1).toString().padStart(2, '0') }}
+                              </span>
+
+                              <div class="step-description">
+                                <h4>{{ step.title }}</h4>
+                                <p>{{ step.description }}</p>
+                              </div>
+                            </div>
+                          }
+                        </div>
+
+                        @if (chapter.note) {
+                          <div class="chapter-note">
+                            <i class="pi pi-info-circle"></i>
+                            <p>{{ chapter.note }}</p>
+                          </div>
+                        }
+                      </div>
+                    </p-accordion-content>
+                  </p-accordion-panel>
+                }
+              </p-accordion>
+            </section>
+          }
+        </p-tabpanel>
+      </p-tabpanels>
+    </p-tabs>
+  </div>
+</div>

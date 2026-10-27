@@ -1,105 +1,163 @@
-<p-dialog 
-  [(visible)]="visible" 
+<p-dialog
+  [(visible)]="visible"
   (onHide)="closeModal()"
-  [modal]="true" 
+  [modal]="true"
   [dismissableMask]="true"
   [draggable]="false"
   [resizable]="false"
   styleClass="storm-wiki-modal"
-  [style]="{ width: '85vw', maxWidth: '1200px', height: '85vh' }">
-
-  <div *ngIf="character" class="modal-body-layout">
-    
-    <!-- TOP BAR -->
-    <div class="modal-top-bar">
-      <div class="char-header-info">
-        <h2 class="char-title">{{ character.name }}</h2>
-      </div>
-      <button class="close-btn" (click)="closeModal()">✖ CLOSE</button>
-    </div>
-
-    <!-- MAIN GRID -->
-    <div class="modal-grid-content">
-      
-      <!-- LEFT COLUMN -->
-      <div class="left-column">
-        <div class="render-box">
-          <img [src]="character.image" [alt]="character.name" class="character-render" />
+  [style]="{ width: '85vw', maxWidth: '1200px', height: '85vh' }"
+>
+  @if (character) {
+    <div class="modal-body-layout">
+      <div class="modal-top-bar">
+        <div class="char-header-info">
+          <span class="header-kicker">STORMWIKI | CHARACTER DATABASE</span>
+          <h2 class="char-title">{{ character.name }}</h2>
+          <p class="header-description">Character information, combat data and guides</p>
         </div>
+        <button type="button" class="close-btn" (click)="closeModal()">
+          <i class="pi pi-times"></i>
+          CLOSE
+        </button>
+      </div>
 
-        <!-- ITEMSETS SECTION (CIRCULAR ICONS ONLY) -->
-        <div class="itemsets-section" *ngIf="character.itemsets?.length">
-          <h3 class="section-subtitle">ITEMSETS</h3>
-          <div class="itemsets-container">
-            <div class="itemset-circle" *ngFor="let item of character.itemsets" [title]="item.name">
-              <img [src]="item.icon" [alt]="item.name" />
+      <div class="modal-grid-content">
+        <div class="left-column">
+          <div class="character-card">
+            <div class="render-box">
+              <img
+                [src]="character.image"
+                [alt]="character.name"
+                class="character-render"
+              />
+              @if (character.dashcutIcon) {
+                <div class="dashcut-badge" [title]="character.dashcutType || 'Dashcut'">
+                  <img [src]="character.dashcutIcon" alt="Dashcut" />
+                </div>
+              }
+              @if (character.tierIcon) {
+                <div class="tier-badge" title="Tier">
+                  <img [src]="character.tierIcon" alt="Tier" />
+                </div>
+              }
+            </div>
+
+            <div class="card-footer-content">
+              <div class="character-name">{{ character.name }}</div>
+              <div class="itemsets-row">
+                @for (item of character.itemsets; track $index) {
+                  <div class="itemset-dot" [title]="item.name">
+                    <img [src]="item.icon" [alt]="item.name" />
+                  </div>
+                }
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="right-column">
+          <p-tabs value="0">
+            <p-tablist>
+              <p-tab value="0">01 OVERVIEW</p-tab>
+              <p-tab value="1">02 FRAME DATA & TECH</p-tab>
+              <p-tab value="2">03 GUIDES</p-tab>
+            </p-tablist>
+
+            <p-tabpanels>
+              <p-tabpanel value="0">
+                <div class="tab-content">
+                  <div class="content-heading">
+                    <span>CHARACTER INFORMATION</span>
+                    <h3>COMBAT OVERVIEW</h3>
+                    <p>Character abilities and special techniques</p>
+                  </div>
+
+                  @if (character.jutsu?.length) {
+                    <div class="info-section">
+                      <div class="info-section-header">
+                        <h3>MAIN JUTSU</h3>
+                        <span>NINJUTSU</span>
+                      </div>
+                      <div class="jutsu-list">
+                        @for (j of character.jutsu; track $index) {
+                          <div class="jutsu-item">{{ j }}</div>
+                        }
+                      </div>
+                    </div>
+                  }
+
+                  @if (character.ultimateJutsu?.length) {
+                    <div class="info-section">
+                      <div class="info-section-header">
+                        <h3>ULTIMATE JUTSU (UJ)</h3>
+                        <span>ULTIMATE TECHNIQUE</span>
+                      </div>
+                      <div class="jutsu-list">
+                        @for (uj of character.ultimateJutsu; track $index) {
+                          <div class="jutsu-item">{{ uj }}</div>
+                        }
+                      </div>
+                    </div>
+                  }
+
+                  @if (!character.jutsu?.length && !character.ultimateJutsu?.length) {
+                    <div class="empty-state">
+                      No jutsu information available for this character.
+                    </div>
+                  }
+                </div>
+              </p-tabpanel>
+
+              <p-tabpanel value="1">
+                <div class="tab-content">
+                  <div class="content-heading">
+                    <span>TECHNICAL DATABASE</span>
+                    <h3>FRAME DATA & TECH</h3>
+                    <p>Advanced combat properties and technical information</p>
+                  </div>
+
+                  <div class="tech-grid">
+                    <div class="tech-box">
+                      <span class="tech-label">JAIL</span>
+                      <span class="tech-value">{{ character.frameData?.jail || 'N/A' }}</span>
+                    </div>
+                    <div class="tech-box">
+                      <span class="tech-label">COMBO GAP</span>
+                      <span class="tech-value">{{ character.frameData?.comboGap || 'N/A' }}</span>
+                    </div>
+                    <div class="tech-box">
+                      <span class="tech-label">PRESSURE</span>
+                      <span class="tech-value">{{ character.frameData?.pressure || 'N/A' }}</span>
+                    </div>
+                    <div class="tech-box">
+                      <span class="tech-label">COMBO CANCEL</span>
+                      <span class="tech-value">{{ character.frameData?.comboCancel || 'N/A' }}</span>
+                    </div>
+                  </div>
+                </div>
+              </p-tabpanel>
+
+              <p-tabpanel value="2">
+                <div class="tab-content">
+                  <div class="content-heading">
+                    <span>CHARACTER RESOURCES</span>
+                    <h3>CHARACTER GUIDES</h3>
+                    <p>Strategies, techniques and competitive knowledge</p>
+                  </div>
+
+                  <div class="guide-box">
+                    <div class="guide-header">CHARACTER GUIDE</div>
+                    <div class="guide-content">
+                      {{ character.guides || 'Guide coming soon for this character.' }}
+                    </div>
+                  </div>
+                </div>
+              </p-tabpanel>
+            </p-tabpanels>
+          </p-tabs>
+        </div>
       </div>
-
-      <!-- RIGHT COLUMN -->
-      <div class="right-column">
-        <p-tabs value="0">
-          
-          <p-tablist>
-            <p-tab value="0">📑 Overview</p-tab>
-            <p-tab value="1">🛡️ Frame Data & Tech</p-tab>
-            <p-tab value="2">📖 Guides</p-tab>
-          </p-tablist>
-
-          <p-tabpanels>
-            
-            <!-- TAB 0: OVERVIEW -->
-            <p-tabpanel value="0">
-              <div class="info-section" *ngIf="character.jutsu">
-                <h3>MAIN JUTSU</h3>
-                <ul>
-                  <li *ngFor="let j of character.jutsu">{{ j }}</li>
-                </ul>
-              </div>
-
-              <div class="info-section" *ngIf="character.ultimateJutsu">
-                <h3>ULTIMATE JUTSU (UJ)</h3>
-                <ul>
-                  <li *ngFor="let uj of character.ultimateJutsu">{{ uj }}</li>
-                </ul>
-              </div>
-            </p-tabpanel>
-
-            <!-- TAB 1: FRAME DATA -->
-            <p-tabpanel value="1">
-              <div class="tech-grid">
-                <div class="tech-box">
-                  <span class="tech-label">JAIL:</span>
-                  <span class="tech-value">{{ character.frameData?.jail || 'N/A' }}</span>
-                </div>
-                <div class="tech-box">
-                  <span class="tech-label">COMBO GAP:</span>
-                  <span class="tech-value">{{ character.frameData?.comboGap || 'N/A' }}</span>
-                </div>
-                <div class="tech-box">
-                  <span class="tech-label">PRESSURE:</span>
-                  <span class="tech-value">{{ character.frameData?.pressure || 'N/A' }}</span>
-                </div>
-                <div class="tech-box">
-                  <span class="tech-label">COMBO CANCEL:</span>
-                  <span class="tech-value">{{ character.frameData?.comboCancel || 'N/A' }}</span>
-                </div>
-              </div>
-            </p-tabpanel>
-
-            <!-- TAB 2: GUIDES -->
-            <p-tabpanel value="2">
-              <div class="guide-box">
-                <p>{{ character.guides || 'Guide coming soon for this character.' }}</p>
-              </div>
-            </p-tabpanel>
-
-          </p-tabpanels>
-        </p-tabs>
-      </div>
-
     </div>
-  </div>
+  }
 </p-dialog>

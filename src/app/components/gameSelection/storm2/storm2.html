@@ -1,33 +1,52 @@
 <div class="cooldowns-container">
-  
-  <!-- Intestazione in stile Ninja Archives -->
   <div class="archive-header">
     <div class="subtitle-tag">STORM 2 ROSTER</div>
     <h1 class="main-title">CHARACTER ARCHIVES</h1>
     <p class="description">Explore playable characters and support types available in the database.</p>
   </div>
 
-  <!-- SEZIONE 1: PLAYABLE CHARACTERS -->
   <div class="section-block">
     <div class="section-header-bar">
       <span class="badge-num">01</span>
       <h2>PLAYABLE CHARACTERS</h2>
     </div>
 
+    <div class="roster-search-bar">
+      <div class="search-field">
+        <i class="pi pi-search" aria-hidden="true"></i>
+        <input
+          type="search"
+          [(ngModel)]="searchText"
+          placeholder="Search characters..."
+          aria-label="Search characters"
+          autocomplete="off"
+        />
+        @if (searchText) {
+          <button type="button" class="clear-search" (click)="searchText = ''" aria-label="Clear search">
+            <i class="pi pi-times" aria-hidden="true"></i>
+          </button>
+        }
+      </div>
+      <div class="character-count">
+        {{ filteredCharacters.length }} / {{ playableCharacters.length }} CHARACTERS
+      </div>
+    </div>
+
     <div class="cards-grid">
-      @for (char of playableCharacters; track $index) {
-        <app-ninja-card 
-          [character]="char" 
+      @for (char of filteredCharacters; track char.name) {
+        <app-ninja-card
+          [character]="char"
           (cardClick)="onCardClick($event)">
         </app-ninja-card>
+      } @empty {
+        <div class="no-results">
+          No characters found.
+        </div>
       }
     </div>
   </div>
-
-
 </div>
 
-<!-- 🛑 AGGIUNGI QUESTO COMPONENTE IN FONDO AL FILE 🛑 -->
 <app-character-detail-modal
   [(visible)]="isModalOpen"
   [character]="selectedCharacter">

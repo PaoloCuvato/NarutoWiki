@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { NinjaCard } from '../../ninja-card/ninja-card';
 import { CharacterDetailModal } from '../../character-detail-modal/character-detail-modal';
 
 @Component({
   selector: 'app-storm2',
-  imports: [NinjaCard, CharacterDetailModal],
+  imports: [NinjaCard, CharacterDetailModal, FormsModule],
   templateUrl: './storm2.html',
   styleUrl: './storm2.scss',
 })
@@ -470,6 +471,15 @@ playableCharacters = [
     itemsets: []
   }
 ];
+
+  searchText = '';
+
+  get filteredCharacters(): typeof this.playableCharacters {
+    const query = this.searchText.trim().toLocaleLowerCase();
+    return this.playableCharacters.filter(character =>
+      character.name.toLocaleLowerCase().includes(query)
+    );
+  }
 
   // Dati di prova per i supporti
   supportCharacters = [

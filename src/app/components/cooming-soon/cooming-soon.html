@@ -1,0 +1,57 @@
+<div class="coming-soon-page">
+  <div class="coming-navigation">
+
+
+  <div class="coming-soon-container">
+    <div class="coming-topbar">
+      <span class="topbar-title">STORMWIKI / IN DEVELOPMENT</span>
+
+      <div class="development-status">
+        <span class="status-dot"></span>
+        UNDER CONSTRUCTION
+      </div>
+    </div>
+
+    <div class="coming-main">
+      <div class="coming-icon">
+        <i class="pi pi-clock"></i>
+      </div>
+
+      <span class="coming-subtitle">
+        {{ config.label || 'NEW CONTENT IN PROGRESS' }}
+      </span>
+
+      <h1>COMING SOON</h1>
+
+      <div class="title-divider"></div>
+
+      <h2 class="feature-title">{{ config.title }}</h2>
+
+      <p class="coming-description">
+        {{ config.description }}
+      </p>
+    </div>
+
+    @if (config.plannedContent.length > 0) {
+      <div class="planned-content">
+        <div class="planned-header">
+          <h3>PLANNED CONTENT</h3>
+          <span>IN DEVELOPMENT</span>
+        </div>
+
+        <div class="planned-list">
+          @for (item of config.plannedContent; track $index) {
+            <div class="planned-item">
+              <i class="pi pi-check"></i>
+              <span>{{ item }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    }
+<br><br>
+    <div class="coming-footer">
+      ULTIMATE NINJA STORM WIKI
+    </div>
+  </div>
+</div>

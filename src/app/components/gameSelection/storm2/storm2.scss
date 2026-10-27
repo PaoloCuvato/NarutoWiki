@@ -1,7 +1,6 @@
 $ninja-red: #b83a3a;
 $ninja-red-light: #e64a4a;
 
-/* Contenitore Principale (lo stesso usato nelle tabelle) */
 .cooldowns-container {
   width: 100%;
   background: rgba(15, 15, 15, 0.6);
@@ -11,7 +10,6 @@ $ninja-red-light: #e64a4a;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
-/* Header del Titolo in Cima */
 .archive-header {
   margin-bottom: 35px;
 
@@ -40,7 +38,6 @@ $ninja-red-light: #e64a4a;
   }
 }
 
-/* Blocchi di Sezione (Playable e Support) */
 .section-block {
   .section-header-bar {
     display: flex;
@@ -71,10 +68,104 @@ $ninja-red-light: #e64a4a;
     }
   }
 
-  /* Layout Griglia per le Carte */
   .cards-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+  }
+}
+
+.roster-search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+
+  .search-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 360px;
+
+    > .pi-search {
+      position: absolute;
+      left: 13px;
+      color: $ninja-red-light;
+      pointer-events: none;
+    }
+
+    input {
+      width: 100%;
+      height: 42px;
+      padding: 0 42px 0 39px;
+      color: #ffffff;
+      background: rgba(10, 10, 12, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      outline: none;
+      font: inherit;
+      font-size: 0.85rem;
+
+      &::placeholder {
+        color: #888888;
+      }
+
+      &:focus {
+        border-color: $ninja-red-light;
+      }
+
+      &::-webkit-search-cancel-button {
+        display: none;
+      }
+    }
+
+    .clear-search {
+      position: absolute;
+      right: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      padding: 0;
+      color: #a6a6a6;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .character-count {
+    color: #aaaaaa;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+  }
+}
+
+.no-results {
+  width: 100%;
+  padding: 30px 15px;
+  color: #999999;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .roster-search-bar {
+    align-items: stretch;
+    flex-direction: column;
+
+    .search-field {
+      max-width: none;
+    }
   }
 }

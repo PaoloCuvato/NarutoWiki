@@ -17,14 +17,13 @@
         </div>
 
         <h2 class="header-title">LOBBIES AVAILABLE</h2>
-
         <div class="header-accent-line"></div>
       </div>
 
       <div class="lobbies-panel">
         <div class="lobby-container">
 
-          @for (lobby of (lobbies | slice:0:8); track lobby.PostId) {
+          @for (lobby of (lobbies | slice:0:7); track lobby.PostId) {
 
             <p-card
               class="naruto-card"
@@ -106,11 +105,33 @@
 
             </p-card>
 
-          } @empty {
-            <div class="no-lobbies">
-              <h2>Nessuna lobby attiva al momento</h2>
-            </div>
           }
+
+          <div class="create-lobby-card">
+            <div class="coming-soon-ribbon">
+              COMING SOON
+            </div>
+
+            <div class="create-lobby-content">
+              <div class="create-lobby-icon">
+                <i class="pi pi-plus"></i>
+              </div>
+
+              <h3>CREATE LOBBY</h3>
+
+              <div class="create-lobby-divider"></div>
+
+              <p>
+                Create your own lobby, customize your match settings,
+                and invite other players to join.
+              </p>
+
+              <div class="create-lobby-status">
+                <i class="pi pi-clock"></i>
+                <span>IN DEVELOPMENT</span>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>

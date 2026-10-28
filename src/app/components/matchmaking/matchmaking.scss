@@ -1,3 +1,4 @@
+
 @use "sass:list";
 
 $ash-near: ();
@@ -60,13 +61,11 @@ $embers: ();
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100%;
   min-height: 100dvh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   background: #050505;
 }
 
@@ -74,10 +73,8 @@ $embers: ();
   position: fixed;
   inset: 0;
   z-index: 0;
-
   width: 100%;
   height: 100dvh;
-
   overflow: hidden;
   pointer-events: none;
 }
@@ -86,10 +83,8 @@ $embers: ();
   position: absolute;
   bottom: 0;
   left: 0;
-
   width: 100%;
   height: 175px;
-
   background:
     radial-gradient(
       ellipse 85% 100% at 50% 110%,
@@ -103,17 +98,14 @@ $embers: ();
       rgba(96, 10, 6, 0.18) 0%,
       transparent 100%
     );
-
   pointer-events: none;
 }
 
 .ash-field {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   pointer-events: none;
   will-change: transform;
 
@@ -122,10 +114,8 @@ $embers: ();
     content: "";
     position: absolute;
     left: 0;
-
     background: transparent;
     border-radius: 50%;
-
     pointer-events: none;
   }
 
@@ -177,19 +167,14 @@ $embers: ();
 .ember-field {
   position: absolute;
   z-index: 4;
-
   bottom: 0;
   left: 0;
-
   width: 2px;
   height: 2px;
-
   background: transparent;
   border-radius: 50%;
   box-shadow: $embers;
-
   pointer-events: none;
-
   animation: ember-rise 5s ease-out infinite;
 }
 
@@ -286,18 +271,14 @@ $embers: ();
 .storm-frame-container {
   position: relative;
   z-index: 1;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100%;
   min-height: 100dvh;
-
   padding: 45px 30px;
   margin: 0 auto;
   box-sizing: border-box;
-
   background: transparent;
   border: none;
   box-shadow: none;
@@ -307,11 +288,9 @@ $embers: ();
 .frame-content-wrapper {
   position: relative;
   z-index: 2;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   width: 100%;
   max-width: 1490px;
   gap: 24px;
@@ -321,7 +300,6 @@ $embers: ();
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   width: 100%;
   padding-left: 6px;
   box-sizing: border-box;
@@ -372,15 +350,11 @@ $embers: ();
   position: relative;
   width: 100%;
   max-width: 1490px;
-
   padding: 55px 30px;
   box-sizing: border-box;
-
   background: rgba(12, 12, 12, 0.12);
-
   border: 1px solid rgba(255, 190, 35, 0.85);
   border-radius: 16px;
-
   box-shadow:
     0 0 14px rgba(255, 185, 30, 0.06),
     inset 0 0 16px rgba(255, 160, 0, 0.015);
@@ -389,12 +363,10 @@ $embers: ();
 .lobby-container {
   position: relative;
   z-index: 2;
-
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-
   width: 100%;
   gap: 25px;
   flex-wrap: wrap;
@@ -403,7 +375,6 @@ $embers: ();
 .naruto-card {
   display: block;
   flex-shrink: 0;
-
   transition:
     transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
     box-shadow 0.3s ease;
@@ -415,13 +386,11 @@ $embers: ();
 
   ::ng-deep .p-card {
     border-radius: 16px !important;
-
     background: linear-gradient(
       145deg,
       rgba(20, 20, 20, 0.96) 0%,
       rgba(8, 8, 8, 0.98) 100%
     ) !important;
-
     box-shadow:
       0 8px 25px rgba(0, 0, 0, 0.6),
       inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
@@ -436,7 +405,6 @@ $embers: ();
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 18px 18px 5px 18px;
 }
 
@@ -483,14 +451,12 @@ $embers: ();
 .bottom-divider {
   border: 0;
   height: 1px;
-
   background: linear-gradient(
     90deg,
     transparent,
     rgba(255, 144, 0, 0.4),
     transparent
   );
-
   margin: 12px 0;
 }
 
@@ -503,14 +469,11 @@ $embers: ();
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-
   background: rgba(0, 0, 0, 0.55);
   padding: 12px;
   border-radius: 12px;
   font-size: 0.85rem;
-
   border: 1px solid rgba(255, 255, 255, 0.05);
-
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
 
   div {
@@ -534,26 +497,21 @@ $embers: ();
   flex-direction: column;
   gap: 10px;
   align-items: center;
-
   width: 100%;
   margin-top: -6px;
 }
 
 ::ng-deep .p-button-discord {
   width: 100% !important;
-
   display: inline-flex !important;
   justify-content: center !important;
   align-items: center !important;
-
   background: #5865F2 !important;
   border: none !important;
   border-radius: 10px !important;
   padding: 12px 20px !important;
-
   box-shadow:
     0 4px 15px rgba(88, 101, 242, 0.35) !important;
-
   transition: all 0.2s ease-in-out !important;
 
   .p-button-label {
@@ -572,10 +530,8 @@ $embers: ();
 
   &:hover {
     background: #4752c4 !important;
-
     box-shadow:
       0 6px 20px rgba(88, 101, 242, 0.55) !important;
-
     transform: translateY(-2px);
   }
 }
@@ -588,9 +544,7 @@ $embers: ();
 ::ng-deep .p-tag-success {
   background-color: rgba(34, 197, 94, 0.15) !important;
   color: #4ade80 !important;
-
   border: 1px solid rgba(74, 222, 128, 0.3) !important;
-
   font-weight: 700 !important;
   padding: 3px 8px !important;
   border-radius: 6px;
@@ -599,11 +553,9 @@ $embers: ();
 .no-lobbies {
   color: white;
   background-color: rgba(0, 0, 0, 0.85);
-
   padding: 20px 40px;
   border-radius: 15px;
   border: 2px solid #ff9000;
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
   text-align: center;
 }
@@ -653,5 +605,148 @@ $embers: ();
 
   .ember-field {
     opacity: 0;
+  }
+}
+
+.create-lobby-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 330px;
+  height: auto;
+  min-height: 0;
+  align-self: stretch;
+  flex-shrink: 0;
+  box-sizing: border-box;
+
+  padding: 22px 20px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    145deg,
+    rgba(20, 17, 12, 0.96),
+    rgba(10, 10, 10, 0.98)
+  );
+
+  border: 2px dashed rgba(255, 144, 0, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.coming-soon-ribbon {
+  position: absolute;
+  z-index: 2;
+  top: 24px;
+  right: -43px;
+  width: 175px;
+  padding: 7px 0;
+  background: #ff9000;
+  color: #101010;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-align: center;
+  transform: rotate(35deg);
+  pointer-events: none;
+}
+
+.create-lobby-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 11px;
+  text-align: center;
+
+  h3 {
+    margin: 4px 0 0;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+
+  p {
+    max-width: 245px;
+    margin: 0;
+    color: #aaa5a0;
+    font-size: 0.8rem;
+    line-height: 1.7;
+  }
+}
+
+.create-lobby-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 72px;
+  background: rgba(255, 144, 0, 0.07);
+  border: 2px solid rgba(255, 144, 0, 0.65);
+  border-radius: 50%;
+
+  i {
+    color: #ff9000;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+}
+
+.create-lobby-divider {
+  width: 55px;
+  height: 2px;
+  background: #ff9000;
+  border-radius: 2px;
+}
+
+.create-lobby-status {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+  padding: 8px 13px;
+  color: #ffad39;
+  background: rgba(255, 144, 0, 0.08);
+  border: 1px solid rgba(255, 144, 0, 0.2);
+  border-radius: 6px;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+
+  i {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .create-lobby-card {
+    width: 330px;
+    max-width: 100%;
+    min-height: 0;
+    padding: 22px 18px;
+  }
+
+  .create-lobby-icon {
+    width: 75px;
+    height: 75px;
+
+    i {
+      font-size: 2.5rem;
+    }
+  }
+
+  .create-lobby-content {
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    p {
+      font-size: 0.75rem;
+    }
   }
 }

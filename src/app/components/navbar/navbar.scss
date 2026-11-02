@@ -4,6 +4,7 @@ $c-blue: #0077ff;          // Storm 3 / Connections (Blu Elettrico)
 $c-gold: #e5a912;          // Storm 4 (Oro Caldo e Luminoso)
 $c-purple: #5b3674;        // Viola Gastly
 $c-red: #ff4757;            // Rosso 
+$c-green: #2ed573;          // Verde
 $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
 
 /* --- NAVBAR CONTAINER --- */
@@ -120,9 +121,9 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
 
     /* --- 6° ELEMENTO: ACCIAIO / METALLO (FAQ) --- */
     &:nth-of-type(6) {
-      .dot { background-color: $c-steel; box-shadow: 0 0 8px $c-steel; }
+      .dot { background-color: $c-green; box-shadow: 0 0 8px $c-green; }
       &:hover, &.active-link {
-        color: $c-steel !important;
+        color: $c-green !important;
         .dot { opacity: 1 !important; }
       }
     }
@@ -213,7 +214,17 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
   }
 
   // 6. Acciaio / Metallo (FAQ / About)
-  &.theme-faq, &.theme-about {
+  &.theme-faq {
+    border-bottom-color: $c-green;
+    .logo-section {
+      .navbar-title { border-left-color: $c-green !important; }
+      img { filter: drop-shadow(0 0 5px rgba(46, 213, 115, 0.4)) brightness(0.85) contrast(120%) hue-rotate(100deg); }
+    }
+    .storm-menu-btn { border-color: $c-green; i, .btn-text { color: $c-green; } }
+  }
+  
+  
+  &.theme-about {
     border-bottom-color: $c-steel;
     .logo-section {
       .navbar-title { border-left-color: $c-steel !important; }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TabsModule } from 'primeng/tabs';
 import { CharacterCooldown } from '../character-cooldown/character-cooldown';
 import { JutsuDatabase } from '../jutsu-database/jutsu-database';
+import { Terminology } from '../terminology/terminology';
 
 
 @Component({
@@ -12,7 +13,8 @@ import { JutsuDatabase } from '../jutsu-database/jutsu-database';
     CommonModule,
     TabsModule,
     CharacterCooldown,
-    JutsuDatabase
+    JutsuDatabase,
+    Terminology
 ],
   templateUrl: './game-resources.html',
   styleUrl: './game-resources.scss',

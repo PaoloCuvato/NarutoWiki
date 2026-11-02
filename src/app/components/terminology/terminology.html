@@ -1,0 +1,189 @@
+<div class="game-resources-wrapper">
+
+  <div class="game-resources-content">
+
+    <!-- HEADER -->
+    <header class="patch-header">
+      <span class="patch-kicker">GAME RESOURCES / KNOWLEDGE BASE</span>
+
+      <h1>GAME MECHANICS</h1>
+
+      <div class="header-line"></div>
+
+      <p>
+        Discover combat mechanics, advanced techniques and gameplay terminology.
+      </p>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <div class="mechanics-container">
+
+      <!-- STATISTICS -->
+      <div class="mechanics-stats">
+
+        <div class="stat-item">
+          <span class="stat-value">{{ totalMechanics }}</span>
+          <span class="stat-label">TOTAL MECHANICS</span>
+        </div>
+
+        <div class="stat-item">
+          <span class="stat-value">{{ categories.length }}</span>
+          <span class="stat-label">CATEGORIES</span>
+        </div>
+
+        <div class="stat-item">
+          <span class="stat-value">{{ filteredCategories.length }}</span>
+          <span class="stat-label">VISIBLE SECTIONS</span>
+        </div>
+
+      </div>
+
+      <!-- SEARCH -->
+      <div class="mechanics-toolbar">
+
+        <div class="search-wrapper">
+          <i class="pi pi-search"></i>
+
+          <input
+            pInputText
+            type="text"
+            [(ngModel)]="searchTerm"
+            placeholder="Search mechanics, abbreviations or descriptions..."
+          />
+
+          @if (searchTerm) {
+            <button
+              type="button"
+              class="clear-search"
+              (click)="clearSearch()"
+              aria-label="Clear search">
+              <i class="pi pi-times"></i>
+            </button>
+          }
+        </div>
+
+        <span class="results-count">
+          {{ filteredCategories.length }} CATEGORIES FOUND
+        </span>
+
+      </div>
+
+      <!-- CATEGORY FILTERS -->
+      <div class="category-filters">
+
+        <button
+          type="button"
+          class="filter-button"
+          [class.active]="selectedCategory === 'all'"
+          (click)="selectCategory('all')">
+          ALL
+        </button>
+
+        @for (category of categories; track category.id) {
+          <button
+            type="button"
+            class="filter-button"
+            [class.active]="selectedCategory === category.id.toString()"
+            (click)="selectCategory(category.id.toString())">
+            {{ category.title }}
+            <span>{{ category.mechanics.length }}</span>
+          </button>
+        }
+
+      </div>
+
+      <!-- MECHANICS CATEGORIES -->
+      <div class="mechanics-sections">
+
+        @for (category of filteredCategories; track category.id) {
+
+          <section class="mechanic-category">
+
+            <!-- CATEGORY HEADER -->
+            <div class="category-header">
+
+              <div class="category-title-wrapper">
+
+                <span class="category-number">
+                  {{ category.id.toString().padStart(2, '0') }}
+                </span>
+
+                <div class="category-title-content">
+                  <h2>{{ category.title }}</h2>
+                  <div class="category-line"></div>
+                </div>
+
+              </div>
+
+              <span class="category-count">
+                {{ category.mechanics.length }} MECHANICS
+              </span>
+
+            </div>
+
+            <!-- MECHANICS GRID -->
+            <div class="mechanics-grid">
+
+              @for (mechanic of category.mechanics; track mechanic.name) {
+
+                <article class="mechanic-card">
+
+                  <div class="mechanic-card-header">
+
+                    <h3>{{ mechanic.name }}</h3>
+
+                    @if (mechanic.abbreviation) {
+                      <span class="mechanic-abbreviation">
+                        {{ mechanic.abbreviation }}
+                      </span>
+                    }
+
+                  </div>
+
+                  <p>{{ mechanic.description }}</p>
+
+                  <div class="mechanic-card-footer">
+                    <span>COMBAT TERMINOLOGY</span>
+                    <i class="pi pi-angle-right"></i>
+                  </div>
+
+                </article>
+
+              }
+
+            </div>
+
+          </section>
+
+        }
+
+        <!-- EMPTY STATE -->
+        @if (filteredCategories.length === 0) {
+
+          <div class="empty-state">
+            <i class="pi pi-search"></i>
+
+            <h2>NO MECHANICS FOUND</h2>
+
+            <p>
+              No mechanics match your search. Try another keyword or category.
+            </p>
+
+            <button
+              pButton
+              type="button"
+              label="CLEAR FILTERS"
+              icon="pi pi-refresh"
+              (click)="selectedCategory = 'all'; clearSearch()">
+            </button>
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

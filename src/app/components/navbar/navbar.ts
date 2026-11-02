@@ -95,11 +95,14 @@ export class Navbar implements OnInit, OnDestroy {
         icon: 'pi pi-trophy',
         routerLink: ['/community/tournaments']
       },
+/*
       {
         label: 'Events',
         icon: 'pi pi-calendar',
         routerLink: ['/community/events'] // <-- Modificato da '/events' a '/community/events'
       },
+
+      */
       {
         separator: true
       },

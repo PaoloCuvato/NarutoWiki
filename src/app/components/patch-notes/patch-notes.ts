@@ -5,7 +5,7 @@ import { TabsModule } from 'primeng/tabs';
 
 export interface CharacterChange {
   character: string;
-  type: 'Buff' | 'Nerf' | 'Adjustment';
+  type: 'Buff' | 'Nerf' | 'Adjustment'| 'Addition';
   details: string[];
 }
 
@@ -569,6 +569,122 @@ export class PatchNotes {
       ]
     }
   ];
+
+  storm4Patches: PatchVersion[] = [
+  {
+    version: 'v1.07',
+    releaseDate: '2017-02-02',
+    title: 'Road to Boruto & 60 FPS Update',
+    highlights: [
+      'Released the Road to Boruto expansion pack with new playable characters and story mode ("Boruto\'s Tale").',
+      'Unlocked 60 FPS support for PC.',
+      'Added Spectator Mode and 8-Player Endless Mode.'
+    ],
+    systemChanges: [
+      {
+        category: 'Performance & Features',
+        description: 'Unlocked 60 FPS frame rate limit for PC players.'
+      },
+      {
+        category: 'Online Modes',
+        description: 'Introduced Spectator Mode and 8-player endless online matching lobbies.'
+      },
+      {
+        category: 'Content Expansion',
+        description: 'Added "Boruto\'s Tale" scenario, new stages, costumes, and matching features.'
+      }
+    ],
+    characterAdjustments: [
+      {
+        character: 'All Roster Characters / Gameplay Mechanics',
+        type: 'Adjustment',
+        details: [
+          'Removed Full Leader Switch Combo.',
+          'Removed Blue Dash Buffers (except for Awakening Action and Spark Dash with old characters).',
+          'Fixed 1 method of Infinite Awakening.',
+          'Fixed Support Ninja Move Kunai Shuriken glitch.'
+        ]
+      },
+      {
+        character: 'New Characters (Road to Boruto DLC)',
+        type: 'Addition',
+        details: [
+          'Added Boruto Uzumaki',
+          'Added Boruto (Scientific Ninja Tool)',
+          'Added Sarada Uchiha',
+          'Added Mitsuki',
+          'Added Naruto Uzumaki (7th Hokage)',
+          'Added Sasuke Uchiha (Wandering Shinobi)',
+          'Added Mecha Naruto'
+        ]
+      }
+    ]
+  }
+];
+
+revolutionPatches: PatchVersion[] = [
+  {
+    version: 'v1.03',
+    releaseDate: '2014-12-10',
+    title: 'Game Balance & System Update',
+    highlights: [
+      'Adjusted support characters and puppet behavior after triggering Coop Ultimate Jutsu.',
+      'Balanced chakra consumption for combos and Drive type mechanics.',
+      'Various bug fixes, motion adjustments, and mode improvements.'
+    ],
+    systemChanges: [
+      {
+        category: 'Game Balance',
+        description: 'Adjusted support and puppet behavior after triggering the Coop Ultimate Jutsu.'
+      },
+      {
+        category: 'Chakra & Combos',
+        description: 'Adjusted chakra consumption of "Ultimate Jutsu from Combo" and "Coop Ultimate Jutsu from Combo".'
+      },
+      {
+        category: 'Drive Type Mechanics',
+        description: 'Adjusted "auto drive" behavior when Storm Gauge becomes Max, support Drive 2 chakra requirements, and gauge behavior when all supports are defeated.'
+      },
+      {
+        category: 'Abyss & Stage Mechanics',
+        description: 'Adjusted ring out behavior when Ninjutsu with effects hits in the abyss stage.'
+      }
+    ],
+    characterAdjustments: [
+      {
+        character: 'Chiyo',
+        type: 'Adjustment',
+        details: [
+          'Adjusted the effect of True Awakening.'
+        ]
+      },
+      {
+        character: 'Sasuke (Eternal Mangekyo Sharingan)',
+        type: 'Adjustment',
+        details: [
+          'Adjusted ground combo first level.'
+        ]
+      },
+      {
+        character: 'Ino, Shikamaru, & Choji',
+        type: 'Adjustment',
+        details: [
+          'Adjusted combination ultimate jutsu effects for Ultimate Jutsu type.'
+        ]
+      },
+      {
+        character: 'General Roster / Supports',
+        type: 'Adjustment',
+        details: [
+          'Adjusted opponent unconscious time upon successful knockout blow.',
+          'Opponent is now blown away if a Guard Break Attack hits while unconscious.',
+          'Adjusted awakening type characters behavior when awakened while moving.',
+          'Adjusted behavior when substituting ground combos and support combos.'
+        ]
+      }
+    ]
+  }
+];
 
   getPatchCount(patches: PatchVersion[]): number {
     return patches.length;

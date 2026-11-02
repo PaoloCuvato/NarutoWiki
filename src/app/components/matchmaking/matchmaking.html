@@ -53,8 +53,8 @@
                   />
 
                   <p-tag
-                    [value]="lobby.Status"
-                    severity="success">
+                    [value]="lobby.Status.toUpperCase() === 'ACTIVE' ? 'ACTIVE' : 'CLOSED'"
+                    [severity]="lobby.Status.toUpperCase() === 'ACTIVE' ? 'success' : 'danger'">
                   </p-tag>
                 </div>
               </ng-template>

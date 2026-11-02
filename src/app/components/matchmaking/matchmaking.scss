@@ -776,3 +776,12 @@ $embers: ();
     border-radius: 8px;
   }
 }
+
+::ng-deep .p-tag-danger {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  color: #f87171 !important;
+  border: 1px solid rgba(248, 113, 113, 0.35) !important;
+  font-weight: 700 !important;
+  padding: 3px 8px !important;
+  border-radius: 6px;
+}

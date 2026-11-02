@@ -45,7 +45,7 @@ lobbies: LobbyModal[] = [
       playerName: 'ItachiUchiha',
       game: 'NSUNSE', // Questo caricherà /stormLogos/NSUNSE.png
       platform: 'PlayStation',
-      Status: 'ACTIVE',
+      Status: 'CLOSED',
       fps: 30,
       skillTarget: 'Casual',
       regionTarget: 'Europe',
@@ -101,10 +101,11 @@ lobbies: LobbyModal[] = [
   }
 
 goToDiscord(postId: string) {
-    if (!postId) return;
+    //if (!postId) return;
 
     // Costruisce il link diretto al post del forum di Discord usando gli ID reali
-    const discordPostUrl = `https://discord.com/channels/420393601176961025/1389588609295712357/${postId}`;
+    const discordPostUrl = `https://discord.com/channels/420393601176961025/1389588609295712357/`;
+//     const discordPostUrl = `https://discord.com/channels/420393601176961025/1389588609295712357/${postId}`;
 
     window.open(discordPostUrl, '_blank');
   }

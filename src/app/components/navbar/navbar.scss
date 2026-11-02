@@ -218,7 +218,7 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
     border-bottom-color: $c-green;
     .logo-section {
       .navbar-title { border-left-color: $c-green !important; }
-      img { filter: drop-shadow(0 0 5px rgba(46, 213, 115, 0.4)) brightness(0.85) contrast(120%) hue-rotate(100deg); }
+      img { filter: drop-shadow(0 0 5px rgba(22, 133, 68, 0.507)) brightness(0.85) contrast(120%) hue-rotate(100deg); }
     }
     .storm-menu-btn { border-color: $c-green; i, .btn-text { color: $c-green; } }
   }

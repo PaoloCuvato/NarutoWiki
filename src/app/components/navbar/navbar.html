@@ -35,14 +35,19 @@
        (mouseleave)="hideDropdown(matchmakingMenu)"></p-tieredMenu>
 
     <!-- COMMUNITY -->
-    <a routerLink="/community" routerLinkActive="active-link" class="nav-item dropdown-trigger" 
-       (mouseenter)="showDropdown($event, communityMenu)" 
-       (mouseleave)="hideDropdown(communityMenu)">
-      <span class="dot"></span> COMMUNITY <i class="pi pi-angle-down dropdown-arrow"></i>
+    <a class="nav-item dropdown-trigger"
+      style="cursor: default;"
+      (mouseenter)="showDropdown($event, communityMenu)"
+      (mouseleave)="hideDropdown(communityMenu)"
+      (click)="$event.preventDefault()">
+      <span class="dot"></span> COMMUNITY
+      <i class="pi pi-angle-down dropdown-arrow"></i>
     </a>
+
     <p-tieredMenu #communityMenu [model]="communityItems" [popup]="true"
-       (mouseenter)="showDropdown($event, communityMenu)" 
-       (mouseleave)="hideDropdown(communityMenu)"></p-tieredMenu>
+      (mouseenter)="showDropdown($event, communityMenu)"
+      (mouseleave)="hideDropdown(communityMenu)">
+    </p-tieredMenu>
 
 <!-- RESOURCES -->
     <a class="nav-item dropdown-trigger" 

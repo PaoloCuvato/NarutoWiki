@@ -73,8 +73,8 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
       transition: opacity 0.3s;
     }
 
-    /* --- 1° ELEMENTO: ARANCIONE (Storm 1) --- */
-    &:nth-child(1) {
+    /* --- 1° ELEMENTO: ARANCIONE (Homepage) --- */
+    &:nth-of-type(1) {
       .dot { background-color: $c-orange; box-shadow: 0 0 8px $c-orange; }
       &:hover, &.active-link {
         color: $c-orange !important;
@@ -82,8 +82,8 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
       }
     }
 
-    /* --- 2° ELEMENTO: BLU ELETTRICO (Storm 3 / Connections) --- */
-    &:nth-child(2) {
+    /* --- 2° ELEMENTO: BLU ELETTRICO (Games) --- */
+    &:nth-of-type(2) {
       .dot { background-color: $c-blue; box-shadow: 0 0 8px $c-blue; }
       &:hover, &.active-link {
         color: $c-blue !important;
@@ -91,8 +91,8 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
       }
     }
 
-    /* --- 3° ELEMENTO: ORO (Storm 4 - Matchmaking con Dropdown) --- */
-    &:nth-child(3) {
+    /* --- 3° ELEMENTO: ORO (Matchmaking) --- */
+    &:nth-of-type(3) {
       .dot { background-color: $c-gold; box-shadow: 0 0 8px $c-gold; }
       &:hover, &.active-link {
         color: $c-gold !important;
@@ -100,8 +100,8 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
       }
     }
 
-    /* --- 4° ELEMENTO: VIOLA GASTLY --- */
-    &:nth-child(4) {
+    /* --- 4° ELEMENTO: VIOLA GASTLY (Community) --- */
+    &:nth-of-type(4) {
       .dot { background-color: $c-purple; box-shadow: 0 0 8px $c-purple; }
       &:hover, &.active-link {
         color: $c-purple !important;
@@ -109,8 +109,8 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
       }
     }
 
-    /* --- 5° ELEMENTO: ROSSO --- */
-    &:nth-child(5) {
+    /* --- 5° ELEMENTO: ROSSO (Resources) --- */
+    &:nth-of-type(5) {
       .dot { background-color: $c-red; box-shadow: 0 0 8px $c-red; }
       &:hover, &.active-link {
         color: $c-red !important;
@@ -118,8 +118,17 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
       }
     }
 
-    /* --- 6° ELEMENTO: ACCIAIO / METALLO --- */
-    &:nth-child(6) {
+    /* --- 6° ELEMENTO: ACCIAIO / METALLO (FAQ) --- */
+    &:nth-of-type(6) {
+      .dot { background-color: $c-steel; box-shadow: 0 0 8px $c-steel; }
+      &:hover, &.active-link {
+        color: $c-steel !important;
+        .dot { opacity: 1 !important; }
+      }
+    }
+
+    /* --- 7° ELEMENTO: ACCIAIO / METALLO (About Us) --- */
+    &:nth-of-type(7) {
       .dot { background-color: $c-steel; box-shadow: 0 0 8px $c-steel; }
       &:hover, &.active-link {
         color: $c-steel !important;
@@ -240,7 +249,7 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
     border-color: #ff4757 !important;
     color: #ff4757 !important;
     box-shadow: 0 0 15px rgba(255, 71, 87, 0.6);
-    
+
     i { color: #ff4757 !important; }
     .btn-text { color: #ff4757 !important; }
   }
@@ -261,7 +270,7 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
   &.empty-avatar {
     border: 1px dashed rgba(255, 255, 255, 0.4);
   }
-  
+
   img {
     object-fit: cover;
     width: 100%;
@@ -449,7 +458,7 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
 
         .p-menuitem-link {
           background: transparent !important;
-          
+
           &::before {
             opacity: 1 !important; /* Mostra il pallino in hover */
           }
@@ -517,7 +526,7 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
     border-color: #5865F2 !important;
     color: #5865F2 !important;
     box-shadow: 0 0 15px rgba(88, 101, 242, 0.4);
-    
+
     i { color: #5865F2 !important; }
     .btn-text { color: #5865F2 !important; }
   }

@@ -127,53 +127,60 @@ html, body {
             grid-template-columns: 1fr;
         }
 
-        .feature-card {
-            background: rgba(30, 28, 38, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 20px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            text-align: left;
-            position: relative;
-            overflow: hidden;
+    .feature-card {
+        background: rgba(30, 28, 38, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        text-align: left;
+        position: relative;
+        overflow: hidden;
 
-            &:hover {
-                border-color: #FF9000;
-                transform: translateY(-5px);
-                background: rgba(35, 32, 45, 0.9);
-                box-shadow: 0 8px 20px rgba(255, 144, 0, 0.15);
+        // Stile del link
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
 
-                i {
-                    color: #FF9000;
-                    transform: scale(1.1);
-                }
-            }
+        &:hover {
+            border-color: #FF9000;
+            transform: translateY(-5px);
+            background: rgba(35, 32, 45, 0.9);
+            box-shadow: 0 8px 20px rgba(255, 144, 0, 0.15);
+            text-decoration: none;
 
             i {
-                font-size: 1.8rem;
                 color: #FF9000;
-                margin-bottom: 12px;
-                display: block;
-                transition: transform 0.3s ease, color 0.3s ease;
-            }
-
-            h4 {
-                font-size: 1.05rem;
-                font-weight: 800;
-                color: #fff;
-                margin: 0 0 6px 0;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
-            }
-
-            p {
-                font-size: 0.85rem;
-                color: #aaa;
-                margin: 0;
-                line-height: 1.5;
+                transform: scale(1.1);
             }
         }
+
+        i {
+            font-size: 1.8rem;
+            color: #FF9000;
+            margin-bottom: 12px;
+            display: block;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        h4 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #fff;
+            margin: 0 0 6px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        p {
+            font-size: 0.85rem;
+            color: #aaa;
+            margin: 0;
+            line-height: 1.5;
+        }
     }
+  }
 }
 
 /* Game Data Section */

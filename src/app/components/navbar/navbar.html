@@ -1,3 +1,4 @@
+
 <nav [class]="'storm-navbar ' + getActiveTheme()">
   <div class="logo-section">
     <img src="StormLogoFranchise.png" alt="logo-section">
@@ -5,37 +6,60 @@
   </div>
 
   <div class="links-section">
+
     <!-- HOMEPAGE -->
-    <a routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+    <a
+      routerLink="/home"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="nav-item">
       <span class="dot"></span> HOMEPAGE
     </a>
-    
+
     <!-- GAMES -->
-  <!-- GAMES -->
-  <a class="nav-item dropdown-trigger" 
-    style="cursor: pointer;"
-    routerLinkActive="active-link"
-    (mouseenter)="showDropdown($event, gamesMenu)" 
-    (mouseleave)="hideDropdown(gamesMenu)"
-    (click)="$event.preventDefault()">
-    <span class="dot"></span> GAMES <i class="pi pi-angle-down dropdown-arrow"></i>
-  </a>
-  <p-tieredMenu #gamesMenu [model]="gamesItems" [popup]="true"
-    (mouseenter)="showDropdown($event, gamesMenu)" 
-    (mouseleave)="hideDropdown(gamesMenu)"></p-tieredMenu>
-    
-    <!-- MATCHMAKING (Senza routerLink, apre solo il menu a tendina senza navigare) -->
-    <a class="nav-item dropdown-trigger" 
-       (mouseenter)="showDropdown($event, matchmakingMenu)" 
-       (mouseleave)="hideDropdown(matchmakingMenu)">
-      <span class="dot"></span> MATCHMAKING <i class="pi pi-angle-down dropdown-arrow"></i>
+    <a
+      class="nav-item dropdown-trigger"
+      [class.active-link]="getActiveTheme() === 'theme-games'"
+      style="cursor: pointer;"
+      (mouseenter)="showDropdown($event, gamesMenu)"
+      (mouseleave)="hideDropdown(gamesMenu)"
+      (click)="$event.preventDefault()">
+      <span class="dot"></span> GAMES
+      <i class="pi pi-angle-down dropdown-arrow"></i>
     </a>
-    <p-tieredMenu #matchmakingMenu [model]="matchmakingItems" [popup]="true"
-       (mouseenter)="showDropdown($event, matchmakingMenu)" 
-       (mouseleave)="hideDropdown(matchmakingMenu)"></p-tieredMenu>
+
+    <p-tieredMenu
+      #gamesMenu
+      [model]="gamesItems"
+      [popup]="true"
+      (mouseenter)="showDropdown($event, gamesMenu)"
+      (mouseleave)="hideDropdown(gamesMenu)">
+    </p-tieredMenu>
+
+    <!-- MATCHMAKING -->
+    <a
+      class="nav-item dropdown-trigger"
+      [class.active-link]="getActiveTheme() === 'theme-matchmaking'"
+      style="cursor: pointer;"
+      (mouseenter)="showDropdown($event, matchmakingMenu)"
+      (mouseleave)="hideDropdown(matchmakingMenu)"
+      (click)="$event.preventDefault()">
+      <span class="dot"></span> MATCHMAKING
+      <i class="pi pi-angle-down dropdown-arrow"></i>
+    </a>
+
+    <p-tieredMenu
+      #matchmakingMenu
+      [model]="matchmakingItems"
+      [popup]="true"
+      (mouseenter)="showDropdown($event, matchmakingMenu)"
+      (mouseleave)="hideDropdown(matchmakingMenu)">
+    </p-tieredMenu>
 
     <!-- COMMUNITY -->
-    <a class="nav-item dropdown-trigger"
+    <a
+      class="nav-item dropdown-trigger"
+      [class.active-link]="getActiveTheme() === 'theme-community'"
       style="cursor: default;"
       (mouseenter)="showDropdown($event, communityMenu)"
       (mouseleave)="hideDropdown(communityMenu)"
@@ -44,118 +68,183 @@
       <i class="pi pi-angle-down dropdown-arrow"></i>
     </a>
 
-    <p-tieredMenu #communityMenu [model]="communityItems" [popup]="true"
+    <p-tieredMenu
+      #communityMenu
+      [model]="communityItems"
+      [popup]="true"
       (mouseenter)="showDropdown($event, communityMenu)"
       (mouseleave)="hideDropdown(communityMenu)">
     </p-tieredMenu>
 
-<!-- RESOURCES -->
-    <a class="nav-item dropdown-trigger" 
+    <!-- RESOURCES -->
+    <a
+      class="nav-item dropdown-trigger"
+      [class.active-link]="getActiveTheme() === 'theme-resources'"
       style="cursor: pointer;"
-      routerLinkActive="active-link"
-      (mouseenter)="showDropdown($event, resourcesMenu)" 
+      (mouseenter)="showDropdown($event, resourcesMenu)"
       (mouseleave)="hideDropdown(resourcesMenu)"
       (click)="$event.preventDefault()">
-      <span class="dot"></span> RESOURCES <i class="pi pi-angle-down dropdown-arrow"></i>
+      <span class="dot"></span> RESOURCES
+      <i class="pi pi-angle-down dropdown-arrow"></i>
     </a>
-    <p-tieredMenu #resourcesMenu [model]="resourcesItems" [popup]="true"
-      (mouseenter)="showDropdown($event, resourcesMenu)" 
-      (mouseleave)="hideDropdown(resourcesMenu)"></p-tieredMenu>
+
+    <p-tieredMenu
+      #resourcesMenu
+      [model]="resourcesItems"
+      [popup]="true"
+      (mouseenter)="showDropdown($event, resourcesMenu)"
+      (mouseleave)="hideDropdown(resourcesMenu)">
+    </p-tieredMenu>
 
     <!-- FAQ -->
-    <a routerLink="/faq" routerLinkActive="active-link" class="nav-item">
+    <a
+      routerLink="/faq"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: false }"
+      class="nav-item">
       <span class="dot"></span> FAQ
     </a>
 
     <!-- ABOUT US -->
-    <a routerLink="/about" routerLinkActive="active-link" class="nav-item">
+    <a
+      routerLink="/about"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: false }"
+      class="nav-item">
       <span class="dot"></span> ABOUT US
     </a>
+
   </div>
 
-  <!-- Auth / User Section -->
+  <!-- AUTH / USER SECTION -->
   <div class="action-section">
+
     @if (isLoggedIn) {
-      <button class="storm-menu-btn logged-in-btn" (click)="menu.toggle($event)">
+      <button
+        class="storm-menu-btn logged-in-btn"
+        (click)="menu.toggle($event)">
+
         @if (userAvatar) {
-          <p-avatar [image]="userAvatar" shape="circle" styleClass="discord-avatar-prime"></p-avatar>
+          <p-avatar
+            [image]="userAvatar"
+            shape="circle"
+            styleClass="discord-avatar-prime">
+          </p-avatar>
         } @else {
-          <p-avatar icon="pi pi-user" shape="circle" styleClass="discord-avatar-prime empty-avatar"></p-avatar>
+          <p-avatar
+            icon="pi pi-user"
+            shape="circle"
+            styleClass="discord-avatar-prime empty-avatar">
+          </p-avatar>
         }
+
         <span class="btn-text">{{ username }}</span>
       </button>
     } @else {
-      <button class="storm-menu-btn login-btn" (click)="openLoginModal()">
-        <p-avatar icon="pi pi-user" shape="circle" styleClass="large-user-avatar"></p-avatar>
+      <button
+        class="storm-menu-btn login-btn"
+        (click)="openLoginModal()">
+
+        <p-avatar
+          icon="pi pi-user"
+          shape="circle"
+          styleClass="large-user-avatar">
+        </p-avatar>
+
         <span class="btn-text">LOGIN</span>
       </button>
     }
-    
-    <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
+
+    <p-tieredMenu
+      #menu
+      [model]="items"
+      [popup]="true">
+    </p-tieredMenu>
+
   </div>
 </nav>
 
-<!-- Toast per i messaggi di notifica PrimeNG -->
+<!-- TOAST -->
 <p-toast></p-toast>
 
-<!-- Disclaimer Modal with Custom Shield Banner -->
-<p-dialog 
-  header="DISCORD AUTHENTICATION & PRIVACY NOTICE" 
-  [(visible)]="displayModal" 
-  [modal]="true" 
+<!-- DISCORD AUTHENTICATION MODAL -->
+<p-dialog
+  header="DISCORD AUTHENTICATION & PRIVACY NOTICE"
+  [(visible)]="displayModal"
+  [modal]="true"
   [style]="{ width: '90vw', 'max-width': '520px' }"
-  [draggable]="false" 
+  [draggable]="false"
   [resizable]="false"
   styleClass="discord-dialog">
 
   <div class="dialog-content">
-    
-    <!-- Custom Discord Banner con Scudino e Testo -->
+
+    <!-- DISCORD BANNER -->
     <div class="custom-discord-banner">
       <i class="pi pi-shield banner-icon"></i>
+
       <div class="banner-body">
         <strong class="banner-title">READ WITH ATTENTION</strong>
+
         <p class="banner-desc">
-          To use Matchmaking and community features, sign in with Discord OAuth2. 
+          To use Matchmaking and community features, sign in with Discord OAuth2.
           We prioritize your account security.
         </p>
       </div>
     </div>
 
-    <!-- Privacy Details -->
+    <!-- PRIVACY DETAILS -->
     <div class="privacy-details">
       <ul>
         <li>
           <i class="pi pi-check-circle check-icon"></i>
-          <span><strong>No Passwords Stored:</strong> Managed safely by Discord OAuth2.</span>
+          <span>
+            <strong>No Passwords Stored:</strong>
+            Managed safely by Discord OAuth2.
+          </span>
         </li>
+
         <li>
           <i class="pi pi-check-circle check-icon"></i>
-          <span><strong>Public Data Only:</strong> We store your <code>Discord ID</code>, <code>Username</code>, and <code>Avatar</code> (All this data are public available by everyone on discord platform).</span>
+          <span>
+            <strong>Public Data Only:</strong>
+            We store your <code>Discord ID</code>,
+            <code>Username</code>, and <code>Avatar</code>
+            (All this data are public available by everyone on discord platform).
+          </span>
         </li>
+
         <li>
           <i class="pi pi-check-circle check-icon"></i>
-          <span><strong>Minimal Access:</strong> Only requests <code>identify</code> scope.</span>
+          <span>
+            <strong>Minimal Access:</strong>
+            Only requests <code>identify</code> scope.
+          </span>
         </li>
       </ul>
     </div>
 
   </div>
 
+  <!-- MODAL FOOTER -->
   <ng-template pTemplate="footer">
     <div class="dialog-footer">
-      <p-button 
-        label="Cancel" 
-        icon="pi pi-times" 
-        styleClass="p-button-text cancel-btn" 
+
+      <p-button
+        label="Cancel"
+        icon="pi pi-times"
+        styleClass="p-button-text cancel-btn"
         (click)="displayModal = false">
       </p-button>
-      <p-button 
-        label="Proceed with Discord" 
-        icon="pi pi-discord" 
-        styleClass="p-button-discord" 
+
+      <p-button
+        label="Proceed with Discord"
+        icon="pi pi-discord"
+        styleClass="p-button-discord"
         (click)="redirectToDiscord()">
       </p-button>
+
     </div>
   </ng-template>
+
 </p-dialog>

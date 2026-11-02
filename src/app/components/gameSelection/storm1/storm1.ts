@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { NinjaCard } from '../../ninja-card/ninja-card';
 import { CharacterDetailModal } from '../../character-detail-modal/character-detail-modal';
 
@@ -454,6 +455,16 @@ export class Storm1 {
       ]
     }
   ];
+
+  
+  searchText = '';
+
+  get filteredCharacters(): typeof this.playableCharacters {
+    const query = this.searchText.trim().toLocaleLowerCase();
+    return this.playableCharacters.filter(character =>
+      character.name.toLocaleLowerCase().includes(query)
+    );
+  }
 
   // --- AGGIUNGI QUESTE VARIABILI ---
   isModalOpen: boolean = false;

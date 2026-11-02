@@ -12,7 +12,7 @@ export class Ninja1 {
 
   comingSoonConfig: ComingSoonConfig = {
     title: 'NARUTO: ULTIMATE NINJA',
-    description: 'The character database and game resources for Naruto: Ultimate Ninja are currently under development.',
+    description: 'The character database and game resources for Naruto: Ultimate Ninja  are currently under development.',
     plannedContent: [
       'Playable Characters',
       'Character Information',

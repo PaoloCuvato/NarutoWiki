@@ -9,18 +9,24 @@ import { Storm4 } from '../gameSelection/storm4/storm4';
 import { StormCons } from '../gameSelection/storm-cons/storm-cons';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import { StormGen } from '../gameSelection/storm-gen/storm-gen';
+import { StormEvo } from '../gameSelection/storm-evo/storm-evo';
+import { StormRev } from '../gameSelection/storm-rev/storm-rev';
 
 
 @Component({
   selector: 'app-games',
 imports: [
     CommonModule, // Abilita la logica Angular nell'HTML
-    Storm1, 
-    Storm2, 
-    Storm3, 
-    Storm4, 
-    StormCons,CardModule,ButtonModule
-  ],  templateUrl: './games.html',
+    Storm1,
+    Storm2,
+    Storm3,
+    Storm4,
+    StormCons, CardModule, ButtonModule,
+    StormGen,
+    StormEvo,
+    StormRev
+],  templateUrl: './games.html',
   styleUrl: './games.scss',
 })
 export class Games {

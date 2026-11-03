@@ -25,11 +25,8 @@
 
   <!-- SEARCH -->
   <div class="database-toolbar">
-
     <div class="search-container">
-
       <i class="pi pi-search"></i>
-
       <input
         type="text"
         [(ngModel)]="searchTerm"
@@ -46,7 +43,7 @@
           <i class="pi pi-times"></i>
         </button>
       }
-
+      
     </div>
 
   </div>
@@ -73,7 +70,6 @@
       }
 
     </div>
-
   </div>
 
   <!-- SECTION HEADING -->
@@ -93,8 +89,7 @@
   <!-- ITEMS LIST -->
   <div class="items-list">
 
-    @for (item of filteredItems; track $index) {
-
+@for (item of filteredItems; track item.name + '-' + (item.game ?? item.category)) {
       <div class="item-card">
 
         <!-- IMAGE -->
@@ -118,9 +113,7 @@
 
         <!-- ITEM INFORMATION -->
         <div class="item-content">
-
           <div class="item-title-row">
-
             <h3>{{ item.name }}</h3>
 
             @if (item.category === 'Common') {
@@ -139,23 +132,6 @@
             {{ item.description }}
           </p>
 
-          @if (item.users && item.users.length > 0) {
-
-            <div class="item-users">
-
-              <i class="pi pi-user"></i>
-
-              <span class="users-label">
-                USER:
-              </span>
-
-              <span class="users-list">
-                {{ item.users.join(', ') }}
-              </span>
-
-            </div>
-
-          }
 
         </div>
 
@@ -165,19 +141,14 @@
 
       <!-- EMPTY STATE -->
       <div class="empty-state">
-
         <i class="pi pi-search"></i>
-
         <h3>No items found</h3>
 
         <p>
           We couldn't find any items matching your search.
         </p>
 
-        <button
-          type="button"
-          (click)="resetFilters()"
-        >
+        <button  type="button"  (click)="resetFilters()">
           Reset filters
         </button>
 
@@ -189,13 +160,9 @@
 
   <!-- FOOTER -->
   <div class="database-footer">
-
     <span></span>
-
     <p>NARUTO STORM WIKI · ITEM DATABASE</p>
-
     <span></span>
-
   </div>
 
 </div>

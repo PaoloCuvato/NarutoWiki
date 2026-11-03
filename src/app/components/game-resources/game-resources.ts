@@ -4,6 +4,7 @@ import { TabsModule } from 'primeng/tabs';
 import { CharacterCooldown } from '../character-cooldown/character-cooldown';
 import { JutsuDatabase } from '../jutsu-database/jutsu-database';
 import { Terminology } from '../terminology/terminology';
+import { ItemDb } from '../item-db/item-db';
 
 
 @Component({
@@ -14,7 +15,8 @@ import { Terminology } from '../terminology/terminology';
     TabsModule,
     CharacterCooldown,
     JutsuDatabase,
-    Terminology
+    Terminology,
+    ItemDb
 ],
   templateUrl: './game-resources.html',
   styleUrl: './game-resources.scss',

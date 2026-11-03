@@ -1,0 +1,201 @@
+<div class="item-database-container">
+
+  <!-- HEADER -->
+  <div class="database-header">
+
+    <div class="header-title">
+
+      <div class="header-icon">
+        <i class="pi pi-box"></i>
+      </div>
+
+      <div>
+        <h1>ITEM DATABASE</h1>
+        <p>Explore the battle items from the Naruto Storm series</p>
+      </div>
+
+    </div>
+
+    <div class="header-counter">
+      <span>{{ filteredItems.length }}</span>
+      <small>ITEMS FOUND</small>
+    </div>
+
+  </div>
+
+  <!-- SEARCH -->
+  <div class="database-toolbar">
+
+    <div class="search-container">
+
+      <i class="pi pi-search"></i>
+
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        placeholder="Search items, descriptions or characters..."
+      />
+
+      @if (searchTerm) {
+        <button
+          type="button"
+          class="clear-search"
+          (click)="searchTerm = ''"
+          aria-label="Clear search"
+        >
+          <i class="pi pi-times"></i>
+        </button>
+      }
+
+    </div>
+
+  </div>
+
+  <!-- FILTERS -->
+  <div class="filter-container">
+
+    <div class="filter-label">
+      <i class="pi pi-filter"></i>
+      FILTER BY CATEGORY
+    </div>
+
+    <div class="filter-list">
+
+      @for (filter of filters; track filter) {
+        <button
+          type="button"
+          class="filter-button"
+          [class.active]="selectedFilter === filter"
+          (click)="selectedFilter = filter"
+        >
+          {{ filter }}
+        </button>
+      }
+
+    </div>
+
+  </div>
+
+  <!-- SECTION HEADING -->
+  <div class="section-heading">
+
+    <div>
+      <h2>Available Items</h2>
+      <p>Browse all the tools and special items</p>
+    </div>
+
+    <span class="result-count">
+      {{ filteredItems.length }} RESULTS
+    </span>
+
+  </div>
+
+  <!-- ITEMS LIST -->
+  <div class="items-list">
+
+    @for (item of filteredItems; track $index) {
+
+      <div class="item-card">
+
+        <!-- IMAGE -->
+        <div class="item-image-container">
+
+          <div class="image-placeholder">
+            <i class="pi pi-image"></i>
+          </div>
+
+          <img
+            [src]="item.imageUrl"
+            [alt]="item.name"
+            loading="lazy"
+            (error)="onImageError($event)"
+          />
+
+        </div>
+
+        <!-- SEPARATOR -->
+        <div class="item-separator"></div>
+
+        <!-- ITEM INFORMATION -->
+        <div class="item-content">
+
+          <div class="item-title-row">
+
+            <h3>{{ item.name }}</h3>
+
+            @if (item.category === 'Common') {
+              <span class="common-tag">
+                COMMON
+              </span>
+            } @else {
+              <span class="game-tag">
+                {{ item.game }}
+              </span>
+            }
+
+          </div>
+
+          <p class="item-description">
+            {{ item.description }}
+          </p>
+
+          @if (item.users && item.users.length > 0) {
+
+            <div class="item-users">
+
+              <i class="pi pi-user"></i>
+
+              <span class="users-label">
+                USER:
+              </span>
+
+              <span class="users-list">
+                {{ item.users.join(', ') }}
+              </span>
+
+            </div>
+
+          }
+
+        </div>
+
+      </div>
+
+    } @empty {
+
+      <!-- EMPTY STATE -->
+      <div class="empty-state">
+
+        <i class="pi pi-search"></i>
+
+        <h3>No items found</h3>
+
+        <p>
+          We couldn't find any items matching your search.
+        </p>
+
+        <button
+          type="button"
+          (click)="resetFilters()"
+        >
+          Reset filters
+        </button>
+
+      </div>
+
+    }
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="database-footer">
+
+    <span></span>
+
+    <p>NARUTO STORM WIKI · ITEM DATABASE</p>
+
+    <span></span>
+
+  </div>
+
+</div>

@@ -1,0 +1,87 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #1e1e1e 0%, #0a0a0a 100%);
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.legal-page-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #121212;
+  color: #e0e0e0;
+  border-radius: 8px;
+  border-top: 4px solid #ff8c00;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+
+  h1 {
+    color: #ff8c00;
+    font-size: 2rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  .last-updated {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 30px;
+    font-style: italic;
+  }
+
+  section {
+    margin-bottom: 25px;
+
+    h2 {
+      color: #ff8c00;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #222;
+      padding-bottom: 5px;
+      font-weight: 700;
+    }
+
+    p, ul {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+      
+      li {
+        margin-bottom: 8px;
+      }
+    }
+
+    code {
+      background-color: #1e1e1e;
+      color: #ff8c00;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.9em;
+    }
+
+    strong {
+      color: #fff;
+    }
+  }
+}
+
+/* Responsive per dispositivi mobili */
+@media (max-width: 768px) {
+  .legal-page-container {
+    margin: 20px 15px;
+    padding: 20px;
+
+    h1 {
+      font-size: 1.6rem;
+    }
+  }
+}

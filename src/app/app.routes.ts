@@ -21,6 +21,7 @@ import { ModdingResources } from './components/modding-resources/modding-resourc
 import { GameResources } from './components/game-resources/game-resources';
 import { CookiePolicy } from './components/cookie-policy/cookie-policy';
 import { PrivacyPolicy } from './components/privacy-policy/privacy-policy';
+import { Terms } from './components/terms/terms';
 
 export const routes: Routes = [
 { path: 'home', component: Homepage },
@@ -48,6 +49,7 @@ export const routes: Routes = [
 
 { path: 'privacy-policy', component: PrivacyPolicy },
 { path: 'cookie-policy', component: CookiePolicy },
+{ path: 'terms', component: Terms },
 
 { path: '', redirectTo: '/home', pathMatch: 'full' }, // Se l'URL è vuoto, vai in Home
 { path: '**', redirectTo: '/home' } // Se l'utente scrive un URL a caso, torna in Home

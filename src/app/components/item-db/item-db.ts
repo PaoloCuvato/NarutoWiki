@@ -172,12 +172,19 @@ export class ItemDb {
       undefined,
       'items/c_bat_159.png'
     ),
-    createItem(
-      'Scroll of Hidden Cloud',
-      'Uses a scroll that grants the user invisibility for a time.',
+      createItem(
+      'Lightning Kunai',
+      'A kunai that can be thrown at the opponent. It will stun him for some seconds.',
       'Common',
       undefined,
-      'items/c_bat_195.png'
+      'items/c_bat_219.png'
+    ),
+    createItem(
+      'Scroll of Hidden Cloud',
+      'Uses a scroll that grants the user invisibility to kumai for a time.',
+      'Common',
+      undefined,
+      'items/s2/item_row_01_col_05.png'
     ),
     createItem(
       'Substitution Scroll',
@@ -194,175 +201,175 @@ export class ItemDb {
       'Increases chakra.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/ramen.png'
+      'items/s1/item_row_02_col_09.png'
     ),
     createItem(
       'Uchiha Scroll',
       'Grants automatic Substitutions*.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/uchiha-scroll.png'
+      'items/s1/item_row_02_col_10.png'
     ),
     createItem(
       'Miso Soup',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/miso-soup.png'
+      'items/s1/item_row_03_col_01.png'
     ),
     createItem(
       'Bandages',
       'Increases speed.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/bandages.png'
+      'items/s1/item_row_03_col_02.png'
     ),
     createItem(
       'Substitution Tag',
       'Grants automatic Substitutions*.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/substitution-tag.png'
+      'items/s1/item_row_03_col_03.png'
     ),
     createItem(
       'Dumpling',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/dumpling.png'
+      'items/s1/item_row_03_col_04.png'
     ),
     createItem(
       'Crushed Root',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/crushed-root.png'
+      'items/s1/item_row_03_col_05.png'
     ),
     createItem(
       'Potato Chips',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/potato-chips.png'
+      'items/s1/item_row_03_col_06.png'
     ),
     createItem(
       'Flower',
       'Increases speed.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/flower.png'
+      'items/s1/item_row_03_col_07.png'
     ),
     createItem(
       'Military Ration Pills',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/military-ration-pills.png'
+      'items/s1/item_row_03_col_08.png'
     ),
     createItem(
       'Beetle',
       'Grants invisibility.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/beetle.png'
+      'items/s1/item_row_03_col_09.png'
     ),
     createItem(
       'Hyuga Clan Secret Ointment',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/hyuga-clan-secret-ointment.png'
+      'items/s1/item_row_03_col_10.png'
     ),
     createItem(
       'Shukaku\'s Sand',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/shukaku-s-sand.png'
+      'items/s1/item_row_04_col_01.png'
     ),
     createItem(
       'Puppet Arm',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/puppet-arm.png'
+      'items/s1/item_row_04_col_02.png'
     ),
     createItem(
       'Temari\'s Scroll',
       'Increases speed.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/temari-s-scroll.png'
+      'items/s1/item_row_04_col_03.png'
     ),
     createItem(
       'Make-Out Lit.',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/make-out-lit.png'
+      'items/s1/item_row_04_col_04.png'
     ),
     createItem(
       'Medicine',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/medicine.png'
+      'items/s1/item_row_04_col_05.png'
     ),
     createItem(
       'Hokage Hat',
       'Grants invisibility.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/hokage-hat.png'
+      'items/s1/item_row_04_col_08.png'
     ),
     createItem(
       'Make-Out Paradise',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/make-out-paradise.png'
+      'items/s1/item_row_04_col_06.png'
     ),
     createItem(
       'Tsunade\'s Medicine',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/tsunade-s-medicine.png'
+      'items/s1/item_row_04_col_07.png'
     ),
     createItem(
       'Orochimaru\'s Medicine',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/orochimaru-s-medicine.png'
+      'items/s1/item_row_04_col_09.png'
     ),
     createItem(
       'Kabuto\'s Pills',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/kabuto-s-pills.png'
+      'items/s1/item_row_04_col_10.png'
     ),
     createItem(
       'Bones',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/bones.png'
+      'items/s1/item_row_05_col_01.png'
     ),
     createItem(
       'Itachi\'s Scroll',
       'Grants automatic Substitutions*.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/itachi-s-scroll.png'
+      'items/s1/item_row_05_col_02.png'
     ),
     createItem(
       'Kisame\'s Scroll',
       'Grants invisibility.',
       'Unique',
       'Ultimate Ninja Storm 1',
-      'assets/items/storm1/kisame-s-scroll.png'
+      'items/s1/item_row_05_col_03.png'
     ),
 
     // ULTIMATE NINJA STORM 2

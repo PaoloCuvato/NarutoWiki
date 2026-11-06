@@ -629,8 +629,8 @@ export class Storm3 {
   },
     // storm 3 
   {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'EMS Sasuke',
+    image: 'characters/l_ssk7.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -642,8 +642,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'Han',
+    image: 'characters/l_han2.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -655,8 +655,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'Yugito',
+    image: 'characters/l_nyg2.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -668,8 +668,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'Fuu',
+    image: 'characters/l_who2.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -681,8 +681,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'Yagura',
+    image: 'characters/l_ygr2.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -694,8 +694,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'Utakata',
+    image: 'characters/l_utk1.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -707,8 +707,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'Roshi',
+    image: 'characters/l_rus2.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -720,8 +720,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'GNW Choji',
+    image: 'characters/l_tyo1.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -733,8 +733,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'GNW Gaara',
+    image: 'characters/l_gar5.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -746,8 +746,36 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'GNW Kakashi',
+    image: 'characters/l_kks3.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/s2/item_row_02_col_07.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+  /*
+    {
+    name: 'GNW Gaara',
+    image: 'characters/l_gar5.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/s2/item_row_02_col_07.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+  */
+    {
+    name: 'TBB Naruto',
+    image: 'characters/kcm naruto.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -759,8 +787,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'Edo Madara',
+    image: 'characters/l_mdr3.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -772,34 +800,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
-    dashcutType: 'Strikeback',
-    dashcutIcon: '/support_type/none.png',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/s2/item_row_02_col_07.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
-    ]
-  },
-    {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
-    dashcutType: 'Strikeback',
-    dashcutIcon: '/support_type/none.png',
-    tierIcon: 'rate_a_l.png',
-    itemsets: [
-      { name: 'Item 1', icon: 'items/s2/item_row_02_col_07.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
-    ]
-  },
-    {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'GNW Tobi',
+    image: 'characters/l_tob2.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -810,8 +812,8 @@ export class Storm3 {
       { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },  {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'Edo Nagato',
+    image: 'characters/l_ngt1.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -823,8 +825,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'Mifune',
+    image: 'characters/l_mfn1.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -836,8 +838,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'Hanzo',
+    image: 'characters/l_hnz1.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -849,8 +851,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'Darui',
+    image: 'characters/l_dri1.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -862,8 +864,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'Killer Bee (Samehada)',
+    image: 'characters/l_klb2.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -875,8 +877,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'Edo Itachi',
+    image: 'characters/l_itc2.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -888,8 +890,8 @@ export class Storm3 {
     ]
   },
     {
-    name: 'Naruto',
-    image: 'characters/l_nrt2.png',
+    name: 'Sage Kabuto',
+    image: 'characters/l_kbt3.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -1012,7 +1014,7 @@ export class Storm3 {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_03_col_2.png' },
+     { name: 'Item 1', icon: 'items/s2/item_row_03_col_02.png' },
       { name: 'Item 2', icon: 'items/c_bat_171.png' },
       { name: 'Item 3', icon: 'items/c_bat_213.png' },
       { name: 'Item 4', icon: 'items/c_bat_165.png' }

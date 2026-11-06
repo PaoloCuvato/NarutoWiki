@@ -379,266 +379,266 @@ export class ItemDb {
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/ramen.png'
+      'items/s2/item_row_02_col_07.png'
     ),
     createItem(
       'Book',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/book.png'
+      'items/s2/item_row_03_col_10.png'
     ),
     createItem(
       'Seal',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/seal.png'
+      'items/s2/item_row_04_col_01.png'
     ),
     createItem(
       'Akatsuki Cape',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/akatsuki-cape.png'
+      'items/s2/item_row_04_col_02.png'
     ),
     createItem(
-      'Popsicle',
+      'Antitode',
       'Recovers negative statuses.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/popsicle.png'
+      'items/s2/item_row_04_col_03.png'
     ),
     createItem(
       'Training Weight',
       'Increases speed.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/training-weight.png'
+      'items/s2/item_row_04_col_05.png'
     ),
     createItem(
       'Book',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/book.png'
+      'items/s2/item_row_04_col_06.png'
     ),
     createItem(
       'Ninja Tool Scroll',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/ninja-tool-scroll.png'
+      'items/s2/item_row_04_col_07.png'
     ),
     createItem(
       'Crushed Root',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/crushed-root.png'
+      'items/s2/item_row_02_col_08.png'
     ),
     createItem(
       'Handbag',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/handbag.png'
+      'items/s2/item_row_04_col_08.png'
     ),
     createItem(
       'Potato Chips',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/potato-chips.png'
+      'items/s2/item_row_02_col_09.png'
     ),
     createItem(
       'Military Ration Pills',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/military-ration-pills.png'
+      'items/s2/item_row_02_col_10.png'
     ),
     createItem(
       'Insect Bag',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/insect-bag.png'
+      'items/s2/item_row_04_col_09.png'
     ),
     createItem(
       'Hyuga Clan Secret Ointment',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/hyuga-clan-secret-ointment.png'
+      'items/s2/item_row_03_col_01.png'
     ),
     createItem(
       'Shukaku\'s Sand',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/shukaku-s-sand.png'
+      'items/s2/item_row_03_col_02.png'
     ),
     createItem(
       'Puppet Arm',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/puppet-arm.png'
+      'items/s2/item_row_03_col_03.png'
     ),
     createItem(
       'Dumplings',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/dumplings.png'
+      'items/s2/item_row_04_col_10.png'
     ),
     createItem(
       'Lottery Ticker',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/lottery-ticker.png'
+      'items/s2/item_row_05_col_06.png'
     ),
     createItem(
       'Orochimaru\'s Medicine',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/orochimaru-s-medicine.png'
+      'items/s2/item_row_05_col_07.png'
     ),
     createItem(
       'Itachi\'s Scroll',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/itachi-s-scroll.png'
+      'items/s2/item_row_03_col_05.png'
     ),
     createItem(
       'Whetstone',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/whetstone.png'
+      'items/s2/item_row_05_col_09.png'
     ),
     createItem(
       'Shogi Tile',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/shogi-tile.png'
+      'items/s2/item_row_05_col_03.png'
     ),
     createItem(
       'Anbu Mask',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/anbu-mask.png'
+      'items/s2/item_row_05_col_02.png'
     ),
     createItem(
       'Inkbrush',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/inkbrush.png'
+      'items/s2/item_row_04_col_04.png'
     ),
     createItem(
       'Puppet Grip',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/puppet-grip.png'
+      'items/s2/item_row_05_col_04.png'
     ),
     createItem(
       'Flying Raijin Kunai',
       'Increases speed.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/flying-raijin-kunai.png'
+      'items/s2/item_row_07_col_01.png'
     ),
     createItem(
       'Water Bottle',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/water-bottle.png'
+      'items/s2/item_row_06_col_05.png'
     ),
     createItem(
       'Bird',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/bird.png'
+      'items/s2/item_row_06_col_06.png'
     ),
     createItem(
       'Perfume',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/perfume.png'
+      'items/s2/item_row_06_col_07.png'
     ),
     createItem(
       'Black Needle',
       'Increases guard break power.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/black-needle.png'
+      'items/s2/item_row_06_col_04.png'
     ),
     createItem(
       'Origami Flower',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/origami-flower.png'
+      'items/s2/item_row_06_col_09.png'
     ),
     createItem(
       'Demon Mask',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/demon-mask.png'
+      'items/s2/item_row_06_col_01.png'
     ),
     createItem(
       'Detonating Clay',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/detonating-clay.png'
+      'items/s2/item_row_05_col_10.png'
     ),
     createItem(
       'Hit List',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/hit-list.png'
+      'items/s2/item_row_06_col_03.png'
     ),
     createItem(
       'Jashin Necklace',
       'Increases guard break power.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/jashin-necklace.png'
+      'items/s2/item_row_06_col_02.png'
     ),
     createItem(
       'Akatsuki Ring',
       'Increases speed.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/akatsuki-ring.png'
+      'items/s2/item_row_06_col_08.png'
     ),
     createItem(
       'Rhyming Dictionary',
       'Increases speed.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/rhyming-dictionary.png'
+      'items/s2/item_row_06_col_10.png'
     ),
     createItem(
       'Cell Phone',
       'Increases guard break power.',
       'Unique',
       'Ultimate Ninja Storm 2',
-      'assets/items/storm2/cell-phone.png'
+      'items/s2/item_row_07_col_02.png'
     ),
 
     // ULTIMATE NINJA STORM GENERATIONS

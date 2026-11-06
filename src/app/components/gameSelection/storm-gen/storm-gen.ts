@@ -148,7 +148,7 @@ export class StormGen {
   },
   {
     name: 'Sasuke Taka',
-    image: 'characters/l_ssk4.png',
+    image: 'characters/l_ssk6.png',
     dashcutType: 'Coverfire',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -557,10 +557,10 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
-     { name: 'Item 4', icon: 'items/c_bat_162.png' }
+     { name: 'Item 1', icon: 'items/gen/item_row_11_col_08.png' },
+     { name: 'Item 2', icon: 'items/gen/item_row_10_col_01.png' },
+     { name: 'Item 3', icon: 'items/gen/item_row_12_col_05.png' },
+     { name: 'Item 4', icon: 'items/c_bat_203.png' }
     ]
   },
    {
@@ -570,9 +570,9 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
+     { name: 'Item 1', icon: 'items/gen/item_row_11_col_01.png' },
+     { name: 'Item 2', icon: 'items/c_bat_183.png' },
+     { name: 'Item 3', icon: 'items/c_bat_198.png' },
      { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
@@ -583,10 +583,10 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
-     { name: 'Item 4', icon: 'items/c_bat_162.png' }
+     { name: 'Item 1', icon: 'items/gen/item_row_10_col_10.png' },
+     { name: 'Item 2', icon: 'items/c_bat_213.png' },
+     { name: 'Item 3', icon: 'items/c_bat_174.png' },
+     { name: 'Item 4', icon: 'items/c_bat_203.png' }
     ]
   },
    {
@@ -596,10 +596,10 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
-     { name: 'Item 4', icon: 'items/c_bat_162.png' }
+     { name: 'Item 1', icon: 'items/gen/item_row_11_col_02.png' },
+     { name: 'Item 2', icon: 'items/c_bat_183.png' },
+     { name: 'Item 3', icon: 'items/8.png' },
+     { name: 'Item 4', icon: 'items/c_bat_165.png' }
     ]
   },
    {
@@ -609,10 +609,23 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
-     { name: 'Item 4', icon: 'items/c_bat_162.png' }
+     { name: 'Item 1', icon: 'items/gen/item_row_04_col_01.png' },
+     { name: 'Item 2', icon: 'items/c_bat_186.png' },
+     { name: 'Item 3', icon: 'items/c_bat_213.png' },
+     { name: 'Item 4', icon: 'items/c_bat_198.png' }
+    ]
+  },
+     {
+    name: 'Sasuke Taka',
+    image: 'characters/l_ssk4.png',
+    dashcutType: '',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+     { name: 'Item 1', icon: 'items/gen/item_row_04_col_02.png' },
+     { name: 'Item 2', icon: 'items/c_bat_174.png' },
+     { name: 'Item 3', icon: 'items/c_bat_183.png' },
+     { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
   },
    {
@@ -622,10 +635,10 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
-     { name: 'Item 4', icon: 'items/c_bat_162.png' }
+     { name: 'Item 1', icon: 'items/gen/item_row_11_col_04.png' },
+     { name: 'Item 2', icon: 'items/c_bat_174.png' },
+     { name: 'Item 3', icon: 'items/8.png' },
+     { name: 'Item 4', icon: 'items/gen/item_row_12_col_09.png' }
     ]
   },
    {
@@ -635,10 +648,10 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
+     { name: 'Item 1', icon: 'items/gen/item_row_11_col_07.png' },
+     { name: 'Item 2', icon: 'items/gen/item_row_09_col_03.png' },
      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-     { name: 'Item 4', icon: 'items/c_bat_162.png' }
+     { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
   },
    {
@@ -648,9 +661,9 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
+     { name: 'Item 1', icon: 'items/gen/item_row_11_col_05.png' },
+     { name: 'Item 2', icon: 'items/c_bat_186.png' },
+     { name: 'Item 3', icon: 'items/gen/item_row_12_col_05.png' },
      { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
@@ -661,10 +674,10 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
-     { name: 'Item 4', icon: 'items/c_bat_162.png' }
+     { name: 'Item 1', icon: 'items/gen/item_row_11_col_06.png' },
+     { name: 'Item 2', icon: 'items/c_bat_186.png' },
+     { name: 'Item 3', icon: 'items/gen/item_row_12_col_05.png' },
+     { name: 'Item 4', icon: 'items/c_bat_165.png' }
     ]
   },
    {
@@ -674,10 +687,10 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
-     { name: 'Item 4', icon: 'items/c_bat_162.png' }
+     { name: 'Item 1', icon: 'items/gen/item_row_10_col_09.png' },
+     { name: 'Item 2', icon: 'items/c_bat_186.png' },
+     { name: 'Item 3', icon: 'items/c_bat_198.png' },
+     { name: 'Item 4', icon: 'items/c_bat_165.png' }
     ]
   },
    {
@@ -687,8 +700,8 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
+     { name: 'Item 1', icon: 'items/gen/item_row_12_col_01.png' },
+     { name: 'Item 2', icon: 'items/c_bat_213.png' },
      { name: 'Item 3', icon: 'items/c_bat_186.png' },
      { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
@@ -700,10 +713,23 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
+     { name: 'Item 1', icon: 'items/gen/item_row_12_col_02.png' },
+     { name: 'Item 2', icon: 'items/8.png' },
+     { name: 'Item 3', icon: 'items/c_bat_174.png' },
      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+     {
+    name: 'Hiruzen Sarutobi',
+    image: 'characters/l_hrz1.png',
+    dashcutType: '',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+     { name: 'Item 1', icon: 'items/gen/item_row_10_col_08.png' },
+     { name: 'Item 2', icon: 'items/c_bat_186.png' },
+     { name: 'Item 3', icon: 'items/c_bat_171.png' },
+     { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
   },
    {
@@ -713,10 +739,10 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
-     { name: 'Item 4', icon: 'items/c_bat_162.png' }
+     { name: 'Item 1', icon: 'items/s2/item_row_03_col_2.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_165.png' }
     ]
   },
    {
@@ -726,10 +752,10 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
-     { name: 'Item 4', icon: 'items/c_bat_162.png' }
+     { name: 'Item 1', icon: 'items/s2/item_row_04_col_10.png' },
+      { name: 'Item 2', icon: 'items/11.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
   },
    {
@@ -739,10 +765,10 @@ export class StormGen {
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
     itemsets: [
-     { name: 'Item 1', icon: 'items/s2/item_row_06_col_04.png' },
-     { name: 'Item 2', icon: 'items/c_bat_168.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
-     { name: 'Item 4', icon: 'items/c_bat_162.png' }
+     { name: 'Item 1', icon: 'items/s2/item_row_03_col_03.png' },
+      { name: 'Item 2', icon: 'items/c_bat_206.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
 

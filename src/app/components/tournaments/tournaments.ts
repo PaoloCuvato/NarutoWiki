@@ -37,6 +37,8 @@ export class Tournaments implements OnInit {
 
   // Gestione modal popup
   displayModal: boolean = false;
+  // Variabile per controllare il popup della feature futura
+  displayFutureModal: boolean = false;
   
   // Variabile per gestire lo stato di caricamento (spinner)
   isLoading: boolean = false;
@@ -182,6 +184,7 @@ this.pastTournaments = mappedTournaments.slice(8, 14);
         detail: 'Tournament created and synced successfully.'
       });
     }
+    this.displayFutureModal = true;
   }
 
   resetForm() {

@@ -110,6 +110,37 @@
   }
 </div>
 
+<!-- Popup p-dialog Feature in Futuro -->
+<!-- Popup p-dialog Feature in Futuro -->
+  <p-dialog 
+    [(visible)]="displayFutureModal" 
+    [modal]="true" 
+    [dismissableMask]="true"
+    [draggable]="false"
+    [resizable]="false"
+    styleClass="purple-tournament-dialog">
+
+    <!-- Header nativo PrimeNG: mette il titolo sulla stessa riga della X -->
+    <ng-template pTemplate="header">
+      <h3 style="color: #ffffff;">Feature Coming Soon</h3>
+    </ng-template>
+
+    <!-- Contenuto con testo sotto e bottone -->
+    <div class="future-dialog-content">
+      <p style="color: #ffffff ">Tournament creation is a feature that will be added in the future. 
+        We apologize for the inconvenience we will try our best to implement it soon.</p>
+      
+      <div class="future-footer">
+        <p-button 
+          label="Got it" 
+          icon="pi pi-check" 
+          (click)="displayFutureModal = false" 
+          styleClass="p-button-purple">
+        </p-button>
+      </div>
+    </div>
+  </p-dialog>
+
 <!-- Modal Popup PrimeNG -->
 <p-dialog 
   [(visible)]="displayModal" 

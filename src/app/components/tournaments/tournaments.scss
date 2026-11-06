@@ -539,4 +539,80 @@
   flex-shrink: 0;
 }
 
+//* Stile personalizzato per il p-dialog dei tornei in arrivo */
+::ng-deep .purple-tournament-dialog {
+  border: 1px solid #8e31e6 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 0 30px rgba(150, 47, 247, 0.527), 0 10px 30px rgba(0, 0, 0, 0.9) !important;
+  width: 90% !important;
+  max-width: 450px !important;
+  overflow: hidden !important;
+
+  /* Sfondo coerente e pulito per header, contenuto e footer del popup */
+  .p-dialog-header,
+  .p-dialog-content,
+  .p-dialog-footer {
+    background: #121216 !important;
+    color: #ffffff !important;
+    border: none !important;
+  }
+
+  .p-dialog-header {
+    padding: 1.25rem 1.25rem 0.5rem 1.25rem !important;
+
+    .p-dialog-header-close {
+      color: #fcfafa !important;
+      outline: none !important;
+      &:hover {
+        color: #7b0ee0 !important;
+        background: rgba(168, 85, 247, 0.15) !important;
+      }
+    }
+  }
+
+  .p-dialog-content {
+    padding: 0 1.25rem 1.25rem 1.25rem !important;
+  }
+}
+
+/* Titolo personalizzato nell'header (sullo stesso livello della X) */
+.dialog-title-custom {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff ;
+  margin: 0 !important;
+  line-height: 1.2;
+}
+
+/* Layout interno del popup */
+.future-dialog-content {
+  background: #121216;
+  color: #ffffff;
+
+  p {
+    color: #cbd5e1 !important;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .future-footer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    button {
+      background: #a955f7c0 !important;
+      border: none !important;
+      color: #ffffff !important;
+      padding: 8px 20px !important;
+      font-weight: 600;
+      
+      &:hover {
+        background: #9233eab6 !important;
+      }
+    }
+  }
+}
+
 }

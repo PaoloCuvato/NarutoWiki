@@ -212,125 +212,34 @@ export class StormGen {
       ]
     },
     {
-      name: 'Kakashi Hatake',
-      image: 'characters/l_kks2.png',
-      dashcutIcon: '/support_type/asst_sp_guard.png',
-      dashcutType: 'Charge Guard',
-      tierIcon: 'rate_a_l.png',
-      itemsets: [
-        { name: 'Item 1', icon: 'items/s1/item_row_04_col_04.png' },
-        { name: 'Item 2', icon: 'items/c_bat_186.png' },
-        { name: 'Item 3', icon: 'items/c_bat_171.png' },
-        { name: 'Item 4', icon: 'items/c_bat_213.png' }
-      ]
-    },
-    {
-      name: 'Might Guy',
-      image: 'characters/l_guy1.png',
-      dashcutIcon: '/support_type/asst_sp_cut.png',
-      dashcutType: 'Dashcut',
-      tierIcon: 'rate_a_l.png',
-      itemsets: [
-        { name: 'Item 1', icon: 'items/s1/item_row_04_col_05.png' },
-        { name: 'Item 2', icon: 'items/c_bat_168.png' },
-        { name: 'Item 3', icon: 'items/c_bat_174.png' },
-        { name: 'Item 4', icon: 'items/c_bat_216.png' }
-      ]
-    },
-    {
-      name: 'Hiruzen Sarutobi',
-      image: 'characters/l_hrz1.png',
+      name: 'Kimimaro',
+      image: 'characters/l_kmm1.png',
       dashcutType: 'Secret Substitution',
       dashcutIcon: '/support_type/asst_scf_oug.png',
-      tierIcon: 'rate_a_l.png',
-      itemsets: [
-        { name: 'Item 1', icon: 'items/s1/item_row_04_col_08.png' },
-        { name: 'Item 2', icon: 'items/c_bat_186.png' },
-        { name: 'Item 3', icon: 'items/c_bat_171.png' },
-        { name: 'Item 4', icon: 'items/c_bat_198.png' }
-      ]
-    },
-    {
-      name: 'Tsunade Senju',
-      image: 'characters/l_tnd1.png',
-      dashcutIcon: '/support_type/asst_sp_ckr.png',
-      dashcutType: 'Charge Assist',
-      tierIcon: 'rate_a_l.png',
-      itemsets: [
-        { name: 'Item 1', icon: 'items/s1/item_row_04_col_07.png' },
-        { name: 'Item 2', icon: 'items/c_bat_198.png' },
-        { name: 'Item 3', icon: 'items/c_bat_183.png' },
-        { name: 'Item 4', icon: 'items/c_bat_162.png' }
-      ]
-    },
-    {
-      name: 'Jiraiya',
-      image: 'characters/l_jry1.png',
-      dashcutType: 'Secret Substitution',
-      dashcutIcon: '/support_type/asst_scf_oug.png',
-      tierIcon: 'rate_a_l.png',
-      itemsets: [
-        { name: 'Item 1', icon: 'items/s1/item_row_04_col_06.png' },
-        { name: 'Item 2', icon: 'items/c_bat_213.png' },
-        { name: 'Item 3', icon: 'items/c_bat_216.png' },
-        { name: 'Item 4', icon: 'items/c_bat_165.png' }
-      ]
-    },
-    {
-      name: 'Orochimaru',
-      image: 'characters/l_orc1.png',
-      dashcutType: 'Break Guard',
-      dashcutIcon: '/support_type/asst_at_guard.png',
-      tierIcon: 'rate_a_l.png',
-      itemsets: [
-        { name: 'Item 1', icon: 'items/s1/item_row_04_col_09.png' },
-        { name: 'Item 2', icon: 'items/c_bat_213.png' },
-        { name: 'Item 3', icon: 'items/c_bat_177.png' },
-        { name: 'Item 4', icon: 'items/c_bat_183.png' }
-      ]
-    },
-    {
-      name: 'Itachi Uchiha',
-      image: 'characters/l_itc1.png',
-      dashcutIcon: '/support_type/asst_sp_guard.png',
-      dashcutType: 'Charge Guard',
-      tierIcon: 'rate_a_l.png',
-      itemsets: [
-        { name: 'Item 1', icon: 'items/s1/item_row_05_col_02.png' },
-        { name: 'Item 2', icon: 'items/c_bat_186.png' },
-        { name: 'Item 3', icon: 'items/c_bat_180.png' },
-        { name: 'Item 4', icon: 'items/c_bat_198.png' }
-      ]
-    },
-    {
-      name: 'Kisame Hoshigaki',
-      image: 'characters/l_ksm1.png',
-      dashcutType: 'Break Guard',
-      dashcutIcon: '/support_type/asst_at_guard.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
         { name: 'Item 1', icon: 'items/s1/item_row_05_col_01.png' },
-        { name: 'Item 2', icon: 'items/c_bat_168.png' },
-        { name: 'Item 3', icon: 'items/c_bat_177.png' },
-        { name: 'Item 4', icon: 'items/c_bat_183.png' }
+        { name: 'Item 2', icon: 'items/c_bat_213.png' },
+        { name: 'Item 3', icon: 'items/c_bat_171.png' },
+        { name: 'Item 4', icon: 'items/c_bat_198.png' }
       ]
     },
-    {
-      name: 'Kabuto Yakushi',
-      image: 'characters/l_kbt1.png',
-      dashcutIcon: '/support_type/asst_sp_ckr.png',
-      dashcutType: 'Charge Assist',
+        {
+      name: 'haku',
+      image: 'characters/l_hak2.png',
+      dashcutType: 'Secret Substitution',
+      dashcutIcon: '/support_type/asst_scf_oug.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/s1/item_row_04_col_10.png' },
-        { name: 'Item 2', icon: 'items/c_bat_216.png' },
-        { name: 'Item 3', icon: 'items/c_bat_168.png' },
-        { name: 'Item 4', icon: 'items/c_bat_162.png' }
+        { name: 'Item 1', icon: 'items/s1/item_row_05_col_01.png' },
+        { name: 'Item 2', icon: 'items/c_bat_213.png' },
+        { name: 'Item 3', icon: 'items/c_bat_171.png' },
+        { name: 'Item 4', icon: 'items/c_bat_198.png' }
       ]
     },
-    {
-      name: 'Kimimaro',
-      image: 'characters/l_kmm1.png',
+        {
+      name: 'Zabusa Momochi',
+      image: 'characters/l_zbz1.png',
       dashcutType: 'Secret Substitution',
       dashcutIcon: '/support_type/asst_scf_oug.png',
       tierIcon: 'rate_a_l.png',

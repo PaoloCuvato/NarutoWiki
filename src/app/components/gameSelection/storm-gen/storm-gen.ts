@@ -1012,113 +1012,138 @@ export class StormGen {
   // Dati di prova per i supporti
   supportCharacters = [
     {
-      name: 'Asuma Sarutobi',
-      image: 'characters/l_asm1.png',
+      name: 'Darui',
+      image: 'characters/l_dri1.png',
       dashcutType: 'Secret Substitution',
-      dashcutIcon: '/support_type/asst_scf_oug.png',
+      dashcutIcon: '/support_type/none.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'rate_a_l.png' },
-        { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
     {
       name: 'Kurenai Yuhi',
       image: 'characters/i_kur.png',
-      dashcutIcon: '/support_type/asst_sp_cover.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Coverfire',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'rate_a_l.png' },
-        { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
     {
       name: 'Shizune Kato',
       image: 'characters/i_shi.png',
       dashcutType: 'Strikeback',
-      dashcutIcon: '/support_type/asst_at_counter.png',
+      dashcutIcon: '/support_type/none.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'rate_a_l.png' },
-        { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
     {
       name: 'Anko Mitarashi',
       image: 'characters/i_anko.png',
       dashcutType: 'Strikeback',
-      dashcutIcon: '/support_type/asst_at_counter.png',
+      dashcutIcon: '/support_type/none.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'rate_a_l.png' },
-        { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
     {
-      name: 'First Hokage',
-      image: 'characters/l_hsm1.png',
-      dashcutIcon: '/support_type/asst_sp_guard.png',
+      name: 'Cee',
+      image: 'characters/Cee.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Charge Guard',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'rate_a_l.png' },
-        { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
     {
-      name: 'Second Hokage',
-      image: 'characters/l_tbm1.png',
-      dashcutIcon: '/support_type/asst_at_counter.png',
+      name: 'Chojuro',
+      image: 'characters/chojuro.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Strikeback',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'rate_a_l.png' },
-        { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
     {
       name: 'Jirobo',
       image: 'characters/l_jrb1.png',
       dashcutType: 'Break Guard',
-      dashcutIcon: '/support_type/asst_at_guard.png',
+      dashcutIcon: '/support_type/none.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'rate_a_l.png' },
-        { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
     {
       name: 'Kidomaru',
       image: 'characters/l_kdm1.png',
-      dashcutIcon: '/support_type/asst_sp_cover.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Coverfire',
       tierIcon: 'rate_a_l.png',    
       itemsets: [
-        { name: 'Item 1', icon: 'rate_a_l.png' },
-        { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
     {
       name: 'Sakon',
       image: 'characters/l_skn1.png',
-      dashcutIcon: '/support_type/asst_sp_guard.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Charge Guard',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'rate_a_l.png' },
-        { name: 'Item 2', icon: 'rate_b_l.png' }
       ]
     },
     {
       name: 'Tayuya',
       image: 'characters/l_tyy1.png',
       dashcutType: 'Strikeback',
-      dashcutIcon: '/support_type/asst_at_counter.png',
+      dashcutIcon: '/support_type/none.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'rate_a_l.png' },
-        { name: 'Item 2', icon: 'rate_b_l.png' }
+      ]
+    },
+        {
+      name: 'Ao',
+      image: 'characters/Ao.png',
+      dashcutType: 'Strikeback',
+      dashcutIcon: '/support_type/none.png',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+      ]
+    },
+     {
+      name: 'Akatsuchi',
+      image: 'characters/akatsuchi.png',
+      dashcutType: 'Strikeback',
+      dashcutIcon: '/support_type/none.png',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+      ]
+    },
+            {
+      name: 'Kurotsuchi',
+      image: 'characters/Kurotsuchi.png',
+      dashcutType: 'Strikeback',
+      dashcutIcon: '/support_type/none.png',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+      ]
+    },
+     {
+      name: 'Foo',
+      image: 'characters/Foo.png',
+      dashcutType: 'Strikeback',
+      dashcutIcon: '/support_type/none.png',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+      ]
+    },
+      {
+      name: 'Torune',
+      image: 'characters/Torune.png',
+      dashcutType: 'Strikeback',
+      dashcutIcon: '/support_type/none.png',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
       ]
     }
   ];

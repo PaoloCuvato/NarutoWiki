@@ -751,7 +751,7 @@ export class StormGen {
       name: 'Naruto Uzumaki',
       image: 'characters/l_nrt1.png',
       dashcutType: 'Strikeback',
-      dashcutIcon: '/support_type/asst_at_counter.png',
+      dashcutIcon: '/support_type/none.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
         { name: 'Item 1', icon: 'items/s1/item_row_02_col_09.png' },
@@ -763,7 +763,7 @@ export class StormGen {
     {
       name: 'Sasuke Uchiha',
       image: 'characters/l_ssk1.png',
-      dashcutIcon: '/support_type/asst_sp_cover.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Coverfire',
       tierIcon: 'rate_a_l.png',
       itemsets: [
@@ -776,7 +776,7 @@ export class StormGen {
     {
       name: 'Sakura Haruno',
       image: 'characters/l_skr1.png',
-      dashcutIcon: '/support_type/asst_sp_ckr.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Charge Assist',
       tierIcon: 'rate_a_l.png',
       itemsets: [
@@ -790,7 +790,7 @@ export class StormGen {
       name: 'Neji Hyuga',
       image: 'characters/l_nej1.png',
       dashcutType: 'Secret Substitution',
-      dashcutIcon: '/support_type/asst_scf_oug.png',
+      dashcutIcon: '/support_type/none.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
         { name: 'Item 1', icon: 'items/s1/item_row_03_col_03.png' },
@@ -802,7 +802,7 @@ export class StormGen {
     {
       name: 'Tenten',
       image: 'characters/l_ten1.png',
-      dashcutIcon: '/support_type/asst_sp_cover.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Coverfire',
       tierIcon: 'rate_a_l.png',
       itemsets: [
@@ -815,7 +815,7 @@ export class StormGen {
     {
       name: 'Rock Lee',
       image: 'characters/l_roc1.png',
-      dashcutIcon: 'strikeback.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'strikeback',
       tierIcon: 'rate_a_l.png',
       itemsets: [
@@ -828,7 +828,7 @@ export class StormGen {
     {
       name: 'Shikamaru Nara',
       image: 'characters/l_sik1.png',
-      dashcutIcon: '/support_type/asst_sp_cover.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Coverfire',
       tierIcon: 'rate_a_l.png',
       itemsets: [
@@ -841,7 +841,7 @@ export class StormGen {
     {
       name: 'Ino Yamanaka',
       image: 'characters/l_ino1.png',
-      dashcutIcon: '/support_type/asst_sp_ckr.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Charge Assist',
       tierIcon: 'rate_a_l.png',
       itemsets: [
@@ -854,7 +854,7 @@ export class StormGen {
     {
       name: 'Choji Akimichi',
       image: 'characters/l_tyo1.png',
-      dashcutIcon: '/support_type/asst_sp_cut.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Dashcut',
       tierIcon: 'rate_a_l.png',
       itemsets: [
@@ -867,7 +867,7 @@ export class StormGen {
     {
       name: 'Hinata Hyuga',
       image: 'characters/l_hnt1.png',
-      dashcutIcon: '/support_type/asst_sp_ckr.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Charge Assist',
       tierIcon: 'rate_a_l.png',
       itemsets: [
@@ -880,7 +880,7 @@ export class StormGen {
     {
       name: 'Kiba Inuzuka',
       image: 'characters/l_kib1.png',
-      dashcutIcon: 'strikeback.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Strikeback',
       tierIcon: 'rate_a_l.png',
       itemsets: [
@@ -894,7 +894,7 @@ export class StormGen {
       name: 'Shino Aburame',
       image: 'characters/l_sin1.png',
       dashcutType: 'Break Guard',
-      dashcutIcon: '/support_type/asst_at_guard.png',
+      dashcutIcon: '/support_type/none.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
         { name: 'Item 1', icon: 'items/s1/item_row_03_col_09.png' },
@@ -906,7 +906,7 @@ export class StormGen {
     {
       name: 'Gaara',
       image: 'characters/l_gar1.png',
-      dashcutIcon: '/support_type/asst_sp_guard.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Charge Guard',
       tierIcon: 'rate_a_l.png',
       itemsets: [
@@ -919,7 +919,7 @@ export class StormGen {
     {
       name: 'Temari',
       image: 'characters/l_tmr1.png',
-      dashcutIcon: '/support_type/asst_sp_cover.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Coverfire',
       tierIcon: 'rate_a_l.png',
       itemsets: [
@@ -932,7 +932,7 @@ export class StormGen {
     {
       name: 'Kankuro',
       image: 'characters/l_knk1.png',
-      dashcutIcon: '/support_type/asst_sp_guard.png',
+      dashcutIcon: '/support_type/none.png',
       dashcutType: 'Charge Guard',
       tierIcon: 'rate_a_l.png',
       itemsets: [
@@ -946,7 +946,7 @@ export class StormGen {
       name: 'Kimimaro',
       image: 'characters/l_kmm1.png',
       dashcutType: 'Secret Substitution',
-      dashcutIcon: '/support_type/asst_scf_oug.png',
+      dashcutIcon: '/support_type/none.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
         { name: 'Item 1', icon: 'items/s1/item_row_05_col_01.png' },
@@ -959,7 +959,7 @@ export class StormGen {
       name: 'haku',
       image: 'characters/l_hak2.png',
       dashcutType: 'Secret Substitution',
-      dashcutIcon: '/support_type/asst_scf_oug.png',
+      dashcutIcon: '/support_type/none.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
         { name: 'Item 1', icon: 'items/gen/item_row_11_col_09.png' },
@@ -972,10 +972,10 @@ export class StormGen {
       name: 'Zabusa Momochi',
       image: 'characters/l_zbz1.png',
       dashcutType: 'Secret Substitution',
-      dashcutIcon: '/support_type/asst_scf_oug.png',
+      dashcutIcon: '/support_type/none.png',
       tierIcon: 'rate_a_l.png',
       itemsets: [
-        { name: 'Item 1', icon: 'items/s1/item_row_11_col_10.png' },
+        { name: 'Item 1', icon: 'items/gen/item_row_11_col_10.png' },
         { name: 'Item 2', icon: 'items/c_bat_186.png' },
         { name: 'Item 3', icon: 'items/c_bat_213.png' },
         { name: 'Item 4', icon: 'items/gen/item_row_12_col_07.png' },

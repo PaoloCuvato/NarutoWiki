@@ -775,7 +775,7 @@ export class Storm3 {
   */
     {
     name: 'TBB Naruto',
-    image: 'characters/kcm naruto.png',
+    image: 'characters/l_nrt4.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',

@@ -78,7 +78,8 @@ lobbies: LobbyModal[] = [
   ngOnInit() {
     this.lobbyService.getLobbies().subscribe({
       next: (data: LobbyModal[]) => {
-        this.lobbies = data;
+        this.lobbies = data; // Inverti l'ordine dei dati ricevuti
+        console.log("Lobbies ricevute dal server:", data); //
       },
       error: (err) => {
         console.error('Errore caricamento lobbies:', err);

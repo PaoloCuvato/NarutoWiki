@@ -31,9 +31,8 @@
       <div class="lobbies-panel">
         <div class="lobby-container">
 
-          @for (lobby of (lobbies | slice:0:7); track lobby.PostId) {
-
-            <p-card
+          @for (lobby of (lobbies | slice:0:7); track lobby.PostId || $index) {
+              <p-card
               class="naruto-card"
               [style]="{
                 'width': '330px',
@@ -53,8 +52,8 @@
                   />
 
                   <p-tag
-                    [value]="lobby.Status.toUpperCase() === 'ACTIVE' ? 'ACTIVE' : 'CLOSED'"
-                    [severity]="lobby.Status.toUpperCase() === 'ACTIVE' ? 'success' : 'danger'">
+                    [value]="(lobby.Status || '').toUpperCase() === 'ACTIVE' ? 'ACTIVE' : 'CLOSED'"
+                    [severity]="(lobby.Status || '').toUpperCase() === 'ACTIVE' ? 'success' : 'danger'">
                   </p-tag>
                 </div>
               </ng-template>

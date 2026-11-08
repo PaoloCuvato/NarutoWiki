@@ -173,6 +173,293 @@ export class Storm4 {
       { name: 'Item 4', icon: 'items/c_bat_203.png' }
     ]
   },
+  // storm 4 characters
+  {
+    name: 'Six Paths Naruto',
+    image: 'characters/l_nrt6.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+    {
+    name: 'Rinne Sasuke',
+    image: 'characters/l_ssk8.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_186.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+    ]
+  },
+    {
+    name: 'Sakura',
+    image: 'characters/l_skr4.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_203.png' }
+    ]
+  },
+    {
+    name: 'Hinata Hyuga',
+    image: 'characters/l_hnt4.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+    ]
+  },
+    {
+    name: 'Rin Nohara',
+    image: 'characters/l_rin1.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_155.png' }
+    ]
+  },
+    {
+    name: 'Six Paths Madara',
+    image: 'characters/l_mdr5.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+    {
+    name: 'Six Paths Obito',
+    image: 'characters/l_obt3.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+      {
+    name: 'Rampage Obito',
+    image: 'characters/l_obt4.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+    {
+    name: 'kaguya',
+    image: 'characters/l_kgy1.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+    {
+    name: 'The Last Naruto',
+    image: 'characters/l_nrt7.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/11.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+      {
+    name: 'RTB Naruto',
+    image: 'characters/l_nrt8.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/11.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+    {
+    name: 'The Last Sasuke',
+    image: 'characters/l_ssk9.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_186.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+    ]
+  },
+      {
+    name: 'RTB Sasuke',
+    image: 'characters/l_ssk10.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_186.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+    ]
+  },
+      {
+    name: 'Boruto Uzumaki',
+    image: 'characters/l_brt1.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+    ]
+  },
+        {
+    name: 'Boruto Uzumaki',
+    image: 'characters/l_brt2.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+    ]
+  },      {
+    name: 'Boruto Uzumaki',
+    image: 'characters/l_brt4.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+    ]
+  },
+    {
+    name: 'Sarada Uchiha',
+    image: 'characters/l_sld1.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+      {
+    name: 'Sarada Uchiha',
+    image: 'characters/l_sld2.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+      {
+    name: 'Mitsuki',
+    image: 'characters/l_mtk1.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_206.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/3.png' }
+    ]
+  },
+    {
+    name: 'Hanabi Hyuga',
+    image: 'characters/l_hnb1.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_203.png' }
+    ]
+  },
+      {
+    name: 'Momoshiki Ōtsutsuki',
+    image: 'characters/l_msk2.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+    ]
+  },
+      {
+    name: 'Kinshiki Ōtsutsuki',
+    image: 'characters/l_ksk3.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_174.png' },
+      { name: 'Item 3', icon: 'items/11.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+
+  // end of storm 4 characters
   {
     name: 'Kabuto',
     image: 'characters/l_kbt1.png',

@@ -1590,11 +1590,9 @@ export class StormRev {
     );
   }
 
-  // --- AGGIUNGI QUESTE VARIABILI ---
   isModalOpen: boolean = false;
   selectedCharacter: any = null;
 
-  // --- AGGIUNGI QUESTO METODO ---
   onCardClick(character: any) {
     this.selectedCharacter = character; // Salva il personaggio cliccato
     this.isModalOpen = true;            // Apre la modale

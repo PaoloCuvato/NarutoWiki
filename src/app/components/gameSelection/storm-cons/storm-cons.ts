@@ -2191,12 +2191,53 @@ export class StormCons {
       character.name.toLocaleLowerCase().includes(query)
     );
   }
+  /*
+      # ==========================================
+      # ROBOTS.TXT - STRICT ANTI-SCRAPING & ANTI-AI
+      # ==========================================
 
-  // --- AGGIUNGI QUESTE VARIABILI ---
+      User-agent: *
+      Disallow: /
+
+      # Specific AI Scraper & Web Crawler Blocklist
+      User-agent: GPTBot
+      Disallow: /
+
+      User-agent: ChatGPT-User
+      Disallow: /
+
+      User-agent: CCBot
+      Disallow: /
+
+      User-agent: Google-Extended
+      Disallow: /
+
+      User-agent: Anthropic AI
+      Disallow: /
+
+      User-agent: ClaudeBot
+      Disallow: /
+
+      User-agent: PerplexityBot
+      Disallow: /
+
+      User-agent: Bytespider
+      Disallow: /
+
+      User-agent: Diffbot
+      Disallow: /
+
+      User-agent: FacebookBot
+      Disallow: /
+
+      User-agent: OmegleBot
+      Disallow: /
+
+  */
+
   isModalOpen: boolean = false;
   selectedCharacter: any = null;
 
-  // --- AGGIUNGI QUESTO METODO ---
   onCardClick(character: any) {
     this.selectedCharacter = character; // Salva il personaggio cliccato
     this.isModalOpen = true;            // Apre la modale

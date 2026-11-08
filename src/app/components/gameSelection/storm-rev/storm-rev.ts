@@ -1322,6 +1322,78 @@ export class StormRev {
       tierIcon: 'rate_a_l.png',
       itemsets: [
       ]
+    },
+    {
+      name: 'Kurenai Yuhi',
+      image: 'characters/i_kur.png',
+      dashcutIcon: '/support_type/none.png',
+      dashcutType: 'Coverfire',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+       // { name: 'Item 1', icon: 'rate_a_l.png' },
+       // { name: 'Item 2', icon: 'rate_b_l.png' }
+      ]
+    },
+    {
+      name: 'Shizune Kato',
+      image: 'characters/i_shi.png',
+      dashcutType: 'Strikeback',
+      dashcutIcon: '/support_type/none.png',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+
+      ]
+    },
+    {
+      name: 'Anko Mitarashi',
+      image: 'characters/i_anko.png',
+      dashcutType: 'Strikeback',
+      dashcutIcon: '/support_type/none.png',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+
+      ]
+    },
+    {
+      name: 'Jirobo',
+      image: 'characters/l_jrb1.png',
+      dashcutType: 'Break Guard',
+      dashcutIcon: '/support_type/none.png',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+
+      ]
+    },
+    {
+      name: 'Kidomaru',
+      image: 'characters/l_kdm1.png',
+      dashcutIcon: '/support_type/none.png',
+      dashcutType: 'Coverfire',
+      tierIcon: 'rate_a_l.png',    
+      itemsets: [
+
+
+      ]
+    },
+    {
+      name: 'Sakon',
+      image: 'characters/l_skn1.png',
+      dashcutIcon: '/support_type/none.png',
+      dashcutType: 'Charge Guard',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+
+      ]
+    },
+    {
+      name: 'Tayuya',
+      image: 'characters/l_tyy1.png',
+      dashcutType: 'Strikeback',
+      dashcutIcon: '/support_type/none.png',
+      tierIcon: 'rate_a_l.png',
+      itemsets: [
+
+      ]
     }
   ];
 

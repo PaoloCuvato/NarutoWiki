@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Output, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Output, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -14,20 +14,29 @@ export class Footer implements OnInit {
 
   @Output() openCookieBanner = new EventEmitter<void>();
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit() {
-    const consent = localStorage.getItem('cookie_consent');
-    if (!consent) {
-      this.showBanner = true;
+    // Esegue il controllo di localStorage SOLO quando siamo nel browser (evita l'errore SSR)
+    if (isPlatformBrowser(this.platformId)) {
+      const consent = localStorage.getItem('cookie_consent');
+      if (!consent) {
+        this.showBanner = true;
+      }
     }
   }
 
   acceptAll() {
-    localStorage.setItem('cookie_consent', 'accepted');
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('cookie_consent', 'accepted');
+    }
     this.showBanner = false;
   }
 
   rejectAll() {
-    localStorage.setItem('cookie_consent', 'rejected');
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('cookie_consent', 'rejected');
+    }
     this.showBanner = false;
   }
 

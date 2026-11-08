@@ -1793,7 +1793,204 @@ export class Storm4 {
         { name: 'Item 3', icon: 'items/8.png' },
         { name: 'Item 4', icon: 'items/c_bat_198.png' }
       ]
-    }
+    },
+
+    // rtb characters
+    {
+    name: 'Naruto RTB',
+    image: 'characters/l_nrt12.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/asst_at_counter.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/11.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+  {
+    name: 'Sasuke RTB',
+    image: 'characters/l_ssk12.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/asst_sp_cover.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_186.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+    ]
+  },
+  {
+    name: 'Sakura RTB',
+    image: 'characters/l_skr4.png',
+    dashcutType: 'Strikeback',
+    dashcutIcon: '/support_type/asst_sp_ckr.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_203.png' }
+    ]
+  },
+  {
+    name: 'Sai RTB',
+    image: 'characters/l_sai1.png',
+    dashcutType: '',
+    dashcutIcon: '/support_type/asst_sp_cover.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_183.png' },
+      { name: 'Item 3', icon: 'items/c_bat_174.png' },
+      { name: 'Item 4', icon: 'items/c_bat_165.png' },
+    ]
+  },
+  {
+    name: 'Shikamaru RTB',
+    image: 'characters/l_sik3.png',
+    dashcutType: 'Break Guard',
+    dashcutIcon: '/support_type/asst_sp_cover.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_174.png' },
+      { name: 'Item 3', icon: 'items/c_bat_183.png' },
+      { name: 'Item 4', icon: 'items/3.png' }
+    ]
+  },
+  {
+    name: 'Ino RTB',
+    image: 'characters/l_ino2.png',
+    dashcutType: '',
+    dashcutIcon: '/support_type/asst_sp_ckr.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_206.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+    ]
+  },
+  {
+    name: 'Choji RTB',
+    image: 'characters/l_tyo2.png',
+    dashcutType: '',
+    dashcutIcon: '/support_type/asst_sp_cut.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_203.png' }
+    ]
+  },
+  {
+    name: 'Kiba RTB',
+    image: 'characters/l_kib2.png',
+    dashcutType: 'Charge Assist',
+    dashcutIcon: '/support_type/asst_at_counter.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/11.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+  {
+    name: 'Hinata RTB',
+    image: 'characters/l_hnt2.png',
+    dashcutType: '',
+    dashcutIcon: '/support_type/asst_sp_ckr.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/3.png' }
+    ]
+  },
+  {
+    name: 'Rock Lee RTB',
+    image: 'characters/l_roc2.png',
+    dashcutType: 'Charge Assist',
+    dashcutIcon: '/support_type/asst_at_counter.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+    ]
+  },
+  {
+    name: 'Ten ten RTB',
+    image: 'characters/l_ten2.png',
+    dashcutType: 'Secret Substitution',
+    dashcutIcon: '/support_type/asst_sp_cover.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+  {
+    name: 'Shino RTB',
+    image: 'characters/l_sin2.png',
+    dashcutType: 'Break Guard',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/3.png' }
+    ]
+  },
+  {
+    name: 'Gaara RTB',
+    image: 'characters/l_gar3.png',
+    dashcutType: 'Charge Assist',
+    dashcutIcon: '/support_type/asst_sp_guard.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+    ]
+  },
+  {
+    name: 'Kankuro RTB',
+    image: 'characters/l_knk3.png',
+    dashcutType: 'Secret Substitution',
+    dashcutIcon: '/support_type/asst_sp_guard.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_206.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },
+  {
+    name: 'Temari RTB',
+    image: 'characters/l_tmr3.png',
+    dashcutType: '',
+    dashcutIcon: '/support_type/asst_sp_cover.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/11.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+    ]
+  },
   ];
   
   searchText = '';

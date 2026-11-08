@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "_comment": "build: ng build",
+    "build": "ng build --configuration production && node obfuscate.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:naruto-wiki": "node dist/naruto-wiki/server/server.mjs"
@@ -36,6 +37,7 @@
     "@primeng/themes": "^21.0.4",
     "@primeuix/themes": "^2.0.3",
     "express": "^5.1.0",
+    "html2canvas": "^1.4.1",
     "primeicons": "^7.0.0",
     "primeng": "^21.1.1",
     "rxjs": "~7.8.0",
@@ -47,6 +49,7 @@
     "@angular/compiler-cli": "^21.1.0",
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
+    "javascript-obfuscator": "^5.10.0",
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"

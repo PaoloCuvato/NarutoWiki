@@ -317,7 +317,7 @@ export class ItemDb {
     ),
     createItem(
       'Hokage Hat',
-      'Grants invisibility.',
+      'Grants invincibility to kunai.',
       'Unique',
       'Ultimate Ninja Storm 1',
       'items/s1/item_row_04_col_08.png'
@@ -648,84 +648,84 @@ export class ItemDb {
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm Generations',
-      'assets/items/generations/seal.png'
+      'items/s2/item_row_04_col_01.png'
     ),
     createItem(
       'Back Pocket',
       'Restores chakra.',
       'Unique',
       'Ultimate Ninja Storm Generations',
-      'assets/items/generations/back-pocket.png'
+      'items/gen/item_row_11_col_05.png'
     ),
     createItem(
       'Snake Cloak',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm Generations',
-      'assets/items/generations/snake-cloak.png'
+      'items/gen/item_row_11_col_07.png'
     ),
     createItem(
       'Senju Charm',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm Generations',
-      'assets/items/generations/senju-charm.png'
+      'items/gen/item_row_12_col_01.png'
     ),
     createItem(
       'Tobirama\'s Face Guard',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm Generations',
-      'assets/items/generations/tobirama-s-face-guard.png'
+      'items/gen/item_row_12_col_02.png'
     ),
     createItem(
       'Mask',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm Generations',
-      'assets/items/generations/mask.png'
+      'items/gen/item_row_11_col_04.png'
     ),
     createItem(
       'Raikage Hat',
       'Increases speed.',
       'Unique',
       'Ultimate Ninja Storm Generations',
-      'assets/items/generations/raikage-hat.png'
+      'items/gen/item_row_11_col_01.png'
     ),
     createItem(
       'Tsuchikage Hat',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm Generations',
-      'assets/items/generations/tsuchikage-hat.png'
+      'items/gen/item_row_11_col_02.png'
     ),
     createItem(
       'Mizukage Hat',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm Generations',
-      'assets/items/generations/mizukage-hat.png'
+      'items/gen/item_row_10_col_10.png'
     ),
     createItem(
       'Zabuza\'s Kunai',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm Generations',
-      'assets/items/generations/zabuza-s-kunai.png'
+      'items/gen/item_row_11_col_10.png'
     ),
     createItem(
       'Mist Anbu Mask',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm Generations',
-      'assets/items/generations/mist-anbu-mask.png'
+      'items/gen/item_row_05_col_02.png'
     ),
     createItem(
       'Sharingan',
       'Restores chakra.',
       'Unique',
       'Ultimate Ninja Storm Generations',
-      'assets/items/generations/sharingan.png'
+      'items/gen/item_row_10_col_09.png'
     ),
 
     // ULTIMATE NINJA STORM 3
@@ -735,105 +735,105 @@ export class ItemDb {
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/seal.png'
+      'items/s2/item_row_04_col_01.png'
     ),
     createItem(
       'Book',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/book.png'
+      '/items/s3/item_r13_c06.png'
     ),
     createItem(
       'Madara\'s Fan',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/madara-s-fan.png'
+      '/items/s3/item_r13_c04.png'
     ),
     createItem(
       'Itachi\'s Scroll',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/itachi-s-scroll.png'
+      '/items/s2/item_row_03_col_05.png'
     ),
     createItem(
       'Eye Drops',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/eye-drops.png'
+      '/items/s3/item_r10_c09.png'
     ),
     createItem(
       'Cleaver Sword',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/cleaver-sword.png'
+      '/items/s3/item_r14_c03.png'
     ),
     createItem(
       'Katana',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/katana.png'
+      '/items/s3/item_r14_c04.png'
     ),
     createItem(
       'Armor',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/armor.png'
+      '/items/s3/item_r13_c05.png'
     ),
     createItem(
       'Poison Fog',
       'Grants poison damage with any attack.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/poison-fog.png'
+      '/items/s3/item_r14_c05.png'
     ),
     createItem(
       'Rosary Beads',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/rosary-beads.png'
+      '/items/s3/item_r13_c08.png'
     ),
     createItem(
       'Flower',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/flower.png'
+      '/items/s2/item_row_06_col_09.png'
     ),
     createItem(
       'Roshi\'s Knife',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/roshi-s-knife.png'
+      '/items/s3/item_r13_c09.png'
     ),
     createItem(
       'Han\'s Gear',
       'Increases defense.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/han-s-gear.png'
+      '/items/s3/item_r13_c10.png'
     ),
     createItem(
       'Bubble Pipe',
       'Increases attack.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/bubble-pipe.png'
+      '/items/s3/item_r13_c07.png'
     ),
     createItem(
       'Fuu\'s Bag',
       'Recovers chakra.',
       'Unique',
       'Ultimate Ninja Storm 3',
-      'assets/items/storm3/fuu-s-bag.png'
+      '/items/s3/item_r14_c01.png'
     )
   ];
 

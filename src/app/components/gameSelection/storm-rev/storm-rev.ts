@@ -350,7 +350,7 @@ export class StormRev {
       { name: 'Item 1', icon: 'items/1.png' },
       { name: 'Item 2', icon: 'items/c_bat_171.png' },
       { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_163.png' }
+      { name: 'Item 4', icon: 'items/c_bat_159.png' }
     ]
   },  {
     name: 'Sharingan Kakashi',

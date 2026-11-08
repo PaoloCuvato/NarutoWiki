@@ -183,6 +183,189 @@ export class StormRev {
       { name: 'Item 4', icon: 'items/c_bat_165.png' }
     ]
   },
+  // rev characters
+  {
+    name: 'Rasa',
+    image: 'characters/l_kkg1.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_183.png' },
+      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+    ]
+  },  {
+    name: '3rd Raikage',
+    image: 'characters/l_rkf1.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_198.png' },
+      { name: 'Item 4', icon: 'items/c_bat_203.png' }
+    ]
+  },  {
+    name: 'Muu',
+    image: 'characters/l_muu1.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_183.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },  {
+    name: 'Gengetsu Hōzuki',
+    image: 'characters/l_mkg1.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/11.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+    ]
+  },  {
+    name: 'Kushina',
+    image: 'characters/l_ksn1.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_174.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_203.png' }
+    ]
+  },  {
+    name: 'Iruka',
+    image: 'characters/l_irk1.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/8.png' },
+      { name: 'Item 3', icon: 'items/c_bat_183.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },  {
+    name: 'Konohamaru Sarutobi',
+    image: 'characters/l_khm1.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_174.png' },
+      { name: 'Item 3', icon: 'items/c_bat_183.png' },
+      { name: 'Item 4', icon: 'items/c_bat_186.png' }
+    ]
+  },  {
+    name: 'KLM Naruto',
+    image: 'characters/l_nrt5.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/11.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },  {
+    name: 'Rinne Rebirth Madara',
+    image: 'characters/l_mdr3.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },{
+    name: 'Mecha Naruto',
+    image: 'characters/l_mnr1.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },  {
+    name: 'Edo Hashirama',
+    image: 'characters/l_hsm3.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    ]
+  },  {
+    name: 'Edo Minato',
+    image: 'characters/l_mnt3.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/11.png' },
+      { name: 'Item 3', icon: 'items/c_bat_183.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+    ]
+  },  {
+    name: 'Shisui Uchiha',
+    image: 'characters/l_ssi1.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/11.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+    ]
+  },  {
+    name: 'GNW Obito',
+    image: 'characters/l_obt2.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_163.png' }
+    ]
+  },  {
+    name: 'Sharingan Kakashi',
+    image: 'characters/l_kks5.png',
+    dashcutType: 'Dashcut',
+    dashcutIcon: '/support_type/none.png',
+    tierIcon: 'rate_a_l.png',
+    itemsets: [
+      { name: 'Item 1', icon: 'items/1.png' },
+      { name: 'Item 2', icon: 'items/11.png' },
+      { name: 'Item 3', icon: 'items/c_bat_183.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+    ]
+  },
+  // end of rev characters
   {
     name: 'Shikamaru',
     image: 'characters/l_sik3.png',

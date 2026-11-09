@@ -202,7 +202,7 @@ export class Storm4 {
   },
     {
     name: 'Sakura',
-    image: 'characters/l_skr4.png',
+    image: 'characters/l_skr5.png',
     dashcutType: 'Strikeback',
     dashcutIcon: '/support_type/asst_sp_ckr.png',
     tierIcon: 'rate_a_l.png',

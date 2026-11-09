@@ -35,9 +35,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_203.png' },
+      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 3', icon: 'items/c_bat_189.png' },
+      { name: 'Item 4', icon: 'items/c_bat_203.png' }
 
     ]
   },
@@ -49,8 +49,8 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [      
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_183.png' },
-      { name: 'Item 3', icon: 'items/c_bat_174.png' },
+      { name: 'Item 2', icon: 'items/c_bat_174.png' },
+      { name: 'Item 3', icon: 'items/c_bat_183.png' },
       { name: 'Item 4', icon: 'items/c_bat_165.png' },]
   },
   {
@@ -61,9 +61,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+      { name: 'Item 2', icon: 'items/c_bat_186.png' },
+      { name: 'Item 3', icon: 'items/c_bat_189.png' },
+      { name: 'Item 4', icon: 'items/c_bat_192.png' }
     ]
   },
   {
@@ -113,9 +113,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_183.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+      { name: 'Item 2', icon: 'items/c_bat_211.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
   {
@@ -126,9 +126,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_198.png' },
+      { name: 'Item 3', icon: 'items/c_bat_183.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
   {
@@ -140,8 +140,8 @@ export class StormEvo {
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
       { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+      { name: 'Item 3', icon: 'items/c_bat_189.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
   },
   {
@@ -166,8 +166,8 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 2', icon: 'items/c_bat_180.png' },
+      { name: 'Item 3', icon: 'items/c_bat_189.png' },
       { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
@@ -179,9 +179,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_186.png' },
+      { name: 'Item 2', icon: 'items/c_bat_198.png' },
       { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 4', icon: 'items/c_bat_209.png' }
     ]
   },
     {
@@ -192,8 +192,8 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 3', icon: 'items/c_bat_189.png' },
       { name: 'Item 4', icon: 'items/c_bat_203.png' }
     ]
   },
@@ -205,9 +205,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 2', icon: 'items/c_bat_168.png' },
       { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+      { name: 'Item 4', icon: 'items/c_bat_180.png' }
     ]
   },
     {
@@ -220,7 +220,7 @@ export class StormEvo {
       { name: 'Item 1', icon: 'items/1.png' },
       { name: 'Item 2', icon: 'items/c_bat_171.png' },
       { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_155.png' }
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
     {
@@ -231,9 +231,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+      { name: 'Item 2', icon: 'items/c_bat_209.png' },
+      { name: 'Item 3', icon: 'items/c_bat_189.png' },
+      { name: 'Item 4', icon: 'items/c_bat_211.png' }
     ]
   },
     {
@@ -245,8 +245,8 @@ export class StormEvo {
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
       { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+      { name: 'Item 3', icon: 'items/c_bat_192.png' },
+      { name: 'Item 4', icon: 'items/8.png' }
     ]
   },
       {
@@ -257,9 +257,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+      { name: 'Item 2', icon: 'items/c_bat_209.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_203.png' }
     ]
   },
     {
@@ -283,8 +283,8 @@ export class StormEvo {
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
       { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/11.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+      { name: 'Item 3', icon: 'items/c_bat_211.png' },
+      { name: 'Item 4', icon: 'items/c_bat_192.png' }
     ]
   },
       {
@@ -296,8 +296,8 @@ export class StormEvo {
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
       { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/11.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+      { name: 'Item 3', icon: 'items/c_bat_211.png' },
+      { name: 'Item 4', icon: 'items/c_bat_192.png' }
     ]
   },
     {
@@ -308,9 +308,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_186.png' },
-      { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_177.png' },
+      { name: 'Item 3', icon: 'items/c_bat_211.png' },
+      { name: 'Item 4', icon: 'items/c_bat_186.png' }
     ]
   },
       {
@@ -321,9 +321,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_186.png' },
-      { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_177.png' },
+      { name: 'Item 3', icon: 'items/c_bat_211.png' },
+      { name: 'Item 4', icon: 'items/c_bat_186.png' }
     ]
   },
       {
@@ -334,9 +334,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_213.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+      { name: 'Item 2', icon: 'items/c_bat_162.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_189.png' }
     ]
   },
         {
@@ -347,9 +347,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_213.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+      { name: 'Item 2', icon: 'items/c_bat_198.png' },
+      { name: 'Item 3', icon: 'items/c_bat_219.png' },
+      { name: 'Item 4', icon: 'items/c_bat_153.png' }
     ]
   },      {
     name: 'Boruto Uzumaki',
@@ -359,7 +359,7 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 2', icon: 'items/c_bat_192.png' },
       { name: 'Item 3', icon: 'items/c_bat_186.png' },
       { name: 'Item 4', icon: 'items/c_bat_165.png' }
     ]
@@ -385,9 +385,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+      { name: 'Item 2', icon: 'items/c_bat_156.png' },
+      { name: 'Item 3', icon: 'items/c_bat_219.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
   },
       {
@@ -411,9 +411,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_203.png' }
+      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_165.png' }
     ]
   },
       {
@@ -424,9 +424,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_174.png' },
+      { name: 'Item 3', icon: 'items/c_bat_216.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
       {
@@ -438,7 +438,7 @@ export class StormEvo {
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
       { name: 'Item 2', icon: 'items/c_bat_174.png' },
-      { name: 'Item 3', icon: 'items/11.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
       { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
@@ -452,9 +452,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_206.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/3.png' }
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_153.png' },
+      { name: 'Item 4', icon: 'items/c_bat_177.png' }
     ]
   },
   {
@@ -563,9 +563,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/11.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 3', icon: 'items/c_bat_177.png' },
+      { name: 'Item 4', icon: 'items/c_bat_203.png' }
     ]
   },  {
     name: 'Rinne Rebirth Madara',
@@ -577,7 +577,7 @@ export class StormEvo {
       { name: 'Item 1', icon: 'items/1.png' },
       { name: 'Item 2', icon: 'items/c_bat_213.png' },
       { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+      { name: 'Item 4', icon: 'items/c_bat_171.png' }
     ]
   },{
     name: 'Mecha Naruto',
@@ -599,9 +599,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 2', icon: 'items/c_bat_153.png' },
       { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+      { name: 'Item 4', icon: 'items/c_bat_211.png' }
     ]
   },  {
     name: 'Edo Minato',
@@ -611,7 +611,7 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
+      { name: 'Item 2', icon: 'items/c_bat_211.png' },
       { name: 'Item 3', icon: 'items/c_bat_183.png' },
       { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
@@ -635,9 +635,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_163.png' }
+      { name: 'Item 2', icon: 'items/c_bat_162.png' },
+      { name: 'Item 3', icon: 'items/c_bat_203.png' },
+      { name: 'Item 4', icon: 'items/c_bat_159.png' }
     ]
   },  {
     name: 'Sharingan Kakashi',
@@ -647,9 +647,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/c_bat_183.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_211.png' },
+      { name: 'Item 3', icon: 'items/c_bat_189.png' },
+      { name: 'Item 4', icon: 'items/c_bat_219.png' }
     ]
   },
   // end of rev characters
@@ -661,9 +661,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_174.png' },
-      { name: 'Item 3', icon: 'items/c_bat_183.png' },
-      { name: 'Item 4', icon: 'items/3.png' }
+      { name: 'Item 2', icon: 'items/c_bat_198.png' },
+      { name: 'Item 3', icon: 'items/c_bat_162.png' },
+      { name: 'Item 4', icon: 'items/c_bat_186.png' }
     ]
   },
   {
@@ -674,9 +674,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_206.png' },
-      { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+      { name: 'Item 2', icon: 'items/c_bat_153.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_171.png' }
     ]
   },
   {
@@ -687,9 +687,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/c_bat_203.png' }
+      { name: 'Item 2', icon: 'items/c_bat_165.png' },
+      { name: 'Item 3', icon: 'items/c_bat_156.png' },
+      { name: 'Item 4', icon: 'items/c_bat_159.png' }
     ]
   },
   // Evo characters
@@ -702,8 +702,8 @@ export class StormEvo {
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
       { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_165.png' }
     ]
   },
     {
@@ -714,9 +714,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_183.png' },
+      { name: 'Item 3', icon: 'items/c_bat_198.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
     {
@@ -727,9 +727,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 3', icon: 'items/c_bat_177.png' },
+      { name: 'Item 4', icon: 'items/c_bat_183.png' }
     ]
   },
     {
@@ -740,9 +740,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_156.png' },
+      { name: 'Item 3', icon: 'items/c_bat_171.png' },
+      { name: 'Item 4', icon: 'items/c_bat_186.png' }
     ]
   },
     {
@@ -766,8 +766,8 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 2', icon: 'items/c_bat_186.png' },
+      { name: 'Item 3', icon: 'items/c_bat_180.png' },
       { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
   },
@@ -779,9 +779,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_203.png' }
     ]
   },
     {
@@ -792,9 +792,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 3', icon: 'items/c_bat_153.png' },
+      { name: 'Item 4', icon: 'items/c_bat_177.png' }
     ]
   },
     {
@@ -805,7 +805,7 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
+      { name: 'Item 2', icon: 'items/c_bat_183.png' },
       { name: 'Item 3', icon: 'items/c_bat_186.png' },
       { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
@@ -817,8 +817,8 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 2', icon: 'items/c_bat_186.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
       { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
   },
@@ -830,9 +830,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 3', icon: 'items/c_bat_189.png' },
+      { name: 'Item 4', icon: 'items/c_bat_203.png' }
     ]
   },
   // end of evo characters
@@ -844,9 +844,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
       { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_159.png' },
+      { name: 'Item 4', icon: 'items/c_bat_192.png' }
     ]
   },
   {
@@ -857,8 +857,8 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_206.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 2', icon: 'items/c_bat_189.png' },
+      { name: 'Item 3', icon: 'items/c_bat_159.png' },
       { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
@@ -870,9 +870,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+      { name: 'Item 2', icon: 'items/c_bat_180.png' },
+      { name: 'Item 3', icon: 'items/c_bat_162.png' },
+      { name: 'Item 4', icon: 'items/8.png' }
     ]
   },
   {
@@ -884,8 +884,8 @@ export class StormEvo {
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
       { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/3.png' }
+      { name: 'Item 3', icon: 'items/c_bat_203.png' },
+      { name: 'Item 4', icon: 'items/c_bat_183.png' }
     ]
   },
   {
@@ -896,8 +896,8 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 2', icon: 'items/c_bat_203.png' },
+      { name: 'Item 3', icon: 'items/c_bat_153.png' },
       { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
@@ -909,9 +909,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 2', icon: 'items/c_bat_168.png' },
       { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/3.png' }
+      { name: 'Item 4', icon: 'items/c_bat_180.png' }
     ]
   },
   {
@@ -961,9 +961,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/c_bat_183.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_156.png' },
+      { name: 'Item 3', icon: 'items/c_bat_171.png' },
+      { name: 'Item 4', icon: 'items/c_bat_186.png' }
     ]
   },
   {
@@ -1000,7 +1000,7 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_174.png' },
+      { name: 'Item 2', icon: 'items/c_bat_177.png' },
       { name: 'Item 3', icon: 'items/8.png' },
       { name: 'Item 4', icon: 'items/c_bat_165.png' }
     ]
@@ -1052,7 +1052,7 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_168.png' },
+      { name: 'Item 2', icon: 'items/c_bat_213.png' },
       { name: 'Item 3', icon: 'items/8.png' },
       { name: 'Item 4', icon: 'items/c_bat_165.png' }
     ]
@@ -1078,9 +1078,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 3', icon: 'items/c_bat_198.png' },
+      { name: 'Item 4', icon: 'items/c_bat_219.png' }
     ]
   },
   {
@@ -1130,9 +1130,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/c_bat_183.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_198.png' },
+      { name: 'Item 3', icon: 'items/c_bat_203.png' },
+      { name: 'Item 4', icon: 'items/c_bat_180.png' }
     ]
   },
   {
@@ -1196,9 +1196,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
      { name: 'Item 1', icon: 'items/1.png' },
-     { name: 'Item 2', icon: 'items/c_bat_186.png' },
-     { name: 'Item 3', icon: 'items/c_bat_213.png' },
-     { name: 'Item 4', icon: 'items/c_bat_198.png' }
+     { name: 'Item 2', icon: 'items/c_bat_180.png' },
+     { name: 'Item 3', icon: 'items/c_bat_186.png' },
+     { name: 'Item 4', icon: 'items/c_bat_174.png' }
     ]
   },
   
@@ -1210,9 +1210,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
      { name: 'Item 1', icon: 'items/1.png' },
-     { name: 'Item 2', icon: 'items/c_bat_174.png' },
-     { name: 'Item 3', icon: 'items/c_bat_183.png' },
-     { name: 'Item 4', icon: 'items/c_bat_198.png' }
+     { name: 'Item 2', icon: 'items/c_bat_219.png' },
+     { name: 'Item 3', icon: 'items/c_bat_213.png' },
+     { name: 'Item 4', icon: 'items/c_bat_192.png' }
     ]
   },
     // storm 3 
@@ -1224,9 +1224,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
      { name: 'Item 1', icon: 'items/1.png' },
-     { name: 'Item 2', icon: 'items/c_bat_186.png' },
-     { name: 'Item 3', icon: 'items/c_bat_213.png' },
-     { name: 'Item 4', icon: 'items/c_bat_198.png' }
+     { name: 'Item 2', icon: 'items/c_bat_159.png' },
+     { name: 'Item 3', icon: 'items/c_bat_156.png' },
+     { name: 'Item 4', icon: 'items/c_bat_203.png' }
     ]
   },
     {
@@ -1278,7 +1278,7 @@ export class StormEvo {
       { name: 'Item 1', icon: 'items/1.png' },
       { name: 'Item 2', icon: 'items/c_bat_171.png' },
       { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_185.png' }
+      { name: 'Item 4', icon: 'items/c_bat_165.png' }
     ]
   },
     {
@@ -1315,9 +1315,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/c_bat_203.png' }
+      { name: 'Item 2', icon: 'items/c_bat_165.png' },
+      { name: 'Item 3', icon: 'items/c_bat_156.png' },
+      { name: 'Item 4', icon: 'items/c_bat_159.png' }
     ]
   },
     {
@@ -1341,9 +1341,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/c_bat_183.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_156.png' },
+      { name: 'Item 3', icon: 'items/c_bat_171.png' },
+      { name: 'Item 4', icon: 'items/c_bat_186.png' }
     ]
   },
   /*
@@ -1382,8 +1382,8 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_213.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 2', icon: 'items/c_bat_192.png' },
+      { name: 'Item 3', icon: 'items/c_bat_203.png' },
       { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
@@ -1395,9 +1395,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_174.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/c_bat_171.png' }
+      { name: 'Item 2', icon: 'items/c_bat_198.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_156.png' }
     ]
   },  {
     name: 'Edo Nagato',
@@ -1459,9 +1459,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_174.png' },
+      { name: 'Item 3', icon: 'items/c_bat_209.png' },
+      { name: 'Item 4', icon: 'items/c_bat_186.png' }
     ]
   },
     {
@@ -1472,9 +1472,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
+      { name: 'Item 2', icon: 'items/c_bat_180.png' },
       { name: 'Item 3', icon: 'items/c_bat_183.png' },
-      { name: 'Item 4', icon: 'items/3.png' }
+      { name: 'Item 4', icon: 'items/c_bat_153.png' }
     ]
   },
     {
@@ -1485,8 +1485,8 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-     { name: 'Item 2', icon: 'items/c_bat_206.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
+     { name: 'Item 2', icon: 'items/c_bat_189.png' },
+     { name: 'Item 3', icon: 'items/c_bat_203.png' },
      { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
   },
@@ -1499,9 +1499,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
      { name: 'Item 1', icon: 'items/1.png' },
-     { name: 'Item 2', icon: 'items/c_bat_174.png' },
-     { name: 'Item 3', icon: 'items/8.png' },
-     { name: 'Item 4', icon: 'items/c_bat_171.png' }
+     { name: 'Item 2', icon: 'items/c_bat_198.png' },
+     { name: 'Item 3', icon: 'items/c_bat_156.png' },
+     { name: 'Item 4', icon: 'items/c_bat_177.png' }
     ]
   },
    {
@@ -1514,7 +1514,7 @@ export class StormEvo {
      { name: 'Item 1', icon: 'items/1.png' },
      { name: 'Item 2', icon: 'items/c_bat_206.png' },
      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-     { name: 'Item 4', icon: 'items/c_bat_198.png' }
+     { name: 'Item 4', icon: 'items/c_bat_192.png' }
     ]
   },
    {
@@ -1525,7 +1525,7 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_186.png' },
+      { name: 'Item 2', icon: 'items/c_bat_192.png' },
       { name: 'Item 3', icon: 'items/c_bat_211.png' },
       { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
@@ -1538,9 +1538,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_186.png' },
-      { name: 'Item 3', icon: 'items/c_bat_211.png' },
-      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+      { name: 'Item 2', icon: 'items/c_bat_211.png' },
+      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 4', icon: 'items/c_bat_156.png' }
     ]
   },
    {
@@ -1564,9 +1564,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
      { name: 'Item 1', icon: 'items/1.png' },
-     { name: 'Item 2', icon: 'items/c_bat_213.png' },
-     { name: 'Item 3', icon: 'items/c_bat_186.png' },
-     { name: 'Item 4', icon: 'items/c_bat_162.png' }
+     { name: 'Item 2', icon: 'items/c_bat_162.png' },
+     { name: 'Item 3', icon: 'items/c_bat_156.png' },
+     { name: 'Item 4', icon: 'items/c_bat_189.png' }
     ]
   },
    {
@@ -1603,9 +1603,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+      { name: 'Item 2', icon: 'items/c_bat_8.png' },
+      { name: 'Item 3', icon: 'items/c_bat_162.png' },
+      { name: 'Item 4', icon: 'items/c_bat_180.png' }
     ]
   },
    {
@@ -1616,9 +1616,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
       { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_159.png' },
+      { name: 'Item 4', icon: 'items/c_bat_192.png' }
     ]
   },
    {
@@ -1629,8 +1629,8 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
      { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_206.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 2', icon: 'items/c_bat_189.png' },
+      { name: 'Item 3', icon: 'items/c_bat_159.png' },
       { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
@@ -1646,7 +1646,7 @@ export class StormEvo {
     { name: 'Item 1', icon: 'items/1.png' },
     { name: 'Item 2', icon: 'items/c_bat_183.png' },
     { name: 'Item 3', icon: 'items/8.png' },
-    { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    { name: 'Item 4', icon: 'items/c_bat_153.png' }
   ]
 },
 {
@@ -1657,8 +1657,8 @@ export class StormEvo {
   tierIcon: 'rate_a_l.png',
   itemsets: [
     { name: 'Item 1', icon: 'items/1.png' },
-    { name: 'Item 2', icon: 'items/c_bat_213.png' },
-    { name: 'Item 3', icon: 'items/c_bat_186.png' },
+    { name: 'Item 2', icon: 'items/c_bat_189.png' },
+    { name: 'Item 3', icon: 'items/c_bat_156.png' },
     { name: 'Item 4', icon: 'items/c_bat_198.png' }
   ]
 },
@@ -1670,9 +1670,9 @@ export class StormEvo {
   tierIcon: 'rate_a_l.png',
   itemsets: [
     { name: 'Item 1', icon: 'items/1.png' },
-    { name: 'Item 2', icon: 'items/c_bat_168.png' },
-    { name: 'Item 3', icon: 'items/c_bat_171.png' },
-    { name: 'Item 4', icon: 'items/c_bat_186.png' }
+    { name: 'Item 2', icon: 'items/c_bat_186.png' },
+    { name: 'Item 3', icon: 'items/c_bat_211.png' },
+    { name: 'Item 4', icon: 'items/c_bat_153.png' }
   ]
 },
 {
@@ -1683,9 +1683,9 @@ export class StormEvo {
   tierIcon: 'rate_a_l.png',
   itemsets: [
     { name: 'Item 1', icon: 'items/1.png' },
-    { name: 'Item 2', icon: 'items/c_bat_183.png' },
-    { name: 'Item 3', icon: 'items/c_bat_216.png' },
-    { name: 'Item 4', icon: 'items/c_bat_165.png' }
+    { name: 'Item 2', icon: 'items/c_bat_156.png' },
+    { name: 'Item 3', icon: 'items/c_bat_165.png' },
+    { name: 'Item 4', icon: 'items/c_bat_180.png' }
   ]
 },
 {
@@ -1698,7 +1698,7 @@ export class StormEvo {
     { name: 'Item 1', icon: 'items/1.png' },
     { name: 'Item 2', icon: 'items/c_bat_213.png' },
     { name: 'Item 3', icon: 'items/c_bat_186.png' },
-    { name: 'Item 4', icon: 'items/c_bat_183.png' },
+    { name: 'Item 4', icon: 'items/c_bat_159.png' },
   ]
 },
 {
@@ -1709,9 +1709,9 @@ export class StormEvo {
   tierIcon: 'rate_a_l.png',
   itemsets: [
     { name: 'Item 1', icon: 'items/1.png' },
-    { name: 'Item 2', icon: 'items/c_bat_216.png' },
-    { name: 'Item 3', icon: 'items/c_bat_174.png' },
-    { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    { name: 'Item 2', icon: 'items/c_bat_198.png' },
+    { name: 'Item 3', icon: 'items/c_bat_213.png' },
+    { name: 'Item 4', icon: 'items/c_bat_192.png' }
   ]
 },
 {
@@ -1723,8 +1723,8 @@ export class StormEvo {
   itemsets: [
     { name: 'Item 1', icon: 'items/1.png' },
     { name: 'Item 2', icon: 'items/c_bat_183.png' },
-    { name: 'Item 3', icon: 'items/c_bat_216.png' },
-    { name: 'Item 4', icon: 'items/c_bat_198.png' }
+    { name: 'Item 3', icon: 'items/c_bat_219.png' },
+    { name: 'Item 4', icon: 'items/c_bat_211.png' }
   ]
 },
 {
@@ -1735,9 +1735,9 @@ export class StormEvo {
   tierIcon: 'rate_a_l.png',
   itemsets: [
     { name: 'Item 1', icon: 'items/1.png' },
-    { name: 'Item 2', icon: 'items/c_bat_168.png' },
-    { name: 'Item 3', icon: 'items/c_bat_213.png' },
-    { name: 'Item 4', icon: 'items/c_bat_186.png' }
+    { name: 'Item 2', icon: 'items/c_bat_177.png' },
+    { name: 'Item 3', icon: 'items/c_bat_165.png' },
+    { name: 'Item 4', icon: 'items/c_bat_211.png' }
   ]
 },
 {
@@ -1748,8 +1748,8 @@ export class StormEvo {
   tierIcon: 'rate_a_l.png',
   itemsets: [
     { name: 'Item 1', icon: 'items/1.png' },
-    { name: 'Item 2', icon: 'items/c_bat_165.png' },
-    { name: 'Item 3', icon: 'items/c_bat_213.png' },
+    { name: 'Item 2', icon: 'items/c_bat_198.png' },
+    { name: 'Item 3', icon: 'items/c_bat_203.png' },
     { name: 'Item 4', icon: 'items/c_bat_162.png' }
   ]
 },
@@ -1761,9 +1761,9 @@ export class StormEvo {
   tierIcon: 'rate_a_l.png',
   itemsets: [
     { name: 'Item 1', icon: 'items/1.png' },
-    { name: 'Item 2', icon: 'items/c_bat_168.png' },
+    { name: 'Item 2', icon: 'items/c_bat_162.png' },
     { name: 'Item 3', icon: 'items/c_bat_186.png' },
-    { name: 'Item 4', icon: 'items/c_bat_183.png' }
+    { name: 'Item 4', icon: 'items/c_bat_211.png' }
   ]
 },
 {
@@ -1774,8 +1774,8 @@ export class StormEvo {
   tierIcon: 'rate_a_l.png',
   itemsets: [
     { name: 'Item 1', icon: 'items/1.png' },
-    { name: 'Item 2', icon: 'items/c_bat_213.png' },
-    { name: 'Item 3', icon: 'items/c_bat_171.png' },
+    { name: 'Item 2', icon: 'items/c_bat_192.png' },
+    { name: 'Item 3', icon: 'items/c_bat_186.png' },
     { name: 'Item 4', icon: 'items/c_bat_198.png' }
   ]
 },
@@ -1787,9 +1787,9 @@ export class StormEvo {
   tierIcon: 'rate_a_l.png',
   itemsets: [
     { name: 'Item 1', icon: 'items/1.png' },
-    { name: 'Item 2', icon: 'items/c_bat_171.png' },
-    { name: 'Item 3', icon: 'items/c_bat_206.png' },
-    { name: 'Item 4', icon: 'items/c_bat_186.png' }
+    { name: 'Item 2', icon: 'items/c_bat_159.png' },
+    { name: 'Item 3', icon: 'items/c_bat_209.png' },
+    { name: 'Item 4', icon: 'items/c_bat_206.png' }
   ]
 },
 {
@@ -1802,7 +1802,7 @@ export class StormEvo {
     { name: 'Item 1', icon: 'items/1.png' },
     { name: 'Item 2', icon: 'items/c_bat_186.png' },
     { name: 'Item 3', icon: 'items/c_bat_171.png' },
-    { name: 'Item 4', icon: 'items/c_bat_162.png' }
+    { name: 'Item 4', icon: 'items/c_bat_2032.png' }
   ]
 },
 {
@@ -1813,9 +1813,9 @@ export class StormEvo {
   tierIcon: 'rate_a_l.png',
   itemsets: [
     { name: 'Item 1', icon: 'items/1.png' },
-    { name: 'Item 2', icon: 'items/c_bat_216.png' },
+    { name: 'Item 2', icon: 'items/c_bat_153.png' },
     { name: 'Item 3', icon: 'items/c_bat_183.png' },
-    { name: 'Item 4', icon: 'items/c_bat_198.png' }
+    { name: 'Item 4', icon: 'items/c_bat_180.png' }
   ]
 },
 {
@@ -1826,9 +1826,9 @@ export class StormEvo {
   tierIcon: 'rate_a_l.png',
   itemsets: [
     { name: 'Item 1', icon: 'items/1.png' },
-    { name: 'Item 2', icon: 'items/c_bat_186.png' },
-    { name: 'Item 3', icon: 'items/c_bat_206.png' },
-    { name: 'Item 4', icon: 'items/c_bat_216.png' }
+    { name: 'Item 2', icon: 'items/c_bat_219.png' },
+    { name: 'Item 3', icon: 'items/c_bat_186.png' },
+    { name: 'Item 4', icon: 'items/c_bat_192.png' }
   ]
 },
     {
@@ -1932,9 +1932,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/11.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+      { name: 'Item 2', icon: 'items/c_bat_159.png' },
+      { name: 'Item 3', icon: 'items/c_bat_209.png' },
+      { name: 'Item 4', icon: 'items/c_bat_219.png' }
     ]
   },
   {
@@ -1945,9 +1945,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_186.png' },
-      { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_162.png' },
+      { name: 'Item 3', icon: 'items/c_bat_198.png' },
+      { name: 'Item 4', icon: 'items/c_bat_209.png' }
     ]
   },
   {
@@ -1958,8 +1958,8 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
+      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 3', icon: 'items/c_bat_189.png' },
       { name: 'Item 4', icon: 'items/c_bat_203.png' }
     ]
   },
@@ -1984,9 +1984,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_174.png' },
-      { name: 'Item 3', icon: 'items/c_bat_183.png' },
-      { name: 'Item 4', icon: 'items/3.png' }
+      { name: 'Item 2', icon: 'items/c_bat_186.png' },
+      { name: 'Item 3', icon: 'items/c_bat_162.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
   },
   {
@@ -1997,9 +1997,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_206.png' },
-      { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+      { name: 'Item 2', icon: 'items/c_bat_153.png' },
+      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 4', icon: 'items/c_bat_171.png' }
     ]
   },
   {
@@ -2010,9 +2010,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/c_bat_203.png' }
+      { name: 'Item 2', icon: 'items/c_bat_165.png' },
+      { name: 'Item 3', icon: 'items/c_bat_156.png' },
+      { name: 'Item 4', icon: 'items/c_bat_159.png' }
     ]
   },
   {
@@ -2023,8 +2023,8 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 2', icon: 'items/c_bat_211.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
       { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
@@ -2036,9 +2036,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
+      { name: 'Item 2', icon: 'items/c_bat_168.png' },
       { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/3.png' }
+      { name: 'Item 4', icon: 'items/c_bat_180.png' }
     ]
   },
   {
@@ -2063,8 +2063,8 @@ export class StormEvo {
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
       { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_162.png' }
+      { name: 'Item 3', icon: 'items/c_bat_189.png' },
+      { name: 'Item 4', icon: 'items/c_bat_198.png' }
     ]
   },
   {
@@ -2076,8 +2076,8 @@ export class StormEvo {
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
       { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
-      { name: 'Item 4', icon: 'items/3.png' }
+      { name: 'Item 3', icon: 'items/c_bat_203.png' },
+      { name: 'Item 4', icon: 'items/c_bat_183.png' }
     ]
   },
   {
@@ -2088,9 +2088,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_213.png' },
-      { name: 'Item 4', icon: 'items/c_bat_165.png' }
+      { name: 'Item 2', icon: 'items/c_bat_180.png' },
+      { name: 'Item 3', icon: 'items/c_bat_162.png' },
+      { name: 'Item 4', icon: 'items/8.png' }
     ]
   },
   {
@@ -2101,8 +2101,8 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_206.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 2', icon: 'items/c_bat_189.png' },
+      { name: 'Item 3', icon: 'items/c_bat_159.png' },
       { name: 'Item 4', icon: 'items/c_bat_162.png' }
     ]
   },
@@ -2114,9 +2114,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/11.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }
+      { name: 'Item 2', icon: 'items/c_bat_186.png' },
+      { name: 'Item 3', icon: 'items/c_bat_159.png' },
+      { name: 'Item 4', icon: 'items/c_bat_192.png' }
     ]
   },
       {
@@ -2141,9 +2141,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [      
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_213.png' },
+      { name: 'Item 2', icon: 'items/c_bat_183.png' },
       { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_165.png' }]
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }]
   },
     {
     name: 'Kawaki Karma',
@@ -2166,7 +2166,7 @@ export class StormEvo {
     itemsets: [      
       { name: 'Item 1', icon: 'items/1.png' },
       { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/8.png' },
+      { name: 'Item 3', icon: 'items/c_bat_203.png' },
       { name: 'Item 4', icon: 'items/c_bat_162.png' }]
   },
     {
@@ -2177,9 +2177,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [      
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_174.png' },
-      { name: 'Item 3', icon: 'items/c_bat_183.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' }]
+      { name: 'Item 2', icon: 'items/c_bat_186.png' },
+      { name: 'Item 3', icon: 'items/c_bat_213.png' },
+      { name: 'Item 4', icon: 'items/c_bat_159.png' }]
   },
     {
     name: 'Momoshiki (Anime)',
@@ -2189,9 +2189,9 @@ export class StormEvo {
     tierIcon: 'rate_a_l.png',
     itemsets: [      
       { name: 'Item 1', icon: 'items/1.png' },
-      { name: 'Item 2', icon: 'items/c_bat_171.png' },
-      { name: 'Item 3', icon: 'items/c_bat_186.png' },
-      { name: 'Item 4', icon: 'items/c_bat_198.png' },]
+      { name: 'Item 2', icon: 'items/c_bat_174.png' },
+      { name: 'Item 3', icon: 'items/c_bat_216.png' },
+      { name: 'Item 4', icon: 'items/c_bat_162.png' }]
   },
     {
     name: 'Jigen',

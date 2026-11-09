@@ -8,11 +8,86 @@
   .tier-box {
     max-width: 1200px;
     margin: 0 auto;
+    min-width: 0;
+    box-sizing: border-box;
     background-color: #0a0a0f;
     border: 1px solid #1a1a24;
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    .tier-tool-wrapper {
+      padding: 1rem 0.5rem;
+
+      .tier-box {
+        padding: 1rem;
+      }
+
+      .tier-row {
+        min-height: 72px;
+
+        .tier-header {
+          width: 76px;
+          min-width: 76px;
+          padding: 0.35rem;
+
+          .tier-title-input {
+            font-size: clamp(0.85rem, 4vw, 1.1rem);
+          }
+        }
+
+        .tier-drop-zone {
+          min-width: 0;
+          min-height: 72px;
+          gap: 0.35rem;
+          padding: 0.35rem;
+        }
+
+        .tier-right-action {
+          width: 40px;
+          min-width: 40px;
+        }
+      }
+
+      .item-card,
+      .cdk-drag-preview {
+        width: 54px;
+        height: 54px;
+      }
+
+      .canvas-area {
+        padding: 0.35rem;
+      }
+
+      .unranked-drop-zone {
+        gap: 0.35rem;
+        padding: 0.75rem;
+      }
+
+      .refresh-banner span {
+        min-width: 0;
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    .tier-tool-wrapper {
+      padding: 0.75rem 0.35rem;
+
+      .tier-box {
+        padding: 0.75rem;
+      }
+
+      .tier-row .tier-header {
+        width: 68px;
+        min-width: 68px;
+      }
+
+      .item-card,
+      .cdk-drag-preview {
+        width: 48px;
+        height: 48px;
+      }
+    }
   }
 
   .header-bar {

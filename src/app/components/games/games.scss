@@ -7,23 +7,26 @@ $ninja-blue: #008cff;
 .games-wrapper {
   background-color: $outer-background !important;
   min-height: 100vh;
-  padding: 50px 20px;
+  padding: clamp(32px, 5vw, 50px) clamp(14px, 2vw, 20px);
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
 
   .games-header {
     text-align: center;
     margin-bottom: 60px;
     .subtitle { color: $ninja-orange; letter-spacing: 5px; font-weight: bold; font-size: 0.8rem; }
-    h1 { font-size: 3.2rem; font-weight: 900; text-transform: uppercase; margin: 10px 0; }
+    h1 { font-size: clamp(1.7rem, 5vw, 3.2rem); font-weight: 900; text-transform: uppercase; margin: 10px 0; }
     .header-line { width: 50px; height: 5px; background: $ninja-orange; margin: 0 auto; border-radius: 10px; }
   }
 }
 
 .games-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 45px;
+  width: 100%;
+  min-width: 0;
   max-width: 1350px;
   margin: 0 auto;
 }
@@ -136,5 +139,27 @@ $ninja-blue: #008cff;
   
   .p-button-label {
     color: inherit !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .games-wrapper {
+    .games-header {
+      margin-bottom: 40px;
+    }
+
+    .games-grid {
+      gap: 28px;
+    }
+  }
+
+  ::ng-deep .storm-card .logo-area {
+    height: clamp(130px, 42vw, 180px);
+  }
+
+  ::ng-deep .storm-card .p-card-body,
+  ::ng-deep .storm-card .p-card-content,
+  ::ng-deep .storm-card .p-card-header {
+    padding: 22px !important;
   }
 }

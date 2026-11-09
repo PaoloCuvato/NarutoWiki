@@ -1,10 +1,12 @@
 :host {
   display: block;
   width: 100%;
+  min-width: 0;
 }
 
 .item-database-container {
   width: 100%;
+  min-width: 0;
   color: #ffffff;
   padding: 25px 0;
   box-sizing: border-box;
@@ -507,8 +509,13 @@
 
   .database-header {
     align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
 
     .header-title {
+      flex: 1 1 200px;
+      min-width: 0;
+
       h1 {
         font-size: 1.1rem;
       }
@@ -523,6 +530,19 @@
         font-size: 0.58rem;
       }
     }
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    .result-count {
+      white-space: normal;
+    }
+  }
+
+  .item-title-row h3 {
+    overflow-wrap: anywhere;
   }
 
   .filter-container .filter-list {

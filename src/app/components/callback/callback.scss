@@ -1,5 +1,6 @@
 .callback-container {
-  height: 80vh;
+  min-height: 80vh;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,8 +16,9 @@
     border-radius: 8px;
     padding: 3rem 2rem;
     box-shadow: 0 0 20px rgba(255, 144, 0, 0.25);
-    max-width: 450px;
+    max-width: 514px;
     width: 100%;
+    box-sizing: border-box;
 
     .callback-spinner {
       font-size: 3rem;
@@ -38,6 +40,20 @@
       font-size: 0.95rem;
       margin: 0;
       line-height: 1.4;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .callback-container {
+      padding: 16px;
+    }
+
+    .callback-card {
+      padding: 2rem 1.25rem;
+
+      .callback-title {
+        font-size: clamp(1.15rem, 5vw, 1.5rem);
+      }
     }
   }
 }

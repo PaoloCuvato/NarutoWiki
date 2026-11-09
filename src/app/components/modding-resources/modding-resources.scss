@@ -36,6 +36,7 @@ $storm-border: rgba(255, 42, 85, 0.2);
   align-items: center;
   justify-content: center;
   width: 100%;
+  box-sizing: border-box;
   padding: 70px 20px 60px;
   background: $storm-header;
   text-align: center;
@@ -79,6 +80,7 @@ $storm-border: rgba(255, 42, 85, 0.2);
   width: 100%;
   max-width: 1200px;
   min-width: 0;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 45px 24px 100px;
   background: transparent;
@@ -184,6 +186,7 @@ $storm-border: rgba(255, 42, 85, 0.2);
 
     input {
       width: 100%;
+      box-sizing: border-box;
       height: 43px;
       padding: 0 43px;
       background: #171010;
@@ -899,9 +902,17 @@ $storm-border: rgba(255, 42, 85, 0.2);
   }
 
   .tools-toolbar {
+    flex-wrap: wrap;
     gap: 10px;
 
+    .search-box {
+      flex: 1 1 100%;
+      max-width: none;
+      min-width: 0;
+    }
+
     .results-count {
+      margin-left: auto;
       font-size: 0.62rem;
     }
   }

@@ -10,6 +10,7 @@ $text-sub: #cbd5e1;
 .game-resources-wrapper {
   position: relative;
   min-height: 100vh;
+  min-width: 0;
   padding: 50px 20px;
   background: 
     radial-gradient(circle at 50% 20%, rgba(206, 194, 197, 0.15), transparent 60%),
@@ -23,6 +24,7 @@ $text-sub: #cbd5e1;
 
 .game-resources-content {
   width: 100%;
+  min-width: 0;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -91,6 +93,19 @@ $text-sub: #cbd5e1;
   .p-tablist-active-bar,
   .p-tab-active-bar {
     display: none !important;
+  }
+
+  .p-tablist-content {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+  }
+
+  .p-tablist-tab-list {
+    width: max-content;
+    min-width: 100%;
+    flex-wrap: nowrap;
   }
 
   /* Singolo Pulsante Tab */
@@ -165,6 +180,8 @@ $text-sub: #cbd5e1;
   border-radius: 12px;
   padding: 18px;
   background: rgba(8, 11, 18, 0.75);
+  min-width: 0;
+  box-sizing: border-box;
 
   app-character-cooldown {
     display: block;
@@ -194,6 +211,58 @@ $text-sub: #cbd5e1;
 
       &:hover {
         background: rgba(255, 42, 85, 0.18) !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .game-resources-wrapper {
+        padding: 36px 14px;
+        background-attachment: scroll;
+      }
+
+      .patch-header h1 {
+        font-size: clamp(1.8rem, 7vw, 2.8rem);
+        letter-spacing: 1px;
+      }
+
+      .game-tabs {
+        padding: 16px !important;
+
+        .p-tab {
+          flex: 0 0 auto !important;
+          white-space: nowrap;
+          padding: 10px 12px !important;
+        }
+      }
+
+      .table-frame {
+        padding: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .game-resources-wrapper {
+        padding: 28px 10px;
+      }
+
+      .game-tabs {
+        padding: 10px !important;
+        border-radius: 12px !important;
+
+        .p-tablist,
+        p-tablist {
+          padding: 4px !important;
+          gap: 6px !important;
+        }
+
+        .tab-title {
+          font-size: 0.75rem !important;
+          letter-spacing: 0.5px !important;
+        }
+      }
+
+      .table-frame {
+        padding: 8px;
       }
     }
 

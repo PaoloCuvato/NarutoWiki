@@ -4,6 +4,7 @@ $ninja-red-glow: rgba(230, 74, 74, 0.35);
 
 .cooldowns-container {
   width: 100%;
+  min-width: 0;
 }
 
 .table-header-toolbar {
@@ -12,12 +13,15 @@ $ninja-red-glow: rgba(230, 74, 74, 0.35);
   align-items: center;
   margin-bottom: 20px;
   flex-wrap: wrap;
+  min-width: 0;
   gap: 15px;
 
   .table-info {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 12px;
+    min-width: 0;
 
     .info-badge {
       background: rgba(184, 58, 58, 0.2);
@@ -38,10 +42,14 @@ $ninja-red-glow: rgba(230, 74, 74, 0.35);
 
   .search-box {
     position: relative;
-    min-width: 250px;
+    flex: 1 1 250px;
+    width: 100%;
+    max-width: 360px;
+    min-width: 0;
 
     input {
       width: 100%;
+      box-sizing: border-box;
       padding: 10px 14px;
       background: rgba(18, 18, 18, 0.9);
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -61,6 +69,12 @@ $ninja-red-glow: rgba(230, 74, 74, 0.35);
 
 /* OVERRIDE STILI PRIMENG TABLE */
 ::ng-deep .p-datatable-ninja {
+  .p-datatable-table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+
   .p-datatable-wrapper {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -69,6 +83,7 @@ $ninja-red-glow: rgba(230, 74, 74, 0.35);
 
   table {
     width: 100%;
+    min-width: 640px;
     border-collapse: collapse;
     background: rgba(12, 12, 12, 0.85);
   }
@@ -176,5 +191,20 @@ $ninja-red-glow: rgba(230, 74, 74, 0.35);
     padding: 30px !important;
     color: #777;
     font-style: italic;
+  }
+}
+
+@media (max-width: 600px) {
+  .table-header-toolbar {
+    align-items: stretch;
+
+    .search-box {
+      flex-basis: 100%;
+      max-width: none;
+    }
+
+    .table-info {
+      gap: 8px;
+    }
   }
 }

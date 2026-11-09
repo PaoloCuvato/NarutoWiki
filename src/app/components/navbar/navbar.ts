@@ -47,6 +47,7 @@ export class Navbar implements OnInit, OnDestroy {
 
   displayModal: boolean = false;
   isLoggedIn: boolean = false;
+  isMobileMenuOpen: boolean = false;
   username: string = 'Ninja User';
   userAvatar: string = ''; 
 
@@ -156,7 +157,7 @@ export class Navbar implements OnInit, OnDestroy {
     if (isPlatformBrowser(this.platformId)) {
       this.routerSub = this.router.events.pipe(
         filter(event => event instanceof NavigationEnd)
-      ).subscribe(() => {});
+      ).subscribe(() => this.closeMobileMenu());
     }
   }
 
@@ -171,6 +172,10 @@ export class Navbar implements OnInit, OnDestroy {
 
   // --- GESTIONE HOVER FLUIDA E CHIUSURA IMMEDIATA DEI MENU INCROCIATI ---
   showDropdown(event: MouseEvent, menu: any) {
+    if (isPlatformBrowser(this.platformId) && window.matchMedia('(max-width: 1200px)').matches) {
+      return;
+    }
+
     if (this.hideTimeout) {
       clearTimeout(this.hideTimeout);
       this.hideTimeout = null;
@@ -190,6 +195,10 @@ export class Navbar implements OnInit, OnDestroy {
   }
 
   hideDropdown(menu: any) {
+    if (isPlatformBrowser(this.platformId) && window.matchMedia('(max-width: 1200px)').matches) {
+      return;
+    }
+
     this.hideTimeout = setTimeout(() => {
       if (menu && typeof menu.hide === 'function') {
         menu.hide();
@@ -198,6 +207,42 @@ export class Navbar implements OnInit, OnDestroy {
         }
       }
     }, 150);
+  }
+
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    if (!this.isMobileMenuOpen) {
+      this.closeMobileMenu();
+    }
+  }
+
+  closeMobileMenu(): void {
+    this.isMobileMenuOpen = false;
+    if (this.activeMenu && typeof this.activeMenu.hide === 'function') {
+      this.activeMenu.hide();
+    }
+    this.activeMenu = null;
+  }
+
+  handleDropdownClick(event: MouseEvent, menu: any): void {
+    event.preventDefault();
+    if (!isPlatformBrowser(this.platformId) || !window.matchMedia('(max-width: 1200px)').matches) {
+      return;
+    }
+
+    if (this.activeMenu === menu && typeof menu.hide === 'function') {
+      menu.hide();
+      this.activeMenu = null;
+      return;
+    }
+
+    if (this.activeMenu && this.activeMenu !== menu && typeof this.activeMenu.hide === 'function') {
+      this.activeMenu.hide();
+    }
+    this.activeMenu = menu;
+    if (typeof menu.toggle === 'function') {
+      menu.toggle(event);
+    }
   }
 
     getActiveTheme(): string {
@@ -245,10 +290,12 @@ export class Navbar implements OnInit, OnDestroy {
   }
 
   openLoginModal() {
+    this.closeMobileMenu();
     this.displayModal = true;
   }
 
   showLoginDialog() {
+    this.closeMobileMenu();
     this.displayModal = true;
   }
 

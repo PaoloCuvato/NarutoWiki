@@ -1,11 +1,21 @@
 
-<nav [class]="'storm-navbar ' + getActiveTheme()">
+<nav [class]="'storm-navbar ' + getActiveTheme()" [class.mobile-open]="isMobileMenuOpen">
   <div class="logo-section">
     <img src="StormLogoFranchise.png" alt="logo-section">
     <span class="navbar-title">ULTIMATE NINJA STORM WIKI</span>
   </div>
 
-  <div class="links-section">
+  <button
+    type="button"
+    class="mobile-nav-toggle"
+    [attr.aria-expanded]="isMobileMenuOpen"
+    aria-controls="primary-navigation"
+    [attr.aria-label]="isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'"
+    (click)="toggleMobileMenu()">
+    <i class="pi" [class.pi-bars]="!isMobileMenuOpen" [class.pi-times]="isMobileMenuOpen"></i>
+  </button>
+
+  <div class="links-section" id="primary-navigation">
 
     <!-- HOMEPAGE -->
     <a
@@ -23,7 +33,7 @@
       style="cursor: pointer;"
       (mouseenter)="showDropdown($event, gamesMenu)"
       (mouseleave)="hideDropdown(gamesMenu)"
-      (click)="$event.preventDefault()">
+      (click)="handleDropdownClick($event, gamesMenu)">
       <span class="dot"></span> GAMES
       <i class="pi pi-angle-down dropdown-arrow"></i>
     </a>
@@ -43,7 +53,7 @@
       style="cursor: pointer;"
       (mouseenter)="showDropdown($event, matchmakingMenu)"
       (mouseleave)="hideDropdown(matchmakingMenu)"
-      (click)="$event.preventDefault()">
+      (click)="handleDropdownClick($event, matchmakingMenu)">
       <span class="dot"></span> MATCHMAKING
       <i class="pi pi-angle-down dropdown-arrow"></i>
     </a>
@@ -63,7 +73,7 @@
       style="cursor: default;"
       (mouseenter)="showDropdown($event, communityMenu)"
       (mouseleave)="hideDropdown(communityMenu)"
-      (click)="$event.preventDefault()">
+      (click)="handleDropdownClick($event, communityMenu)">
       <span class="dot"></span> COMMUNITY
       <i class="pi pi-angle-down dropdown-arrow"></i>
     </a>
@@ -83,7 +93,7 @@
       style="cursor: pointer;"
       (mouseenter)="showDropdown($event, resourcesMenu)"
       (mouseleave)="hideDropdown(resourcesMenu)"
-      (click)="$event.preventDefault()">
+      (click)="handleDropdownClick($event, resourcesMenu)">
       <span class="dot"></span> RESOURCES
       <i class="pi pi-angle-down dropdown-arrow"></i>
     </a>

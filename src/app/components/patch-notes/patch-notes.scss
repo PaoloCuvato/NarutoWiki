@@ -18,8 +18,10 @@ $ninja-blue: #008cff;
 
 .patch-notes-wrapper {
   position: relative;
+  width: 100%;
   min-height: 100vh;
   padding: 60px 20px;
+  box-sizing: border-box;
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.88)), url('/lord_kabuto.png') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
@@ -602,12 +604,26 @@ $ninja-blue: #008cff;
 }
 
 @media (max-width: 550px) {
-  .game-tabs {
+  ::ng-deep .game-tabs {
+    .p-tablist-content {
+      max-width: 100%;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scrollbar-width: thin;
+    }
+
+    .p-tablist-tab-list {
+      width: max-content;
+      min-width: 100%;
+      flex-wrap: nowrap;
+    }
+
     .p-tab {
-      min-width: 0;
-      flex: 1;
+      min-width: max-content;
+      flex: 0 0 auto;
       padding: 14px 10px !important;
       font-size: 0.7rem !important;
+      white-space: nowrap;
     }
 
     .tab-number {
@@ -626,7 +642,16 @@ $ninja-blue: #008cff;
     }
 
     .patch-title {
+      min-width: 0;
       padding-bottom: 12px;
+
+      span {
+        overflow-wrap: anywhere;
+      }
     }
+  }
+
+  .patch-notes-wrapper {
+    background-attachment: scroll;
   }
 }

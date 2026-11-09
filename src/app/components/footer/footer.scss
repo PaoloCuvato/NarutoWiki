@@ -199,12 +199,18 @@
     padding: 20px;
   }
   .cookie-banner-content {
+    min-width: 0;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
   }
+  .cookie-text-area {
+    width: 100%;
+    min-width: 0;
+  }
   .cookie-buttons {
     width: 100%;
+    flex-wrap: wrap;
     justify-content: flex-end;
   }
 
@@ -227,6 +233,38 @@
 
     .legal-links {
       justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .cookie-banner-overlay {
+    padding: 18px 16px;
+  }
+
+  .cookie-buttons {
+    flex-direction: column;
+    align-items: stretch;
+
+    button {
+      min-height: 44px;
+    }
+  }
+
+  .storm-footer {
+    .footer-container {
+      padding: 32px 16px;
+    }
+
+    .footer-section {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .legal-links {
+      column-gap: 8px;
+      row-gap: 8px;
     }
   }
 }

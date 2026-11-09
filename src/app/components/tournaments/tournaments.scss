@@ -14,6 +14,9 @@
   padding: 20px;
   max-width: 1400px;
   margin: 0 auto;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .action-bar-container {
@@ -103,12 +106,13 @@
 /* Griglia Orizzontale per i Tornei */
 .tournaments-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
   gap: 24px;
 }
 
 /* Card Torneo Principale */
 .tournament-card {
+  min-width: 0;
   background: rgba(14, 14, 18, 0.95);
   border: 1px solid rgba(168, 85, 247, 0.2);
   border-radius: 12px;
@@ -611,6 +615,97 @@
       &:hover {
         background: #9233eab6 !important;
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tournaments-page {
+    padding: 16px;
+  }
+
+  .action-bar-container {
+    padding: 16px 0 28px;
+
+    .page-title {
+      flex: 1 1 100%;
+      min-width: 0;
+
+      h1 {
+        flex-wrap: wrap;
+        font-size: clamp(1.5rem, 5vw, 2rem);
+      }
+    }
+
+    ::ng-deep .btn-trigger-modal {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .tournaments-grid {
+    gap: 18px;
+  }
+
+  ::ng-deep .purple-tournament-dialog {
+    width: calc(100vw - 32px) !important;
+    max-width: 750px !important;
+    margin: 16px;
+  }
+
+  .tournament-wrapper {
+    .tournament-header h2 {
+      flex-wrap: wrap;
+      font-size: clamp(1.25rem, 5vw, 1.6rem);
+    }
+
+    .tournament-card-form {
+      padding: 1rem;
+    }
+
+    .form-footer {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .tournaments-page {
+    padding: 14px;
+  }
+
+  .tournaments-section .section-title {
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  .tournament-card .card-banner {
+    height: clamp(130px, 50vw, 160px);
+  }
+
+  ::ng-deep .purple-tournament-dialog {
+    width: calc(100vw - 20px) !important;
+    margin: 10px;
+
+    .p-dialog-header {
+      padding: 1rem 1rem 0 !important;
+    }
+
+    .p-dialog-content {
+      padding: 0 1rem 1rem !important;
+    }
+  }
+
+  .tournament-wrapper {
+    .tournament-card-form {
+      padding: 0.85rem;
+    }
+
+    .review-step .review-list li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
     }
   }
 }

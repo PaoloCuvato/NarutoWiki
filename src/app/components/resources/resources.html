@@ -1,1 +1,121 @@
-<p>resources works!</p>
+<div class="tier-tool-wrapper">
+  
+  <div class="tier-box">
+    
+    <!-- Top Bar Controlli -->
+    <div class="header-bar">
+      <div class="title-section">
+        <h1>Tier List Tool</h1>
+        <p>Upload files, drag and drop items, and export your image.</p>
+      </div>
+
+      <div class="actions-section">
+        <!-- Input File Nascosto -->
+        <input 
+          type="file" 
+          #fileInput 
+          style="display: none;" 
+          accept="image/*" 
+          multiple 
+          (change)="onImageUpload($event)">
+
+        <!-- Pulsanti personalizzati con stile uniforme -->
+        <button class="custom-btn upload-btn" (click)="triggerFileInput()">
+          <i class="pi pi-upload"></i> Upload File
+        </button>
+
+        <button class="custom-btn add-btn" (click)="addTier()">
+          <i class="pi pi-plus"></i> Add Tier
+        </button>
+
+        <button class="custom-btn reset-btn" (click)="resetAll()">
+          <i class="pi pi-refresh"></i> Reset
+        </button>
+        
+        <button class="custom-btn png-btn" (click)="exportImage('png')">
+          <i class="pi pi-download"></i> PNG
+        </button>
+
+        <button class="custom-btn jpeg-btn" (click)="exportImage('jpeg')">
+          <i class="pi pi-image"></i> JPEG
+        </button>
+      </div>
+    </div>
+
+    <!-- AREA DI ESPORTAZIONE (Tier Canvas) -->
+    <div #exportArea class="canvas-area">
+      <div class="tier-rows-container">
+        
+        <div *ngFor="let tier of tiers; let i = index" class="tier-row">
+          
+          <!-- Box Label Colore + Input Nome -->
+          <div class="tier-header" [style.background-color]="tier.color">
+            <input type="text" [(ngModel)]="tier.label" class="tier-title-input" />
+            <div class="tier-color-control">
+              <p-colorPicker [(ngModel)]="tier.color" appendTo="body" pTooltip="Change Tier Color"></p-colorPicker>
+            </div>
+          </div>
+
+          <!-- Zone di Drop per ogni Tier -->
+          <div 
+            [id]="tier.id"
+            cdkDropList
+            cdkDropListOrientation="mixed"
+            [cdkDropListData]="tier.items"
+            [cdkDropListConnectedTo]="connectedToIds"
+            (cdkDropListDropped)="onDrop($event)"
+            class="tier-drop-zone">
+            
+            <div *ngFor="let item of tier.items" cdkDrag class="item-card" [pTooltip]="item.name">
+              <img [src]="item.url" [alt]="item.name" />
+            </div>
+
+          </div>
+
+          <!-- Pulsante Cestino a destra -->
+          <div class="tier-right-action">
+            <button pButton icon="pi pi-trash" class="p-button-text p-button-danger delete-btn" (click)="deleteTier(i)" pTooltip="Delete Tier"></button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- AREA UNRANKED (File Caricati) -->
+    <div class="unranked-box">
+      
+      <!-- Banner di avviso richiesto -->
+      <div class="refresh-banner">
+        <i class="pi pi-info-circle"></i>
+        <span>Please click anywhere on the page if uploaded files do not appear immediately.</span>
+      </div>
+
+      <div class="unranked-header">
+        <h3>Items to Rank</h3>
+        <span class="count-badge">{{ unrankedItems.length }} files</span>
+      </div>
+
+      <div 
+        id="unranked-pool"
+        cdkDropList
+        cdkDropListOrientation="mixed"
+        [cdkDropListData]="unrankedItems"
+        [cdkDropListConnectedTo]="connectedToIds"
+        (cdkDropListDropped)="onDrop($event)"
+        class="unranked-drop-zone">
+        
+        <div *ngFor="let item of unrankedItems" cdkDrag class="item-card" [pTooltip]="item.name">
+          <img [src]="item.url" [alt]="item.name" />
+        </div>
+
+        <div *ngIf="unrankedItems.length === 0" class="empty-msg">
+          <i class="pi pi-images"></i>
+          <p>Use the <strong>Upload File</strong> button above to load images from your PC.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

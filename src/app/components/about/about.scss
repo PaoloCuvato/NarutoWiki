@@ -11,7 +11,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 450px;
     background: url('/weapon.png') no-repeat bottom center;
     background-size: contain;
@@ -120,7 +120,7 @@
 
   .contributors-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
     gap: 20px;
   }
 
@@ -244,5 +244,46 @@
     .partner-card { flex-direction: column; text-align: center; padding: 40px 25px; }
     .profile-card { padding: 30px; }
     .fixed-weapons-bg { opacity: 0.08; }
+  }
+}
+
+@media (max-width: 480px) {
+  .storm-about-new {
+    padding: 48px 14px;
+
+    .about-header {
+      margin-bottom: 48px;
+
+      h1 {
+        font-size: clamp(2rem, 8vw, 2.7rem);
+        line-height: 1.1;
+      }
+
+      .subtitle {
+        font-size: 0.72rem;
+        letter-spacing: 2px;
+      }
+    }
+
+    .about-content {
+      gap: 42px;
+    }
+
+    .profile-card {
+      padding: 22px;
+
+      .profile-header h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .partner-card {
+      gap: 20px;
+      padding: 30px 18px;
+
+      .partner-text h2 {
+        font-size: 1.7rem;
+      }
+    }
   }
 }

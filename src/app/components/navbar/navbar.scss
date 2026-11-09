@@ -22,6 +22,10 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
   transition: border-color 0.3s ease;
 }
 
+.mobile-nav-toggle {
+  display: none;
+}
+
 /* --- LOGO & TITLE --- */
 .logo-section {
   display: flex;
@@ -540,5 +544,154 @@ $c-steel: #8a9ba8;          // Acciaio / Platino (Per il capitolo 6 / metallico)
 
     i { color: #5865F2 !important; }
     .btn-text { color: #5865F2 !important; }
+  }
+}
+
+@media (max-width: 1450px) and (min-width: 1201px) {
+  .storm-navbar {
+    padding: 0 24px;
+  }
+
+  .logo-section {
+    gap: 10px;
+
+    .navbar-title {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+  }
+
+  .links-section {
+    gap: 14px;
+
+    .nav-item {
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .storm-menu-btn {
+    padding: 0 12px !important;
+    gap: 8px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .storm-navbar {
+    height: auto;
+    min-height: 72px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 12px;
+    padding: 10px 20px;
+  }
+
+  .logo-section {
+    flex: 1;
+    min-width: 0;
+    gap: 8px;
+
+    img {
+      height: 40px;
+      flex-shrink: 0;
+    }
+
+    .navbar-title {
+      min-width: 0;
+      font-size: clamp(0.62rem, 2.8vw, 0.9rem);
+      letter-spacing: 0.3px;
+      line-height: 1.25;
+      padding-left: 8px;
+    }
+  }
+
+  .mobile-nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    color: #fff;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+
+  .links-section,
+  .action-section {
+    display: none;
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .storm-navbar.mobile-open {
+    .links-section {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding-top: 10px;
+
+      .nav-item {
+        min-height: 44px;
+        padding: 9px 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        box-sizing: border-box;
+      }
+
+      .nav-item .dot {
+        flex: 0 0 8px;
+      }
+    }
+
+    .action-section {
+      display: flex;
+      align-items: center;
+      padding-top: 12px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .storm-navbar {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .logo-section img {
+    height: 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  ::ng-deep .discord-dialog {
+    .p-dialog-header {
+      padding: 1rem !important;
+
+      .p-dialog-title {
+        font-size: 0.95rem;
+      }
+    }
+
+    .p-dialog-content {
+      padding: 1rem !important;
+    }
+
+    .p-dialog-footer .dialog-footer {
+      flex-direction: column-reverse;
+      align-items: stretch !important;
+      gap: 8px !important;
+
+      p-button,
+      .p-button {
+        width: 100%;
+        min-height: 44px;
+        justify-content: center;
+      }
+    }
   }
 }

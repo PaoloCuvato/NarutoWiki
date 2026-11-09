@@ -7,6 +7,9 @@ $ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
 // --- NASCONDE LA SCROLLBAR A DESTRA SU TUTTI I BROWSER ---
 :host {
   display: block;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   scrollbar-width: none; 
   -ms-overflow-style: none; 
 
@@ -23,6 +26,7 @@ $ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
   background-size: cover;
   min-height: 100vh;
   padding: 60px 20px;
+  box-sizing: border-box;
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
   overflow: hidden; // Nasconde le nuvole quando escono dai bordi dello schermo
@@ -152,8 +156,10 @@ $ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
 // CONTENITORE CON EFFETTO SFOCATURA SULLO SFONDO (BACKDROP BLUR)
 .table-container {
   width: 100%;
+  min-width: 0;
   max-width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
   border: 2px solid $ninja-orange;
   border-radius: 12px;
   overflow: hidden;
@@ -164,6 +170,16 @@ $ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
 }
 
 ::ng-deep .p-datatable-storm {
+  .p-datatable-table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+
+  table {
+    min-width: 860px;
+  }
+
   .p-datatable-thead > tr > th {
     background: rgba(17, 17, 17, 0.95) !important;
     color: $ninja-orange !important;
@@ -219,6 +235,8 @@ $ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
     background: rgba(15, 15, 15, 0.9) !important;
     border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
     padding: 10px !important;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .p-paginator-page, .p-paginator-next, .p-paginator-last, .p-paginator-first, .p-paginator-prev {
       color: #888 !important;
@@ -328,5 +346,37 @@ $ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
   }
   100% {
     transform: scaleX(-1) translateX(calc(100vw + 1400px)); // Attraversa tutto lo schermo ed esce completamente a sinistra
+  }
+}
+
+@media (max-width: 768px) {
+  .leaderboard-wrapper {
+    padding: 40px 14px;
+    background-attachment: scroll;
+
+    .leaderboard-header {
+      margin-bottom: 30px;
+
+      h1 {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+      }
+
+      .subtitle {
+        font-size: clamp(0.85rem, 3vw, 1.1rem);
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .leaderboard-wrapper {
+    padding: 32px 10px;
+  }
+
+  ::ng-deep .p-datatable-storm {
+    .p-datatable-thead > tr > th,
+    .p-datatable-tbody > tr > td {
+      padding: 12px 14px;
+    }
   }
 }

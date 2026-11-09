@@ -1,0 +1,145 @@
+$card-background: rgba(10, 10, 10, 0.82);
+$ninja-red: #b83a3a;
+
+:host {
+  display: block;
+}
+
+.game-resources-wrapper {
+  position: relative;
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.88)), url('/lord_kabuto.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.game-resources-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.patch-header {
+  margin-bottom: 38px;
+
+  .patch-kicker {
+    display: block;
+    color: $ninja-red;
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .header-line {
+    width: 60px;
+    height: 4px;
+    margin-top: 10px;
+    background: $ninja-red;
+    border-radius: 2px;
+  }
+
+  p {
+    margin: 10px 0 0;
+    color: #888;
+    font-size: 0.92rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* STILE IDENTICO ALLE PATCH NOTES PER I TAB */
+::ng-deep {
+  .game-tabs {
+    width: 100%;
+
+    /* Forza lo sfondo nero e rimuove il bianco di default */
+    .p-tablist,
+    .p-tablist-viewport,
+    .p-tablist-content {
+      background: $card-background !important;
+      border: 1px solid rgba(184, 58, 58, 0.25) !important;
+      border-radius: 10px 10px 0 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Singolo tab */
+    .p-tab {
+      position: relative;
+      padding: 18px 24px !important;
+      background: transparent !important;
+      border: none !important;
+      color: #666 !important;
+      font-size: 0.88rem !important;
+      font-weight: 900 !important;
+      letter-spacing: 1px !important;
+      transition: all 0.2s ease;
+
+      .tab-number {
+        margin-right: 8px;
+        color: #444;
+        font-size: 0.75rem;
+        transition: color 0.2s ease;
+      }
+
+      &:hover {
+        color: #fff !important;
+        .tab-number {
+          color: $ninja-red;
+        }
+      }
+
+      /* Tab Selezionata con linea rossa sotto come nell'immagine */
+      &[aria-selected='true'],
+      &.p-tab-active {
+        color: #fff !important;
+        background: transparent !important;
+
+        .tab-number {
+          color: $ninja-red !important;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background: $ninja-red !important;
+        }
+      }
+    }
+
+    /* Nasconde la barra di scorrimento di default di PrimeNG se dà fastidio */
+    .p-tablist-active-bar,
+    .p-tab-active-bar {
+      display: none !important;
+    }
+
+    /* Contenitore dei pannelli coordinato */
+    .p-tabpanels {
+      padding: 30px !important;
+      background: rgba(5, 5, 5, 0.85) !important;
+      border: 1px solid rgba(184, 58, 58, 0.25) !important;
+      border-top: none !important;
+      border-radius: 0 0 10px 10px !important;
+      backdrop-filter: blur(8px);
+      color: #fff !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+  }
+}

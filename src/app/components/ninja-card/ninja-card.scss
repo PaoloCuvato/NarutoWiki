@@ -3,6 +3,14 @@ $ninja-red: #b83a3a;
 $ninja-red-light: #e64a4a;
 $ninja-red-glow: rgba(230, 74, 74, 0.4);
 
+:host {
+  display: block;
+  flex: 0 1 274px;
+  width: 274px;
+  max-width: 100%;
+  min-width: 0;
+}
+
 .ninja-card {
   background: rgba(15, 15, 15, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -10,7 +18,8 @@ $ninja-red-glow: rgba(230, 74, 74, 0.4);
   padding: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: 240px;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 14px;

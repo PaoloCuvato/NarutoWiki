@@ -1876,7 +1876,7 @@ export class Storm4 {
   },
   {
     name: 'Choji RTB',
-    image: 'characters/l_tyo3.png',
+    image: 'characters/l_tyo4.png',
     dashcutType: '',
     dashcutIcon: '/support_type/asst_sp_cut.png',
     tierIcon: 'rate_a_l.png',

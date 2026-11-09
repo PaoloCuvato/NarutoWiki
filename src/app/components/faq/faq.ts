@@ -46,7 +46,7 @@ export class Faq {
     {
       question: 'When will I be able to create my own Ninja Card?',
       answer: [
-        'The Ninja Card Creator is one of our planned community features. It will allow players to create and customize their own player cards.',
+        'The Ninja Card Creator is one of our planned community features. It will allow players to create,customize their own player cards and join or create lobbies using our custom matchmaking system .',
         'Stay tuned for updates regarding its development and official release.'
       ],
       open: false
@@ -54,7 +54,7 @@ export class Faq {
     {
       question: 'When will I be able to create a lobby through Matchmaking?',
       answer: [
-        'Our goal is to introduce a matchmaking system where players can create lobbies, organize matches, and connect with other members of the community.',
+        'Our goal is to introduce a matchmaking system where players can create lobbies, organize matches, and connect with other members of the community via Discord or the wiki.',
         'This feature is planned for a future update. More details will be announced as development progresses.'
       ],
       open: false
@@ -63,14 +63,14 @@ export class Faq {
       question: "I'm a content creator. How can I appear in the Community section?",
       answer: [
         'We are always interested in discovering content creators who contribute to the Naruto Storm community.',
-        'You can contact our team through our official community channels and share your YouTube, Twitch, or other social media profiles. We will review your content and consider adding you to the Community section.'
+        'You can contact our team through our official community channels and share your YouTube, Twitch, or other social media profiles or you can contact us directly on inquiry@willofninja.com; we will review your content and consider adding you to the Community section.'
       ],
       open: false
     },
     {
       question: 'How can I send suggestions or feedback?',
       answer: [
-        'Community feedback is extremely important to us. If you have ideas, suggestions, or improvements in mind, feel free to contact us through our official community channels.',
+        'Community feedback is extremely important to us. If you have ideas, suggestions, or improvements in mind, feel free to contact us through our official community on Discord or email us at inquiry@willofninja.com.',
         'Every suggestion is appreciated and helps us improve the wiki.'
       ],
       open: false
@@ -87,7 +87,7 @@ export class Faq {
       question: 'How can I become a sponsor?',
       answer: [
         'We welcome collaborations and sponsorship opportunities that can help support the project and its future growth.',
-        'If you are interested in sponsoring the Storm Wiki, please get in touch with our team through our official contact channels to discuss possible collaborations.'
+        'If you are interested in sponsoring the Storm Wiki, please get in touch with our team through our official contact channels or email us at inquiry@willofninja.com to discuss possible collaborations.'
       ],
       open: false
     },
@@ -95,7 +95,8 @@ export class Faq {
       question: 'How can I add my Storm project to the wiki?',
       answer: [
         'We want the wiki to be a place where the community can showcase useful projects and resources.',
-        'If you have created a tool, mod, website, database, or another project related to the Naruto Storm series, contact our team with a description and the relevant links. We will review your submission.'
+        'If you have created a tool, mod, website, database, or another project related to the Naruto Storm series and you would like to showcase it on the wiki, contact our team with a description and the relevant links. We will review your submission.',
+        'you can reach us through our official community channels or email us at inquiry@willofninja.com'
       ],
       open: false
     },
@@ -103,14 +104,16 @@ export class Faq {
       question: 'How can I become part of the Will of Ninja team?',
       answer: [
         'We are always looking for passionate people who want to contribute to the Naruto Storm community.',
-        'Whether you are a developer, researcher, designer, content creator, or simply someone with valuable knowledge about the games, you can contact us and express your interest in joining the team.'
+        'Whether you are a developer, researcher, designer, content creator, or simply someone with valuable knowledge about the games, you can contact us and express your interest in joining the team.',
+        'you can reach us through our official community channels or email us at inquiry@willofninja.com'
+
       ],
       open: false
     },
     {
       question: 'How can I report a bug?',
       answer: [
-        'If you encounter a bug or something that is not working correctly, please report it through our official community channels.',
+        'If you encounter a bug or something that is not working correctly, please report it through our official community channels or email us at inquiry@willofninja.com.',
         'Whenever possible, include a description of the issue, screenshots, and the steps required to reproduce it. This will help us investigate and fix the problem faster.'
       ],
       open: false
@@ -118,8 +121,19 @@ export class Faq {
     {
       question: 'Why are all characters ranked A Tier?',
       answer: [
-        'Character rankings are part of an ongoing evaluation process. A character placement should reflect their actual performance, strengths, weaknesses, and overall competitive potential.',
-        'If you notice characters sharing the same rank, it does not necessarily mean they are equally strong. We aim to improve and refine the tier information as more data and community feedback become available.'
+        'We would love to showcase the different character tier lists across all the games. Unfortunately, implementing this feature will take some time.',
+        'For this reason, you may currently see a tier displayed next to certain characters. Please note that these rankings are temporary and should not be taken seriously at this stage, we are worrking the fastest that we can to update the tier list of each games.',
+        'We apologize for any inconvenience and appreciate your understanding!'
+
+      ],
+      open: false
+    },
+        {
+      question: 'Why Leaderboard is not updating?',
+      answer: [
+        'The Leaderboard section is on build and will be updated in the future. We are working on implementing a system that will showcase the last rankings of our matchmaking system.',
+        'We are also planning to add Seasons but before do that we need to upgrade our matchmaking system to support this feature.',
+        'We appreciate your patience and understanding as we continue to develop and improve this feature.'
       ],
       open: false
     }

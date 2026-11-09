@@ -1,3 +1,4 @@
+
 <div class="community-container">
 
   <div *ngIf="isLoading" class="loading-wrapper">
@@ -46,9 +47,11 @@
         <div class="creator-box" *ngFor="let creator of featuredCreators">
           <div class="creator-header">
             <div class="creator-profile">
+
               <p-avatar
                 *ngIf="creator.avatarUrl; else defaultAvatar"
                 [image]="creator.avatarUrl"
+                (onImageError)="onAvatarError($event, creator)"
                 shape="circle"
                 styleClass="creator-avatar">
               </p-avatar>

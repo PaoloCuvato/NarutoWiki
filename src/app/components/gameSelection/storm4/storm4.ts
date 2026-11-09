@@ -1837,7 +1837,7 @@ export class Storm4 {
   },
   {
     name: 'Sai RTB',
-    image: 'characters/l_sai1.png',
+    image: 'characters/l_sai3.png',
     dashcutType: '',
     dashcutIcon: '/support_type/asst_sp_cover.png',
     tierIcon: 'rate_a_l.png',
@@ -1850,7 +1850,7 @@ export class Storm4 {
   },
   {
     name: 'Shikamaru RTB',
-    image: 'characters/l_sik3.png',
+    image: 'characters/l_sik5.png',
     dashcutType: 'Break Guard',
     dashcutIcon: '/support_type/asst_sp_cover.png',
     tierIcon: 'rate_a_l.png',
@@ -1863,7 +1863,7 @@ export class Storm4 {
   },
   {
     name: 'Ino RTB',
-    image: 'characters/l_ino2.png',
+    image: 'characters/l_ino4.png',
     dashcutType: '',
     dashcutIcon: '/support_type/asst_sp_ckr.png',
     tierIcon: 'rate_a_l.png',
@@ -1876,7 +1876,7 @@ export class Storm4 {
   },
   {
     name: 'Choji RTB',
-    image: 'characters/l_tyo2.png',
+    image: 'characters/l_tyo3.png',
     dashcutType: '',
     dashcutIcon: '/support_type/asst_sp_cut.png',
     tierIcon: 'rate_a_l.png',
@@ -1889,7 +1889,7 @@ export class Storm4 {
   },
   {
     name: 'Kiba RTB',
-    image: 'characters/l_kib2.png',
+    image: 'characters/l_kib4.png',
     dashcutType: 'Charge Assist',
     dashcutIcon: '/support_type/asst_at_counter.png',
     tierIcon: 'rate_a_l.png',
@@ -1902,7 +1902,7 @@ export class Storm4 {
   },
   {
     name: 'Hinata RTB',
-    image: 'characters/l_hnt2.png',
+    image: 'characters/l_hnt5.png',
     dashcutType: '',
     dashcutIcon: '/support_type/asst_sp_ckr.png',
     tierIcon: 'rate_a_l.png',
@@ -1915,7 +1915,7 @@ export class Storm4 {
   },
   {
     name: 'Rock Lee RTB',
-    image: 'characters/l_roc2.png',
+    image: 'characters/l_roc4.png',
     dashcutType: 'Charge Assist',
     dashcutIcon: '/support_type/asst_at_counter.png',
     tierIcon: 'rate_a_l.png',
@@ -1928,7 +1928,7 @@ export class Storm4 {
   },
   {
     name: 'Ten ten RTB',
-    image: 'characters/l_ten2.png',
+    image: 'characters/l_ten4.png',
     dashcutType: 'Secret Substitution',
     dashcutIcon: '/support_type/asst_sp_cover.png',
     tierIcon: 'rate_a_l.png',
@@ -1941,7 +1941,7 @@ export class Storm4 {
   },
   {
     name: 'Shino RTB',
-    image: 'characters/l_sin2.png',
+    image: 'characters/l_sin4.png',
     dashcutType: 'Break Guard',
     dashcutIcon: '/support_type/none.png',
     tierIcon: 'rate_a_l.png',
@@ -1954,7 +1954,7 @@ export class Storm4 {
   },
   {
     name: 'Gaara RTB',
-    image: 'characters/l_gar3.png',
+    image: 'characters/l_gar6.png',
     dashcutType: 'Charge Assist',
     dashcutIcon: '/support_type/asst_sp_guard.png',
     tierIcon: 'rate_a_l.png',
@@ -1967,7 +1967,7 @@ export class Storm4 {
   },
   {
     name: 'Kankuro RTB',
-    image: 'characters/l_knk3.png',
+    image: 'characters/l_knk6.png',
     dashcutType: 'Secret Substitution',
     dashcutIcon: '/support_type/asst_sp_guard.png',
     tierIcon: 'rate_a_l.png',
@@ -1980,7 +1980,7 @@ export class Storm4 {
   },
   {
     name: 'Temari RTB',
-    image: 'characters/l_tmr3.png',
+    image: 'characters/l_tmr6.png',
     dashcutType: '',
     dashcutIcon: '/support_type/asst_sp_cover.png',
     tierIcon: 'rate_a_l.png',

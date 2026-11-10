@@ -17,30 +17,33 @@ export class Callback implements OnInit {
   private platformId = inject(PLATFORM_ID);
   private http = inject(HttpClient);
 
-  private hasRequested = false; // <-- Flag per evitare chiamate duplicate
+  private hasRequested = false;
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       this.route.queryParams.subscribe(params => {
         const code = params['code'];
-        
+
         if (code && !this.hasRequested) {
-          this.hasRequested = true; // Blocca subito ulteriori esecuzioni
+          this.hasRequested = true;
 
-          this.http.post<any>('http://localhost:8080/api/auth/discord', { code: code })
-            .subscribe({
-              next: (userSavedInMongo) => {
-                localStorage.setItem('discord_user', JSON.stringify(userSavedInMongo));
+          const apiUrl = window.location.hostname === 'localhost'
+            ? 'http://localhost:8080/api/auth/discord'
+            : '/api/auth/discord';
 
-                this.router.navigate(['/home']).then(() => {
-                  window.location.reload();
-                });
-              },
-              error: (err) => {
-                console.error('Errore durante l\'autenticazione Discord:', err);
-                this.router.navigate(['/home']);
-              }
-            });
+          this.http.post<any>(apiUrl, { code }).subscribe({
+            next: (userSavedInMongo) => {
+              localStorage.setItem('discord_user', JSON.stringify(userSavedInMongo));
+
+              this.router.navigate(['/home']).then(() => {
+                window.location.reload();
+              });
+            },
+            error: (err) => {
+              console.error('Errore durante l\'autenticazione Discord:', err);
+              this.router.navigate(['/home']);
+            }
+          });
         } else if (!code && !this.hasRequested) {
           this.router.navigate(['/home']);
         }

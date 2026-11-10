@@ -52,8 +52,11 @@ export class Navbar implements OnInit, OnDestroy {
   userAvatar: string = ''; 
 
   private readonly CLIENT_ID = '1310173685268746262';
-  private readonly REDIRECT_URI = encodeURIComponent('http://localhost:4200/callback');
-
+  private readonly REDIRECT_URI = encodeURIComponent(
+    typeof window !== 'undefined' && window.location.hostname === 'localhost'
+      ? 'http://localhost:4200/callback'
+      : 'https://willofninja.com/callback'
+  );
   // Gestione hover e menu attivi per evitare sovrapposizioni
   private hideTimeout: any = null;
   private activeMenu: any = null;

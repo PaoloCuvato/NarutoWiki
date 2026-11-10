@@ -8,7 +8,7 @@ import { TournamentModal } from '../modals/tournament-modal';
 })
 export class TournamentService {
   // Aggiunto /connections per puntare all'endpoint corretto del Controller
-  private apiUrl = 'http://localhost:8080/api/tournaments/connections'; 
+  private apiUrl = '/api/tournaments/connections'; 
 
   constructor(private http: HttpClient) {
     console.log('URL CHIAMATO:', this.apiUrl);

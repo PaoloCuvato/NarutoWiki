@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class LobbyService {
-  private apiUrl= "http://localhost:8080/api/lobbies/all";
+  private apiUrl= "/api/lobbies/all";
 
 constructor(private http: HttpClient) {}
 

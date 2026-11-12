@@ -193,4 +193,21 @@ export class CharacterCooldown implements OnInit {
       { character: 'Zabuza', baseJ1: 9, baseJ2: 11, awakeningJ1: 9, awakeningJ2: 11 }
     ];
   }
+
+    getCooldownClass(value: number): string {
+      if (value >= 5 && value <= 6) {
+        return 'cooldown-blue';
+      } else if (value >= 7 && value <= 9) {
+        return 'cooldown-green';
+      } else if (value >= 10 && value <= 12) {
+        return 'cooldown-white';
+      } else if (value >= 13 && value <= 17) {
+        return 'cooldown-yellow';
+      } else if (value >= 18 && value <= 30) {
+        return 'cooldown-red';
+      }
+
+      return '';
+    }
+
 }

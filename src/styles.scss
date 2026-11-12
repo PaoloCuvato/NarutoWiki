@@ -162,3 +162,72 @@ body {
     color: #94a3b8 !important;
   }
 }
+
+  // STORM WIKI - PRIME NG 17 TIERED MENU
+
+body .p-tieredmenu {
+  background: #0d0e12 !important;
+  background-color: #0d0e12 !important;
+  border: 2px solid #ff9000 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 0 20px rgba(255, 144, 0, 0.35) !important;
+}
+
+body .p-tieredmenu .p-tieredmenu-root-list,
+body .p-tieredmenu .p-submenu-list {
+  background: #0d0e12 !important;
+}
+
+body .p-tieredmenu .p-menuitem-content {
+  background: #0d0e12 !important;
+}
+
+body .p-tieredmenu .p-menuitem-link,
+body .p-tieredmenu .p-menuitem-link:not(.p-disabled) {
+  background: #0d0e12 !important;
+  color: #ffffffe7 !important;
+}
+
+body .p-tieredmenu .p-menuitem-link .p-menuitem-text,
+body .p-tieredmenu .p-menuitem-link .p-menuitem-icon,
+body .p-tieredmenu .p-menuitem-link .p-submenu-icon {
+  color: #fffffff1 !important;
+}
+
+/* HOVER */
+body .p-tieredmenu .p-menuitem-content:hover,
+body .p-tieredmenu .p-menuitem-link:not(.p-disabled):hover {
+  background: #ffffffe8 !important;
+}
+
+body .p-tieredmenu .p-menuitem-content:hover .p-menuitem-link,
+body .p-tieredmenu .p-menuitem-link:not(.p-disabled):hover {
+  background: #ffffffe7 !important;
+  color: #000000 !important;
+}
+
+body .p-tieredmenu .p-menuitem-content:hover .p-menuitem-text,
+body .p-tieredmenu .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text {
+  color: #000000 !important;
+}
+
+body .p-tieredmenu .p-menuitem-content:hover .p-menuitem-icon,
+body .p-tieredmenu .p-menuitem-content:hover .p-submenu-icon,
+body .p-tieredmenu .p-menuitem-link:not(.p-disabled):hover .p-menuitem-icon,
+body .p-tieredmenu .p-menuitem-link:not(.p-disabled):hover .p-submenu-icon {
+  color: #ff9000 !important;
+}
+/* TESTO MENU */
+body .p-tieredmenu .p-tieredmenu-item-label {
+  color: #ffffffee !important;
+}
+
+/* HOVER TESTO */
+body .p-tieredmenu .p-tieredmenu-item-content:hover .p-tieredmenu-item-label {
+  color: #000000 !important;
+}
+
+/* HOVER SFONDO */
+body .p-tieredmenu .p-tieredmenu-item-content:hover {
+  background: #ffffffe7 !important;
+}

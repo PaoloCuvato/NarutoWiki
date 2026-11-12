@@ -1,3 +1,4 @@
+
 $ninja-red: #b83a3a;
 $ninja-red-light: #e64a4a;
 $ninja-red-glow: rgba(230, 74, 74, 0.35);
@@ -24,9 +25,9 @@ $ninja-red-glow: rgba(230, 74, 74, 0.35);
     min-width: 0;
 
     .info-badge {
-      background: rgba(184, 58, 58, 0.2);
-      border: 1px solid $ninja-red-light;
-      color: $ninja-red-light;
+      background: rgba(71, 58, 184, 0.2);
+      color: #f7f7f7;
+      border: 1px solid #fcfcfc;
       font-size: 0.72rem;
       font-weight: 900;
       padding: 4px 10px;
@@ -69,6 +70,7 @@ $ninja-red-glow: rgba(230, 74, 74, 0.35);
 
 /* OVERRIDE STILI PRIMENG TABLE */
 ::ng-deep .p-datatable-ninja {
+
   .p-datatable-table-container {
     max-width: 100%;
     overflow-x: auto;
@@ -135,30 +137,55 @@ $ninja-red-glow: rgba(230, 74, 74, 0.35);
 
   /* Badge / Pillole Cooldown */
   .cooldown-pill {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 45px;
     padding: 4px 10px;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #e0e0e0;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 0.82rem;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
 
-    &.awk {
-      border-color: rgba(184, 58, 58, 0.3);
-      color: #ff9999;
+    /* 5 - 6 secondi: BLU */
+    &.cooldown-blue {
+      background: rgba(59, 130, 246, 0.15);
+      border-color: #3b82f6;
+      color: #60a5fa;
+      box-shadow: 0 0 6px rgba(59, 130, 246, 0.15);
     }
 
-    &.fast {
-      background: rgba(46, 204, 113, 0.15);
-      border-color: rgba(46, 204, 113, 0.4);
-      color: #2ecc71;
+    /* 7 - 9 secondi: VERDE */
+    &.cooldown-green {
+      background: rgba(34, 197, 94, 0.15);
+      border-color: #22c55e;
+      color: #4ade80;
+      box-shadow: 0 0 6px rgba(34, 197, 94, 0.15);
     }
 
-    &.slow {
-      background: rgba(231, 76, 60, 0.15);
-      border-color: rgba(231, 76, 60, 0.4);
-      color: #e74c3c;
+    /* 10 - 12 secondi: BIANCO */
+    &.cooldown-white {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #e5e7eb;
+      color: #ffffff;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.12);
+    }
+
+    /* 13 - 17 secondi: GIALLO */
+    &.cooldown-yellow {
+      background: rgba(234, 179, 8, 0.15);
+      border-color: #eab308;
+      color: #facc15;
+      box-shadow: 0 0 6px rgba(234, 179, 8, 0.15);
+    }
+
+    /* 18 - 30 secondi: ROSSO */
+    &.cooldown-red {
+      background: rgba(239, 68, 68, 0.15);
+      border-color: #ef4444;
+      color: #ff6b6b;
+      box-shadow: 0 0 6px rgba(239, 68, 68, 0.15);
     }
   }
 

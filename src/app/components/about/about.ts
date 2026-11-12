@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './about.scss',
 })
 export class About {
-
+  openYoutube(url: string): void {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
 }

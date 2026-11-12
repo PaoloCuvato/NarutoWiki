@@ -1,9 +1,11 @@
+
 <div class="cooldowns-container">
   <!-- Barra superiore con badge informativo e campo di ricerca -->
   <div class="table-header-toolbar">
     <div class="table-info">
-      <span class="info-badge">PATCH 1.70</span>
+      <span class="info-badge">Storm Connections</span>
       <span class="info-text">All values are listed in seconds (s)</span>
+      <span class="info-badge">PATCH 1.70</span>
     </div>
 
     <div class="search-box">
@@ -22,8 +24,7 @@
     #dt
     [value]="cooldownsData"
     [paginator]="true"
-    [rows]="15"
-    [rowsPerPageOptions]="[10, 15, 25, 50, 100]"
+    [rows]="20"
     [globalFilterFields]="['character']"
     styleClass="p-datatable-ninja"
     [responsiveLayout]="'scroll'"
@@ -53,23 +54,35 @@
         <td class="col-character">
           <strong>{{ item.character }}</strong>
         </td>
+
+        <!-- BASE J1 -->
         <td>
-          <span class="cooldown-pill" [class.fast]="item.baseJ1 <= 8" [class.slow]="item.baseJ1 >= 20">
+          <span class="cooldown-pill"
+                [ngClass]="getCooldownClass(item.baseJ1)">
             {{ item.baseJ1 }}s
           </span>
         </td>
+
+        <!-- BASE J2 -->
         <td>
-          <span class="cooldown-pill" [class.fast]="item.baseJ2 <= 8" [class.slow]="item.baseJ2 >= 20">
+          <span class="cooldown-pill"
+                [ngClass]="getCooldownClass(item.baseJ2)">
             {{ item.baseJ2 }}s
           </span>
         </td>
+
+        <!-- AWAKENING J1 -->
         <td>
-          <span class="cooldown-pill awk" [class.fast]="item.awakeningJ1 <= 8" [class.slow]="item.awakeningJ1 >= 20">
+          <span class="cooldown-pill awk"
+                [ngClass]="getCooldownClass(item.awakeningJ1)">
             {{ item.awakeningJ1 }}s
           </span>
         </td>
+
+        <!-- AWAKENING J2 -->
         <td>
-          <span class="cooldown-pill awk" [class.fast]="item.awakeningJ2 <= 8" [class.slow]="item.awakeningJ2 >= 20">
+          <span class="cooldown-pill awk"
+                [ngClass]="getCooldownClass(item.awakeningJ2)">
             {{ item.awakeningJ2 }}s
           </span>
         </td>

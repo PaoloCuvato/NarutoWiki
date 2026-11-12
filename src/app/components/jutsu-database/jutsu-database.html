@@ -2,8 +2,9 @@
   <!-- Toolbar superiore identica alla tabella cooldown -->
   <div class="table-header-toolbar">
     <div class="table-info">
-      <span class="info-badge">OTG STATUS</span>
+      <span class="info-badge">Storm Connections</span>
       <span class="info-text">Jutsu & Awakening Ground Hit Compatibility</span>
+      <span class="info-badge">OTG STATUS</span>
     </div>
 
     <div class="search-box">
@@ -22,8 +23,7 @@
     #dt
     [value]="jutsuList"
     [paginator]="true"
-    [rows]="15"
-    [rowsPerPageOptions]="[10, 15, 25, 50, 100]"
+    [rows]="20"
     [globalFilterFields]="['character', 'notes']"
     styleClass="p-datatable-ninja"
     [responsiveLayout]="'scroll'"

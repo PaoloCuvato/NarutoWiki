@@ -30,9 +30,9 @@ $ninja-red-glow: rgba(230, 74, 74, 0.35);
     min-width: 0;
 
     .info-badge {
-      background: rgba(184, 58, 58, 0.2);
-      border: 1px solid $ninja-red-light;
-      color: $ninja-red-light;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid #fcfcfc;
+      color: #f7f7f7;
       font-size: 0.72rem;
       font-weight: 900;
       padding: 4px 10px;

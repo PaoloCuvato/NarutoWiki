@@ -44,7 +44,7 @@ export class Games {
     { id: 'stormrev', name: 'Storm Revolution', logo: 'stormLogos/NSUNSR.png' },
 
     { id: 'storm4', name: 'Storm 4 RTB', logo: 'stormLogos/NSUNSRTB.png' },
-    { id: 'stormevo', name: 'Storm Evolution', logo: 'stormLogos/NSUNSE.png' },
+   // { id: 'stormevo', name: 'Storm Evolution', logo: 'stormLogos/NSUNSE.png' },
     { id: 'stormconn', name: 'Storm Connections', logo: 'stormLogos/NXBUNSC.png' }
   ];
 

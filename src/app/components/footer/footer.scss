@@ -268,3 +268,13 @@
     }
   }
 }
+
+/* Riduzione altezza footer - Desktop 1080p e 1366px */
+@media (min-width: 993px) and (max-width: 1400px) {
+  .storm-footer {
+    .footer-container {
+      padding-top: 26px;    // Prima 30px
+      padding-bottom: 26px; // Prima 30px
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "note": "Generations is console-only; it has no Steam achievement set. Xbox/PlayStation trophies require a separate source.",
+  "games": {
+    "Storm_1": {
+      "downloaded": 50,
+      "expected": 50,
+      "complete": true
+    },
+    "Storm_2": {
+      "downloaded": 50,
+      "expected": 50,
+      "complete": true
+    },
+    "Storm_3_Full_Burst": {
+      "downloaded": 51,
+      "expected": 54,
+      "complete": false
+    },
+    "Storm_Revolution": {
+      "downloaded": 50,
+      "expected": 50,
+      "complete": true
+    },
+    "Storm_4": {
+      "downloaded": 53,
+      "expected": 53,
+      "complete": true
+    },
+    "Storm_Connections": {
+      "downloaded": 45,
+      "expected": 45,
+      "complete": true
+    }
+  }
+}

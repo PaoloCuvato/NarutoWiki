@@ -1,74 +1,205 @@
 <div class="leaderboard-wrapper">
-  
-  <!-- CONTENITORE NUVOLE DI SFONDO (Sempre dietro a tutto) -->
-  <div class="clouds-container">
-    <!-- Gruppo Sinistra (3 nuvole a diverse altezze che scorrono) -->
-    <img src="cloud.png" class="cloud-item cloud-left-1" alt="cloud">
-    <img src="cloud.png" class="cloud-item cloud-left-2" alt="cloud">
-    <img src="cloud.png" class="cloud-item cloud-left-3" alt="cloud">
-    
-    <!-- Gruppo Destra (3 nuvole a diverse altezze che scorrono dall'altro lato) -->
-    <img src="cloud.png" class="cloud-item cloud-right-1" alt="cloud">
-    <img src="cloud.png" class="cloud-item cloud-right-2" alt="cloud">
-    <img src="cloud.png" class="cloud-item cloud-right-3" alt="cloud">
+  <div class="clouds-container" aria-hidden="true">
+    <img src="cloud.png" class="cloud-item cloud-left-1" alt="" />
+    <img src="cloud.png" class="cloud-item cloud-left-2" alt="" />
+    <img src="cloud.png" class="cloud-item cloud-left-3" alt="" />
+    <img src="cloud.png" class="cloud-item cloud-right-1" alt="" />
+    <img src="cloud.png" class="cloud-item cloud-right-2" alt="" />
+    <img src="cloud.png" class="cloud-item cloud-right-3" alt="" />
   </div>
 
-
-  <div class="leaderboard-header" style="position: relative; z-index: 2;">
+  <div class="leaderboard-header">
     <span class="subtitle">| SHINOBI RANKINGS</span>
     <h1>Leaderboard</h1>
     <div class="header-line"></div>
+    <p class="board-caption">{{ currentGame?.caption || 'NARUTO SHIPPUDEN: Ultimate Ninja STORM 4' }} · Steam</p>
   </div>
 
-  <div class="table-container" style="position: relative; z-index: 2;">
-    <p-table [value]="ninjaList" 
-             [paginator]="true" 
-             [rows]="10" 
-             [responsiveLayout]="'scroll'"
-             styleClass="p-datatable-storm">
-      
+  <div class="table-container">
+    <div class="game-switcher" role="tablist" aria-label="Game leaderboard selector">
+      <button
+        *ngFor="let game of games"
+        type="button"
+        class="game-tab"
+        [class.active]="game.key === selectedGameKey"
+        (click)="selectGame(game.key)"
+      >
+        {{ game.shortLabel }}
+      </button>
+    </div>
+
+    <section *ngIf="isComingSoon" class="coming-soon" aria-live="polite">
+      <span class="coming-soon-eyebrow">SHINOBI RANKINGS</span>
+      <h2>Coming Soon</h2>
+      <span class="coming-soon-line" aria-hidden="true"></span>
+      <p>{{ currentGame?.shortLabel }} leaderboards are on the way.</p>
+    </section>
+
+    <ng-container *ngIf="!isComingSoon">
+    <div class="leaderboard-toolbar">
+      <label class="board-select-label" for="storm-board">
+        Rankings
+        <select
+          id="storm-board"
+          [ngModel]="selectedBoard"
+          (ngModelChange)="selectBoard($event)"
+          [disabled]="boards.length === 0"
+        >
+          <option *ngIf="boards.length === 0" value="">No rankings yet</option>
+          <option *ngFor="let board of boards" [value]="board.name">{{ board.label }}</option>
+        </select>
+      </label>
+
+      <label class="player-search-label" for="storm-search">
+        Search players
+        <input
+          id="storm-search"
+          type="search"
+          [(ngModel)]="search"
+          placeholder="Steam name or Steam ID"
+        >
+      </label>
+
+      <label class="board-select-label filter-select" for="storm-filter">
+        Player filter
+        <select id="storm-filter" [(ngModel)]="filterMode">
+          <option value="hide-suspicious">Hide suspicious</option>
+          <option value="verified">Verified playtime only</option>
+          <option value="all">Show all</option>
+        </select>
+      </label>
+
+      <button
+        class="refresh-button"
+        type="button"
+        [disabled]="refreshing"
+        (click)="refresh()"
+      >
+        {{ refreshing ? 'Loading…' : 'Reload Data' }}
+      </button>
+    </div>
+
+    <div class="leaderboard-meta">
+      <span>{{ currentBoard?.region || 'All Regions' }} · {{ currentBoard?.category || 'Leaderboard' }}</span>
+      <span>{{ capturedEntries | number }} / {{ totalEntries | number }} entries available</span>
+      <span *ngIf="fetchedAt">Saved Steam snapshot · {{ fetchedAt | date:'medium' }}</span>
+    </div>
+
+    <div class="leaderboard-notice" *ngIf="refreshing">
+      Loading rankings…
+    </div>
+    <div class="leaderboard-notice error" *ngIf="pageError" role="alert">
+      {{ pageError }}
+    </div>
+
+    <p-table
+      *ngIf="capturedEntries > 0"
+      [value]="filteredPlayers"
+      [paginator]="false"
+      [responsiveLayout]="'scroll'"
+      sortField="globalRank"
+      [sortOrder]="1"
+      styleClass="p-datatable-storm"
+    >
       <ng-template pTemplate="header">
         <tr>
-          <th style="width: 8%" class="text-center">Rank</th>
-          <th pSortableColumn="username" style="width: 22%">Username <p-sortIcon field="username"></p-sortIcon></th>
-          <th pSortableColumn="clan" style="width: 15%">Clan <p-sortIcon field="clan"></p-sortIcon></th>
-          <th style="width: 25%">Title</th> 
-          <th pSortableColumn="level" style="width: 10%" class="text-center">Level <p-sortIcon field="level"></p-sortIcon></th>
-          <th style="width: 10%" class="text-center">W / L</th>
-          <th pSortableColumn="score" style="width: 10%" class="text-end">Score <p-sortIcon field="score"></p-sortIcon></th>
+          <th pSortableColumn="globalRank" class="text-center">
+            Rank
+            <p-sortIcon field="globalRank"></p-sortIcon>
+          </th>
+          <th pSortableColumn="playerName">
+            Steam Player
+            <p-sortIcon field="playerName"></p-sortIcon>
+          </th>
+          <th>Steam ID</th>
+          <th>{{ currentBoard?.scoreLabel || 'Score' }}</th>
+          <th *ngIf="isBpBoard && selectedGameKey === 'storm4'">STORM 4 hours</th>
+          <th class="text-center">Profile</th>
         </tr>
       </ng-template>
-      
-      <ng-template pTemplate="body" let-ninja let-rowIndex="rowIndex">
+
+      <ng-template pTemplate="body" let-ninja>
         <tr>
           <td class="text-center">
-            <span class="rank-badge badge-{{rowIndex + 1}}">
-              {{rowIndex + 1}}
-            </span>
+            <span class="rank-badge" [ngClass]="'badge-' + ninja.globalRank">{{ ninja.globalRank }}</span>
           </td>
-          <td class="username-cell">{{ninja.username}}</td>
-          <td>
-            <span class="clan-tag" [ngClass]="ninja.clan.toLowerCase()">
-              {{ninja.clan}}
-            </span>
+          <td class="username-cell">
+            <div class="steam-player">
+              <img
+                *ngIf="ninja.avatarUrl"
+                class="steam-avatar"
+                [src]="ninja.avatarUrl"
+                alt=""
+                referrerpolicy="no-referrer"
+              />
+              <span class="steam-avatar avatar-placeholder" *ngIf="!ninja.avatarUrl">?</span>
+              <span class="steam-player-info">
+                <span class="steam-player-name">{{ ninja.playerName }}</span>
+                <span *ngIf="isTopFourCheaterFlag(ninja)" class="cheater-label">CHEATER</span>
+              </span>
+            </div>
           </td>
-          <td>
-            <span class="ninja-title-tag">
-              {{ getNinjaTitle(ninja.score) }}
-            </span>
-          </td>
-          <td class="text-center level-cell">{{ninja.level}}</td>
-          <td class="text-center stats-cell">
-            <span class="wins">{{ninja.wins}}</span>
-            <span class="divider">/</span>
-            <span class="losses">{{ninja.losses}}</span>
-          </td>
-          <td class="text-end score-cell">
-            {{ninja.score | number}}
+          <td>{{ ninja.steamId }}</td>
+          <td class="score-cell">{{ ninja.score | number }}</td>
+          <td *ngIf="isBpBoard && selectedGameKey === 'storm4'">{{ playtimeLabel(ninja) }}</td>
+          <td class="text-center">
+            <a
+              *ngIf="safeProfileUrl(ninja) as profileUrl"
+              [href]="profileUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="profile-link"
+            >
+              Steam Profile ↗
+            </a>
           </td>
         </tr>
       </ng-template>
 
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td [attr.colspan]="isBpBoard ? 6 : 5" class="empty-state-cell">
+            No players match the current filters on this page.
+          </td>
+        </tr>
+      </ng-template>
     </p-table>
+
+    <div class="leaderboard-pages" *ngIf="capturedEntries > 0">
+      <div class="page-size-control">
+        <label for="leaderboard-page-size">Players per page</label>
+        <select
+          id="leaderboard-page-size"
+          [ngModel]="pageSize"
+          (ngModelChange)="setPageSize($event)"
+        >
+          <option [ngValue]="10">10</option>
+          <option [ngValue]="25">25</option>
+          <option [ngValue]="50">50</option>
+        </select>
+      </div>
+
+      <nav class="page-navigation" aria-label="Leaderboard pages">
+        <button type="button" (click)="changePage(1)" [disabled]="pageNumber === 1 || refreshing" aria-label="First page">«</button>
+        <button type="button" (click)="changePage(pageNumber - 1)" [disabled]="pageNumber === 1 || refreshing" aria-label="Previous page">‹</button>
+        <span>Page {{ pageNumber | number }} of {{ totalPages | number }}</span>
+        <button type="button" (click)="changePage(pageNumber + 1)" [disabled]="pageNumber === totalPages || refreshing" aria-label="Next page">›</button>
+        <button type="button" (click)="changePage(totalPages)" [disabled]="pageNumber === totalPages || refreshing" aria-label="Last page">»</button>
+      </nav>
+
+      <div class="page-jump-control">
+        <label for="leaderboard-go-page">Go to page</label>
+        <input
+          id="leaderboard-go-page"
+          type="number"
+          min="1"
+          [max]="totalPages"
+          [(ngModel)]="requestedPage"
+          (keyup.enter)="changePage(requestedPage)"
+        />
+        <button type="button" (click)="changePage(requestedPage)" [disabled]="refreshing">Go</button>
+      </div>
+    </div>
+    </ng-container>
   </div>
 </div>

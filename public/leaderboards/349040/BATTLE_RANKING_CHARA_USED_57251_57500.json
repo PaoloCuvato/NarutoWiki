@@ -1,0 +1,5014 @@
+{
+  "appId": 349040,
+  "game": "STORM 4",
+  "boardName": "BATTLE_RANKING_CHARA_USED",
+  "leaderboardId": 856135,
+  "totalEntries": 1554550,
+  "sortMethod": "Descending",
+  "displayType": "Numeric",
+  "rangeStart": 57251,
+  "rangeEnd": 57500,
+  "fetchedAtUtc": "2026-11-13T02:38:59.329746+00:00",
+  "entries": [
+    {
+      "globalRank": 57251,
+      "steamId": "76561199012363667",
+      "playerName": "saeyuki",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/a5e9cb71d67aa897e8ef399337de44ee2285df65_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        34,
+        0,
+        325,
+        32,
+        0,
+        228,
+        20,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561199012363667"
+    },
+    {
+      "globalRank": 57252,
+      "steamId": "76561199011216623",
+      "playerName": ".\u5FD7.StormScorched",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/658b6fb88376d11b44e59ecd62b65f54f85d284c_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        21,
+        6,
+        59,
+        13,
+        3,
+        228,
+        7,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561199011216623"
+    },
+    {
+      "globalRank": 57253,
+      "steamId": "76561199007690056",
+      "playerName": "MikeyMononoke",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/94910f47fc0fa83fc70e018595d922d74866a576_full.jpg",
+      "score": 124,
+      "details": [
+        277,
+        11,
+        5,
+        278,
+        10,
+        5,
+        213,
+        9,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561199007690056"
+    },
+    {
+      "globalRank": 57254,
+      "steamId": "76561199007529059",
+      "playerName": "Beastplayz1994",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/884376fc45e8dd8a13620d467b3848d59277cba0_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        31,
+        1,
+        230,
+        26,
+        5,
+        59,
+        22,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561199007529059"
+    },
+    {
+      "globalRank": 57255,
+      "steamId": "76561199003818788",
+      "playerName": "Silent_Astro",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/14d87558dd511cf6a084028ca881addf3338bcbd_full.jpg",
+      "score": 124,
+      "details": [
+        274,
+        31,
+        7,
+        346,
+        29,
+        9,
+        225,
+        28,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561199003818788"
+    },
+    {
+      "globalRank": 57256,
+      "steamId": "76561199003768141",
+      "playerName": "Jinsoulsz",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/1b1838419fb1c3eec88297a87b9fceeaa0c86ee6_full.jpg",
+      "score": 124,
+      "details": [
+        241,
+        7,
+        4,
+        62,
+        6,
+        3,
+        30,
+        5,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561199003768141"
+    },
+    {
+      "globalRank": 57257,
+      "steamId": "76561199003130542",
+      "playerName": "lsp",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/02824a7f6e98b080c3dafb134741aa49609895c0_full.jpg",
+      "score": 124,
+      "details": [
+        229,
+        22,
+        11,
+        76,
+        21,
+        5,
+        78,
+        15,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561199003130542"
+    },
+    {
+      "globalRank": 57258,
+      "steamId": "76561199002589906",
+      "playerName": "Smitty",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/37cf1dc1f48ac849fb89a0b11182816609a9e6eb_full.jpg",
+      "score": 124,
+      "details": [
+        74,
+        7,
+        2,
+        48,
+        6,
+        5,
+        57,
+        6,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561199002589906"
+    },
+    {
+      "globalRank": 57259,
+      "steamId": "76561199001659038",
+      "playerName": "Rainbow",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/6117398c824ad306fee011141dc32c4c111a84de_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        12,
+        5,
+        42,
+        9,
+        3,
+        19,
+        8,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561199001659038"
+    },
+    {
+      "globalRank": 57260,
+      "steamId": "76561198998365112",
+      "playerName": "2445569753",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        25,
+        15,
+        9,
+        210,
+        13,
+        10,
+        213,
+        13,
+        10
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198998365112"
+    },
+    {
+      "globalRank": 57261,
+      "steamId": "76561198997803116",
+      "playerName": "tilian",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/127cad2e7646025d6a3d10ac0d838be58cb2e536_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        14,
+        8,
+        8,
+        8,
+        6,
+        226,
+        8,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198997803116"
+    },
+    {
+      "globalRank": 57262,
+      "steamId": "76561198997503340",
+      "playerName": "Yangzunyao",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/d465fa8bd0f77d3c2cb48b4a1b9b4ab612d08385_full.jpg",
+      "score": 124,
+      "details": [
+        259,
+        22,
+        9,
+        333,
+        13,
+        7,
+        258,
+        11,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198997503340"
+    },
+    {
+      "globalRank": 57263,
+      "steamId": "76561198995274971",
+      "playerName": "rkddkwl2007",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/e33b6b0dbfffbcd3904ca702be4db6c5f0a8641e_full.jpg",
+      "score": 124,
+      "details": [
+        229,
+        25,
+        15,
+        213,
+        23,
+        15,
+        210,
+        21,
+        13
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198995274971"
+    },
+    {
+      "globalRank": 57264,
+      "steamId": "76561198993844618",
+      "playerName": "Smokey",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/26466e871c3387e7c32a2c487a661b407dc3e2ef_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        9,
+        5,
+        321,
+        9,
+        7,
+        230,
+        7,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198993844618"
+    },
+    {
+      "globalRank": 57265,
+      "steamId": "76561198992544019",
+      "playerName": "Baltasar",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/5f365cf95a0cc6723c5f381934e58f9e27c563af_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        82,
+        30,
+        225,
+        43,
+        15,
+        57,
+        31,
+        14
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198992544019"
+    },
+    {
+      "globalRank": 57266,
+      "steamId": "76561198990864580",
+      "playerName": "9999",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/9fe4613b49ba078f3d3e3d65c6dabc1cf6b117f4_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        11,
+        3,
+        25,
+        9,
+        3,
+        53,
+        9,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198990864580"
+    },
+    {
+      "globalRank": 57267,
+      "steamId": "76561198990333473",
+      "playerName": "Hideki",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/5e5e431765d710ba473411c87ca21329878f3de4_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        64,
+        45,
+        225,
+        62,
+        41,
+        270,
+        32,
+        21
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198990333473"
+    },
+    {
+      "globalRank": 57268,
+      "steamId": "76561198988619522",
+      "playerName": "\u041F\u0438\u0412\u041E",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/cdc0b239c00387c946b1b7d384bd0fa498b4579e_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        10,
+        4,
+        3,
+        7,
+        0,
+        7,
+        6,
+        0
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198988619522"
+    },
+    {
+      "globalRank": 57269,
+      "steamId": "76561198988394023",
+      "playerName": "Mister_Fister",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/e123051ffc4f07e73737d58c17e3bee71366fc34_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        33,
+        8,
+        270,
+        28,
+        8,
+        225,
+        27,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198988394023"
+    },
+    {
+      "globalRank": 57270,
+      "steamId": "76561198986446067",
+      "playerName": "Shatullu",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/9db4379c2531f5accd95570c7ac358f7169393dc_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        12,
+        10,
+        221,
+        6,
+        4,
+        273,
+        6,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198986446067"
+    },
+    {
+      "globalRank": 57271,
+      "steamId": "76561198985539257",
+      "playerName": "\u88AB\u52A8\u541B",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/8b9e64e589e3b966338c1865f9423ad9f79fc699_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        60,
+        25,
+        116,
+        22,
+        5,
+        48,
+        21,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198985539257"
+    },
+    {
+      "globalRank": 57272,
+      "steamId": "76561198983813975",
+      "playerName": "\u4E0B\u5B63\u9884\u544A",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/40bf29a0a7d3e4a36e64456677985317e46ff3de_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        27,
+        15,
+        228,
+        22,
+        12,
+        125,
+        15,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198983813975"
+    },
+    {
+      "globalRank": 57273,
+      "steamId": "76561198982831682",
+      "playerName": "jb",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/fc6a1e748dff0adc5b9e844d8867ae346ba70542_full.jpg",
+      "score": 124,
+      "details": [
+        46,
+        54,
+        46,
+        230,
+        41,
+        34,
+        113,
+        32,
+        28
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198982831682"
+    },
+    {
+      "globalRank": 57274,
+      "steamId": "76561198978120911",
+      "playerName": "\u0421\u043C\u0443\u0440\u0444",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/4236d4b8eb3f5c419b5dcfb747605572d1465f39_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        16,
+        5,
+        78,
+        12,
+        4,
+        226,
+        12,
+        8
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198978120911"
+    },
+    {
+      "globalRank": 57275,
+      "steamId": "76561198973534999",
+      "playerName": "zoro",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/79a8119bd2a027755f93872d0d09b959909a0405_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        51,
+        22,
+        229,
+        43,
+        21,
+        27,
+        30,
+        12
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198973534999"
+    },
+    {
+      "globalRank": 57276,
+      "steamId": "76561198971317225",
+      "playerName": "D",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/b95aa0e31ec5a6f780e0fb2c20e684a9a062b4af_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        18,
+        6,
+        225,
+        10,
+        3,
+        126,
+        9,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198971317225"
+    },
+    {
+      "globalRank": 57277,
+      "steamId": "76561198971077241",
+      "playerName": "nvnvnvnvnvnv",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/b2fd5819b06422405597c0f5dd52bcd0f5359255_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        82,
+        28,
+        125,
+        68,
+        27,
+        76,
+        60,
+        20
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198971077241"
+    },
+    {
+      "globalRank": 57278,
+      "steamId": "76561198970523851",
+      "playerName": "\u602A\u76D7\u6CB3\u9A6C",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/29e2fc219ebfe34ef4cab067c4704fc28f973572_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        18,
+        14,
+        228,
+        13,
+        11,
+        230,
+        12,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198970523851"
+    },
+    {
+      "globalRank": 57279,
+      "steamId": "76561198969384912",
+      "playerName": "WorkOut",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/ef21ea73d1632cd85368e90f186f153e4eb20509_full.jpg",
+      "score": 124,
+      "details": [
+        57,
+        5,
+        3,
+        144,
+        4,
+        2,
+        33,
+        3,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198969384912"
+    },
+    {
+      "globalRank": 57280,
+      "steamId": "76561198964991287",
+      "playerName": "Janiboy",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/3dbdf4bf9c9cb06aa241190922e2f6ec4f2460bf_full.jpg",
+      "score": 124,
+      "details": [
+        176,
+        46,
+        23,
+        125,
+        37,
+        17,
+        48,
+        34,
+        14
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198964991287"
+    },
+    {
+      "globalRank": 57281,
+      "steamId": "76561198964225715",
+      "playerName": "AsakuraWei",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/c484ed9c0226e3b057dc8e6a2c4ea37eed13cb36_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        7,
+        3,
+        54,
+        6,
+        3,
+        57,
+        6,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198964225715"
+    },
+    {
+      "globalRank": 57282,
+      "steamId": "76561198958799194",
+      "playerName": "YellowSharpie",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/d92f22b4fed393f0f5ae6f66b38074071d11bff6_full.jpg",
+      "score": 124,
+      "details": [
+        274,
+        10,
+        3,
+        226,
+        7,
+        5,
+        25,
+        6,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198958799194"
+    },
+    {
+      "globalRank": 57283,
+      "steamId": "76561198938292837",
+      "playerName": "Mataichi",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/de75dae22dc1563385a7fd716c4a3dff66ee0636_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        17,
+        3,
+        121,
+        11,
+        7,
+        68,
+        4,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198938292837"
+    },
+    {
+      "globalRank": 57284,
+      "steamId": "76561198935121384",
+      "playerName": "NobeShiryu",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/e1dde7fe207a397634580d4755f7890ccf24ddd7_full.jpg",
+      "score": 124,
+      "details": [
+        353,
+        23,
+        16,
+        225,
+        21,
+        15,
+        263,
+        16,
+        11
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198935121384"
+    },
+    {
+      "globalRank": 57285,
+      "steamId": "76561198933623748",
+      "playerName": "SnoW \u30B7",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/680dc3807ac329c731b5403bb00ea267b76e2e23_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        67,
+        17,
+        29,
+        33,
+        11,
+        268,
+        25,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198933623748"
+    },
+    {
+      "globalRank": 57286,
+      "steamId": "76561198916716148",
+      "playerName": "Xing Bling",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/7d8fa4595c46ecdc7051a37e10ca72c0a1acf672_full.jpg",
+      "score": 124,
+      "details": [
+        59,
+        40,
+        18,
+        27,
+        39,
+        10,
+        225,
+        30,
+        14
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198916716148"
+    },
+    {
+      "globalRank": 57287,
+      "steamId": "76561198895460610",
+      "playerName": "\u5B63\u4F2F\u4FC3",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        57,
+        73,
+        42,
+        225,
+        59,
+        34,
+        122,
+        44,
+        29
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198895460610"
+    },
+    {
+      "globalRank": 57288,
+      "steamId": "76561198882324488",
+      "playerName": "twitch.tv/diexonly",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/51fd2622949173976ca987cc7150a7826d66d2ea_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        32,
+        11,
+        28,
+        23,
+        9,
+        9,
+        17,
+        8
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198882324488"
+    },
+    {
+      "globalRank": 57289,
+      "steamId": "76561198882228758",
+      "playerName": "\u5468\u745C",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        225,
+        17,
+        2,
+        59,
+        15,
+        3,
+        228,
+        15,
+        8
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198882228758"
+    },
+    {
+      "globalRank": 57290,
+      "steamId": "76561198880813830",
+      "playerName": "SaikoLacksManner",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/a64e32a30325cd5e327de9186fe3242dc2ef1dc7_full.jpg",
+      "score": 124,
+      "details": [
+        57,
+        17,
+        11,
+        225,
+        17,
+        11,
+        228,
+        12,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198880813830"
+    },
+    {
+      "globalRank": 57291,
+      "steamId": "76561198879768491",
+      "playerName": "Killua",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/3b2b85e196f9a3f059153848d30d9d234d3f727e_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        8,
+        4,
+        49,
+        6,
+        5,
+        57,
+        6,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198879768491"
+    },
+    {
+      "globalRank": 57292,
+      "steamId": "76561198873373197",
+      "playerName": "seal-s",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/ad56e257f3a4b394de721dbbcf2e18e8e8e3cda3_full.jpg",
+      "score": 124,
+      "details": [
+        48,
+        12,
+        5,
+        57,
+        11,
+        3,
+        17,
+        10,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198873373197"
+    },
+    {
+      "globalRank": 57293,
+      "steamId": "76561198872179805",
+      "playerName": "\u0423\u0428\u0415\u041B \u0412 \u0410\u0420\u041C\u0418\u042E",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/64b000988bbb4d79e6038c728980a61d3ee24ea3_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        36,
+        17,
+        225,
+        33,
+        13,
+        69,
+        28,
+        14
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198872179805"
+    },
+    {
+      "globalRank": 57294,
+      "steamId": "76561198870860051",
+      "playerName": "Xoma",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/0f68129a1bcf00422fcabc11766f77156eee7b36_full.jpg",
+      "score": 124,
+      "details": [
+        230,
+        10,
+        5,
+        57,
+        5,
+        1,
+        63,
+        3,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198870860051"
+    },
+    {
+      "globalRank": 57295,
+      "steamId": "76561198870344628",
+      "playerName": "APOLLO",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/55bebd69a9e64ea5ab32df8d715f90bfc54de478_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        7,
+        6,
+        59,
+        6,
+        6,
+        229,
+        6,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198870344628"
+    },
+    {
+      "globalRank": 57296,
+      "steamId": "76561198870048333",
+      "playerName": "weenie hut jr",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/75339da5eb435a6a2a9c8dca4b1e92cd5f8eed83_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        20,
+        0,
+        221,
+        13,
+        0,
+        229,
+        12,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198870048333"
+    },
+    {
+      "globalRank": 57297,
+      "steamId": "76561198869911616",
+      "playerName": "FAYDES",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/be5d205f80720523ac1c2ee459a023acd5f971de_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        52,
+        15,
+        225,
+        34,
+        7,
+        59,
+        24,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198869911616"
+    },
+    {
+      "globalRank": 57298,
+      "steamId": "76561198869809621",
+      "playerName": "SpeculativeLeon",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/777fde640b3b6d8a9bcd788537c94e88cffdb4dd_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        53,
+        12,
+        225,
+        52,
+        12,
+        229,
+        35,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198869809621"
+    },
+    {
+      "globalRank": 57299,
+      "steamId": "76561198860900881",
+      "playerName": "bottle cap",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/a7ba5ca572e3bcfd5387297a9c2e9d5d06036e25_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        33,
+        22,
+        27,
+        32,
+        15,
+        124,
+        15,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198860900881"
+    },
+    {
+      "globalRank": 57300,
+      "steamId": "76561198857304529",
+      "playerName": "\u5922\u898B\u5FC3\u5730",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/05275edcee122592ea9d1f41c94df5dc9ea670aa_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        55,
+        24,
+        57,
+        46,
+        27,
+        122,
+        42,
+        29
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198857304529"
+    },
+    {
+      "globalRank": 57301,
+      "steamId": "76561198856208407",
+      "playerName": "\u0414\u044E\u0448\u0430 \u041C\u0435\u0442\u0451\u043B\u043A\u0438\u043D",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/14cd20dbbabbf84b90f165edeabb2327d266de9d_full.jpg",
+      "score": 124,
+      "details": [
+        57,
+        29,
+        0,
+        87,
+        13,
+        1,
+        27,
+        11,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198856208407"
+    },
+    {
+      "globalRank": 57302,
+      "steamId": "76561198855995752",
+      "playerName": "\uB54C\uB54C",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/3477bb7de5e527ad25bdf544c75fc4b7b49318e8_full.jpg",
+      "score": 124,
+      "details": [
+        200,
+        54,
+        30,
+        267,
+        10,
+        3,
+        228,
+        8,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198855995752"
+    },
+    {
+      "globalRank": 57303,
+      "steamId": "76561198853657635",
+      "playerName": "lakote",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/34b564e790b8e9ca6a89bb02b753ba192a156724_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        88,
+        62,
+        258,
+        63,
+        44,
+        346,
+        56,
+        40
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198853657635"
+    },
+    {
+      "globalRank": 57304,
+      "steamId": "76561198853082577",
+      "playerName": "Ziftara",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/393f7473fa49072199cf7dd10c0205f8e2e07a60_full.jpg",
+      "score": 124,
+      "details": [
+        69,
+        24,
+        6,
+        195,
+        20,
+        12,
+        121,
+        16,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198853082577"
+    },
+    {
+      "globalRank": 57305,
+      "steamId": "76561198849961462",
+      "playerName": "Tmaster157",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/0ea7bd7558e7ff7abe73f398a07967d1e48b57c9_full.jpg",
+      "score": 124,
+      "details": [
+        88,
+        62,
+        36,
+        228,
+        34,
+        16,
+        21,
+        13,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198849961462"
+    },
+    {
+      "globalRank": 57306,
+      "steamId": "76561198847521479",
+      "playerName": "\uADF8\uB9CC\uB9E5\uC5B4",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/00ab2bde37dd7fbcfdffa56e93d533853c3bb09e_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        25,
+        14,
+        225,
+        17,
+        9,
+        226,
+        17,
+        12
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198847521479"
+    },
+    {
+      "globalRank": 57307,
+      "steamId": "76561198846999211",
+      "playerName": "\u5149",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/b7bf0b4a0e2d54dc518093410563e4a6ca4ae263_full.jpg",
+      "score": 124,
+      "details": [
+        88,
+        87,
+        79,
+        76,
+        79,
+        73,
+        315,
+        54,
+        50
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198846999211"
+    },
+    {
+      "globalRank": 57308,
+      "steamId": "76561198845158989",
+      "playerName": "SaiTo",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/30d32b72ffec8348ab9101dd3459ee549d2cfe63_full.jpg",
+      "score": 124,
+      "details": [
+        270,
+        64,
+        8,
+        76,
+        54,
+        1,
+        228,
+        46,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198845158989"
+    },
+    {
+      "globalRank": 57309,
+      "steamId": "76561198844548650",
+      "playerName": "HAMBURGER",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/e48e36a92d03a413aa0b46419c987563cacacf0a_full.jpg",
+      "score": 124,
+      "details": [
+        75,
+        39,
+        9,
+        228,
+        28,
+        7,
+        57,
+        25,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198844548650"
+    },
+    {
+      "globalRank": 57310,
+      "steamId": "76561198844252071",
+      "playerName": "zzen",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/4f25ef569957d692a5b3e537d4e25546bc6e84c9_full.jpg",
+      "score": 124,
+      "details": [
+        234,
+        34,
+        16,
+        315,
+        28,
+        17,
+        259,
+        25,
+        14
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198844252071"
+    },
+    {
+      "globalRank": 57311,
+      "steamId": "76561198839267221",
+      "playerName": "puri",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/f1dffcefe402e93ba6d5e7bbeb15457369861635_full.jpg",
+      "score": 124,
+      "details": [
+        226,
+        23,
+        12,
+        228,
+        15,
+        5,
+        270,
+        15,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198839267221"
+    },
+    {
+      "globalRank": 57312,
+      "steamId": "76561198834641848",
+      "playerName": "Arsenic",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/e367a57dd3bb169ebba48219bf27ed7610b9714e_full.jpg",
+      "score": 124,
+      "details": [
+        259,
+        14,
+        7,
+        66,
+        13,
+        6,
+        268,
+        13,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198834641848"
+    },
+    {
+      "globalRank": 57313,
+      "steamId": "76561198834233004",
+      "playerName": "XIAO\u8427",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/a9daebdfc53da943d81a6b1e4e7f54c815bf50f3_full.jpg",
+      "score": 124,
+      "details": [
+        87,
+        21,
+        17,
+        221,
+        7,
+        5,
+        230,
+        7,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198834233004"
+    },
+    {
+      "globalRank": 57314,
+      "steamId": "76561198832587583",
+      "playerName": "Tms",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/f0b73dbeb4232b1607f194d95b32de573e5e024c_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        17,
+        4,
+        225,
+        9,
+        3,
+        274,
+        6,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198832587583"
+    },
+    {
+      "globalRank": 57315,
+      "steamId": "76561198831913488",
+      "playerName": "\u623F\u7BA1\u3001",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/acacec54c2cb39d998efbca9d09aa8295300b935_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        23,
+        5,
+        228,
+        21,
+        5,
+        225,
+        16,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198831913488"
+    },
+    {
+      "globalRank": 57316,
+      "steamId": "76561198820539509",
+      "playerName": "Secre",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/77ce7c20b1215bec34b65b52145aa07bc905e3d1_full.jpg",
+      "score": 124,
+      "details": [
+        270,
+        48,
+        31,
+        271,
+        35,
+        25,
+        10,
+        30,
+        19
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198820539509"
+    },
+    {
+      "globalRank": 57317,
+      "steamId": "76561198820527867",
+      "playerName": "SAIPAN",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/9fec2aa8afd1833445eb156fc3e6ee44d2d678a2_full.jpg",
+      "score": 124,
+      "details": [
+        269,
+        29,
+        11,
+        226,
+        21,
+        12,
+        224,
+        17,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198820527867"
+    },
+    {
+      "globalRank": 57318,
+      "steamId": "76561198819920197",
+      "playerName": "Sweety \u263E",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/c33389b8c7fd9bcc9b7ec315f769243a968b47a8_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        39,
+        20,
+        57,
+        37,
+        19,
+        81,
+        29,
+        15
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198819920197"
+    },
+    {
+      "globalRank": 57319,
+      "steamId": "76561198818773936",
+      "playerName": "\u76D7\u53F7\u6CA1\u8150\u6728",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/a0776c11c1e21223aa747ffa83277d320883f9fe_full.jpg",
+      "score": 124,
+      "details": [
+        48,
+        54,
+        22,
+        230,
+        25,
+        1,
+        49,
+        10,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198818773936"
+    },
+    {
+      "globalRank": 57320,
+      "steamId": "76561198816070870",
+      "playerName": "01234569",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        221,
+        9,
+        4,
+        274,
+        9,
+        2,
+        258,
+        8,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198816070870"
+    },
+    {
+      "globalRank": 57321,
+      "steamId": "76561198815818189",
+      "playerName": "Frame \u300C\u30CB\u30AD\u30BF\u300D",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/0e0e3a1e19e5ab7e1aa184128d70802d54378765_full.jpg",
+      "score": 124,
+      "details": [
+        124,
+        61,
+        16,
+        225,
+        53,
+        13,
+        228,
+        53,
+        13
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198815818189"
+    },
+    {
+      "globalRank": 57322,
+      "steamId": "76561198813395502",
+      "playerName": "\u2661\uD835\uDD0E\uD835\uDD1E\uD835\uDD0D\uD835\uDD29\uD835\uDD326\uD835\uDD2D\u2661",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/e5de6ac0bf9365a41a2837a2b936aeccecec9592_full.jpg",
+      "score": 124,
+      "details": [
+        346,
+        17,
+        16,
+        76,
+        13,
+        5,
+        225,
+        13,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198813395502"
+    },
+    {
+      "globalRank": 57323,
+      "steamId": "76561198810771777",
+      "playerName": "\u674E\u627F\u6D32",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/c2c51159307ac0e5c3960f0df31732a07cd85cd0_full.jpg",
+      "score": 124,
+      "details": [
+        226,
+        14,
+        10,
+        225,
+        12,
+        12,
+        19,
+        7,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198810771777"
+    },
+    {
+      "globalRank": 57324,
+      "steamId": "76561198810646492",
+      "playerName": "XIAOXIN",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/265d043506f0654d97a5049f03c3bb5e9018f513_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        44,
+        15,
+        59,
+        27,
+        11,
+        126,
+        17,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198810646492"
+    },
+    {
+      "globalRank": 57325,
+      "steamId": "76561198809312825",
+      "playerName": "\u6F13\u5C71\u5341\u4E8C\u6D6A",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/b779e43a161e7f22c8a821424df66c6258da78b6_full.jpg",
+      "score": 124,
+      "details": [
+        229,
+        16,
+        7,
+        221,
+        9,
+        1,
+        69,
+        8,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198809312825"
+    },
+    {
+      "globalRank": 57326,
+      "steamId": "76561198808184156",
+      "playerName": "\u64B2\u5695\u5695\u5695\u5695\u5695",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/c2c51159307ac0e5c3960f0df31732a07cd85cd0_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        33,
+        6,
+        229,
+        19,
+        9,
+        221,
+        18,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198808184156"
+    },
+    {
+      "globalRank": 57327,
+      "steamId": "76561198804456607",
+      "playerName": "Kanagata eater",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/6af5834bb789835132b9fdc1bdbbd3e108be6eb3_full.jpg",
+      "score": 124,
+      "details": [
+        74,
+        3,
+        1,
+        213,
+        3,
+        3,
+        235,
+        3,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198804456607"
+    },
+    {
+      "globalRank": 57328,
+      "steamId": "76561198803307620",
+      "playerName": "El Camino",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/896a874529867b5bfd3441a437c46a37a17ea4dc_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        9,
+        7,
+        49,
+        5,
+        2,
+        64,
+        5,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198803307620"
+    },
+    {
+      "globalRank": 57329,
+      "steamId": "76561198802983124",
+      "playerName": "\u0448\u0438\u0437\u043E\u0440\u044D\u0439",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/e15c08df9a06329b9fddf1596ace1ebbb68f5e34_full.jpg",
+      "score": 124,
+      "details": [
+        274,
+        6,
+        3,
+        345,
+        6,
+        1,
+        222,
+        5,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198802983124"
+    },
+    {
+      "globalRank": 57330,
+      "steamId": "76561198798938963",
+      "playerName": "jealousy",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/002e64646bd258f52241f3430c64eee1741da5ea_full.jpg",
+      "score": 124,
+      "details": [
+        88,
+        9,
+        7,
+        213,
+        9,
+        6,
+        229,
+        9,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198798938963"
+    },
+    {
+      "globalRank": 57331,
+      "steamId": "76561198677780101",
+      "playerName": "iplaytoomuch1234",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/b61824b0338fa2302e27a8911fcfeafa88150ddc_full.jpg",
+      "score": 124,
+      "details": [
+        48,
+        47,
+        33,
+        101,
+        35,
+        28,
+        21,
+        33,
+        26
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198677780101"
+    },
+    {
+      "globalRank": 57332,
+      "steamId": "76561198452276505",
+      "playerName": "ppipevc",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/087a48aab0d1f27af6c4e0dce8d9a071c2b3ec6f_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        36,
+        22,
+        86,
+        22,
+        13,
+        29,
+        21,
+        10
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198452276505"
+    },
+    {
+      "globalRank": 57333,
+      "steamId": "76561198451440648",
+      "playerName": "Marco",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/d8ebede431682097c76492df1c2209b552c8f61b_full.jpg",
+      "score": 124,
+      "details": [
+        59,
+        12,
+        2,
+        29,
+        11,
+        2,
+        57,
+        11,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198451440648"
+    },
+    {
+      "globalRank": 57334,
+      "steamId": "76561198448654696",
+      "playerName": "ITheBestJie",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        228,
+        8,
+        5,
+        240,
+        6,
+        2,
+        29,
+        5,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198448654696"
+    },
+    {
+      "globalRank": 57335,
+      "steamId": "76561198448402985",
+      "playerName": "luma",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/04d85a69a503a1067a6bbcd7e5136d7c867dc10f_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        26,
+        19,
+        226,
+        10,
+        5,
+        228,
+        8,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198448402985"
+    },
+    {
+      "globalRank": 57336,
+      "steamId": "76561198443599762",
+      "playerName": "dsiahdfhsdafkjhekjfhkjsdfd",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/95fa1795690afa8e44735bfd9165f4d6a70f1c52_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        14,
+        2,
+        273,
+        11,
+        1,
+        221,
+        10,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198443599762"
+    },
+    {
+      "globalRank": 57337,
+      "steamId": "76561198440098480",
+      "playerName": "Oz",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        66,
+        22,
+        12,
+        97,
+        22,
+        12,
+        61,
+        11,
+        8
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198440098480"
+    },
+    {
+      "globalRank": 57338,
+      "steamId": "76561198438821648",
+      "playerName": "Harmonica",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/575260ad905f6413bf1c4cf7aaecebe95dc01337_full.jpg",
+      "score": 124,
+      "details": [
+        274,
+        17,
+        12,
+        298,
+        14,
+        12,
+        204,
+        12,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198438821648"
+    },
+    {
+      "globalRank": 57339,
+      "steamId": "76561198433989084",
+      "playerName": "3210",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        64,
+        89,
+        77,
+        17,
+        68,
+        58,
+        23,
+        62,
+        54
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198433989084"
+    },
+    {
+      "globalRank": 57340,
+      "steamId": "76561198433796608",
+      "playerName": "Sparta_2000",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/18cf9e93edbe79213f24fd277a0c8fc05e9ec68f_full.jpg",
+      "score": 124,
+      "details": [
+        274,
+        41,
+        20,
+        273,
+        40,
+        18,
+        59,
+        37,
+        15
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198433796608"
+    },
+    {
+      "globalRank": 57341,
+      "steamId": "76561198433372450",
+      "playerName": "Vitor",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/4801cda71d8910757c9bcbdfa5c755b638112004_full.jpg",
+      "score": 124,
+      "details": [
+        29,
+        18,
+        7,
+        3,
+        10,
+        4,
+        88,
+        10,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198433372450"
+    },
+    {
+      "globalRank": 57342,
+      "steamId": "76561198433192693",
+      "playerName": "L I N G U I \u00C7 A T O S C A N A",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/543bb32f9249e6738288c0d3ac6987ee25983c41_full.jpg",
+      "score": 124,
+      "details": [
+        57,
+        58,
+        31,
+        66,
+        47,
+        28,
+        76,
+        41,
+        25
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198433192693"
+    },
+    {
+      "globalRank": 57343,
+      "steamId": "76561198430256906",
+      "playerName": "[GG]Mafia",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/768063a80c536a6b27f99d8a4bfc909ad1822b76_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        19,
+        10,
+        25,
+        13,
+        7,
+        88,
+        12,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198430256906"
+    },
+    {
+      "globalRank": 57344,
+      "steamId": "76561198429378520",
+      "playerName": "Lyzon",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/6cc46228634f4862cb428657713bfe19882a01c2_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        118,
+        79,
+        270,
+        95,
+        65,
+        268,
+        60,
+        42
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198429378520"
+    },
+    {
+      "globalRank": 57345,
+      "steamId": "76561198424940892",
+      "playerName": "2019-X_X-2022",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/b4b663e17b2628b474a8ddaf9977f871b897ca83_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        31,
+        16,
+        228,
+        27,
+        15,
+        29,
+        26,
+        14
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198424940892"
+    },
+    {
+      "globalRank": 57346,
+      "steamId": "76561198418738377",
+      "playerName": "kagfancy",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/af5d3e4e849709da3f969e1177e53baf89388cbf_full.jpg",
+      "score": 124,
+      "details": [
+        224,
+        11,
+        6,
+        81,
+        10,
+        2,
+        23,
+        9,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198418738377"
+    },
+    {
+      "globalRank": 57347,
+      "steamId": "76561198418513505",
+      "playerName": "VIOLATOR",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/808c6d314d662f37063d29850e8b08e5fc3ead05_full.jpg",
+      "score": 124,
+      "details": [
+        60,
+        22,
+        9,
+        55,
+        18,
+        6,
+        72,
+        9,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198418513505"
+    },
+    {
+      "globalRank": 57348,
+      "steamId": "76561198418176870",
+      "playerName": "Lerouxske",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/d4371bdba4c8c3484bc5b88edc6ee3c15d2bc250_full.jpg",
+      "score": 124,
+      "details": [
+        29,
+        19,
+        9,
+        221,
+        19,
+        13,
+        42,
+        18,
+        8
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198418176870"
+    },
+    {
+      "globalRank": 57349,
+      "steamId": "76561198416935617",
+      "playerName": "Dynamo",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/e78af8c634ec9f1b31934993a5efc8908e7e279c_full.jpg",
+      "score": 124,
+      "details": [
+        229,
+        35,
+        7,
+        228,
+        31,
+        5,
+        66,
+        19,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198416935617"
+    },
+    {
+      "globalRank": 57350,
+      "steamId": "76561198414825407",
+      "playerName": "Suedo",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/5c41cdd547c4143f7342102793fc84d6a135c24e_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        28,
+        14,
+        28,
+        20,
+        9,
+        345,
+        15,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198414825407"
+    },
+    {
+      "globalRank": 57351,
+      "steamId": "76561198414599387",
+      "playerName": "\u0412\u0430\u0441\u044C",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/7f3ec787e9f197569ccb5c1d50df904ccde8acee_full.jpg",
+      "score": 124,
+      "details": [
+        125,
+        47,
+        23,
+        22,
+        14,
+        13,
+        81,
+        7,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198414599387"
+    },
+    {
+      "globalRank": 57352,
+      "steamId": "76561198408261014",
+      "playerName": "\u5FEB\u4E50\u7B28\u6BD4\u5728\u8FD9\u91CC",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/9e0dd4dd76f23aba764a1aae67537d0595250807_full.jpg",
+      "score": 124,
+      "details": [
+        78,
+        15,
+        4,
+        228,
+        11,
+        11,
+        57,
+        8,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198408261014"
+    },
+    {
+      "globalRank": 57353,
+      "steamId": "76561198408129812",
+      "playerName": "\u554A\u5566\u554A\u5566\u541B",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/f795eafb192fe5b296cacde8a2d8ddd0ad085ba8_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        39,
+        12,
+        57,
+        36,
+        14,
+        122,
+        26,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198408129812"
+    },
+    {
+      "globalRank": 57354,
+      "steamId": "76561198405982790",
+      "playerName": "yazergg",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/2e4c4ec4de2dd953e18ea87e448b30dbefedd9b4_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        24,
+        12,
+        77,
+        20,
+        14,
+        17,
+        19,
+        13
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198405982790"
+    },
+    {
+      "globalRank": 57355,
+      "steamId": "76561198405214982",
+      "playerName": "BigSlippy",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/61abd4a8b8c30a27894ccdbf0cf906c9328c34a7_full.jpg",
+      "score": 124,
+      "details": [
+        66,
+        6,
+        4,
+        258,
+        6,
+        3,
+        333,
+        6,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198405214982"
+    },
+    {
+      "globalRank": 57356,
+      "steamId": "76561198401951413",
+      "playerName": "MAIOLI29",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/1dea55c3c8067824dcd72e8895d70570de20cfbe_full.jpg",
+      "score": 124,
+      "details": [
+        1,
+        23,
+        10,
+        100,
+        20,
+        5,
+        273,
+        15,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198401951413"
+    },
+    {
+      "globalRank": 57357,
+      "steamId": "76561198400020237",
+      "playerName": "ttv/Def1ler\u30C4",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/b1c83b83f7f7448b97e5a076766c083705a12f7d_full.jpg",
+      "score": 124,
+      "details": [
+        27,
+        14,
+        10,
+        221,
+        14,
+        10,
+        31,
+        13,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198400020237"
+    },
+    {
+      "globalRank": 57358,
+      "steamId": "76561198399664497",
+      "playerName": "lealll__",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/c6265f3d2fbd81c029d2dcb58de313e8001b5a93_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        65,
+        19,
+        123,
+        50,
+        15,
+        228,
+        50,
+        22
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198399664497"
+    },
+    {
+      "globalRank": 57359,
+      "steamId": "76561198399269740",
+      "playerName": "Leon Smash Kennedy",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/5f1f263b4a6bc4f726683f6b7cad420b2389fa83_full.jpg",
+      "score": 124,
+      "details": [
+        51,
+        34,
+        12,
+        15,
+        26,
+        9,
+        333,
+        17,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198399269740"
+    },
+    {
+      "globalRank": 57360,
+      "steamId": "76561198398679755",
+      "playerName": "kalven0410",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/144a900f1dca26e7351a697a6d3c6b0909c148cf_full.jpg",
+      "score": 124,
+      "details": [
+        226,
+        17,
+        4,
+        66,
+        12,
+        8,
+        27,
+        10,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198398679755"
+    },
+    {
+      "globalRank": 57361,
+      "steamId": "76561198397032361",
+      "playerName": "Darstination",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/d973e21adcab6ea8f6beca2b2b67b60134b7c7c1_full.jpg",
+      "score": 124,
+      "details": [
+        25,
+        13,
+        4,
+        224,
+        7,
+        3,
+        272,
+        7,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198397032361"
+    },
+    {
+      "globalRank": 57362,
+      "steamId": "76561198395029220",
+      "playerName": "\u4F60\u5728\u72D7\u53EB\u4EC0\u4E48",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/eb07282fd91a1255bc9f5ef229beafc872cf77a6_full.jpg",
+      "score": 124,
+      "details": [
+        49,
+        10,
+        2,
+        225,
+        10,
+        2,
+        25,
+        7,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198395029220"
+    },
+    {
+      "globalRank": 57363,
+      "steamId": "76561198391956081",
+      "playerName": "2067773795",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/0714a92dc222b79af0edb8235b4926e416a395e6_full.jpg",
+      "score": 124,
+      "details": [
+        229,
+        19,
+        6,
+        122,
+        13,
+        4,
+        228,
+        11,
+        8
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198391956081"
+    },
+    {
+      "globalRank": 57364,
+      "steamId": "76561198390651070",
+      "playerName": "U\u00C7AN-FOK BALI\u011EI",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/924a89ce8007507bc52a563d89cd240353acdd9a_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        11,
+        8,
+        230,
+        9,
+        4,
+        57,
+        8,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198390651070"
+    },
+    {
+      "globalRank": 57365,
+      "steamId": "76561198390316169",
+      "playerName": "Manu_Escudero",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/1fa48f3adeb9594213eb5579244b70f7430ff46e_full.jpg",
+      "score": 124,
+      "details": [
+        125,
+        7,
+        3,
+        57,
+        6,
+        4,
+        60,
+        6,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198390316169"
+    },
+    {
+      "globalRank": 57366,
+      "steamId": "76561198389740757",
+      "playerName": "Tryregret",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/c487eaed86f80f4111db02cba40a54a3ff2a0446_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        37,
+        22,
+        76,
+        32,
+        25,
+        270,
+        18,
+        14
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198389740757"
+    },
+    {
+      "globalRank": 57367,
+      "steamId": "76561198389437895",
+      "playerName": "sire3000",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/550989981bfbc02f60283dbd03936ba6956720ee_full.jpg",
+      "score": 124,
+      "details": [
+        64,
+        66,
+        16,
+        329,
+        28,
+        9,
+        212,
+        25,
+        8
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198389437895"
+    },
+    {
+      "globalRank": 57368,
+      "steamId": "76561198387666578",
+      "playerName": "bursacanavar\u013116",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/85e937f3d970ee3e9289fe455d3decf48b22090e_full.jpg",
+      "score": 124,
+      "details": [
+        274,
+        36,
+        12,
+        273,
+        34,
+        12,
+        25,
+        28,
+        11
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198387666578"
+    },
+    {
+      "globalRank": 57369,
+      "steamId": "76561198387656656",
+      "playerName": "nek\u015Bi\u015B",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/02721cea0b0a0feb95f31179f9cd05ed4f87a06b_full.jpg",
+      "score": 124,
+      "details": [
+        270,
+        15,
+        5,
+        176,
+        13,
+        5,
+        225,
+        9,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198387656656"
+    },
+    {
+      "globalRank": 57370,
+      "steamId": "76561198387066200",
+      "playerName": "Orange",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/543bb32f9249e6738288c0d3ac6987ee25983c41_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        34,
+        10,
+        228,
+        30,
+        11,
+        229,
+        23,
+        8
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198387066200"
+    },
+    {
+      "globalRank": 57371,
+      "steamId": "76561198386206170",
+      "playerName": "\u0E4B",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/db5eb874648942ef68195f915950a7f05c85fbf6_full.jpg",
+      "score": 124,
+      "details": [
+        259,
+        21,
+        5,
+        225,
+        19,
+        6,
+        234,
+        9,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198386206170"
+    },
+    {
+      "globalRank": 57372,
+      "steamId": "76561198381590710",
+      "playerName": "\u6211\u7684\u5FC3\u662F\u7C07\u62E5\u70C8\u65E5\u7684\u82B1",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/c497d3d686d278c18b52d0be1d89e2b200bd1434_full.jpg",
+      "score": 124,
+      "details": [
+        48,
+        8,
+        7,
+        87,
+        5,
+        3,
+        213,
+        5,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198381590710"
+    },
+    {
+      "globalRank": 57373,
+      "steamId": "76561198381132460",
+      "playerName": "noah",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/ae956806b61fe60bca97bfab0c70d2686a21657d_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        35,
+        12,
+        57,
+        21,
+        7,
+        346,
+        17,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198381132460"
+    },
+    {
+      "globalRank": 57374,
+      "steamId": "76561198380830533",
+      "playerName": "Akatosh",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/d84c21a60756feb8a22d2e505af06cf810e147ad_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        11,
+        10,
+        66,
+        7,
+        4,
+        229,
+        6,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198380830533"
+    },
+    {
+      "globalRank": 57375,
+      "steamId": "76561198379886315",
+      "playerName": "mavihawk",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        59,
+        116,
+        75,
+        122,
+        115,
+        74,
+        258,
+        51,
+        31
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198379886315"
+    },
+    {
+      "globalRank": 57376,
+      "steamId": "76561198379828220",
+      "playerName": "John",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/e859d828154c7d7297f5b4fcbe41ab90c79073ed_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        22,
+        15,
+        73,
+        17,
+        14,
+        79,
+        12,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198379828220"
+    },
+    {
+      "globalRank": 57377,
+      "steamId": "76561198377433954",
+      "playerName": "adrianjb1234",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/9ed8b0efbf3f942a18bf7b579e5cae15f74418e2_full.jpg",
+      "score": 124,
+      "details": [
+        125,
+        24,
+        17,
+        57,
+        19,
+        14,
+        228,
+        17,
+        13
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198377433954"
+    },
+    {
+      "globalRank": 57378,
+      "steamId": "76561198375000061",
+      "playerName": "Uzumaki",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/ded764f4a8b2c78991b9ab0ced555d57cec35dc3_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        58,
+        25,
+        76,
+        33,
+        13,
+        225,
+        26,
+        13
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198375000061"
+    },
+    {
+      "globalRank": 57379,
+      "steamId": "76561198371653490",
+      "playerName": "Argel",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/431f7d76146bf58b67c94d493682909acce6fc21_full.jpg",
+      "score": 124,
+      "details": [
+        277,
+        12,
+        5,
+        28,
+        10,
+        6,
+        36,
+        9,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198371653490"
+    },
+    {
+      "globalRank": 57380,
+      "steamId": "76561198370213166",
+      "playerName": "Kefi",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/cf65494866dc2bdd7c3eea6623b898189d6ea007_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        92,
+        24,
+        3,
+        28,
+        11,
+        225,
+        21,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198370213166"
+    },
+    {
+      "globalRank": 57381,
+      "steamId": "76561198370040739",
+      "playerName": "OneTrueking",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/a41301d4b9e1d39dda8f88f1c057b74f846482c7_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        12,
+        2,
+        333,
+        12,
+        4,
+        27,
+        11,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198370040739"
+    },
+    {
+      "globalRank": 57382,
+      "steamId": "76561198369987176",
+      "playerName": "ciciku\u015F",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/03d9b65b6214712dfd89046f524dcefc81dd4312_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        8,
+        7,
+        49,
+        6,
+        6,
+        230,
+        5,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198369987176"
+    },
+    {
+      "globalRank": 57383,
+      "steamId": "76561198366857646",
+      "playerName": "\uB300\uB791",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/b3877044cdfff2ddb4288f670e0656064d9f1b2d_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        35,
+        25,
+        333,
+        35,
+        23,
+        221,
+        18,
+        13
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198366857646"
+    },
+    {
+      "globalRank": 57384,
+      "steamId": "76561198366748148",
+      "playerName": "muloreptile",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/e4a8f5718ddf7b458cf4c09c111961f668a37197_full.jpg",
+      "score": 124,
+      "details": [
+        55,
+        60,
+        37,
+        54,
+        57,
+        36,
+        53,
+        56,
+        35
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198366748148"
+    },
+    {
+      "globalRank": 57385,
+      "steamId": "76561198366604728",
+      "playerName": "Tron",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/61117fa6317b6a03f436eb7d64ac5d6888a65f6e_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        4,
+        1,
+        333,
+        4,
+        0,
+        88,
+        3,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198366604728"
+    },
+    {
+      "globalRank": 57386,
+      "steamId": "76561198365599245",
+      "playerName": "Si_Kosong",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/124951739afca5dfe4f66c4c522e3951ae11d523_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        6,
+        4,
+        229,
+        5,
+        4,
+        273,
+        5,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198365599245"
+    },
+    {
+      "globalRank": 57387,
+      "steamId": "76561198364345040",
+      "playerName": "FLuX KING",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/7b440cc3c9705b6e05c5450b23f02b39a85d5e83_full.jpg",
+      "score": 124,
+      "details": [
+        229,
+        86,
+        66,
+        259,
+        71,
+        57,
+        333,
+        52,
+        40
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198364345040"
+    },
+    {
+      "globalRank": 57388,
+      "steamId": "76561198364262053",
+      "playerName": "yavahue",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/c3c15b718cb6d7ddcaa09d8e1a2e399707788c62_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        13,
+        10,
+        228,
+        10,
+        9,
+        125,
+        7,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198364262053"
+    },
+    {
+      "globalRank": 57389,
+      "steamId": "76561198360572122",
+      "playerName": "\u0421\u041D\u042E\u0421 \u0423\u042D\u0419\u041D",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/018a6bc10a2b74390a8b22f3bc65b2e5c403024f_full.jpg",
+      "score": 124,
+      "details": [
+        25,
+        12,
+        9,
+        228,
+        12,
+        10,
+        57,
+        10,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198360572122"
+    },
+    {
+      "globalRank": 57390,
+      "steamId": "76561198357772745",
+      "playerName": "\uBC15\uC9C4\uC6B0",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/4d32ed611a395ee5f43dae0ef6ab719183dd4150_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        36,
+        22,
+        57,
+        23,
+        14,
+        270,
+        17,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198357772745"
+    },
+    {
+      "globalRank": 57391,
+      "steamId": "76561198356112676",
+      "playerName": "\u9673\u6D69\u5357",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/a5412620d12cf721b200b17739cfa928592f00b3_full.jpg",
+      "score": 124,
+      "details": [
+        57,
+        20,
+        9,
+        76,
+        16,
+        9,
+        122,
+        13,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198356112676"
+    },
+    {
+      "globalRank": 57392,
+      "steamId": "76561198354087591",
+      "playerName": "lofikay",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/fc13bb1f59388dc6070a14f9224b6f697e08a4d3_full.jpg",
+      "score": 124,
+      "details": [
+        78,
+        18,
+        4,
+        8,
+        17,
+        6,
+        270,
+        14,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198354087591"
+    },
+    {
+      "globalRank": 57393,
+      "steamId": "76561198353832268",
+      "playerName": "Imposs1ble",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/eba09b473d824e28c27fbf31502589823f686a74_full.jpg",
+      "score": 124,
+      "details": [
+        274,
+        58,
+        25,
+        273,
+        55,
+        23,
+        228,
+        19,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198353832268"
+    },
+    {
+      "globalRank": 57394,
+      "steamId": "76561198351256366",
+      "playerName": "Insomniac",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/d67abded4ca585ae3f017981f7f92badd1eb6e46_full.jpg",
+      "score": 124,
+      "details": [
+        226,
+        15,
+        10,
+        57,
+        13,
+        11,
+        224,
+        13,
+        10
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198351256366"
+    },
+    {
+      "globalRank": 57395,
+      "steamId": "76561198347127281",
+      "playerName": "BUTCHER",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/f622f8990fd618f7ad3841b02cb5e619057f9676_full.jpg",
+      "score": 124,
+      "details": [
+        270,
+        47,
+        13,
+        59,
+        36,
+        7,
+        228,
+        29,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198347127281"
+    },
+    {
+      "globalRank": 57396,
+      "steamId": "76561198346753368",
+      "playerName": "eoghqwe",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/52c726f8ee646d641ed6d170f73ea649d52b0776_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        26,
+        16,
+        225,
+        14,
+        9,
+        57,
+        10,
+        8
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198346753368"
+    },
+    {
+      "globalRank": 57397,
+      "steamId": "76561198345723272",
+      "playerName": "T.TvManoMadara",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/a562c961ed912617098bbd4515bb01c40f4ffb84_full.jpg",
+      "score": 124,
+      "details": [
+        230,
+        75,
+        39,
+        122,
+        67,
+        38,
+        270,
+        56,
+        29
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198345723272"
+    },
+    {
+      "globalRank": 57398,
+      "steamId": "76561198344465923",
+      "playerName": "KitingBean",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/c4812d851191b7d1e65c95aef276bf91d9eae45d_full.jpg",
+      "score": 124,
+      "details": [
+        230,
+        12,
+        4,
+        23,
+        10,
+        5,
+        73,
+        9,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198344465923"
+    },
+    {
+      "globalRank": 57399,
+      "steamId": "76561198344176644",
+      "playerName": "Twitch.tv/Koadaina",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        226,
+        9,
+        7,
+        274,
+        9,
+        3,
+        273,
+        8,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198344176644"
+    },
+    {
+      "globalRank": 57400,
+      "steamId": "76561198339720046",
+      "playerName": "\u003C blank \u003E",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/bd2b7ca0651f2416a611a38cd073b854a2b2b734_full.jpg",
+      "score": 124,
+      "details": [
+        176,
+        65,
+        47,
+        74,
+        12,
+        10,
+        59,
+        11,
+        8
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198339720046"
+    },
+    {
+      "globalRank": 57401,
+      "steamId": "76561198339128255",
+      "playerName": "kirukato1870",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/f4454afd3f2daaf678ccf22adf2e5ab1c67f093b_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        20,
+        5,
+        346,
+        20,
+        5,
+        228,
+        16,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198339128255"
+    },
+    {
+      "globalRank": 57402,
+      "steamId": "76561198338619676",
+      "playerName": "Akari",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/991697d97a0e54ae3a65cf6d30e8b5b2c162baff_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        32,
+        18,
+        125,
+        30,
+        18,
+        228,
+        22,
+        16
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198338619676"
+    },
+    {
+      "globalRank": 57403,
+      "steamId": "76561198337419823",
+      "playerName": "edd",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/92f4ddd39478d00d5bed8e97710ee0c6da3fae5a_full.jpg",
+      "score": 124,
+      "details": [
+        125,
+        80,
+        45,
+        278,
+        51,
+        27,
+        353,
+        29,
+        20
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198337419823"
+    },
+    {
+      "globalRank": 57404,
+      "steamId": "76561198332133306",
+      "playerName": "par1ss",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/4390075747660f8a2d1b37fa14f7bc29330472c8_full.jpg",
+      "score": 124,
+      "details": [
+        57,
+        16,
+        9,
+        228,
+        16,
+        10,
+        125,
+        13,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198332133306"
+    },
+    {
+      "globalRank": 57405,
+      "steamId": "76561198330132218",
+      "playerName": "yo_myg",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/b7fbf78e6d2abb73de19ff818cf221d1264cca7f_full.jpg",
+      "score": 124,
+      "details": [
+        73,
+        97,
+        87,
+        263,
+        15,
+        10,
+        59,
+        13,
+        13
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198330132218"
+    },
+    {
+      "globalRank": 57406,
+      "steamId": "76561198329029772",
+      "playerName": "mastercenturionblue",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/50767cea96889a121066ed45c098873cb258f8f3_full.jpg",
+      "score": 124,
+      "details": [
+        237,
+        7,
+        4,
+        295,
+        6,
+        3,
+        68,
+        5,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198329029772"
+    },
+    {
+      "globalRank": 57407,
+      "steamId": "76561198325482169",
+      "playerName": "LAMORTE",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        233,
+        48,
+        16,
+        29,
+        31,
+        13,
+        230,
+        24,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198325482169"
+    },
+    {
+      "globalRank": 57408,
+      "steamId": "76561198322840926",
+      "playerName": "Piggy Slayer",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/a5ceecd4542a9249f7b349b54794dd29c51088bd_full.jpg",
+      "score": 124,
+      "details": [
+        21,
+        17,
+        7,
+        221,
+        17,
+        6,
+        227,
+        16,
+        0
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198322840926"
+    },
+    {
+      "globalRank": 57409,
+      "steamId": "76561198321788538",
+      "playerName": "GluttonyDZ",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/efcb3169f0324c91b8c2b52fb1fc16a84ecc351f_full.jpg",
+      "score": 124,
+      "details": [
+        274,
+        25,
+        14,
+        59,
+        14,
+        7,
+        71,
+        11,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198321788538"
+    },
+    {
+      "globalRank": 57410,
+      "steamId": "76561198320377198",
+      "playerName": "Bobbobert18",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/ae540d37eef3cfcff194166b7325340a698fe0e0_full.jpg",
+      "score": 124,
+      "details": [
+        1,
+        14,
+        6,
+        3,
+        14,
+        6,
+        7,
+        11,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198320377198"
+    },
+    {
+      "globalRank": 57411,
+      "steamId": "76561198318213352",
+      "playerName": "BLVCKLIGHT",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/c5a3b8d32d0e6daabef08bfcaa86c69f1837b8e8_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        38,
+        35,
+        225,
+        34,
+        32,
+        221,
+        28,
+        25
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198318213352"
+    },
+    {
+      "globalRank": 57412,
+      "steamId": "76561198316629458",
+      "playerName": "Xta",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/d54fa802a09593dc5690778d0c89d34c15fe1add_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        30,
+        14,
+        278,
+        8,
+        6,
+        352,
+        7,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198316629458"
+    },
+    {
+      "globalRank": 57413,
+      "steamId": "76561198314557811",
+      "playerName": "DIO",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/9b1754848636b26890552d6f731bc398f800d844_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        30,
+        6,
+        59,
+        22,
+        4,
+        274,
+        14,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198314557811"
+    },
+    {
+      "globalRank": 57414,
+      "steamId": "76561198312633599",
+      "playerName": "TheDementor",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/1454c7d29372359bf8b4b3f42b4158b837f41c9c_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        46,
+        17,
+        229,
+        40,
+        7,
+        25,
+        39,
+        19
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198312633599"
+    },
+    {
+      "globalRank": 57415,
+      "steamId": "76561198311459320",
+      "playerName": "\u0443\u0431\u0438\u043B \u0441\u0438\u0440\u0438\u0439\u0447\u0438\u043A\u0430((",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/1a72ba1b049b459c1f7a6abaf81b80333d4a78e9_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        40,
+        9,
+        76,
+        39,
+        11,
+        74,
+        24,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198311459320"
+    },
+    {
+      "globalRank": 57416,
+      "steamId": "76561198310299256",
+      "playerName": "Tempest",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/1fd5b62fa3d6b07e9996ea2e969524a7e06c1b96_full.jpg",
+      "score": 124,
+      "details": [
+        16,
+        15,
+        10,
+        11,
+        14,
+        8,
+        221,
+        14,
+        10
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198310299256"
+    },
+    {
+      "globalRank": 57417,
+      "steamId": "76561198310249917",
+      "playerName": "\u0412\u043E\u0440 \u0433\u043E\u0432\u043D\u0430",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/dd2bac1217b064e875b2623348cc952676ad5928_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        16,
+        8,
+        48,
+        5,
+        2,
+        79,
+        5,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198310249917"
+    },
+    {
+      "globalRank": 57418,
+      "steamId": "76561198309944004",
+      "playerName": "ZoSlow",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/3d52c8f17c46f63f7af3fadf45db771cfce84036_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        19,
+        11,
+        315,
+        16,
+        6,
+        225,
+        15,
+        8
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198309944004"
+    },
+    {
+      "globalRank": 57419,
+      "steamId": "76561198309877646",
+      "playerName": "Foodnedo",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/59e2ddb0ea2f3adbf5b5d97de95845b221e38877_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        41,
+        14,
+        111,
+        39,
+        13,
+        268,
+        32,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198309877646"
+    },
+    {
+      "globalRank": 57420,
+      "steamId": "76561198309346557",
+      "playerName": "Pug",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        221,
+        55,
+        39,
+        228,
+        40,
+        27,
+        225,
+        16,
+        12
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198309346557"
+    },
+    {
+      "globalRank": 57421,
+      "steamId": "76561198307369476",
+      "playerName": "Luraic",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/8c3d69cba744b0003510e14b9b248d9a284ca806_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        13,
+        6,
+        26,
+        10,
+        10,
+        78,
+        10,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198307369476"
+    },
+    {
+      "globalRank": 57422,
+      "steamId": "76561198303013920",
+      "playerName": "BlueRazGeekbar",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/e643c812feece27c17ad274ee113b3c2efb3d202_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        30,
+        4,
+        225,
+        30,
+        4,
+        59,
+        28,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198303013920"
+    },
+    {
+      "globalRank": 57423,
+      "steamId": "76561198302957605",
+      "playerName": "Kinplacenret",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/f59496f1621f14de87fd9b5425674fd86ae99875_full.jpg",
+      "score": 124,
+      "details": [
+        57,
+        20,
+        3,
+        228,
+        15,
+        2,
+        230,
+        13,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198302957605"
+    },
+    {
+      "globalRank": 57424,
+      "steamId": "76561198302060907",
+      "playerName": "Yash",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        228,
+        11,
+        3,
+        230,
+        9,
+        7,
+        1,
+        8,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198302060907"
+    },
+    {
+      "globalRank": 57425,
+      "steamId": "76561198300442885",
+      "playerName": "Pedroram1877",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/f1e1facc4b8fea86a0863de9e8b19ed5157ef66c_full.jpg",
+      "score": 124,
+      "details": [
+        273,
+        12,
+        2,
+        225,
+        10,
+        7,
+        270,
+        10,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198300442885"
+    },
+    {
+      "globalRank": 57426,
+      "steamId": "76561198298738688",
+      "playerName": "Tyler",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/c245e14db76e5c182b853cd66bea61f33dbd2ccd_full.jpg",
+      "score": 124,
+      "details": [
+        27,
+        18,
+        11,
+        49,
+        18,
+        6,
+        229,
+        10,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198298738688"
+    },
+    {
+      "globalRank": 57427,
+      "steamId": "76561198288909758",
+      "playerName": "Somaliyskiy Painter",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/465f8164e843fd676c980a5df2aa6d44077c15f5_full.jpg",
+      "score": 124,
+      "details": [
+        230,
+        21,
+        14,
+        228,
+        11,
+        6,
+        35,
+        8,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198288909758"
+    },
+    {
+      "globalRank": 57428,
+      "steamId": "76561198287461930",
+      "playerName": "\uC628\uCC9C\uC774",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/5b8825b34c5d77b00c3a18897f2f1175fa0e0e57_full.jpg",
+      "score": 124,
+      "details": [
+        267,
+        15,
+        10,
+        100,
+        11,
+        7,
+        101,
+        11,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198287461930"
+    },
+    {
+      "globalRank": 57429,
+      "steamId": "76561198285108145",
+      "playerName": "Janiboy",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/06b1a69ce602baab1b6f828690324779ab642117_full.jpg",
+      "score": 124,
+      "details": [
+        123,
+        5,
+        1,
+        3,
+        3,
+        0,
+        8,
+        3,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198285108145"
+    },
+    {
+      "globalRank": 57430,
+      "steamId": "76561198285101885",
+      "playerName": "\u20ADam1\u014Ba\u5C3Ai",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/b0811bb0c85cd30627c9c27143d6b44206774711_full.jpg",
+      "score": 124,
+      "details": [
+        21,
+        7,
+        5,
+        225,
+        6,
+        6,
+        346,
+        6,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198285101885"
+    },
+    {
+      "globalRank": 57431,
+      "steamId": "76561198284732599",
+      "playerName": "Empty_Dark-eye",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        125,
+        49,
+        20,
+        221,
+        46,
+        16,
+        23,
+        25,
+        11
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198284732599"
+    },
+    {
+      "globalRank": 57432,
+      "steamId": "76561198282847931",
+      "playerName": "1403091736",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/1c0b5c37a442a2d39f32902ec42f2e26ba6a142e_full.jpg",
+      "score": 124,
+      "details": [
+        48,
+        15,
+        9,
+        228,
+        11,
+        3,
+        51,
+        8,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198282847931"
+    },
+    {
+      "globalRank": 57433,
+      "steamId": "76561198281709093",
+      "playerName": "Sohka",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/71aa87545fef134bc3e7a0ae62ef89c0a78e4f20_full.jpg",
+      "score": 124,
+      "details": [
+        124,
+        21,
+        20,
+        57,
+        17,
+        16,
+        54,
+        14,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198281709093"
+    },
+    {
+      "globalRank": 57434,
+      "steamId": "76561198281633009",
+      "playerName": "\u53F0\u670D\u6700\u840C155",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/4a7ef8dc7f866c91e9473cb6249e690bcfcdc2a2_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        70,
+        61,
+        221,
+        67,
+        57,
+        227,
+        56,
+        48
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198281633009"
+    },
+    {
+      "globalRank": 57435,
+      "steamId": "76561198278483644",
+      "playerName": "minion traumatizado",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/476e9e50bb0c98b7ebdbeaaca8509962cb4c04e0_full.jpg",
+      "score": 124,
+      "details": [
+        278,
+        13,
+        2,
+        351,
+        12,
+        3,
+        221,
+        9,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198278483644"
+    },
+    {
+      "globalRank": 57436,
+      "steamId": "76561198278329379",
+      "playerName": "CooLgarfiE",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/962757e78f1065017b0ddb8efca660d641c9e492_full.jpg",
+      "score": 124,
+      "details": [
+        66,
+        12,
+        4,
+        270,
+        7,
+        3,
+        227,
+        6,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198278329379"
+    },
+    {
+      "globalRank": 57437,
+      "steamId": "76561198276700734",
+      "playerName": "\u267Fv4nchesko\u267F",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/1fa48f3adeb9594213eb5579244b70f7430ff46e_full.jpg",
+      "score": 124,
+      "details": [
+        222,
+        5,
+        4,
+        53,
+        4,
+        1,
+        19,
+        3,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198276700734"
+    },
+    {
+      "globalRank": 57438,
+      "steamId": "76561198275431051",
+      "playerName": "Magi",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/3eef365d3cdef98a33f3bc4380546efef37fe58b_full.jpg",
+      "score": 124,
+      "details": [
+        49,
+        17,
+        12,
+        3,
+        12,
+        7,
+        7,
+        11,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198275431051"
+    },
+    {
+      "globalRank": 57439,
+      "steamId": "76561198271703193",
+      "playerName": "\uACE0\uAE43\uC9D1\uACF5\uAE43\uBC25\uB9CC\uBA39\uACE0\uC774",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/4d96f65d7c2b6c54e7ffe4e4e8c65ad1e45dc082_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        43,
+        21,
+        221,
+        29,
+        13,
+        225,
+        22,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198271703193"
+    },
+    {
+      "globalRank": 57440,
+      "steamId": "76561198269502784",
+      "playerName": "Dec1te",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/08c213c59f569046cf14d2b203b213822fced073_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        60,
+        29,
+        57,
+        37,
+        18,
+        274,
+        29,
+        19
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198269502784"
+    },
+    {
+      "globalRank": 57441,
+      "steamId": "76561198269013456",
+      "playerName": "melancholy",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/ca88f1f8efa667439d916b2b0e5694bb67dede6a_full.jpg",
+      "score": 124,
+      "details": [
+        66,
+        24,
+        11,
+        229,
+        21,
+        9,
+        228,
+        19,
+        17
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198269013456"
+    },
+    {
+      "globalRank": 57442,
+      "steamId": "76561198268177507",
+      "playerName": "RedSpoonerator",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/1692905629cffe3e9d23da8a25ce01755edc2b03_full.jpg",
+      "score": 124,
+      "details": [
+        22,
+        31,
+        14,
+        57,
+        24,
+        12,
+        34,
+        13,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198268177507"
+    },
+    {
+      "globalRank": 57443,
+      "steamId": "76561198261065082",
+      "playerName": "LokiSan",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/d9680bd7ac883a3975235b854299fdf5f7c7b650_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        42,
+        13,
+        75,
+        18,
+        8,
+        25,
+        11,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198261065082"
+    },
+    {
+      "globalRank": 57444,
+      "steamId": "76561198260904643",
+      "playerName": "BLK_WLF",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/43deabe8ea2875b5525b188983dfc9933784effd_full.jpg",
+      "score": 124,
+      "details": [
+        57,
+        28,
+        22,
+        48,
+        11,
+        4,
+        125,
+        11,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198260904643"
+    },
+    {
+      "globalRank": 57445,
+      "steamId": "76561198259413147",
+      "playerName": "SH",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/90281bcb08a9d28ef4c343c5f6b8b75f093e4a9b_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        38,
+        15,
+        165,
+        8,
+        2,
+        33,
+        7,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198259413147"
+    },
+    {
+      "globalRank": 57446,
+      "steamId": "76561198258759787",
+      "playerName": "Terrix",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/815620bf2491be691e9cd2012741e1cba2f0fb06_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        12,
+        9,
+        225,
+        7,
+        5,
+        258,
+        7,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198258759787"
+    },
+    {
+      "globalRank": 57447,
+      "steamId": "76561198258594171",
+      "playerName": "TBGod",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        224,
+        12,
+        2,
+        27,
+        10,
+        0,
+        221,
+        10,
+        0
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198258594171"
+    },
+    {
+      "globalRank": 57448,
+      "steamId": "76561198258366832",
+      "playerName": "s1lence",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/365a840d3f171db87ac363c6dceafc9d9c19cbb6_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        71,
+        23,
+        57,
+        65,
+        19,
+        225,
+        22,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198258366832"
+    },
+    {
+      "globalRank": 57449,
+      "steamId": "76561198258350238",
+      "playerName": "Zeppelin[RL]",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/c28b5f5c469b5c74eb53a00239ba1d3133a18cc9_full.jpg",
+      "score": 124,
+      "details": [
+        293,
+        46,
+        23,
+        197,
+        32,
+        19,
+        353,
+        31,
+        18
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198258350238"
+    },
+    {
+      "globalRank": 57450,
+      "steamId": "76561198257889394",
+      "playerName": "Kriegerofdragon",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/e9729cefc5fa00400e1dee8a71f84d1377277ccb_full.jpg",
+      "score": 124,
+      "details": [
+        346,
+        7,
+        2,
+        66,
+        5,
+        4,
+        274,
+        5,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198257889394"
+    },
+    {
+      "globalRank": 57451,
+      "steamId": "76561198255989242",
+      "playerName": "Kaywik",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/1191c81a57194f64acfcda94f0fd0cb94e92eff7_full.jpg",
+      "score": 124,
+      "details": [
+        27,
+        53,
+        9,
+        124,
+        17,
+        3,
+        226,
+        15,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198255989242"
+    },
+    {
+      "globalRank": 57452,
+      "steamId": "76561198255735125",
+      "playerName": "Zerf",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/c22138fe576d21e833b0b25dff550a5b50d4f23c_full.jpg",
+      "score": 124,
+      "details": [
+        230,
+        13,
+        6,
+        116,
+        11,
+        6,
+        315,
+        11,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198255735125"
+    },
+    {
+      "globalRank": 57453,
+      "steamId": "76561198254028260",
+      "playerName": "StupidSituation",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/bc48401783bba8e5d187e0066333bd49aa14e939_full.jpg",
+      "score": 124,
+      "details": [
+        86,
+        13,
+        3,
+        63,
+        8,
+        0,
+        116,
+        5,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198254028260"
+    },
+    {
+      "globalRank": 57454,
+      "steamId": "76561198253670417",
+      "playerName": "\uD83D\uDC96\u0F12Excitation\u0F12\uD83D\uDC96",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/738345e90541ec9e092fdad6321ae639eed49e4b_full.jpg",
+      "score": 124,
+      "details": [
+        59,
+        11,
+        11,
+        25,
+        9,
+        9,
+        213,
+        9,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198253670417"
+    },
+    {
+      "globalRank": 57455,
+      "steamId": "76561198253518520",
+      "playerName": "CHENYEN",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/0ae81ca7c6209a3391ea86d2da7ff019658732e0_full.jpg",
+      "score": 124,
+      "details": [
+        25,
+        10,
+        5,
+        89,
+        8,
+        4,
+        221,
+        7,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198253518520"
+    },
+    {
+      "globalRank": 57456,
+      "steamId": "76561198249832632",
+      "playerName": "DrSteinMax",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/44755b91d30eca1cde52313278c07df45d403784_full.jpg",
+      "score": 124,
+      "details": [
+        73,
+        58,
+        13,
+        21,
+        39,
+        13,
+        71,
+        31,
+        12
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198249832632"
+    },
+    {
+      "globalRank": 57457,
+      "steamId": "76561198247630278",
+      "playerName": "ZZZZZZZZZZZZ22",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        125,
+        69,
+        40,
+        221,
+        60,
+        29,
+        258,
+        56,
+        37
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198247630278"
+    },
+    {
+      "globalRank": 57458,
+      "steamId": "76561198247131212",
+      "playerName": "J0k3rbr0m4",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/12ba138a850abde7d633c01f9df6aec0b5dbc460_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        34,
+        14,
+        25,
+        33,
+        13,
+        270,
+        30,
+        14
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198247131212"
+    },
+    {
+      "globalRank": 57459,
+      "steamId": "76561198242347044",
+      "playerName": "Hanyruk",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/7c5753a9415749075e76c1011e3f54a0ea48f724_full.jpg",
+      "score": 124,
+      "details": [
+        226,
+        29,
+        6,
+        270,
+        20,
+        3,
+        268,
+        18,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198242347044"
+    },
+    {
+      "globalRank": 57460,
+      "steamId": "76561198240480096",
+      "playerName": "\u6CEA\u51A0\u54C0\u6B4C-\u742A\u591A\u5361\u6D1B\u65AF",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/3bee5915b0130ad3fc30fef98bc07cae0930fd51_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        5,
+        4,
+        65,
+        4,
+        1,
+        78,
+        4,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198240480096"
+    },
+    {
+      "globalRank": 57461,
+      "steamId": "76561198239288486",
+      "playerName": "DTboy",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/a768f01662c7e151a40298f9cb5906b3dcaf6dbb_full.jpg",
+      "score": 124,
+      "details": [
+        230,
+        21,
+        16,
+        228,
+        15,
+        6,
+        57,
+        14,
+        12
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198239288486"
+    },
+    {
+      "globalRank": 57462,
+      "steamId": "76561198231447732",
+      "playerName": "bulka21(Freak)",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/0309f3a8182a10536eeafaf058a8a738cca8cdfb_full.jpg",
+      "score": 124,
+      "details": [
+        270,
+        33,
+        11,
+        80,
+        32,
+        13,
+        268,
+        21,
+        7
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198231447732"
+    },
+    {
+      "globalRank": 57463,
+      "steamId": "76561198227481716",
+      "playerName": "\u041F\u0420\u041E\u0421\u0422\u041E \u0424\u0418\u041B\u042F",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/4f63e6e0496f5971b9d244685de874e216415edf_full.jpg",
+      "score": 124,
+      "details": [
+        221,
+        35,
+        20,
+        228,
+        32,
+        15,
+        227,
+        29,
+        13
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198227481716"
+    },
+    {
+      "globalRank": 57464,
+      "steamId": "76561198227246584",
+      "playerName": "#TRIGGERWARNING",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/d0d62cadf3d2b6560ad246bf3bcb6943afe93321_full.jpg",
+      "score": 124,
+      "details": [
+        57,
+        62,
+        42,
+        113,
+        41,
+        32,
+        230,
+        41,
+        32
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198227246584"
+    },
+    {
+      "globalRank": 57465,
+      "steamId": "76561198223670196",
+      "playerName": "shpingle",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/0f2b02fea2d8a8d1f484bbad8cd75422c71a2a8b_full.jpg",
+      "score": 124,
+      "details": [
+        97,
+        9,
+        2,
+        42,
+        8,
+        0,
+        66,
+        6,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198223670196"
+    },
+    {
+      "globalRank": 57466,
+      "steamId": "76561198221664280",
+      "playerName": "Zekken",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/9930246b64fa35869f968a2c3c11f004d7787890_full.jpg",
+      "score": 124,
+      "details": [
+        222,
+        31,
+        3,
+        228,
+        29,
+        5,
+        3,
+        17,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198221664280"
+    },
+    {
+      "globalRank": 57467,
+      "steamId": "76561198220172021",
+      "playerName": "caprison",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/998724279b142d135550d1c8693e05c0a8e5bc29_full.jpg",
+      "score": 124,
+      "details": [
+        46,
+        15,
+        2,
+        228,
+        9,
+        3,
+        78,
+        7,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198220172021"
+    },
+    {
+      "globalRank": 57468,
+      "steamId": "76561198219834348",
+      "playerName": "Sunless",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/b8784dae70598f8ffdbc86858d695287bb0991db_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        56,
+        13,
+        57,
+        51,
+        18,
+        76,
+        51,
+        20
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198219834348"
+    },
+    {
+      "globalRank": 57469,
+      "steamId": "76561198209102040",
+      "playerName": "\u0441\u043E\u043B\u043D\u044B\u0448\u043A\u043E \u69D8",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/96278e9590e5a86265aade8ca9c9f23cbc120d9c_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        22,
+        15,
+        59,
+        15,
+        11,
+        172,
+        12,
+        8
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198209102040"
+    },
+    {
+      "globalRank": 57470,
+      "steamId": "76561198208777927",
+      "playerName": "Ernie",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/32b19273dbbaaf9ecb97d80f68ff63dfde917542_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        22,
+        14,
+        228,
+        20,
+        16,
+        76,
+        17,
+        12
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198208777927"
+    },
+    {
+      "globalRank": 57471,
+      "steamId": "76561198206433608",
+      "playerName": "ZachAttack",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/2038e7f280e46838d12213d9fdeb84df08bc31dc_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        16,
+        8,
+        228,
+        14,
+        7,
+        221,
+        11,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198206433608"
+    },
+    {
+      "globalRank": 57472,
+      "steamId": "76561198205144597",
+      "playerName": "JokerC",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/8dfe278c7493b6984540e57ecd57b791df13841e_full.jpg",
+      "score": 124,
+      "details": [
+        59,
+        15,
+        13,
+        213,
+        15,
+        11,
+        229,
+        15,
+        11
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198205144597"
+    },
+    {
+      "globalRank": 57473,
+      "steamId": "76561198204856397",
+      "playerName": "AlixSOAD",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/323bee975144053f1d685eaf2fbf2669266fdb51_full.jpg",
+      "score": 124,
+      "details": [
+        346,
+        21,
+        7,
+        76,
+        17,
+        8,
+        225,
+        12,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198204856397"
+    },
+    {
+      "globalRank": 57474,
+      "steamId": "76561198199582821",
+      "playerName": "Kinon",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/c4feee3555c832a794ab8f0aced6336a4d5772ba_full.jpg",
+      "score": 124,
+      "details": [
+        59,
+        28,
+        26,
+        274,
+        21,
+        10,
+        290,
+        17,
+        15
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198199582821"
+    },
+    {
+      "globalRank": 57475,
+      "steamId": "76561198199580403",
+      "playerName": "MIRO",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/9b6511300c9d11c9e97989a0b38bf8f6fa057af5_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        22,
+        6,
+        221,
+        20,
+        6,
+        228,
+        20,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198199580403"
+    },
+    {
+      "globalRank": 57476,
+      "steamId": "76561198199381686",
+      "playerName": "Gurido",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/6468ff144f6d09a8fcdd401f3e7bef8fb520022d_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        64,
+        49,
+        122,
+        55,
+        43,
+        88,
+        50,
+        33
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198199381686"
+    },
+    {
+      "globalRank": 57477,
+      "steamId": "76561198198709466",
+      "playerName": "John wick",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/ac80c7731344b4a5a4a5a12812477b9674495a00_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        33,
+        13,
+        225,
+        23,
+        11,
+        57,
+        19,
+        9
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198198709466"
+    },
+    {
+      "globalRank": 57478,
+      "steamId": "76561198198271451",
+      "playerName": "mello",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/109a558117915b29ce6a8be5723015e32fe84314_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        83,
+        34,
+        76,
+        75,
+        31,
+        42,
+        68,
+        26
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198198271451"
+    },
+    {
+      "globalRank": 57479,
+      "steamId": "76561198197842477",
+      "playerName": "KirIn",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/a627d3c0e9fe310d6ce9538c3594376522acbb00_full.jpg",
+      "score": 124,
+      "details": [
+        57,
+        11,
+        7,
+        270,
+        11,
+        4,
+        226,
+        9,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198197842477"
+    },
+    {
+      "globalRank": 57480,
+      "steamId": "76561198197019455",
+      "playerName": "Doomsday",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/e41592f0aa51934839b39912d3fa94df3d057fb9_full.jpg",
+      "score": 124,
+      "details": [
+        259,
+        36,
+        24,
+        76,
+        26,
+        14,
+        116,
+        21,
+        17
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198197019455"
+    },
+    {
+      "globalRank": 57481,
+      "steamId": "76561198194285970",
+      "playerName": "Aurelian",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/ed9b470048c61e197b7a63e301c67d23d2a181b9_full.jpg",
+      "score": 124,
+      "details": [
+        228,
+        18,
+        6,
+        333,
+        14,
+        6,
+        100,
+        12,
+        3
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198194285970"
+    },
+    {
+      "globalRank": 57482,
+      "steamId": "76561198194238690",
+      "playerName": "mAx",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/0b9983f185595eab1e51308675c1ebe1e6adafbe_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        13,
+        2,
+        226,
+        12,
+        2,
+        57,
+        10,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198194238690"
+    },
+    {
+      "globalRank": 57483,
+      "steamId": "76561198193996995",
+      "playerName": "f",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/67faeaa724ba9f0d49ce213194b3f2e650b30583_full.jpg",
+      "score": 124,
+      "details": [
+        122,
+        25,
+        22,
+        225,
+        18,
+        18,
+        59,
+        15,
+        12
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198193996995"
+    },
+    {
+      "globalRank": 57484,
+      "steamId": "76561198193689855",
+      "playerName": "Gerax",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/f0b59553c4da5d54fbc4f44b6d47c0a25198315a_full.jpg",
+      "score": 124,
+      "details": [
+        274,
+        6,
+        4,
+        116,
+        5,
+        3,
+        221,
+        5,
+        5
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198193689855"
+    },
+    {
+      "globalRank": 57485,
+      "steamId": "76561198192777075",
+      "playerName": "whyskippy",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/504b46284002f4cedac1f75650ada44b8cae8ab9_full.jpg",
+      "score": 124,
+      "details": [
+        57,
+        13,
+        5,
+        228,
+        9,
+        4,
+        94,
+        7,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198192777075"
+    },
+    {
+      "globalRank": 57486,
+      "steamId": "76561198191795630",
+      "playerName": "Elleo",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/6720a33753464d07fd61cf67131efe7df5c0c54d_full.jpg",
+      "score": 124,
+      "details": [
+        315,
+        29,
+        12,
+        221,
+        21,
+        11,
+        225,
+        17,
+        8
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198191795630"
+    },
+    {
+      "globalRank": 57487,
+      "steamId": "76561198191266873",
+      "playerName": "greg5320",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/6c624006a82763484000fe965e28cab9ff545538_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        23,
+        11,
+        270,
+        23,
+        12,
+        269,
+        21,
+        11
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198191266873"
+    },
+    {
+      "globalRank": 57488,
+      "steamId": "76561198187038421",
+      "playerName": "Shanks36",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/dad919027393d24d5e84438fb92622663dc2fa9f_full.jpg",
+      "score": 124,
+      "details": [
+        68,
+        27,
+        18,
+        56,
+        25,
+        8,
+        69,
+        24,
+        18
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198187038421"
+    },
+    {
+      "globalRank": 57489,
+      "steamId": "76561198173504311",
+      "playerName": "L.K. DERIC NG",
+      "avatarUrl": null,
+      "score": 124,
+      "details": [
+        333,
+        113,
+        69,
+        154,
+        70,
+        45,
+        253,
+        63,
+        40
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198173504311"
+    },
+    {
+      "globalRank": 57490,
+      "steamId": "76561198172366594",
+      "playerName": "TiRe",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/3fb611e40609f439d6b9cf56c410abd68717c143_full.jpg",
+      "score": 124,
+      "details": [
+        87,
+        8,
+        1,
+        22,
+        7,
+        3,
+        10,
+        6,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198172366594"
+    },
+    {
+      "globalRank": 57491,
+      "steamId": "76561198171735191",
+      "playerName": "zodiac",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/61e1060ffe905073da973dff2aaa80c323ea0000_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        7,
+        2,
+        40,
+        6,
+        4,
+        125,
+        6,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198171735191"
+    },
+    {
+      "globalRank": 57492,
+      "steamId": "76561198170941898",
+      "playerName": "\u041B\u042F\u041B\u044F",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/453899e2d56522a9f734228ddde498d5c911661c_full.jpg",
+      "score": 124,
+      "details": [
+        125,
+        7,
+        2,
+        221,
+        6,
+        0,
+        25,
+        5,
+        0
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198170941898"
+    },
+    {
+      "globalRank": 57493,
+      "steamId": "76561198169212776",
+      "playerName": "John Xina",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/b4b87983526fae1574b5b23e8d95e4ec02a7fe60_full.jpg",
+      "score": 124,
+      "details": [
+        125,
+        25,
+        15,
+        57,
+        24,
+        17,
+        228,
+        19,
+        12
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198169212776"
+    },
+    {
+      "globalRank": 57494,
+      "steamId": "76561198168444648",
+      "playerName": "Lucky",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/cfad2e826b6b58e4aed4262f7a7589811b4401f3_full.jpg",
+      "score": 124,
+      "details": [
+        76,
+        42,
+        21,
+        74,
+        28,
+        18,
+        327,
+        20,
+        14
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198168444648"
+    },
+    {
+      "globalRank": 57495,
+      "steamId": "76561198168269648",
+      "playerName": "Tarotti",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/d1cc2f1caac877606c6c7e26596cef58acc8607e_full.jpg",
+      "score": 124,
+      "details": [
+        225,
+        13,
+        7,
+        42,
+        7,
+        1,
+        1,
+        6,
+        4
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198168269648"
+    },
+    {
+      "globalRank": 57496,
+      "steamId": "76561198167324350",
+      "playerName": "GUNT CLEANER",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/5555ffac83894dace8e55536f6cd0215d005c121_full.jpg",
+      "score": 124,
+      "details": [
+        27,
+        9,
+        4,
+        100,
+        6,
+        3,
+        29,
+        5,
+        2
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198167324350"
+    },
+    {
+      "globalRank": 57497,
+      "steamId": "76561198166601367",
+      "playerName": "xSky",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/b1b2ef1484c85d3aa99b5387dd2d2e920d024913_full.jpg",
+      "score": 124,
+      "details": [
+        268,
+        17,
+        11,
+        270,
+        14,
+        11,
+        54,
+        10,
+        8
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198166601367"
+    },
+    {
+      "globalRank": 57498,
+      "steamId": "76561198166293615",
+      "playerName": "iamyourpuppet",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/b61ab9bce173a550044ab05dc90929796bb9fb3a_full.jpg",
+      "score": 124,
+      "details": [
+        101,
+        4,
+        1,
+        238,
+        4,
+        0,
+        264,
+        4,
+        1
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198166293615"
+    },
+    {
+      "globalRank": 57499,
+      "steamId": "76561198164152112",
+      "playerName": "Eblan",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/f133be3a7d751f260589e99b9142ed228322622f_full.jpg",
+      "score": 124,
+      "details": [
+        346,
+        52,
+        24,
+        345,
+        33,
+        17,
+        76,
+        18,
+        6
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198164152112"
+    },
+    {
+      "globalRank": 57500,
+      "steamId": "76561198163708438",
+      "playerName": "Colbaster",
+      "avatarUrl": "https://avatars.cloudflare.steamstatic.com/477a967fe9d5a79884b6deeb0ba1d2da8104b4aa_full.jpg",
+      "score": 124,
+      "details": [
+        48,
+        28,
+        8,
+        49,
+        21,
+        6,
+        27,
+        19,
+        11
+      ],
+      "ugcId": "18446744073709551615",
+      "steamProfileUrl": "https://steamcommunity.com/profiles/76561198163708438"
+    }
+  ]
+}

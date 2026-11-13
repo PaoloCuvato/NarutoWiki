@@ -1,172 +1,358 @@
-// --- TAVOLO COLORI DEFINITIVI STILE STORMWIKI ---
-$card-background: rgba(10, 10, 10, 0.82); // Nero opaco trasparente per mostrare lo sfondo sotto!
-$inner-background: #0a0a0a;  // Grigio scurissimo per contrasto interno tabelle
-$ninja-orange: #ff9000;      // Arancione dei titoli e dettagli della home
-$ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
-
-// --- NASCONDE LA SCROLLBAR A DESTRA SU TUTTI I BROWSER ---
-:host {
-  display: block;
-  width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
-
-  &::-webkit-scrollbar {
-    display: none;
-    width: 0px;
-    background: transparent;
-  }
-}
+$ninja-orange: #ff9900;
+$ninja-blue: #00a8ff;
+$card-background: rgba(6, 8, 14, 0.88);
+$card-border: rgba(255, 153, 0, 0.22);
 
 .leaderboard-wrapper {
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url('/madaraVsHash.png') no-repeat center center fixed;
-  background-size: cover;
   min-height: 100vh;
-  padding: 60px 20px;
-  box-sizing: border-box;
   color: #ffffff;
-  font-family: 'Segoe UI', sans-serif;
-  overflow: hidden; // Nasconde le nuvole quando escono dai bordi dello schermo
-
-  // --- CENTRATURA VERTICALE PERFETTA ---
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  .nav-bar {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 20px auto;
-    position: relative;
-    z-index: 2;
-  }
-
-  .leaderboard-header {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 45px auto; // <--- SPAZIO AUMENTATO TRA TITOLO E TABELLA
-    position: relative;
-    z-index: 2;
-
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      margin: 5px 0;
-      letter-spacing: 1px;
-    }
-    .subtitle {
-      color: $ninja-orange;
-      font-weight: 800;
-      font-size: 1.1rem;
-      letter-spacing: 2px;
-    }
-    .header-line {
-      width: 60px;
-      height: 4px;
-      background: $ninja-orange;
-      border-radius: 2px;
-      margin-top: 5px;
-    }
-  }
-}
-
-// --- CONTENITORE NUVOLE DI SFONDO (MOLTO LENTE E SEMPRE PRESENTI) ---
-.clouds-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1; // Rigorosamente dietro la tabella e l'intestazione
-  pointer-events: none; // I click passano attraverso
+  color-scheme: dark;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+    url('/madaraVsHash.png') no-repeat center center fixed;
+  background-size: cover;
+  padding: 110px 32px 64px;
   overflow: hidden;
 }
 
-.cloud-item {
-  position: absolute;
-  opacity: 0.55; // Sfumate perfettamente sullo sfondo
-  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.6));
-  will-change: transform;
-}
-
-/* --- 3 NUVOLE DA SINISTRA (Entrano, attraversano ed escono prima di tornare) --- */
-.cloud-left-1 {
-  top: 6%;
-  left: -700px; // Estremità sinistra fuori schermo
-  width: 650px;
-  animation: extremeSlideLeft 110s ease-in-out infinite alternate;
-  animation-delay: 0s;
-}
-
-.cloud-left-2 {
-  top: 36%;
-  left: -700px;
-  width: 500px;
-  animation: extremeSlideLeft 90s ease-in-out infinite alternate;
-  animation-delay: -35s;
-}
-
-.cloud-left-3 {
-  top: 66%;
-  left: -700px;
-  width: 700px;
-  animation: extremeSlideLeft 130s ease-in-out infinite alternate;
-  animation-delay: -70s;
-}
-
-/* --- 3 NUVOLE DA DESTRA (Entrano, attraversano ed escono prima di tornare) --- */
-.cloud-right-1 {
-  top: 18%;
-  right: -700px; // Estremità destra fuori schermo
-  width: 550px;
-  animation: extremeSlideRight 95s ease-in-out infinite alternate;
-  animation-delay: -20s;
-  transform: scaleX(-1); // Specchiata
-}
-
-.cloud-right-2 {
-  top: 48%;
-  right: -700px;
-  width: 620px;
-  animation: extremeSlideRight 120s ease-in-out infinite alternate;
-  animation-delay: -50s;
-  transform: scaleX(-1);
-}
-
-.cloud-right-3 {
-  top: 78%;
-  right: -700px;
-  width: 480px;
-  animation: extremeSlideRight 100s ease-in-out infinite alternate;
-  animation-delay: -10s;
-  transform: scaleX(-1);
-}
-
-// CONTENITORE CON EFFETTO SFOCATURA SULLO SFONDO (BACKDROP BLUR)
-.table-container {
+.leaderboard-header {
+  position: relative;
+  z-index: 2;
   width: 100%;
-  min-width: 0;
+  max-width: 1200px;
+  margin: 0 auto 24px;
+
+  .subtitle {
+    display: inline-block;
+    color: $ninja-orange;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .header-line {
+    width: 64px;
+    height: 4px;
+    background: $ninja-orange;
+    border-radius: 999px;
+    margin: 12px 0 14px;
+  }
+
+  .board-caption {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    letter-spacing: 0.4px;
+  }
+}
+
+.table-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  box-sizing: border-box;
   border: 2px solid $ninja-orange;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 0 30px rgba(255, 144, 0, 0.2);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 0 30px rgba(255, 144, 0, 0.18);
+  background: rgba(4, 6, 10, 0.68);
+  backdrop-filter: blur(9px);
+}
+
+.game-switcher {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  padding: 14px 18px 12px;
+  border-bottom: 1px solid rgba(255, 153, 0, 0.15);
+  background: linear-gradient(180deg, rgba(8, 10, 16, 0.92), rgba(8, 10, 16, 0.72));
+}
+
+.game-tab {
+  appearance: none;
+  border: 1px solid rgba(255, 153, 0, 0.28);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)),
+    rgba(7, 10, 18, 0.92);
+  color: rgba(255, 255, 255, 0.84);
+  border-radius: 12px;
+  padding: 8px 12px;
+  min-height: 38px;
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
   position: relative;
-  z-index: 2; // Sopra alle nuvole di sfondo
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(255, 153, 0, 0.16), transparent 45%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  &:hover {
+    border-color: rgba(255, 153, 0, 0.6);
+    color: #ffffff;
+    transform: translateY(-1px);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &.active {
+    background: linear-gradient(180deg, #ffb62f, #ff9300 68%, #da7600);
+    color: #141414;
+    border-color: #ffbf4d;
+    box-shadow: 0 8px 16px rgba(255, 153, 0, 0.18);
+  }
+}
+
+.leaderboard-toolbar {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.8fr auto;
+  gap: 14px;
+  align-items: end;
+  padding: 18px;
+  background: rgba(8, 10, 16, 0.72);
+  border-bottom: 1px solid rgba(255, 153, 0, 0.14);
+}
+
+.board-select-label,
+.player-search-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.board-select-label select,
+.player-search-label input {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  padding: 0 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+// Keep the browser-native option lists dark on Windows and Chromium.
+.board-select-label select {
+  color-scheme: dark;
+  background-color: #11151e;
+  color: #f7f7f7;
+  accent-color: $ninja-orange;
+  cursor: pointer;
+
+  option,
+  optgroup {
+    background-color: #11151e;
+    color: #f7f7f7;
+  }
+
+  option:checked {
+    background-color: #a95c00;
+    color: #ffffff;
+  }
+}
+
+.board-select-label select:focus,
+.player-search-label input:focus {
+  border-color: rgba(255, 153, 0, 0.8);
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.16);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.board-select-label select:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.player-search-label input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.refresh-button {
+  min-width: 140px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #ffad1f, $ninja-orange);
+  color: #121212;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 18px rgba(255, 153, 0, 0.2);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: wait;
+  }
+}
+
+.leaderboard-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  padding: 0 18px 16px;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.78rem;
+}
+
+.leaderboard-notice {
+  padding: 0 18px 14px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.84rem;
+}
+
+.steam-player {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.steam-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex: 0 0 32px;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.steam-player-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.steam-player-name {
+  font-weight: 700;
+}
+
+.cheater-label {
+  display: inline-flex;
+  width: fit-content;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(215, 48, 48, 0.18);
+  border: 1px solid rgba(255, 88, 88, 0.55);
+  color: #ff6b6b;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.7px;
+}
+
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 153, 0, 0.4);
+  border-radius: 6px;
+  color: $ninja-orange;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.82rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: $ninja-orange;
+    color: #ffffff;
+    background: rgba(255, 153, 0, 0.14);
+  }
+}
+
+.empty-state-cell {
+  text-align: center;
+  padding: 32px 20px !important;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.username-cell {
+  font-weight: 700;
+  font-size: 1.02rem;
+}
+
+.score-cell {
+  font-weight: 800;
+  color: $ninja-orange;
+  font-size: 1.08rem;
+  transition: color 0.2s ease;
+}
+
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #1e1e1e;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #888;
+
+  &.badge-1 {
+    background: #f1c40f;
+    color: #000;
+  }
+
+  &.badge-2 {
+    background: #95a5a6;
+    color: #000;
+  }
+
+  &.badge-3 {
+    background: #e67e22;
+    color: #fff;
+  }
 }
 
 ::ng-deep .p-datatable-storm {
@@ -196,14 +382,22 @@ $ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
     .p-sortable-column-icon {
       color: #666 !important;
     }
+
     &:hover {
       background: #161616 !important;
       color: #ffffff !important;
-      .p-sortable-column-icon { color: $ninja-orange !important; }
+
+      .p-sortable-column-icon {
+        color: $ninja-orange !important;
+      }
     }
+
     &.p-highlight {
       color: #ffffff !important;
-      .p-sortable-column-icon { color: $ninja-orange !important; }
+
+      .p-sortable-column-icon {
+        color: $ninja-orange !important;
+      }
     }
   }
 
@@ -212,7 +406,7 @@ $ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
     color: #ffffff !important;
     transition: all 0.2s ease;
 
-    & > td {
+    > td {
       padding: 16px 20px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
       border-top: none;
@@ -222,32 +416,63 @@ $ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
 
     &:hover {
       background: rgba(0, 140, 255, 0.15) !important;
-      cursor: pointer;
-      & > td {
+
+      > td {
         color: #ffffff;
         border-bottom-color: $ninja-blue !important;
       }
-      .score-cell { color: $ninja-blue; }
+
+      .score-cell {
+        color: $ninja-blue;
+      }
     }
   }
 
   .p-paginator {
     background: rgba(15, 15, 15, 0.9) !important;
+    color-scheme: dark;
+
+    .p-select,
+    .p-paginator-rpp-dropdown,
+    select {
+      color-scheme: dark;
+      color: #eeeeee !important;
+      background: #141820 !important;
+      border: 1px solid rgba(255, 153, 0, 0.25) !important;
+      border-radius: 7px;
+    }
+
+    .p-select-label,
+    .p-select-dropdown,
+    .p-select-dropdown-icon {
+      color: #eeeeee !important;
+    }
+
+    option,
+    optgroup {
+      color: #eeeeee !important;
+      background: #141820 !important;
+    }
     border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
     padding: 10px !important;
     flex-wrap: wrap;
     justify-content: center;
 
-    .p-paginator-page, .p-paginator-next, .p-paginator-last, .p-paginator-first, .p-paginator-prev {
+    .p-paginator-page,
+    .p-paginator-next,
+    .p-paginator-last,
+    .p-paginator-first,
+    .p-paginator-prev {
       color: #888 !important;
       min-width: 2.5rem !important;
       height: 2.5rem !important;
       border-radius: 6px;
-      
+
       &:hover {
         background: rgba(255, 144, 0, 0.1) !important;
         color: $ninja-orange !important;
       }
+
       &.p-highlight {
         background: $ninja-orange !important;
         color: #000000 !important;
@@ -257,126 +482,266 @@ $ninja-blue: #008cff;        // Blu per l'effetto di selezione/hover dinamico
   }
 }
 
-// UTILITY CELL STYLE
-.text-center { text-align: center; }
-.text-end { text-align: right; }
-
-.username-cell { font-weight: 700; font-size: 1.05rem; }
-.level-cell { font-weight: bold; color: #ccc; }
-.score-cell { font-weight: 800; color: $ninja-orange; font-size: 1.15rem; transition: color 0.2s; }
-
-.stats-cell {
-  font-weight: bold;
-  font-size: 0.95rem;
-  .wins { color: #2ecc71; }
-  .divider { color: #444; margin: 0 4px; }
-  .losses { color: #e74c3c; }
+.clouds-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-// CLAN LABELS
-.clan-tag {
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  background: #161616;
-  border: 1px solid #333;
-  color: #aaa;
-
-  &.uzumaki { color: #ff4757; border-color: rgba(255, 71, 87, 0.4); background: rgba(255, 71, 87, 0.05); }
-  &.uchiha { color: #5352ed; border-color: rgba(83, 82, 237, 0.4); background: rgba(83, 82, 237, 0.05); }
-  &.hatake { color: #2ed573; border-color: rgba(46, 213, 115, 0.4); background: rgba(46, 213, 115, 0.05); }
+.cloud-item {
+  position: absolute;
+  opacity: 0.55;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.6));
+  will-change: transform;
 }
 
-// BADGE DEI PODI (1°, 2°, 3°)
-.rank-badge {
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
-  border-radius: 6px;
-  background: #1e1e1e;
-  font-weight: 800;
-  font-size: 0.9rem;
-  color: #888;
-
-  &.badge-1 { background: #f1c40f; color: #000; box-shadow: 0 0 10px rgba(241, 196, 15, 0.3); }
-  &.badge-2 { background: #95a5a6; color: #000; box-shadow: 0 0 10px rgba(149, 165, 166, 0.3); }
-  &.badge-3 { background: #e67e22; color: #fff; box-shadow: 0 0 10px rgba(230, 126, 34, 0.3); }
+.cloud-left-1 {
+  top: 6%;
+  left: -700px;
+  width: 650px;
+  animation: extremeSlideLeft 110s ease-in-out infinite alternate;
 }
 
-// --- SOVRASCRITTURA PULSANTE BACK ---
-::ng-deep .p-btn-back {
-  background: transparent !important;
-  border: none !important;
-  color: $ninja-orange !important;
-  font-weight: 900 !important;
-  text-transform: uppercase;
-  padding: 0 !important;
-  box-shadow: none !important;
-
-  .p-button-icon {
-    color: $ninja-orange !important;
-    font-weight: 900;
-    font-size: 1.1rem;
-    margin-right: 8px;
-  }
-
-  &:hover {
-    background: transparent !important;
-    color: $ninja-blue !important;
-    .p-button-icon { color: $ninja-blue !important; }
-  }
+.cloud-left-2 {
+  top: 36%;
+  left: -700px;
+  width: 500px;
+  animation: extremeSlideLeft 90s ease-in-out infinite alternate;
+  animation-delay: -35s;
 }
 
-// --- ANIMAZIONI LUNGHE E FLUIDE DA ESTREMITÀ A ESTREMITÀ ---
+.cloud-left-3 {
+  top: 66%;
+  left: -700px;
+  width: 700px;
+  animation: extremeSlideLeft 130s ease-in-out infinite alternate;
+  animation-delay: -70s;
+}
+
+.cloud-right-1 {
+  top: 18%;
+  right: -700px;
+  width: 550px;
+  animation: extremeSlideRight 95s ease-in-out infinite alternate;
+  animation-delay: -20s;
+  transform: scaleX(-1);
+}
+
+.cloud-right-2 {
+  top: 48%;
+  right: -700px;
+  width: 620px;
+  animation: extremeSlideRight 120s ease-in-out infinite alternate;
+  animation-delay: -50s;
+  transform: scaleX(-1);
+}
+
+.cloud-right-3 {
+  top: 78%;
+  right: -700px;
+  width: 480px;
+  animation: extremeSlideRight 100s ease-in-out infinite alternate;
+  animation-delay: -10s;
+  transform: scaleX(-1);
+}
+
 @keyframes extremeSlideLeft {
   0% {
-    transform: translateX(0); // Parte da left: -700px (completamente fuori bordo a sinistra)
+    transform: translateX(0);
   }
+
   100% {
-    transform: translateX(calc(100vw + 1400px)); // Attraversa tutto lo schermo ed esce completamente a destra
+    transform: translateX(calc(100vw + 1400px));
   }
 }
 
 @keyframes extremeSlideRight {
   0% {
-    transform: scaleX(-1) translateX(0); // Parte da right: -700px (completamente fuori bordo a destra)
+    transform: scaleX(-1) translateX(0);
   }
+
   100% {
-    transform: scaleX(-1) translateX(calc(100vw + 1400px)); // Attraversa tutto lo schermo ed esce completamente a sinistra
+    transform: scaleX(-1) translateX(calc(100vw + 1400px));
   }
 }
 
-@media (max-width: 768px) {
-  .leaderboard-wrapper {
-    padding: 40px 14px;
-    background-attachment: scroll;
+@media (max-width: 1120px) {
+  .game-switcher {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+  }
 
-    .leaderboard-header {
-      margin-bottom: 30px;
-
-      h1 {
-        font-size: clamp(2rem, 8vw, 2.8rem);
-      }
-
-      .subtitle {
-        font-size: clamp(0.85rem, 3vw, 1.1rem);
-      }
-    }
+  .leaderboard-toolbar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   .leaderboard-wrapper {
-    padding: 32px 10px;
+    padding: 96px 14px 42px;
   }
 
-  ::ng-deep .p-datatable-storm {
-    .p-datatable-thead > tr > th,
-    .p-datatable-tbody > tr > td {
-      padding: 12px 14px;
-    }
+  .game-switcher {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .leaderboard-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .refresh-button {
+    width: 100%;
+  }
+}
+
+// PrimeNG renders its page-size menu in an overlay outside the table.
+::ng-deep .p-select-overlay,
+::ng-deep .p-select-list-container {
+  background: #12161e !important;
+  color: #f7f7f7 !important;
+  border: 1px solid rgba(255, 153, 0, 0.3) !important;
+  color-scheme: dark;
+}
+
+::ng-deep .p-select-option {
+  background: transparent !important;
+  color: #eeeeee !important;
+
+  &.p-select-option-selected,
+  &.p-focus,
+  &:hover {
+    background: rgba(255, 153, 0, 0.19) !important;
+    color: #ffffff !important;
+  }
+}
+
+// Full-leaderboard paging stays lightweight: only the selected ranking page is loaded.
+.leaderboard-pages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 14px 18px;
+  background: rgba(10, 12, 18, 0.95);
+  border-top: 1px solid rgba(255, 153, 0, 0.22);
+}
+
+.page-size-control,
+.page-jump-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  label {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #c0c0c0;
+  }
+
+  select,
+  input {
+    width: 72px;
+    height: 34px;
+    border: 1px solid rgba(255, 153, 0, 0.3);
+    border-radius: 6px;
+    padding: 0 8px;
+    background: #12161e;
+    color: #ffffff;
+    color-scheme: dark;
+    outline: none;
+  }
+
+  option {
+    background: #12161e;
+    color: #ffffff;
+  }
+}
+
+.page-navigation {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  span {
+    margin: 0 10px;
+    font-size: 0.82rem;
+    color: #cfcfcf;
+    white-space: nowrap;
+  }
+}
+
+.page-navigation button,
+.page-jump-control button {
+  height: 34px;
+  min-width: 36px;
+  border: 1px solid rgba(255, 153, 0, 0.26);
+  border-radius: 6px;
+  background: #17191f;
+  color: #f7a51a;
+  font-weight: 900;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background: rgba(255, 153, 0, 0.16);
+    border-color: #ff9900;
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+}
+
+@media (max-width: 720px) {
+  .leaderboard-pages {
+    justify-content: center;
+  }
+}
+
+// A simple placeholder for games whose rankings are not published yet.
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  gap: 12px;
+  padding: 52px 24px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(12, 14, 20, 0.92), rgba(4, 6, 10, 0.84));
+
+  .coming-soon-eyebrow {
+    color: #ff9900;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .coming-soon-line {
+    width: 56px;
+    height: 3px;
+    border-radius: 2px;
+    background: #ff9900;
+  }
+
+  p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.9rem;
   }
 }

@@ -1,0 +1,84 @@
+<Window x:Class="StormLeaderboardCollector.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="STORM 4 Leaderboard"
+        Width="550"
+        Height="420"
+        MinWidth="490"
+        MinHeight="340"
+        WindowStartupLocation="CenterScreen"
+        Background="#090B0F"
+        Foreground="#F5F5F5"
+        FontFamily="Segoe UI"
+        FontSize="13">
+    <Grid Margin="26">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,22">
+            <TextBlock Text="STORM 4" Foreground="#FF9C00"
+                       FontWeight="Bold" FontSize="12" />
+            <TextBlock Text="LEADERBOARD" FontWeight="Bold"
+                       FontSize="26" Margin="0,2,0,8" />
+            <Border Height="2" Width="44" Background="#FF9C00"
+                    HorizontalAlignment="Left" />
+        </StackPanel>
+
+        <Border Grid.Row="1" Background="{StaticResource Panel}"
+                BorderBrush="{StaticResource Outline}" BorderThickness="1"
+                CornerRadius="6" Padding="16" Margin="0,0,0,14">
+            <StackPanel>
+                <TextBlock x:Name="ConnectionText" Text="Connecting to Steam..."
+                           FontWeight="SemiBold" />
+                <TextBlock x:Name="StatusText" Text="Starting"
+                           Foreground="#A4A4A4" Margin="0,5,0,0"
+                           TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+
+        <Border x:Name="SignInPanel" Grid.Row="2"
+                Background="{StaticResource Panel}"
+                BorderBrush="{StaticResource Outline}" BorderThickness="1"
+                CornerRadius="6" Padding="14" Margin="0,0,0,14"
+                Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="LoginQrImage" Width="104" Height="104"
+                       Margin="0,0,16,0" Visibility="Collapsed" />
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Steam sign-in" FontWeight="SemiBold" />
+                    <TextBlock x:Name="LoginInstructions" Text="Connecting..."
+                               Foreground="#A4A4A4" Margin="0,7,0,0"
+                               TextWrapping="Wrap" MaxWidth="310" />
+                    <Button x:Name="OpenLoginButton"
+                            Content="Open Steam"
+                            Width="120" HorizontalAlignment="Left"
+                            Margin="0,11,0,0" Visibility="Collapsed"
+                            Click="OpenLogin_Click" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <StackPanel Grid.Row="3" VerticalAlignment="Center">
+            <Button x:Name="CaptureAllButton" Content="CAPTURE ALL"
+                    Height="45" FontSize="14" FontWeight="Bold"
+                    Click="CaptureAll_Click" IsEnabled="False" />
+            <Button x:Name="RetrySignInButton"
+                    Content="RETRY SIGN-IN"
+                    Height="38"
+                    Margin="0,9,0,0"
+                    Visibility="Collapsed"
+                    Click="RetrySignIn_Click" />
+            <TextBlock x:Name="ProgressText" Text="Ready"
+                       HorizontalAlignment="Center" TextAlignment="Center"
+                       Foreground="#AAAEB4" Margin="0,12,0,0"
+                       TextWrapping="Wrap" />
+            <ProgressBar x:Name="CaptureProgress" Height="3" Minimum="0"
+                         Maximum="100" Value="0" Margin="0,12,0,0"
+                         Visibility="Collapsed" />
+        </StackPanel>
+    </Grid>
+</Window>

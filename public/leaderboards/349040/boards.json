@@ -1,0 +1,82 @@
+{
+  "defaultBoard": "BATTLE_RANKING_BP_ALL",
+  "boards": [
+    {
+      "name": "BATTLE_RANKING_BP_ALL",
+      "label": "Global BP",
+      "category": "Battle Points",
+      "region": "All Regions",
+      "scoreLabel": "BP"
+    },
+    {
+      "name": "BATTLE_RANKING_BP_NA",
+      "label": "North America BP",
+      "category": "Battle Points",
+      "region": "North America",
+      "scoreLabel": "BP"
+    },
+    {
+      "name": "BATTLE_RANKING_BP_EU",
+      "label": "Europe BP",
+      "category": "Battle Points",
+      "region": "Europe",
+      "scoreLabel": "BP"
+    },
+    {
+      "name": "BATTLE_RANKING_BP_JP",
+      "label": "Japan BP",
+      "category": "Battle Points",
+      "region": "Japan",
+      "scoreLabel": "BP"
+    },
+    {
+      "name": "BATTLE_RANKING_BP_ASIA",
+      "label": "Asia BP",
+      "category": "Battle Points",
+      "region": "Asia",
+      "scoreLabel": "BP"
+    },
+    {
+      "name": "BATTLE_RANKING_RANK_WIN_ALL",
+      "label": "Global Ranked Wins",
+      "category": "Ranked Wins",
+      "region": "All Regions",
+      "scoreLabel": "Wins"
+    },
+    {
+      "name": "BATTLE_RANKING_RANK_WIN_NA",
+      "label": "North America Ranked Wins",
+      "category": "Ranked Wins",
+      "region": "North America",
+      "scoreLabel": "Wins"
+    },
+    {
+      "name": "BATTLE_RANKING_RANK_WIN_EU",
+      "label": "Europe Ranked Wins",
+      "category": "Ranked Wins",
+      "region": "Europe",
+      "scoreLabel": "Wins"
+    },
+    {
+      "name": "BATTLE_RANKING_RANK_WIN_JP",
+      "label": "Japan Ranked Wins",
+      "category": "Ranked Wins",
+      "region": "Japan",
+      "scoreLabel": "Wins"
+    },
+    {
+      "name": "BATTLE_RANKING_RANK_WIN_ASIA",
+      "label": "Asia Ranked Wins",
+      "category": "Ranked Wins",
+      "region": "Asia",
+      "scoreLabel": "Wins"
+    },
+    {
+      "name": "BATTLE_RANKING_CHARA_USED",
+      "label": "Character Usage",
+      "category": "Character Usage",
+      "region": "All Regions",
+      "scoreLabel": "Score"
+    }
+  ]
+}
